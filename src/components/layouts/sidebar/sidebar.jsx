@@ -1,3 +1,4 @@
+import NavLink from "@/components/navLinks/navLink";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -76,21 +77,21 @@ const Sidebar = () => {
           className="mx-auto"
         />
       </div>
-      <div className="mt-8 ">
+      <div className="mt-8 flex flex-col gap-y-4 lg:gap-y-3">
         {sidebarRoute.map((singleRoute) => (
-          <Link key={singleRoute.id} href={singleRoute.href}>
-            <div className="flex items-center gap-2 md:p-1 lg:p-2 mx-4 rounded-lg border">
+          <NavLink key={singleRoute.id} exact={singleRoute.href === '/'} activeClassName="bg-gradient-to-b from-[#281B32] to-[#2d1e38f4]" href={singleRoute.href} className="md:p-1 lg:p-2 mx-4 rounded-lg ">
+            <div className="flex items-center gap-2 ">
               <Image
                 src={singleRoute.iconLink}
                 width={41}
                 height={41}
                 alt={singleRoute.routeName}
               />
-              <p className="text-lg text-white font-berlin font-bold">
+              <p className="text-lg text-white font-berlin font-semibold">
                 {singleRoute.routeName}
               </p>
             </div>
-          </Link>
+          </NavLink>
         ))}
       </div>
       <hr className="mt-4 mx-4 border-2 border-[#00000075]" />
