@@ -1,21 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-// https://i.ibb.co/bQjx1Ld/Home.png
-// https://i.ibb.co/kBdQfrX/Icon-1.png
-// https://i.ibb.co/TYthXwz/Icon-2.png
-// https://i.ibb.co/gg1CqrL/Icon-3.png
-// https://i.ibb.co/zsfM69k/Icon-4.png
-// https://i.ibb.co/f9sCBrB/Icon-5.png
-// https://i.ibb.co/SKHyfYp/Icon.png
-// https://i.ibb.co/zNrsZKZ/Tarot-1.png
-// https://i.ibb.co/HrLXbQ8/Tarot-2.png
-// https://i.ibb.co/2YnxRVQ/Tarot-3.png
-// https://i.ibb.co/RgfDXBV/Tarot-4.png
-// https://i.ibb.co/DL2dzN9/Tarot-5.png
-// https://i.ibb.co/RD05jMX/Tool-label-1.png
-// https://i.ibb.co/RD05jMX/Tool-label-1.png
-
 const sidebarRoute = [
   {
     id: "1",
@@ -61,9 +46,27 @@ const sidebarRoute = [
   },
 ];
 
+const sidebarRoute2 = [
+  {
+    id: "1",
+    routeName: "Policies",
+    href: "/policies",
+  },
+  {
+    id: "2",
+    routeName: "Contact",
+    href: "/contact",
+  },
+  {
+    id: "3",
+    routeName: "About us",
+    href: "/about-us",
+  },
+];
+
 const Sidebar = () => {
   return (
-    <div>
+    <div className="font-berlin">
       <div className="mt-4">
         <Image
           width={160}
@@ -75,7 +78,7 @@ const Sidebar = () => {
       </div>
       <div className="mt-8 ">
         {sidebarRoute.map((singleRoute) => (
-          <Link key={singleRoute.id} href={singleRoute.href} >
+          <Link key={singleRoute.id} href={singleRoute.href}>
             <div className="flex items-center gap-2 md:p-1 lg:p-2 mx-4 rounded-lg border">
               <Image
                 src={singleRoute.iconLink}
@@ -89,6 +92,16 @@ const Sidebar = () => {
             </div>
           </Link>
         ))}
+      </div>
+      <hr className="mt-4 mx-4 border-2 border-[#00000075]" />
+      <div className="flex justify-center w-full mt-4">
+        <ul className="list-disc w-fit mx-auto list-white">
+          {sidebarRoute2.map((singleRoute) => (
+            <li key={singleRoute.id} className="mb-1 text-white font-berlin">
+              <Link href={singleRoute.href}>{singleRoute.routeName}</Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
