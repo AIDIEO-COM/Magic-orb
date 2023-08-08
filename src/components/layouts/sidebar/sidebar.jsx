@@ -47,9 +47,27 @@ const sidebarRoute = [
   },
 ];
 
+const sidebarRoute2 = [
+  {
+    id: "1",
+    routeName: "Policies",
+    href: "/policies",
+  },
+  {
+    id: "2",
+    routeName: "Contact",
+    href: "/contact",
+  },
+  {
+    id: "3",
+    routeName: "About us",
+    href: "/about-us",
+  },
+];
+
 const Sidebar = () => {
   return (
-    <div>
+    <div className="font-berlin">
       <div className="mt-4">
         <Image
           width={160}
@@ -75,6 +93,16 @@ const Sidebar = () => {
             </div>
           </NavLink>
         ))}
+      </div>
+      <hr className="mt-4 mx-4 border-2 border-[#00000075]" />
+      <div className="flex justify-center w-full mt-4">
+        <ul className="list-disc w-fit mx-auto list-white">
+          {sidebarRoute2.map((singleRoute) => (
+            <li key={singleRoute.id} className="mb-1 text-white font-berlin">
+              <Link href={singleRoute.href}>{singleRoute.routeName}</Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
