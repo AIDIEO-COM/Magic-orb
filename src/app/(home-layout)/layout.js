@@ -1,9 +1,8 @@
+import HomeLayout from "@/components/layouts/homeLayout/homeLayout";
 
-const layout = ({children}) => {
+const layout = ({ children }) => {
     return (
-        <div>
-            {children}
-        </div>
+        <HomeLayout>{children}</HomeLayout>
     );
 };
 
