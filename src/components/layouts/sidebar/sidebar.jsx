@@ -1,20 +1,6 @@
+import NavLink from "@/components/navLinks/navLink";
 import Image from "next/image";
 import Link from "next/link";
-
-// https://i.ibb.co/bQjx1Ld/Home.png
-// https://i.ibb.co/kBdQfrX/Icon-1.png
-// https://i.ibb.co/TYthXwz/Icon-2.png
-// https://i.ibb.co/gg1CqrL/Icon-3.png
-// https://i.ibb.co/zsfM69k/Icon-4.png
-// https://i.ibb.co/f9sCBrB/Icon-5.png
-// https://i.ibb.co/SKHyfYp/Icon.png
-// https://i.ibb.co/zNrsZKZ/Tarot-1.png
-// https://i.ibb.co/HrLXbQ8/Tarot-2.png
-// https://i.ibb.co/2YnxRVQ/Tarot-3.png
-// https://i.ibb.co/RgfDXBV/Tarot-4.png
-// https://i.ibb.co/DL2dzN9/Tarot-5.png
-// https://i.ibb.co/RD05jMX/Tool-label-1.png
-// https://i.ibb.co/RD05jMX/Tool-label-1.png
 
 const sidebarRoute = [
   {
@@ -73,21 +59,21 @@ const Sidebar = () => {
           className="mx-auto"
         />
       </div>
-      <div className="mt-8 ">
+      <div className="mt-8 flex flex-col gap-y-4 lg:gap-y-3">
         {sidebarRoute.map((singleRoute) => (
-          <Link key={singleRoute.id} href={singleRoute.href} >
-            <div className="flex items-center gap-2 md:p-1 lg:p-2 mx-4 rounded-lg border">
+          <NavLink key={singleRoute.id} exact={singleRoute.href === '/'} activeClassName="bg-gradient-to-b from-[#281B32] to-[#2d1e38f4]" href={singleRoute.href} className="md:p-1 lg:p-2 mx-4 rounded-lg ">
+            <div className="flex items-center gap-2 ">
               <Image
                 src={singleRoute.iconLink}
                 width={41}
                 height={41}
                 alt={singleRoute.routeName}
               />
-              <p className="text-lg text-white font-berlin font-bold">
+              <p className="text-lg text-white font-berlin font-semibold">
                 {singleRoute.routeName}
               </p>
             </div>
-          </Link>
+          </NavLink>
         ))}
       </div>
     </div>
