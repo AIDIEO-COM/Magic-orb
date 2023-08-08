@@ -13,7 +13,7 @@ const Sidebar = () => {
   return (
     <div>
       {sidebarRoute.map((singleRoute) => (
-        <div key={sidebarRoute.id} className="flex items-center gap-2">
+        <div key={singleRoute.id} className="flex items-center gap-2">
           <Image
             src={singleRoute.iconLink}
             width={41}
