@@ -9,7 +9,7 @@ const HomeLayout = ({ children }) => {
     setSidebarOpen(!sidebarOpen);
   };
   return (
-    <div className="lg:grid grid-cols-10 min-h-screen relative">
+    <div className="lg:grid grid-cols-8 min-h-screen relative">
       {/* mobile side drawer */}
       <div className="overflow-hidden h-fit w-fit lg:hidden">
         <div
@@ -27,10 +27,10 @@ const HomeLayout = ({ children }) => {
         )}
       </div>
       {/* desktop sidebar */}
-      <div className="hidden lg:inline-block lg:col-start-1 lg:col-end-2 bg-gradient-to-b from-[#3D2D3B] to-[#232141]">
+      <div className="hidden lg:inline-block lg:col-start-1 lg:col-end-2 bg-gradient-to-b from-[#442143] to-[#2B3057] border-r-2 border-white">
         <Sidebar></Sidebar>
       </div>
-      <div className="lg:col-start-2 lg:col-end-11">
+      <div className="lg:col-start-2 lg:col-end-9">
         <Navbar toggleSidebar={toggleSidebar}></Navbar>
         {children}
       </div>
