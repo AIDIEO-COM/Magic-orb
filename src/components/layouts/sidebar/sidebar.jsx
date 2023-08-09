@@ -104,6 +104,7 @@ const Sidebar = () => {
           ))}
         </ul>
       </div>
+      <p className="absolute bottom-2 translate-x-[50%] text-white text-lg">#Com-orb</p>
     </div>
   );
 };
