@@ -32,7 +32,9 @@ const HomeLayout = ({ children }) => {
       </div>
       <div className="lg:col-start-2 lg:col-end-9">
         <Navbar toggleSidebar={toggleSidebar}></Navbar>
+        <div className="lg:p-8 w-full h-full bg-gradient-to-r from-[#3D2D3B] to-[#232141]">
         {children}
+        </div>
       </div>
     </div>
   );
