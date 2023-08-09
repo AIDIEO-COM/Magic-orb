@@ -7,7 +7,7 @@ const MagicOrb = () => {
   const [chatBoxClassName, setChatBoxClassName] = useState("translate-y-[100%]");
   useEffect(() => {
     const timeOut = setTimeout(() => {
-      setBannerClassName("w-full h-[84%] duration-700")
+      setBannerClassName("w-full h-[200px] md:h-[84%] duration-700")
       setChatBoxClassName("translate-y-0")
     }, 5)
     return () => clearTimeout(timeOut)
@@ -20,16 +20,16 @@ const MagicOrb = () => {
           alt="homepageimg"
           width={1500}
           height={1000}
-          className={bannerClassName}
+          className={`${bannerClassName} `}
         ></Image>
         {/* chat box */}
         <div className="overflow-hidden">
-        <div className={`absolute left-1/2 -translate-x-1/2 ${chatBoxClassName} bottom-12 xl:w-[850px] h-[300px] rounded-xl bg-[#20192A] px-10 py-5 duration-700`}>
-          <h1 className="text-[#DBCBF4] font-berlin text-3xl text-center">Chat with the magic orb</h1>
+        <div className={`absolute left-1/2 -translate-x-1/2 ${chatBoxClassName} bottom-5 md:bottom-12 w-[90%] md:w-[60%] xl:w-[850px] h-[400px] md:h-[300px] rounded-xl bg-[#20192A] px-5 md:px-10 py-5 duration-700`}>
+          <h1 className="text-[#DBCBF4] font-berlin text-xl md:text-3xl text-center">Chat with the magic orb</h1>
           <div className="text-left w-full h-fit px-2 mt-5">
-            <p className="text-[#E5BD9D] font-berlin text-lg ">Orb: How can I help you today?</p>
+            <p className="text-[#E5BD9D] font-berlin text-base md:text-lg ">Orb: How can I help you today?</p>
           </div>
-          <div className=" h-8 bg-[#635B74] rounded-md py-[3px] px-2 font-berlin lg:flex justify-between absolute bottom-5 left-8 right-8">
+          <div className="h-8 bg-[#635B74] rounded-md py-[3px] px-2 font-berlin flex justify-between absolute bottom-5 left-4 right-4 md:left-8 md:right-8">
             <input
               name="search"
               className="outline-none w-[80%] h-full bg-transparent text-[#C5B7DC] text-sm pl-1"
