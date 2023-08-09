@@ -1,10 +1,10 @@
-"use client"
+"use client";
 import ImageCard from "@/components/shared/ImageCard/ImageCard";
 import Image from "next/image";
 import BannerContent from "./bannerContent";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const imageCardInfo = [
   {
@@ -47,28 +47,57 @@ const imageCardInfo = [
 ];
 
 const Home = () => {
-  const [isVisible, setVisible] = useState(true);
-  console.log(isVisible)
+  const [cardClassName, setCardClassName] = useState("translate-y-[100%]");
+  const [bannerSideContent, setBannerSideContent] = useState("opacity-0");
+  const [bannerClassName, setBannerClassName] = useState(" opacity-0");
+  const [animationBanner, setAnimationBanner] = useState("w-full h-[90%]");
+  const [controlAnimateBanner, setControlAnimateBanner] = useState(false);
+  useEffect(() => {
+    const timeOut = setTimeout(() => {
+      setCardClassName("translate-y-0");
+      setBannerSideContent("opacity-100");
+      setBannerClassName("opacity-100 ");
+      setAnimationBanner("w-[65%] h-[57%]");
+    }, 5);
+    const controlBannerTime = setTimeout(() => {
+      setControlAnimateBanner(true);
+      setAnimationBanner("hidden");
+    }, 700);
+    return (
+      () => clearTimeout(controlAnimateBanner), () => clearTimeout(timeOut)
+    );
+  });
+  useEffect(() => {}, [controlAnimateBanner]);
   return (
-    <div className="font-berlin p-3 md:p-4 lg:p-0 h-[calc(100vh-60px)]">
+    <div className="font-berlin p-3 md:p-4 lg:p-0 h-[calc(100vh-60px)] ">
+      {/* animate banner */}
+      <Image
+        src={"https://i.ibb.co/RD05jMX/Tool-label-1.png"}
+        alt="homepageimg"
+        width={1000}
+        height={900}
+        className={` ${animationBanner} duration-700 absolute rounded-xl ${
+          controlAnimateBanner ? "hidden" : ""
+        }`}
+      ></Image>
       <div className="lg:grid grid-cols-10 ">
-        <div className="col-start-1 col-end-9  relative">
-          <motion.div onTap={() => setVisible(!isVisible)}>
-            <Link href={"/magic-orb"}>
-              <Image
-                src={"https://i.ibb.co/RD05jMX/Tool-label-1.png"}
-                alt="homepageimg"
-                width={800}
-                height={800}
-                className="w-full h-full"
-              ></Image>
-              <div className="lg:hidden">
-                <BannerContent></BannerContent>
-              </div>
-            </Link>
-          </motion.div>
+        <div className="col-start-1 col-end-9 relative">
+          <Link href={"/magic-orb"}>
+            <Image
+              src={"https://i.ibb.co/RD05jMX/Tool-label-1.png"}
+              alt="homepageimg"
+              width={1000}
+              height={1000}
+              className={`w-full h-full ${bannerClassName} duration-700`}
+            ></Image>
+            <div className="lg:hidden">
+              <BannerContent></BannerContent>
+            </div>
+          </Link>
         </div>
-        <div className="col-start-9 col-end-11 flex flex-col gap-y-3">
+        <div
+          className={`col-start-9 col-end-11 flex flex-col gap-y-3 ${bannerSideContent} duration-700`}
+        >
           <div className="h-[30%] w-full relative overflow-hidden hidden lg:inline-block">
             <Image
               src={"https://i.ibb.co/QN7h6G0/orb22-1.png"}
@@ -89,10 +118,14 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3  xl:grid-cols-4 gap-y-5 px-2 mt-[25px]">
-        {imageCardInfo.slice(0, 4).map((singleImageCardInfo) => (
-          <ImageCard key={singleImageCardInfo.id} {...singleImageCardInfo} />
-        ))}
+      <div className="overflow-hidden w-full ">
+        <div
+          className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3  xl:grid-cols-4 gap-y-5 px-2 mt-[25px] duration-700 ${cardClassName}`}
+        >
+          {imageCardInfo.slice(0, 4).map((singleImageCardInfo) => (
+            <ImageCard key={singleImageCardInfo.id} {...singleImageCardInfo} />
+          ))}
+        </div>
       </div>
     </div>
   );
