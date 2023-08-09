@@ -6,7 +6,7 @@ const Navbar = ({toggleSidebar}) => {
     return (
         <div className="py-4 px-4 md:px-7 lg:px-14 bg-gradient-to-b from-[#3D2D3B] to-[#232141] flex items-center justify-between">
             {/* menubar for mobile */}
-            <div className="lg:hidden">
+            <div className="xl:hidden">
                 <FaBars onClick={toggleSidebar} className="text-white text-2xl ml-3 cursor-pointer"></FaBars>
             </div>
             {/* navbar content here */}
@@ -14,7 +14,7 @@ const Navbar = ({toggleSidebar}) => {
                 <input name="search" className="outline-none w-[80%] h-full bg-transparent text-white text-sm pl-1" placeholder="Search"></input>
                 <button className="outline-none w-[6%] h-full bg-[#BFB1D6] rounded-md flex items-center justify-center"><FaAngleRight className="w-4 h-4 text-[#624652]"></FaAngleRight></button>
             </div>
-            <div className="lg:hidden">
+            <div className="xl:hidden">
                 <Image src={"https://i.ibb.co/kxxsFW7/home-modified-3.png"} alt="logo" width={125} height={33}></Image>
             </div>
             <div className="flex w-fit h-full items-center gap-4">
