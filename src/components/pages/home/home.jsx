@@ -1,6 +1,7 @@
 import ImageCard from "@/components/shared/ImageCard/ImageCard";
 import Image from "next/image";
 import BannerContent from "./bannerContent";
+import Link from "next/link";
 
 const imageCardInfo = [
   {
@@ -47,6 +48,7 @@ const Home = () => {
     <div className="font-berlin p-3 md:p-4 lg:p-0 h-[calc(100vh-60px)]">
       <div className="lg:grid grid-cols-10 ">
         <div className="col-start-1 col-end-9  relative">
+          <Link href={"/magic-orb"}>
           <Image
             src={"https://i.ibb.co/RD05jMX/Tool-label-1.png"}
             alt="homepageimg"
@@ -57,6 +59,7 @@ const Home = () => {
           <div className="lg:hidden">
             <BannerContent></BannerContent>
           </div>
+          </Link>
         </div>
         <div className="col-start-9 col-end-11 flex flex-col gap-y-3">
           <div className="h-[30%] w-full relative overflow-hidden hidden lg:inline-block">

@@ -1,7 +1,7 @@
 
 const Library = () => {
   return (
-    <div>This is library page</div>
+    <div className="font-berlin p-3 md:p-4 lg:p-0 h-[calc(100vh-60px)]">This is library page</div>
   )
 }
 
