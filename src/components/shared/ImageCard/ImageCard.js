@@ -10,7 +10,7 @@ const ImageCard = ({
 }) => {
   return (
     <div
-      className="relative max-w-[329px] h-[257px] bg-cover bg-center font-berlin  rounded-xl"
+      className="relative max-w-[329px] h-[257px] bg-cover bg-center font-berlin rounded-xl cursor-pointer"
       style={{
         backgroundImage: `url(${card_img_link})`,
       }}>

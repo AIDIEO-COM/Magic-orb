@@ -1,46 +1,6 @@
 import ImageCard from "@/components/shared/ImageCard/ImageCard";
 import Image from "next/image";
-
-const imageCardInfo = [
-    {
-      id: "1",
-      card_img_link: "https://i.ibb.co/zNrsZKZ/Tarot-1.png",
-      card_title: "Astrology table",
-      card_subtitle: "Discover your character",
-      try_count: 0,
-      game_name: "Play astrology",
-      try_remaining: 32,
-    },
-    {
-      id: "2",
-      card_img_link: "https://i.ibb.co/DL2dzN9/Tarot-5.png",
-      card_title: "Compatibility check",
-      card_subtitle: "Discover your real soulmates",
-      try_count: 0,
-      game_name: "Find compatibility",
-      try_remaining: 32,
-    },
-    {
-      id: "3",
-      card_img_link: "https://i.ibb.co/2YnxRVQ/Tarot-3.png",
-      card_title: "Tarot table and cards",
-      card_subtitle: "Discover destiny",
-      try_count: 0,
-      game_name: "Play tarot",
-      try_remaining: 32,
-    },
-  
-    {
-      id: "4 ",
-      card_img_link: "https://i.ibb.co/HrLXbQ8/Tarot-2.png",
-      card_title: "Dream interpretation",
-      card_subtitle: "Find the symbols of your dreams",
-      try_count: 0,
-      game_name: "Interpretative dream",
-      try_remaining: 32,
-    },
-  ];
-  
+import imageCardInfo from "@/temp-data/imageCardInfo";
 
 const Home = () => {
   return (
@@ -50,10 +10,9 @@ const Home = () => {
           <Image
             src={"https://i.ibb.co/RD05jMX/Tool-label-1.png"}
             alt="homepageimg"
-            width={800}
-            height={800}
-            className="w-full h-full"
-          ></Image>
+            width={1000}
+            height={1000}
+            className="w-full h-full"></Image>
         </div>
         <div className="col-start-9 col-end-11 flex flex-col gap-y-3">
           <div className="h-[30%] w-full relative overflow-hidden">
@@ -62,8 +21,7 @@ const Home = () => {
               alt="sideimg"
               width={300}
               height={250}
-              className="w-full h-full"
-            ></Image>
+              className="w-full h-full"></Image>
             <div className="absolute top-0 left-0 right-0 bottom-0 px-5 py-3">
               <div>
                 <h1 className="text-[#FFC8AA] text-2xl font-semibold font-berlin">
@@ -97,7 +55,7 @@ const Home = () => {
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-2 px-2 ">
-        {imageCardInfo.map((singleImageCardInfo) => (
+        {imageCardInfo.slice(0, 4).map((singleImageCardInfo) => (
           <ImageCard key={singleImageCardInfo.id} {...singleImageCardInfo} />
         ))}
       </div>
