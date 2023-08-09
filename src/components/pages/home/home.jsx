@@ -69,8 +69,8 @@ const Home = () => {
             ></Image>
             <BannerContent></BannerContent>
           </div>
-          <div className="min-h-[180px] xl:h-[70%] w-full pr-1 xl:px-2 xl:pb-3 pt-4 xl:pt-0">
-            <div className="default-gradient rounded-[16px] w-full h-full min-h-[180px] ">
+          <div className="min-h-fit xl:h-[70%] w-full pr-1 xl:px-2 xl:pb-3 pt-4 xl:pt-0">
+            <div className="default-gradient rounded-[16px] w-full h-full min-h-fit ">
               <p className="font-berlin text-[#FFC8AA] text-2xl md:text-3xl p-6">
                 Adds here for free version. Click to swap to the premium version
                 view
@@ -79,7 +79,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="lg:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-2 px-2  hidden">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3  xl:grid-cols-4 gap-y-5 px-2 mt-[25px]">
         {imageCardInfo.map((singleImageCardInfo) => (
           <ImageCard key={singleImageCardInfo.id} {...singleImageCardInfo} />
         ))}
