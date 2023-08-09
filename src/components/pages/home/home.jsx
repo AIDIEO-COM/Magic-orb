@@ -44,8 +44,8 @@ const imageCardInfo = [
 
 const Home = () => {
   return (
-    <div className="font-berlin p-3 md:p-4 lg:p-0">
-      <div className="lg:grid grid-cols-10 h-[60%]">
+    <div className="font-berlin p-3 md:p-4 lg:p-0 h-[calc(100vh-60px)]">
+      <div className="lg:grid grid-cols-10 ">
         <div className="col-start-1 col-end-9  relative">
           <Image
             src={"https://i.ibb.co/RD05jMX/Tool-label-1.png"}
