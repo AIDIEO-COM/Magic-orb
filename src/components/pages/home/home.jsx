@@ -80,7 +80,7 @@ const Home = () => {
         </div>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3  xl:grid-cols-4 gap-y-5 px-2 mt-[25px]">
-        {imageCardInfo.map((singleImageCardInfo) => (
+        {imageCardInfo.slice(0, 4).map((singleImageCardInfo) => (
           <ImageCard key={singleImageCardInfo.id} {...singleImageCardInfo} />
         ))}
       </div>
