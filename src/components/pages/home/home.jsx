@@ -2,7 +2,6 @@
 import ImageCard from "@/components/shared/ImageCard/ImageCard";
 import Image from "next/image";
 import BannerContent from "./bannerContent";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
