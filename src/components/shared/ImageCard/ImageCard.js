@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 
@@ -9,9 +10,12 @@ const ImageCard = ({
   try_count,
   game_name,
   try_remaining,
+  href,
+  home
 }) => {
   return (
-    <div className="w-full h-full flex justify-center">
+    <div className="w-full h-full flex justify-center default-shadow rounded-xl">
+      <Link className="relative w-[130px] h-[110px] sm:w-[170px] sm:h-[140px] lg:w-full lg:h-full bg-cover bg-center font-berlin  rounded-xl" href={home ? href : '/tools'}>
       <div
       className="relative w-[130px] h-[110px] sm:w-[170px] sm:h-[140px] lg:w-full lg:h-full bg-cover bg-center font-berlin  rounded-xl"
       style={{
@@ -33,6 +37,7 @@ const ImageCard = ({
         {try_remaining}
       </div>
     </div>
+      </Link>
     </div>
   );
 };
