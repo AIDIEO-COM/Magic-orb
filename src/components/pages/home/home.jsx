@@ -4,8 +4,8 @@ import Image from "next/image";
 import BannerContent from "./BannerContent";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import GiftCardHome from "./giftCardHome";
-import BannerSideContent from "./bannerSideContent";
+import GiftCardHome from "./GiftCardHome";
+import BannerSideContent from "./BannerSideContent";
 import imageCardInfo from '@/temp-data/imageCardInfo'
 
 
