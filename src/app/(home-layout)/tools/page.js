@@ -1,4 +1,4 @@
-import ImageCard from "@/components/shared/ImageCard/ImageCard";
+import ImageCard from "@/components/shared/imageCard/ImageCard";
 import imageCardInfo from "@/temp-data/imageCardInfo";
 import Image from "next/image";
 import { BiSolidChevronsLeft, BiSolidChevronsRight } from "react-icons/bi";
