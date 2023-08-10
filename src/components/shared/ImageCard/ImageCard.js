@@ -11,7 +11,7 @@ const ImageCard = ({
   return (
     <div className="w-full h-full flex justify-center">
       <div
-      className="relative w-[157px] h-[133px] sm:w-[170px] sm:h-[140px] md:w-[220px] md:h-[160px] lg:w-[329px] lg:h-[257px] xl:w-[250px] xl:h-[200px] 2xl:w-[329px] 2xl:h-[257px] bg-cover bg-center font-berlin  rounded-xl"
+      className="relative w-[130px] h-[110px] sm:w-[170px] sm:h-[140px] md:w-[220px] md:h-[160px] lg:w-[210px] lg:h-[170px] xl:w-[200px] xl:h-[180px] 2xl:w-[320px] 2xl:h-[250px] bg-cover bg-center font-berlin  rounded-xl"
       style={{
         backgroundImage: `url(${card_img_link})`,
       }}>
