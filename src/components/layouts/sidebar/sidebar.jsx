@@ -63,6 +63,16 @@ const sidebarRoute2 = [
     routeName: "About us",
     href: "/about-us",
   },
+  {
+    id: "4",
+    routeName: "Registration",
+    href: "/registration",
+  },
+  {
+    id: "5",
+    routeName: "Log in",
+    href: "/login",
+  },
 ];
 
 const Sidebar = () => {
@@ -79,7 +89,12 @@ const Sidebar = () => {
       </div>
       <div className="mt-8 flex flex-col gap-y-4 lg:gap-y-3">
         {sidebarRoute.map((singleRoute) => (
-          <NavLink key={singleRoute.id} exact={singleRoute.href === '/'} activeClassName="bg-gradient-to-b from-[#281B32] to-[#2d1e38f4]" href={singleRoute.href} className="p-2 mx-4 rounded-lg ">
+          <NavLink
+            key={singleRoute.id}
+            exact={singleRoute.href === "/"}
+            activeClassName="bg-gradient-to-b from-[#281B32] to-[#2d1e38f4]"
+            href={singleRoute.href}
+            className="p-2 mx-4 rounded-lg ">
             <div className="flex items-center gap-2 ">
               <Image
                 src={singleRoute.iconLink}
@@ -104,7 +119,9 @@ const Sidebar = () => {
           ))}
         </ul>
       </div>
-      <p className="absolute bottom-2 translate-x-[50%] text-white text-lg hidden sm:inline-block">#Com-orb</p>
+      <p className="absolute bottom-2 translate-x-[50%] text-white text-lg hidden sm:inline-block">
+        #Com-orb
+      </p>
     </div>
   );
 };
