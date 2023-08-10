@@ -1,7 +1,7 @@
 "use client";
 import ImageCard from "@/components/shared/ImageCard/ImageCard";
 import Image from "next/image";
-import BannerContent from "./bannerContent";
+import BannerContent from "./BannerContent";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import GiftCardHome from "./giftCardHome";
