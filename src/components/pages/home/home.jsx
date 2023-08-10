@@ -1,7 +1,10 @@
+"use client";
 import ImageCard from "@/components/shared/ImageCard/ImageCard";
 import Image from "next/image";
 import BannerContent from "./bannerContent";
+import { motion } from "framer-motion";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const imageCardInfo = [
   {
@@ -44,24 +47,57 @@ const imageCardInfo = [
 ];
 
 const Home = () => {
+  const [cardClassName, setCardClassName] = useState("translate-y-[100%]");
+  const [bannerSideContent, setBannerSideContent] = useState("opacity-0");
+  const [bannerClassName, setBannerClassName] = useState(" opacity-0");
+  const [animationBanner, setAnimationBanner] = useState("w-full h-[90%]");
+  const [controlAnimateBanner, setControlAnimateBanner] = useState(false);
+  useEffect(() => {
+    const timeOut = setTimeout(() => {
+      setCardClassName("translate-y-0");
+      setBannerSideContent("opacity-100");
+      setBannerClassName("opacity-100 ");
+      setAnimationBanner("w-[65%] h-[57%]");
+    }, 5);
+    const controlBannerTime = setTimeout(() => {
+      setControlAnimateBanner(true);
+      setAnimationBanner("hidden");
+    }, 700);
+    return (
+      () => clearTimeout(controlAnimateBanner), () => clearTimeout(timeOut)
+    );
+  });
+  useEffect(() => {}, [controlAnimateBanner]);
   return (
-    <div className="font-berlin p-3 md:p-4 lg:p-0 h-[calc(100vh-60px)]">
+    <div className="font-berlin p-3 md:p-4 lg:p-0 h-[calc(100vh-60px)] ">
+      {/* animate banner */}
+      <Image
+        src={"https://i.ibb.co/RD05jMX/Tool-label-1.png"}
+        alt="homepageimg"
+        width={1000}
+        height={900}
+        className={` ${animationBanner} duration-700 absolute rounded-xl ${
+          controlAnimateBanner ? "hidden" : ""
+        }`}
+      ></Image>
       <div className="lg:grid grid-cols-10 ">
-        <div className="col-start-1 col-end-9  relative">
+        <div className="col-start-1 col-end-9 relative">
           <Link href={"/magic-orb"}>
-          <Image
-            src={"https://i.ibb.co/RD05jMX/Tool-label-1.png"}
-            alt="homepageimg"
-            width={800}
-            height={800}
-            className="w-full h-full"
-          ></Image>
-          <div className="lg:hidden">
-            <BannerContent></BannerContent>
-          </div>
+            <Image
+              src={"https://i.ibb.co/RD05jMX/Tool-label-1.png"}
+              alt="homepageimg"
+              width={1000}
+              height={1000}
+              className={`w-full h-full ${bannerClassName} duration-700`}
+            ></Image>
+            <div className="lg:hidden">
+              <BannerContent></BannerContent>
+            </div>
           </Link>
         </div>
-        <div className="col-start-9 col-end-11 flex flex-col gap-y-3">
+        <div
+          className={`col-start-9 col-end-11 flex flex-col gap-y-3 ${bannerSideContent} duration-700`}
+        >
           <div className="h-[30%] w-full relative overflow-hidden hidden lg:inline-block">
             <Image
               src={"https://i.ibb.co/QN7h6G0/orb22-1.png"}
@@ -82,10 +118,39 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3  xl:grid-cols-4 gap-y-5 px-2 mt-[25px]">
-        {imageCardInfo.slice(0, 4).map((singleImageCardInfo) => (
-          <ImageCard key={singleImageCardInfo.id} {...singleImageCardInfo} />
-        ))}
+      <div className={` w-full lg:grid grid-cols-2 md:grid-cols-3 xl:grid-cols-7 gap-x-2 duration-700 ${cardClassName}`}>
+        <div
+          className={`flex justify-between lg:col-start-1 lg:col-end-4 mt-[25px] items-center `}
+        >
+          {imageCardInfo.slice(0, 2).map((singleImageCardInfo) => (
+            <ImageCard key={singleImageCardInfo.id} {...singleImageCardInfo} />
+          ))}
+        </div>
+        {/* gift card */}
+        <div className="col-start-4 col-end-5 mt-2 justify-items-center hidden lg:inline-block">
+        <div className="p-5 mt-4 mx-auto  flex flex-col xl:w-40 xl:h-[180px] 2xl:w-44 2xl:h-[250px] items-center justify-between rounded-xl bg-[#221c3de0] shadow-[10px_10px_8px10px#00000024]">
+          <p className="text-[#E5BD9D] text-xs font-semibold text-center">
+            Redeem your gift card
+          </p>
+          <Image
+            src="https://i.ibb.co/GCDyhJw/Default-cosmic-pink-gift-card-0-3507d5d2-e214-4bf6-b126-ff41039a25cf-0-1.png"
+            alt="gift card"
+            width={108}
+            height={148}
+            className="lg:w-[70px] lg:h-[100px] xl:w-[80px] xl:h-[105px] 2xl:w-[108px] 2xl:h-[148px]"
+          />
+          <button className="mx-auto text-[#E5BD9D] text-xs bg-[#674B53] px-2 font-semibold rounded-lg py-1">
+            Take the card
+          </button>
+        </div>
+        </div>
+        <div
+          className={`flex justify-between  lg:col-start-5 lg:col-end-8 mt-[25px] items-center `}
+        >
+          {imageCardInfo.slice(2, 4).map((singleImageCardInfo) => (
+            <ImageCard key={singleImageCardInfo.id} {...singleImageCardInfo} />
+          ))}
+        </div>
       </div>
     </div>
   );
