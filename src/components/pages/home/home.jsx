@@ -2,7 +2,6 @@
 import ImageCard from "@/components/shared/ImageCard/ImageCard";
 import Image from "next/image";
 import BannerContent from "./bannerContent";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -118,9 +117,9 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className={` w-full lg:grid grid-cols-2 md:grid-cols-3 xl:grid-cols-7 gap-x-2 duration-700 ${cardClassName}`}>
+      <div className={` w-full lg:grid lg:grid-cols-7 xl:grid-cols-7 gap-x-2 duration-700 ${cardClassName}`}>
         <div
-          className={`flex justify-between lg:col-start-1 lg:col-end-4 mt-[25px] items-center `}
+          className={`flex justify-between lg:col-start-1 lg:col-end-4 mt-[25px] items-center gap-x-4`}
         >
           {imageCardInfo.slice(0, 2).map((singleImageCardInfo) => (
             <ImageCard key={singleImageCardInfo.id} {...singleImageCardInfo} />
@@ -145,7 +144,7 @@ const Home = () => {
         </div>
         </div>
         <div
-          className={`flex justify-between  lg:col-start-5 lg:col-end-8 mt-[25px] items-center `}
+          className={`flex justify-between gap-x-4  lg:col-start-5 lg:col-end-8 mt-[25px] items-center `}
         >
           {imageCardInfo.slice(2, 4).map((singleImageCardInfo) => (
             <ImageCard key={singleImageCardInfo.id} {...singleImageCardInfo} />
