@@ -1,8 +1,8 @@
 const Settings = () => {
   return (
     <div className="font-berlin p-3 md:p-4 lg:p-0 h-[calc(100vh-60px)]">
-      <div className="default-gradient max-w-[550px] h-fit rounded-2xl mx-auto px-10 pb-4">
-        <div className="flex flex-col justify-center">
+      <div className="default-gradient max-w-[550px] h-fit rounded-2xl mx-auto px-10 pb-4 ">
+        <div className="flex flex-col justify-center ">
           <p className="text-[#E5BD9D] font-semibold text-[28px] text-center">
             Settings
           </p>
@@ -11,7 +11,7 @@ const Settings = () => {
             Make sure you have the best environment
           </p>
           <p className="text-[#E5BD9D] text-sm font-semibold mt-2">Account:</p>
-          <form className="mt-2">
+          <form className="mt-1">
             <div className="flex flex-col mb-2.5">
               <label
                 htmlFor="username"

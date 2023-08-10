@@ -1,5 +1,5 @@
 "use client";
-import ImageCard from "@/components/shared/ImageCard/ImageCard";
+import ImageCard from "@/components/shared/imageCard/ImageCard";
 import Image from "next/image";
 import BannerContent from "./BannerContent";
 import Link from "next/link";
