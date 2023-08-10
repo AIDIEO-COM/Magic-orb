@@ -4,7 +4,7 @@ import React from 'react';
 const GiftCardHome = () => {
     return (
         <div className="col-start-4 col-end-5 mt-2 justify-items-center hidden lg:inline-block">
-          <div className="p-5 mt-4 mx-auto  flex flex-col xl:w-40 xl:h-[180px] 2xl:w-44 2xl:h-[250px] items-center justify-between rounded-xl bg-[#221c3de0] shadow-[10px_10px_8px10px#00000024]">
+          <div className="p-5 mt-4 mx-auto  flex flex-col xl:w-40 xl:h-[180px] 2xl:w-44 2xl:h-[250px] items-center justify-between rounded-xl bg-[#221c3de0] shadow-[10px_10px_8px10px#00000024] default-shadow">
             <p className="text-[#E5BD9D] text-xs font-semibold text-center">
               Redeem your gift card
             </p>

@@ -1,4 +1,4 @@
-import NavLink from "@/components/navLinks/navLink";
+import NavLink from "@/components/navLinks/NavLink";
 import Image from "next/image";
 import Link from "next/link";
 

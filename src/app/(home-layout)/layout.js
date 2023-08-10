@@ -1,4 +1,4 @@
-import HomeLayout from "@/components/layouts/homeLayout/homeLayout";
+import HomeLayout from "@/components/layouts/homeLayout/HomeLayout";
 
 const layout = ({ children }) => {
     return (

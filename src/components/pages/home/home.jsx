@@ -1,11 +1,11 @@
 "use client";
 import ImageCard from "@/components/shared/imageCard/ImageCard";
 import Image from "next/image";
-import BannerContent from "./bannerContent";
+import BannerContent from "./BannerContent";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import GiftCardHome from "./giftCardHome";
-import BannerSideContent from "./bannerSideContent";
+import GiftCardHome from "./GiftCardHome";
+import BannerSideContent from "./BannerSideContent";
 import imageCardInfo from '@/temp-data/imageCardInfo'
 
 
@@ -60,13 +60,13 @@ const Home = () => {
         <BannerSideContent bannerSideContent={bannerSideContent}></BannerSideContent>
       </div>
       <div
-        className={` w-full lg:grid lg:grid-cols-7 xl:grid-cols-7 overflow-hidden gap-x-2 duration-700 ${cardClassName}`}
+        className={` w-full lg:grid lg:grid-cols-7 pb-5 xl:grid-cols-7 overflow-hidden gap-x-2 duration-700 ${cardClassName}`}
       >
         <div
           className={`flex justify-between lg:col-start-1 lg:col-end-4 mt-[25px] items-center gap-x-4`}
         >
           {imageCardInfo.slice(0, 2).map((singleImageCardInfo) => (
-            <ImageCard key={singleImageCardInfo.id} {...singleImageCardInfo} />
+            <ImageCard key={singleImageCardInfo.id} {...singleImageCardInfo} home={true}/>
           ))}
         </div>
         {/* gift card */}
@@ -75,7 +75,7 @@ const Home = () => {
           className={`flex justify-between gap-x-4  lg:col-start-5 lg:col-end-8 mt-[25px] items-center `}
         >
           {imageCardInfo.slice(2, 4).map((singleImageCardInfo) => (
-            <ImageCard key={singleImageCardInfo.id} {...singleImageCardInfo} />
+            <ImageCard key={singleImageCardInfo.id} {...singleImageCardInfo} home={true}/>
           ))}
         </div>
       </div>
