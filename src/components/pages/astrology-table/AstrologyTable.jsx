@@ -1,13 +1,17 @@
 "use client";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import AstrologyContent from "./AstrologyContent";
 
 const AstrologyTable = () => {
   const [firstTransitionImg, setFirstTransitionImg] = useState(
     " w-[320px] h-[250px] bottom-0 left-0"
   );
   const [secondBgImg, setSecondBgImg] = useState(
-    " "
+    "opacity-0 "
+  );
+  const [astrologyContent, setAstrologyContent] = useState(
+    "opacity-0"
   );
   useEffect(() => {
     const timeOut = setTimeout(() => {
@@ -22,7 +26,7 @@ const AstrologyTable = () => {
     }, 700);
     const removeFirstTransitionImg = setTimeout(() => {
       setFirstTransitionImg("hidden");
-        
+      setAstrologyContent("opacity-100");
     }, 1400);
     return (
       () => clearTimeout(opacityLowFirstTransitionImg),
@@ -30,7 +34,7 @@ const AstrologyTable = () => {
     );
   }, []);
   return (
-    <div>
+    <div className="w-full h-full lg:h-[700px] 2xl:h-full  ">
       <Image
         src={"https://i.ibb.co/zNrsZKZ/Tarot-1.png"}
         alt="astrologyTransitionImg"
@@ -38,14 +42,17 @@ const AstrologyTable = () => {
         height={800}
         className={`absolute ${firstTransitionImg} duration-700`}
       ></Image>
-      <div className="w-full h-full bg-cover">
+      <div className="w-full h-full">
         <Image
           src={"https://i.ibb.co/yqrp6rj/image-5.png"}
           alt="img"
           width={1000}
-          height={800}
-          className={`h-full w-full ${secondBgImg} opacity-0 duration-1000 `}
+          height={1000}
+          className={`h-full w-full ${secondBgImg}  duration-1000 `}
         ></Image>
+        <div className={`absolute top-10 lg:top-0 right-0 left-0 bottom-0 w-full h-full ${astrologyContent} duration-1000`}>
+          <AstrologyContent></AstrologyContent>
+        </div>
       </div>
     </div>
   );
