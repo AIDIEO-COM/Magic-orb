@@ -1,4 +1,4 @@
-import Home from "@/components/pages/home/home";
+import Home from "@/components/pages/home/Home";
 import React from "react";
 
 
