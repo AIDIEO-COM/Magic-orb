@@ -7,6 +7,7 @@ const imageCardInfo = [
     try_count: 0,
     game_name: "Play astrology",
     try_remaining: 32,
+    href: "/tools/astrology-table"
   },
   {
     id: "2",
@@ -16,6 +17,7 @@ const imageCardInfo = [
     try_count: 0,
     game_name: "Find compatibility",
     try_remaining: 32,
+    href: "/tools/compatibility-check"
   },
   {
     id: "3",
@@ -25,6 +27,7 @@ const imageCardInfo = [
     try_count: 0,
     game_name: "Play tarot",
     try_remaining: 32,
+    href: "/tools/discover-destiny"
   },
 
   {
@@ -35,6 +38,7 @@ const imageCardInfo = [
     try_count: 0,
     game_name: "Interpretative dream",
     try_remaining: 32,
+    href: "/tools/dream-interpretation"
   },
   {
     id: "5",
@@ -44,6 +48,7 @@ const imageCardInfo = [
     try_count: 0,
     game_name: "Read now",
     try_remaining: 32,
+    href: ""
   },
   {
     id: "6",
@@ -53,6 +58,7 @@ const imageCardInfo = [
     try_count: 0,
     game_name: "Shop now",
     try_remaining: 32,
+    href: ""
   },
 ];
 

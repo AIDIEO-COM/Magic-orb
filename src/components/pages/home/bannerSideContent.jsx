@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import BannerContent from './bannerContent';
+import BannerContent from './BannerContent';
 
 const BannerSideContent = ({bannerSideContent}) => {
     return (
