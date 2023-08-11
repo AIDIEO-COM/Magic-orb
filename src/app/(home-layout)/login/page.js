@@ -1,5 +1,4 @@
 import Link from "next/link";
-import React from "react";
 import { AiOutlineGoogle } from "react-icons/ai";
 import { FaFacebookF } from "react-icons/fa";
 import { FiTwitter } from "react-icons/fi";

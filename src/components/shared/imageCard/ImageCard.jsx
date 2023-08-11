@@ -1,6 +1,4 @@
 import Link from "next/link";
-import React from "react";
-
 
 // md:w-[220px] md:h-[160px] lg:w-[210px] lg:h-[170px] xl:w-[200px] xl:h-[180px] 2xl:w-[320px] 2xl:h-[250px]
 const ImageCard = ({
