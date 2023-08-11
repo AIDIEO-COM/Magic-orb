@@ -4,26 +4,27 @@ import Image from "next/image";
 import { BiSolidChevronsLeft, BiSolidChevronsRight } from "react-icons/bi";
 const Tools = () => {
   return (
-    <div className="grid grid-cols-2 gap-8 relative z-0 font-berlin p-3 md:p-4 lg:p-0 h-[calc(100vh-60px)]">
-      <div className="w-[600px] h-[900px] -mt-28 border-r-2 rotate-[3.00deg] bg-gradient-to-r from-[#442143] to-[#2B3057] z-3">
+    <div className="grid justify-items-center md:justify-items-stretch pt-32 md:pt-0 md:grid-cols-2 gap-8 relative z-0 font-berlin p-3 md:p-4 lg:p-0 min-h-[calc(100vh-60px)] ">
+      {/* TODO: hide overflow bottom */}
+      <div className="max-auto w-[90%] md:w-auto max-w-[600px] min-h-[900px] -mt-28 border-r-2 sm:rotate-[3.00deg] bg-gradient-to-r from-[#442143] to-[#2B3057] lg:z-3">
         <div className="mt-20 overflow-hidden">
-          <h3 className="text-center -rotate-[3.00deg]  text-3xl font-bold text-[#DBCBF4]">
+          <h3 className="text-center sm:-rotate-[3.00deg]  text-3xl font-bold text-[#DBCBF4]">
             The Magic Orb
           </h3>
-          <div className="w-[635px] -rotate-3">
+          <div className=" max-w-[635px] sm:-rotate-3">
             <Image
               src={"https://i.ibb.co/RD05jMX/Tool-label-1.png"}
               alt="the magic orb"
               width={1000}
               height={1000}
-              className="w-full h-full mt-6 -ml-4 object-cover"
+              className="w-full h-full mt-6 sm:-ml-4 object-cover"
             />
           </div>
         </div>
-        <div className="mt-14 px-8 grid grid-cols-2 justify-items-end">
+        <div className="mt-14 px-8 grid sm:grid-cols-2 justify-items-end">
           <div>
-            <p className="text-[#DBCBF4] -rotate-3">Info</p>
-            <div className="-rotate-3 ml-2">
+            <p className="text-[#DBCBF4] sm:-rotate-3">Info</p>
+            <div className="sm:-rotate-3 ml-2">
               {[1, 2, 3].map((infoItem) => (
                 <p key={infoItem} className="text-[10px] mb-4 text-[#E5BD9D]">
                   <span className="text-[#DBCBF4]">Spiritual Guidance: </span>
@@ -39,8 +40,8 @@ const Tools = () => {
           </div>
           <div className="flex flex-col items-center gap-y-10">
             <div className="border-l-2 pl-8 h-[200px]">
-              <p className="text-[#DBCBF4] -rotate-3 text-center">Activity</p>
-              <div className="-rotate-3 mt-8">
+              <p className="text-[#DBCBF4] sm:-rotate-3 text-center">Activity</p>
+              <div className="sm:-rotate-3 pt-8">
                 {[1, 2, 3, 4].map((activityItem) => (
                   <div
                     key={activityItem}
@@ -51,7 +52,7 @@ const Tools = () => {
                 ))}
               </div>
             </div>
-            <div className="-rotate-3 mb-8 relative">
+            <div className="sm:-rotate-3 mb-8 relative">
               <p className="bg-[#BFB1D6] text-[#624652] text-[15px] w-fit px-3 py-1 font-semibold rounded-md cursor-pointer">
                 Use tool
               </p>
