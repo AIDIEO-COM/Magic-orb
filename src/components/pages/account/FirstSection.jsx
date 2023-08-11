@@ -26,7 +26,7 @@ const FirstSection = ({ subscriptionModel }) => {
           ))}
         </ul>
       </div>
-      <div className="p-4 flex flex-col w-36 items-center justify-between rounded-xl bg-[#221c3de0] shadow-[10px_10px_8px_10px_#00000024]">
+      <div className="hidden p-4 sm:flex flex-col w-36 items-center justify-between rounded-xl bg-[#221c3de0] shadow-[10px_10px_8px_10px_#00000024]">
         <p className="text-[#E5BD9D] text-xs font-semibold text-center">
           Redeem your gift card
         </p>

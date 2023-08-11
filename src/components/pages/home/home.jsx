@@ -13,35 +13,18 @@ const Home = () => {
   const [cardClassName, setCardClassName] = useState("translate-y-[100%]");
   const [bannerSideContent, setBannerSideContent] = useState("opacity-0");
   const [bannerClassName, setBannerClassName] = useState(" opacity-0");
-  const [animationBanner, setAnimationBanner] = useState("w-full h-[90%]");
-  const [controlAnimateBanner, setControlAnimateBanner] = useState(false);
   useEffect(() => {
     const timeOut = setTimeout(() => {
       setCardClassName("translate-y-0");
       setBannerSideContent("opacity-100");
       setBannerClassName("opacity-100 ");
-      setAnimationBanner("w-[65%] h-[57%]");
     }, 5);
-    const controlBannerTime = setTimeout(() => {
-      setControlAnimateBanner(true);
-      setAnimationBanner("hidden");
-    }, 700);
     return (
-      () => clearTimeout(controlBannerTime), () => clearTimeout(timeOut)
+     () => clearTimeout(timeOut)
     );
   });
   return (
     <div className="font-berlin p-3 md:p-4 lg:p-0 min-h-[calc(100vh-60px)]">
-      {/* animate banner */}
-      <Image
-        src={"https://i.ibb.co/RD05jMX/Tool-label-1.png"}
-        alt="homepageimg"
-        width={1000}
-        height={900}
-        className={` ${animationBanner} duration-700 absolute rounded-xl ${
-          controlAnimateBanner ? "hidden" : ""
-        }`}
-      ></Image>
       <div className="lg:grid grid-cols-10 ">
         <div className="col-start-1 col-end-9 relative">
           <Link href={"/magic-orb"}>
