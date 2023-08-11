@@ -44,7 +44,7 @@ const page = () => {
             <div className="flex items-center gap-2 mb-2 ml-4">
               <input
                 type="radio"
-                className="w-4 h-4 rounded-full border-[#866345] "
+                className="w-4 h-4 rounded-full border-[#866345] cursor-pointer"
               />
               <p className="text-[#DBCBF4] text-sm">Keep logged in</p>
             </div>

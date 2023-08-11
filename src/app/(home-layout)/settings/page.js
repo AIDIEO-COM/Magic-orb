@@ -52,7 +52,7 @@ const Settings = () => {
               <div className="flex items-center gap-2 mb-2">
                 <input
                   type="radio"
-                  className="w-4 h-4 rounded-full border-[#E5BD9D] "
+                  className="w-4 h-4 rounded-full border-[#E5BD9D] cursor-pointer"
                 />
                 <p className="text-[#DBCBF4] text-sm">
                   Keep logged in to devices
@@ -61,7 +61,7 @@ const Settings = () => {
               <div className="flex items-center gap-2">
                 <input
                   type="radio"
-                  className="w-4 h-4 rounded-full border-[#E5BD9D]"
+                  className="w-4 h-4 rounded-full border-[#E5BD9D] cursor-pointer"
                 />
                 <p className="text-[#DBCBF4] text-sm">
                   Subscribe to newsletter
@@ -104,7 +104,7 @@ const Settings = () => {
               <input
                 type="text"
                 placeholder="Drelciuc"
-                className="bg-[#674B53] h-6  px-2 rounded-2xl text-[#E5BD9D] tracking-wide outline-none placeholder-[#E5BD9D]"
+                className="bg-[#674B53] h-6  px-2 rounded-2xl text-[#E5BD9D] tracking-wide outline-none placeholder-[#E5BD9D] "
               />
             </div>
             <div className="flex flex-col mb-2.5">
@@ -135,7 +135,7 @@ const Settings = () => {
               <div className="flex items-center gap-2 mb-2">
                 <input
                   type="radio"
-                  className="w-4 h-4 rounded-full border-[#E5BD9D] "
+                  className="w-4 h-4 rounded-full border-[#E5BD9D] cursor-pointer"
                 />
                 <p className="text-[#DBCBF4] text-sm">
                   Keep logged in to devices
@@ -144,7 +144,7 @@ const Settings = () => {
               <div className="flex items-center gap-2">
                 <input
                   type="radio"
-                  className="w-4 h-4 rounded-full border-[#E5BD9D]"
+                  className="w-4 h-4 rounded-full border-[#E5BD9D] cursor-pointer "
                 />
                 <p className="text-[#DBCBF4] text-sm">
                   Subscribe to newsletter

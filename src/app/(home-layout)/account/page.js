@@ -185,7 +185,7 @@ const Account = () => {
             </div>
           </div>
         </div>
-        <div className="flex items-center justify-between px-4 rounded-xl bg-[#221c3de0] shadow-[10px_10px_8px_10px_#00000024] grow-0 w-[15%]"></div>
+        <div className="default-gradient flex items-center justify-between px-4 rounded-xl grow-0 w-[15%]"></div>
         <div className="flex items-center justify-between px-4 rounded-xl bg-[#221c3de0] shadow-[10px_10px_8px_10px_#00000024] grow w-[33%]">
           <div className="flex flex-col justify-between gap-y-2 p-4">
             <div className="flex flex-col">
