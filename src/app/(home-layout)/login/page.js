@@ -5,8 +5,8 @@ import { FiTwitter } from "react-icons/fi";
 
 const page = () => {
   return (
-    <div className="font-berlin p-3 md:p-4 lg:p-0 h-[calc(100vh-60px)] ">
-      <div className="default-gradient max-w-[450px] h-fit mx-auto px-10 pb-4 rounded-xl py-6 ">
+    <div className="font-berlin p-3 md:p-4 lg:p-0 min-h-[calc(100vh-60px)] flex items-center w-full">
+      <div className="default-gradient max-w-[450px] h-fit mx-auto p-5 w-full md:px-10 md:pb-4 rounded-xl md:py-6 ">
         <div className="flex flex-col justify-center ">
           <p className="text-[#E5BD9D] font-semibold text-[28px] text-center">
             Login in

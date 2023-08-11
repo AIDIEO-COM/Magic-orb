@@ -12,10 +12,10 @@ const ImageCard = ({
   home
 }) => {
   return (
-    <div className="w-full h-full flex justify-center default-shadow rounded-xl">
+    <div className="w-full h-full flex justify-center rounded-xl">
       <Link className="relative w-[130px] h-[110px] sm:w-[170px] sm:h-[140px] lg:w-full lg:h-full bg-cover bg-center font-berlin  rounded-xl" href={home ? href : '/tools'}>
       <div
-      className="relative w-[130px] h-[110px] sm:w-[170px] sm:h-[140px] lg:w-full lg:h-full bg-cover bg-center font-berlin  rounded-xl"
+      className="relative w-[130px]  default-shadow h-[110px] sm:w-[170px] sm:h-[140px] md:w-[200px] md:h-[160px] lg:w-full lg:h-full bg-cover bg-center font-berlin  rounded-xl"
       style={{
         backgroundImage: `url(${card_img_link})`,
       }}>

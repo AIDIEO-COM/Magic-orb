@@ -1,8 +1,8 @@
 const Policies = () => {
   return (
     <div className="font-berlin p-3 md:p-4 lg:p-0 min-h-[calc(100vh-60px)]">
-      <div className="flex flex-col items-center justify-center max-w-[750px] rounded-xl bg-[#221c3de0] shadow-[10px_10px_8px_10px_#00000024] py-8 px-14  mx-auto mb-4">
-        <p className="text-[#DBCBF4] font-berlin font-semibold text-3xl">
+      <div className="flex flex-col items-center justify-center max-w-[750px] rounded-xl bg-[#221c3de0] shadow-[10px_10px_8px_10px_#00000024] p-5 md:py-8 md:px-14  mx-auto mb-4">
+        <p className="text-[#DBCBF4] font-berlin font-semibold text-xl sm:text-3xl">
           Policies
         </p>
         <div>
