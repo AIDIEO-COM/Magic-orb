@@ -1,8 +1,23 @@
 "use client";
+import FriendRequest from "@/components/friendRequest/FriendRequest";
+import Notification from "@/components/notification/Notification";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { FaBars, FaAngleRight } from "react-icons/fa";
 const Navbar = ({ toggleSidebar }) => {
+  const [isFrdReqNotificationModalOpen, setIsFrdReqNotificationModalOpen] =
+    useState(false);
+  const [isNotificationModalOpen, setIsNotificationModalOpen] = useState(false);
+
+  const toggleNotificationModal = (modalName) => {
+    if (modalName === "friendRequest") {
+      setIsNotificationModalOpen(false);
+      setIsFrdReqNotificationModalOpen(!isFrdReqNotificationModalOpen);
+    } else {
+      setIsFrdReqNotificationModalOpen(false);
+      setIsNotificationModalOpen(!isNotificationModalOpen);
+    }
+  };
   return (
     <div className="py-4 px-4 md:px-7 lg:px-14 lg:h-[60px] bg-gradient-to-b from-[#3D2D3B] to-[#232141] flex items-center justify-between relative z-1">
       {/* menubar for mobile */}
@@ -31,16 +46,28 @@ const Navbar = ({ toggleSidebar }) => {
       </div>
       <div className="flex w-fit h-full items-center gap-4 z-20 lg:absolute right-14 ">
         <Image
+          onClick={() => toggleNotificationModal("friendRequest")}
           src={"https://i.ibb.co/RTPVZK9/notification-modified-1.png"}
           alt="notification-modified"
           width={28}
-          height={28}></Image>
+          height={28}
+          className="cursor-pointer"></Image>
         <Image
+          onClick={() => toggleNotificationModal("notifications")}
           src={"https://i.ibb.co/HnQhpXc/Notifications.png"}
           alt="notification-modified"
           width={28}
-          height={28}></Image>
+          height={28}
+          className="cursor-pointer"></Image>
       </div>
+      <FriendRequest
+        isOpen={isFrdReqNotificationModalOpen}
+        onClose={() => toggleNotificationModal("friendRequest")}
+      />
+      <Notification
+        isOpen={isNotificationModalOpen}
+        onClose={() => toggleNotificationModal("notification")}
+      />
     </div>
   );
 };

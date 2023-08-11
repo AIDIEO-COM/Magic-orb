@@ -1,6 +1,4 @@
 import Image from 'next/image';
-import React from 'react';
-
 const GiftCardHome = () => {
     return (
         <div className="col-start-4 col-end-5 mt-2 justify-items-center hidden lg:inline-block">
