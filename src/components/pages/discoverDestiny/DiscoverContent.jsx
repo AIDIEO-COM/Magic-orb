@@ -1,84 +1,64 @@
-import Image from 'next/image';
-import React from 'react';
-import { FaAngleRight } from 'react-icons/fa';
+"use client";
+import Image from "next/image";
+import React, { useState } from "react";
+import PredictCards from "./predictCards/PredictCards";
+import PredictDetails from "./predictDetails/PredictDetails";
 
-const genarateIcon = [
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
-    23, 24, 25, 26, 27, 28, 29, 30,
-  ];
+const genarateCards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 const DiscoverContent = () => {
-    return (
-        <div className=" w-full h-full lg:p-7 xl:p-10 lg:overflow-hidden">
-      <div className="w-full flex flex-col items-center">
+  const [selectRandomCards, setSelectRandomCards] = useState(false);
+  const [showPredictDetails, setShowPredictDetails] = useState(false);
+  const togglePredictDetails = () => {
+    setShowPredictDetails(!showPredictDetails);
+  }
+  const resetPredict = () =>{
+    setShowPredictDetails(false)
+    setSelectRandomCards(false)
+  }
+  return (
+    <div className=" w-full h-full lg:p-7 xl:p-10  relative">
+      <div className="w-full flex flex-col items-center  relative">
         <h1 className="text-lg md:text-xl lg:text-3xl font-berlin font-semibold text-[#FFC8AA]">
           Choose cards to predict future
         </h1>
-        
         {/* TODO: some design messing here */}
+        <button
+          onClick={() => setSelectRandomCards(!selectRandomCards)}
+          className={`text-[#E5BD9D] bg-[#674B53] absolute -bottom-[44px] px-3 text-sm lg:text-base rounded-full duration-700 ${selectRandomCards ? " hidden" : ""}`}
+        >
+          Select random cards
+        </button>
       </div>
-      <div className="h-ful w-full flex flex-col items-center md:items-start  md:flex-row justify-center gap-10 sm:gap-20 lg:gap-0 lg:justify-between pt-10 lg:pt-20">
-        <div className="w-[85%] sm:w-[60%] md:w-[27%] xl:w-[22%] default-shadow bg-[#20192A] h-[500px] rounded-[50px] p-4 xl:px-8 text-[#FFC8AA] flex flex-col justify-between bg-opacity-60">
-          <h1 className="text-base lg:text-3xl font-berlin text-center">
-            New persons
+      <div className="flex flex-col items-center pt-28 lg:pt-0 lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:top-28">
+        {selectRandomCards && <PredictCards togglePredictDetails={togglePredictDetails} showPredictDetails={showPredictDetails}></PredictCards>}
+        {showPredictDetails && <PredictDetails resetPredict={resetPredict}></PredictDetails>}
+      </div>
+      {/* card containers */}
+      <div className="h-ful w-full flex flex-col items-center md:items-start  md:flex-row justify-center gap-10 sm:gap-20 lg:gap-0 lg:justify-between pt-10 lg:pt-16">
+        <div className={`w-[85%] sm:w-[60%] md:w-[27%] xl:w-[25%]  h-[500px] rounded-[50px] p-4  text-[#FFC8AA] lg:flex flex-col  bg-opacity-60 ${selectRandomCards && 'hidden'}`}>
+          <h1 className="text-base lg:text-3xl font-berlin text-center pb-4">
+            Cards
           </h1>
-          <div className="">
-            <p className="pl-[15%]">&lsaquo; 1998 &rsaquo;</p>
-            <div className="flex gap-[6px] flex-wrap gap-y-3">
-              <p className="pl-[7%] pr-[50px]">&lsaquo; June &rsaquo;</p>
-              {genarateIcon.map((index) => (
-                <Image
-                  key={index}
-                  src={"https://i.ibb.co/3SHJXn0/Ellipse-23.png"}
-                  alt="elipsis"
-                  width={25}
-                  height={25}
-                ></Image>
-              ))}
-            </div>
-          </div>
-          <div className=" space-y-4 flex flex-col items-center pb-4">
-            <div className="h-7 bg-[#624652] rounded-md py-[3px] px-1 font-berlin flex justify-between w-full">
-              <input
-                name="birth-time"
-                className="outline-none w-[80%] h-full bg-transparent text-[#FFC8AA] text-sm pl-1"
-                placeholder="Birth time"
-              ></input>
-              <button className="outline-none w-fit px-2 text-[#FFC8AA] h-full bg-[#FFC8AA] rounded-md flex items-center justify-center">
-                <FaAngleRight className="w-4 h-4 text-[#624652]"></FaAngleRight>
-              </button>
-            </div>
-            <div className="h-7 bg-[#624652] rounded-md py-[3px] px-1 font-berlin flex justify-between w-full">
-              <input
-                name="birth-location"
-                className="outline-none w-[80%] h-full bg-transparent text-[#FFC8AA] text-sm pl-1"
-                placeholder="Birth location"
-              ></input>
-              <button className="outline-none w-fit px-2 text-[#FFC8AA] h-full bg-[#FFC8AA] rounded-md flex items-center justify-center">
-                <FaAngleRight className="w-4 h-4 text-[#624652]"></FaAngleRight>
-              </button>
-            </div>
-            <div className="h-7 bg-[#624652] rounded-md py-[3px] px-1 font-berlin flex justify-between w-full">
-              <input
-                name="name"
-                className="outline-none w-[80%] h-full bg-transparent text-[#FFC8AA] text-sm pl-1"
-                placeholder="Name"
-              ></input>
-              <button className="outline-none w-fit px-2 text-[#FFC8AA] h-full bg-[#FFC8AA] rounded-md flex items-center justify-center">
-                <FaAngleRight className="w-4 h-4 text-[#624652]"></FaAngleRight>
-              </button>
-            </div>
-            <button className="outline-none w-fit px-3 text-[#FFC8AA] h-7 bg-[#624652] rounded-md flex items-center justify-center">
-              Create new chart
-            </button>
+          <div className="grid grid-cols-3 gap-y-3 gap-x-3">
+            {genarateCards.map((index) => (
+              <Image
+                key={index}
+                src={"https://i.ibb.co/tBs7rDd/images-4.png"}
+                alt="elipsis"
+                width={200}
+                height={200}
+                className="w-full h-full"
+              ></Image>
+            ))}
           </div>
         </div>
-        <div className="w-[85%] sm:w-[60%] md:w-[27%] xl:w-[22%] default-shadow bg-[#20192A] h-[500px] rounded-[50px] p-4 xl:px-8 text-[#FFC8AA] bg-opacity-60">
+        <div className="w-[85%] sm:w-[60%] md:w-[27%] xl:w-[25%] default-shadow  h-[500px] rounded-[50px] p-4  xl:px-7 text-[#FFC8AA] bg-opacity-60">
           <h1 className="text-base lg:text-3xl font-berlin text-center">
-            Select saved & friends
+            Prediction history
           </h1>
           <div className="flex gap-2 flex-wrap pt-7 justify-center">
-            {genarateIcon.slice(0, 10).map((index) => (
+            {genarateCards.slice(0, 10).map((index) => (
               <div
                 key={index}
                 className="w-[50px] h-[50px] bg-[#88848D] rounded-full flex justify-center items-center"
@@ -96,7 +76,7 @@ const DiscoverContent = () => {
         </div>
       </div>
     </div>
-    );
+  );
 };
 
 export default DiscoverContent;
