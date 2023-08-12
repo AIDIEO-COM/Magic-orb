@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const HomeStatistics = () => {
     return (
-        <div className="default-gradient rounded-[16px] flex flex-col w-full justify-between gap-y-2 p-4">
+        <div className="default-gradient rounded-[16px] flex flex-col w-full justify-between gap-y-2 p-4 h-full">
         <div className="flex flex-col">
           <p className="text-[#E5BD9D] font-bold text-2xl text-center">
             Statistics

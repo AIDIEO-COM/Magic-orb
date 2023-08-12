@@ -14,13 +14,12 @@ const DiscoverContent = () => {
         <h1 className="text-lg md:text-xl lg:text-3xl font-berlin font-semibold text-[#FFC8AA]">
           Choose cards to predict future
         </h1>
-        
         {/* TODO: some design messing here */}
       </div>
       <div className="h-ful w-full flex flex-col items-center md:items-start  md:flex-row justify-center gap-10 sm:gap-20 lg:gap-0 lg:justify-between pt-10 lg:pt-20">
         <div className="w-[85%] sm:w-[60%] md:w-[27%] xl:w-[22%] default-shadow bg-[#20192A] h-[500px] rounded-[50px] p-4 xl:px-8 text-[#FFC8AA] flex flex-col justify-between bg-opacity-60">
           <h1 className="text-base lg:text-3xl font-berlin text-center">
-            New persons
+            Cards
           </h1>
           <div className="">
             <p className="pl-[15%]">&lsaquo; 1998 &rsaquo;</p>
@@ -29,48 +28,13 @@ const DiscoverContent = () => {
               {genarateIcon.map((index) => (
                 <Image
                   key={index}
-                  src={"https://i.ibb.co/3SHJXn0/Ellipse-23.png"}
+                  src={"https://i.ibb.co/tBs7rDd/images-4.png"}
                   alt="elipsis"
                   width={25}
                   height={25}
                 ></Image>
               ))}
             </div>
-          </div>
-          <div className=" space-y-4 flex flex-col items-center pb-4">
-            <div className="h-7 bg-[#624652] rounded-md py-[3px] px-1 font-berlin flex justify-between w-full">
-              <input
-                name="birth-time"
-                className="outline-none w-[80%] h-full bg-transparent text-[#FFC8AA] text-sm pl-1"
-                placeholder="Birth time"
-              ></input>
-              <button className="outline-none w-fit px-2 text-[#FFC8AA] h-full bg-[#FFC8AA] rounded-md flex items-center justify-center">
-                <FaAngleRight className="w-4 h-4 text-[#624652]"></FaAngleRight>
-              </button>
-            </div>
-            <div className="h-7 bg-[#624652] rounded-md py-[3px] px-1 font-berlin flex justify-between w-full">
-              <input
-                name="birth-location"
-                className="outline-none w-[80%] h-full bg-transparent text-[#FFC8AA] text-sm pl-1"
-                placeholder="Birth location"
-              ></input>
-              <button className="outline-none w-fit px-2 text-[#FFC8AA] h-full bg-[#FFC8AA] rounded-md flex items-center justify-center">
-                <FaAngleRight className="w-4 h-4 text-[#624652]"></FaAngleRight>
-              </button>
-            </div>
-            <div className="h-7 bg-[#624652] rounded-md py-[3px] px-1 font-berlin flex justify-between w-full">
-              <input
-                name="name"
-                className="outline-none w-[80%] h-full bg-transparent text-[#FFC8AA] text-sm pl-1"
-                placeholder="Name"
-              ></input>
-              <button className="outline-none w-fit px-2 text-[#FFC8AA] h-full bg-[#FFC8AA] rounded-md flex items-center justify-center">
-                <FaAngleRight className="w-4 h-4 text-[#624652]"></FaAngleRight>
-              </button>
-            </div>
-            <button className="outline-none w-fit px-3 text-[#FFC8AA] h-7 bg-[#624652] rounded-md flex items-center justify-center">
-              Create new chart
-            </button>
           </div>
         </div>
         <div className="w-[85%] sm:w-[60%] md:w-[27%] xl:w-[22%] default-shadow bg-[#20192A] h-[500px] rounded-[50px] p-4 xl:px-8 text-[#FFC8AA] bg-opacity-60">
