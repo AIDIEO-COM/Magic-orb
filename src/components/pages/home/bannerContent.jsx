@@ -1,6 +1,3 @@
-import NavLink from "@/components/navLinks/NavLink";
-import Link from "next/link";
-
 const BannerContent = () => {
   return (
     <div className="absolute top-0 left-0 right-0 bottom-0 px-4 py-2 sm:px-5 sm:py-3">
