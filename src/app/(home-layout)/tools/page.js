@@ -17,6 +17,7 @@ const Tools = () => {
               alt="the magic orb"
               width={1000}
               height={1000}
+              priority
               className="w-full h-full mt-6 sm:-ml-4 object-cover"
             />
           </div>

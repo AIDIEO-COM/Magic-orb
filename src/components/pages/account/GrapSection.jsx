@@ -18,6 +18,7 @@ const GrapSection = () => {
             alt="statistics"
             width={200}
             height={180}
+            className="w-full h-full"
           />
           {stats.map((singleStats) => (
             <div key={singleStats.id} className="flex items-center gap-4 mb-2">
@@ -74,6 +75,7 @@ const GrapSection = () => {
             alt="statistics"
             width={500}
             height={200}
+            priority
             className="w-full h-full mx-auto"
           />
           <div className="flex items-center justify-between text-[#E5BD9D] text-[10px]">

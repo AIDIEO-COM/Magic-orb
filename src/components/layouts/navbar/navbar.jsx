@@ -42,7 +42,7 @@ const Navbar = ({ toggleSidebar }) => {
           src={"https://i.ibb.co/kxxsFW7/home-modified-3.png"}
           alt="logo"
           width={125}
-          height={33}></Image>
+          height={33} className="w-full h-full"></Image>
       </div>
       <div className="flex w-fit h-full items-center gap-4 z-20 lg:absolute right-14 ">
         <Image

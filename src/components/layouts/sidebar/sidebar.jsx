@@ -84,7 +84,7 @@ const Sidebar = () => {
           height={51}
           src="https://i.ibb.co/kxxsFW7/home-modified-3.png"
           alt="magic orb logo"
-          className="mx-auto"
+          className="mx-auto w-auto h-auto"
         />
       </div>
       <div className="mt-8 flex flex-col gap-y-4 lg:gap-y-3">

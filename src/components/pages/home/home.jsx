@@ -38,6 +38,7 @@ const Home = () => {
         alt="homepageimg"
         width={1000}
         height={900}
+        priority
         className={` ${animationBanner} duration-700 absolute rounded-xl ${
           controlAnimateBanner ? "hidden" : ""
         }`}
@@ -50,6 +51,7 @@ const Home = () => {
               alt="homepageimg"
               width={1000}
               height={1000}
+              priority
               className={`w-full h-full ${bannerClassName} duration-700`}
             ></Image>
             <div className="lg:hidden">

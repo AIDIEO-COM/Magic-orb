@@ -20,6 +20,7 @@ const MagicOrb = () => {
           alt="homepageimg"
           width={1500}
           height={1000}
+          priority
           className={`${bannerClassName} `}
         ></Image>
         {/* chat box */}

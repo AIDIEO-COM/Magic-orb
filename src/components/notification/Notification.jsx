@@ -20,7 +20,7 @@ const Notification = ({ isOpen, onClose }) => {
     return null;
   }
   return (
-    <div className="default-gradient w-[400px] h-fit absolute top-14 right-24 rounded-xl p-4 z-20 transition-transform duration-500 notification-modal">
+    <div className="default-gradient w-[400px] h-fit absolute top-14 right-16 rounded-xl p-4 z-20 transition-transform duration-500 notification-modal">
       <p className="text-center text-[#E5BD9D] text-sm tracking-wide">
         Notifications
       </p>
