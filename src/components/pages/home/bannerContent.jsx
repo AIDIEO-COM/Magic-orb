@@ -1,3 +1,6 @@
+import NavLink from "@/components/navLinks/NavLink";
+import Link from "next/link";
+
 const BannerContent = () => {
   return (
     <div className="absolute top-0 left-0 right-0 bottom-0 px-4 py-2 sm:px-5 sm:py-3">
@@ -10,7 +13,7 @@ const BannerContent = () => {
         </p>
       </div>
       <div className="absolute bottom-5 md:bottom-10 lg:bottom-4 xl:bottom-7 left-1/2 transform -translate-x-1/2  bg-[#6b5863] rounded-xl px-3 ">
-        <p className="text-[#E5BD9D] text-base md:text-lg lg:text-sm font-semibold tracking-wider">
+        <p  className="text-[#E5BD9D] text-base md:text-lg lg:text-sm font-semibold tracking-wider">
           Chat Now
         </p>
       </div>

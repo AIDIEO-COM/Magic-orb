@@ -1,36 +1,20 @@
-import Image from "next/image";
-import React, { useState } from "react";
-import { FaAngleRight } from "react-icons/fa";
+import Image from 'next/image';
+import React from 'react';
+import { FaAngleRight } from 'react-icons/fa';
 
 const genarateIcon = [
-  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
-  23, 24, 25, 26, 27, 28, 29, 30,
-];
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
+    23, 24, 25, 26, 27, 28, 29, 30,
+  ];
 
-const CompatibilityContent = () => {
-  const [checkBtnIsClicked, setCheckBtnIsClicked] = useState(false);
-  return (
-    <div className=" w-full h-full lg:p-7 xl:p-10 lg:overflow-hidden">
+const DiscoverContent = () => {
+    return (
+        <div className=" w-full h-full lg:p-7 xl:p-10 lg:overflow-hidden">
       <div className="w-full flex flex-col items-center">
         <h1 className="text-lg md:text-xl lg:text-3xl font-berlin font-semibold text-[#FFC8AA]">
-          Check Compatibility
+          Choose cards to predict future
         </h1>
-        <div className="text-[#FFC8AA] flex items-center justify-center gap-2 pt-1 ">
-          <p className="text-sm lg:text-base">Western</p>
-          <div className=" h-[18px] w-10 bg-[#674B53] rounded-full overflow-hidden p-[3px] flex items-center justify-center cursor-pointer">
-            <button
-              className="relative w-full h-full rounded-full "
-              onClick={() => setCheckBtnIsClicked(!checkBtnIsClicked)}
-            >
-              <div
-                className={`absolute top-0 duration-500  h-3 w-3 bg-[#D9D9D9] rounded-full ${
-                  checkBtnIsClicked ? "translate-x-[22px]" : "left-0"
-                }`}
-              ></div>
-            </button>
-          </div>
-          <p className="text-sm lg:text-base">Chines</p>
-        </div>
+        
         {/* TODO: some design messing here */}
       </div>
       <div className="h-ful w-full flex flex-col items-center md:items-start  md:flex-row justify-center gap-10 sm:gap-20 lg:gap-0 lg:justify-between pt-10 lg:pt-20">
@@ -112,7 +96,7 @@ const CompatibilityContent = () => {
         </div>
       </div>
     </div>
-  );
+    );
 };
 
-export default CompatibilityContent;
+export default DiscoverContent;

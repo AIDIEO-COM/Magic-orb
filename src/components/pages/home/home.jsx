@@ -13,6 +13,7 @@ const Home = () => {
   const [cardClassName, setCardClassName] = useState("translate-y-[100%]");
   const [bannerSideContent, setBannerSideContent] = useState("opacity-0");
   const [bannerClassName, setBannerClassName] = useState(" opacity-0");
+  
   useEffect(() => {
     const timeOut = setTimeout(() => {
       setCardClassName("translate-y-0");
