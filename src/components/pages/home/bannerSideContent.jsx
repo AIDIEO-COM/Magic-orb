@@ -23,14 +23,6 @@ const BannerSideContent = ({ bannerSideContent }) => {
           ></Image>
           <BannerContent></BannerContent>
         </div>
-      {/* <div className="min-h-fit xl:h-[70%] w-full pr-1 xl:px-2 xl:pb-3 pt-4 xl:pt-0">
-            <div className="default-gradient rounded-[16px] w-full h-full min-h-fit ">
-              <p className="font-berlin text-[#FFC8AA] text-2xl md:text-3xl p-6">
-                Adds here for free version. Click to swap to the premium version
-                view
-              </p>
-            </div>
-          </div> */}
       <div
         onClick={handleStatisticShow}
         className="min-h-fit xl:h-[70%] w-full pr-1 xl:px-2 xl:pb-3 pt-4 xl:pt-0 cursor-pointer"
