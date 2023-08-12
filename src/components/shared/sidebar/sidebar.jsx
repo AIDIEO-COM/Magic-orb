@@ -92,7 +92,7 @@ const Sidebar = () => {
           <NavLink
             key={singleRoute.id}
             exact={singleRoute.href === "/"}
-            activeClassName="bg-gradient-to-b from-[#281B32] to-[#2d1e38f4]"
+            activeClassName="bg-gradient-to-b from-[#281B32] to-[#2d1e38f4] duration-500 transition-all"
             href={singleRoute.href}
             className="p-2 mx-4 rounded-lg ">
             <div className="flex items-center gap-2 ">

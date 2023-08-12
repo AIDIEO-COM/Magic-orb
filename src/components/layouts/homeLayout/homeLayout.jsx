@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import Sidebar from "../sidebar/Sidebar";
-import Navbar from "../navbar/Navbar";
+import Sidebar from "../../shared/sidebar/Sidebar";
+import Navbar from "../../shared/navbar/Navbar";
 
 const HomeLayout = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);

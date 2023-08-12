@@ -1,6 +1,6 @@
 "use client";
-import FriendRequest from "@/components/friendRequest/FriendRequest";
-import Notification from "@/components/notification/Notification";
+import FriendRequest from "@/components/shared/navbar/friendRequest/FriendRequest";
+import Notification from "@/components/shared/navbar/notification/Notification";
 import Image from "next/image";
 import React, { useState } from "react";
 import { FaBars, FaAngleRight } from "react-icons/fa";
