@@ -19,18 +19,17 @@ const HomeLayout = ({ children }) => {
     <div className="xl:grid grid-cols-8  relative bg-gradient-to-b from-[#442143] to-[#2B3057]">
       {/* mobile side drawer */}
       <div className="overflow-hidden h-fit w-fit xl:hidden">
-        <din
+        <div
           className={`h-screen overflow-y-scroll xl:hidden bg-gradient-to-b from-[#3D2D3B] to-[#232141] fixed top-0 left-0 ${
             sidebarOpen ? "" : "-translate-x-[100%]"
           } w-[60%] sm:w-[300px] z-50 duration-500`}
         >
-            <Sidebar></Sidebar>
-        </din>
+          <Sidebar></Sidebar>
+        </div>
         {sidebarOpen && (
           <button
             onClick={toggleSidebar}
-            className="absolute top-0 right-0 left-0 bottom-0 bg-black bg-opacity-30 z-[49]"
-          ></button>
+            className="absolute top-0 right-0 left-0 bottom-0 bg-black bg-opacity-30 z-[49]"></button>
         )}
       </div>
       {/* desktop sidebar */}

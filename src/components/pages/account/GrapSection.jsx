@@ -11,16 +11,19 @@ const stats = [
 const GrapSection = () => {
   return (
     <div className="flex flex-col sm:flex-row w-full gap-2 mt-8">
-      <div className="flex items-center gap-2 justify-between px-4 rounded-xl bg-[#221c3de0] shadow-[10px_10px_8px_10px_#00000024] grow sm:w-[50%]">
-        <div className="flex flex-col items-center w-[40%]">
+      <div className="flex items-center gap-2 justify-between px-4 rounded-xl bg-[#221c3de0] shadow-[10px_10px_8px_10px_#00000024] grow sm:w-[35%]">
+        <div className="flex flex-col items-start justify-center w-[50%] md:[40%]">
           <Image
             src="https://i.ibb.co/wNkY8bD/Screenshot-2023-08-10-112323-removebg-preview.png"
             alt="statistics"
             width={200}
             height={180}
+            className="w-[140px] md:w-[200px] "
           />
           {stats.map((singleStats) => (
-            <div key={singleStats.id} className="flex items-center gap-4 mb-2">
+            <div
+              key={singleStats.id}
+              className="flex items-center gap-1 md:gap-4 mb-2">
               <p className={`w-4 h-4 bg-[#DBCBF4] rounded-full`}></p>
               {/* TODO: Stats color not working */}
               <span className="text-[#DBCBF4] text-[10px] tracking-wider">
@@ -32,33 +35,35 @@ const GrapSection = () => {
             </div>
           ))}
         </div>
-        <div className="flex flex-col items-center justify-between gap-y-3 w-[60%]">
+        <div className="flex flex-col items-center justify-between gap-y-3 w-[50%] md:[60%]">
           <div className="flex flex-col">
-            <p className="text-[#E5BD9D] font-bold text-2xl">Personality</p>
+            <p className="text-[#E5BD9D] font-bold text-lg md:text-2xl">
+              Personality
+            </p>
             <span className="text-[#DBCBF4] text-[10px] tracking-wider text-center">
               IFTP Personality
             </span>
           </div>
-          <p className="text-[#E5BD9D] text-[9px] text-center">
+          <p className="text-[#E5BD9D] text-[9px] text-justify">
             Your personality is based on the emotions and trauma from the past.
             The best way to free the real you is by talking with a qualified
             person
           </p>
-          <div className="flex items-center mt-1 ">
-            <button className="text-[#E5BD9D] text-xs bg-[#674B53] px-2 font-semibold rounded-lg py-1">
+          <div className="flex items-center mt-1 gap-1">
+            <button className="text-[#E5BD9D] text-[10px] md:text-xs bg-[#674B53] px-1 md:px-2 font-semibold rounded-lg py-0.5 md:py-1">
               Free yourself
             </button>
-            <button className="text-[#E5BD9D] text-xs px-2 font-semibold rounded-lg py-1 underline">
+            <button className="text-[#E5BD9D] text-[10px] md:text-xs px-1 md:px-2 font-semibold rounded-lg py-0.5 md:py-1 underline">
               See full stats
             </button>
           </div>
         </div>
       </div>
-      <div className="default-gradient hidden md:flex items-center justify-between px-4 rounded-xl grow-0 w-[15%]"></div>
-      <div className="flex  items-center justify-between px-4 rounded-xl bg-[#221c3de0] shadow-[10px_10px_8px_10px_#00000024] grow sm:w-[33%]">
+      <div className="default-gradient hidden md:flex items-center justify-between px-4 rounded-xl grow-0 w-[30%]"></div>
+      <div className="flex  items-center justify-between px-4 rounded-xl bg-[#221c3de0] shadow-[10px_10px_8px_10px_#00000024] grow sm:w-[35%]">
         <div className="flex flex-col w-full justify-between gap-y-2 p-4">
           <div className="flex flex-col">
-            <p className="text-[#E5BD9D] font-bold text-2xl text-center">
+            <p className="text-[#E5BD9D] font-bold text-lg md:text-2xl text-center">
               Statistics
             </p>
             <span className="text-[#DBCBF4] text-[10px] tracking-wider text-center">
