@@ -6,7 +6,7 @@ import { useState } from "react";
 const Tools = () => {
   const [activeCard, setActiveCard] = useState(imageCardInfo[0]);
   return (
-    <div className="grid justify-items-center md:justify-items-stretch pt-32 md:pt-0 md:grid-cols-2 gap-8 relative z-0 font-berlin p-3 md:p-4 lg:p-0 min-h-[calc(100vh-60px)] ">
+    <div className="grid justify-items-center md:justify-items-stretch pt-32 md:pt-0 md:grid-cols-2 gap-8 relative z-0 font-berlin p-3 md:p-4 lg:p-0 min-h-[calc(100vh-60px)]  h-full">
       {/* TODO: hide overflow bottom */}
       <ToolsContent activeCard={activeCard}></ToolsContent>
       <div className="grid grid-cols-2 gap-4">
