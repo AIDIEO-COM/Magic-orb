@@ -27,12 +27,12 @@ const HomeLayout = ({ children }) => {
         )}
       </div>
       {/* desktop sidebar */}
-      <div className="hidden xl:inline-block lg:col-start-1 lg:col-end-2 bg-gradient-to-b from-[#442143] to-[#2B3057] border-r-2 border-white ">
+      <div className="hidden xl:inline-block lg:col-start-1 lg:col-end-2  border-r-2 border-white ">
         <Sidebar></Sidebar>
       </div>
       <div className="xl:col-start-2 xl:col-end-9">
         <Navbar toggleSidebar={toggleSidebar}></Navbar>
-        <div className="lg:p-8 lg:pb-0 w-full  bg-gradient-to-r from-[#3D2D3B] to-[#232141]">
+        <div className="lg:p-8 lg:pb-8 w-full  default-background-color">
         {children}
         </div>
       </div>

@@ -27,7 +27,7 @@ const Navbar = ({ toggleSidebar }) => {
           className="text-white text-2xl ml-3 cursor-pointer"></FaBars>
       </div>
       {/* navbar content here */}
-      <div className="w-[38%] h-7 bg-[#635B74] rounded-md py-[3px] px-2 font-berlin lg:flex justify-between hidden lg:absolute z-10">
+      <div className="w-[30%] h-7 bg-[#635B74] rounded-md py-[3px] px-2 font-berlin lg:flex justify-between hidden lg:absolute z-10">
         <input
           name="search"
           className="outline-none w-[80%] h-full bg-transparent text-white text-sm pl-1"
