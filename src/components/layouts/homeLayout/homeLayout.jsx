@@ -1,24 +1,31 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Sidebar from "../../shared/sidebar/Sidebar";
 import Navbar from "../../shared/navbar/Navbar";
+import { usePathname } from "next/navigation";
 
 const HomeLayout = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
   };
+  const currentPath = usePathname();
+  useEffect(() => {
+    if(currentPath === currentPath){
+      setSidebarOpen(false);
+    }
+  }, [currentPath])
   return (
     <div className="xl:grid grid-cols-8  relative bg-gradient-to-b from-[#442143] to-[#2B3057]">
       {/* mobile side drawer */}
       <div className="overflow-hidden h-fit w-fit xl:hidden">
-        <div
+        <din
           className={`h-screen overflow-y-scroll xl:hidden bg-gradient-to-b from-[#3D2D3B] to-[#232141] fixed top-0 left-0 ${
             sidebarOpen ? "" : "-translate-x-[100%]"
           } w-[60%] sm:w-[300px] z-50 duration-500`}
         >
-          <Sidebar></Sidebar>
-        </div>
+            <Sidebar></Sidebar>
+        </din>
         {sidebarOpen && (
           <button
             onClick={toggleSidebar}
@@ -33,7 +40,7 @@ const HomeLayout = ({ children }) => {
       <div className="xl:col-start-2 xl:col-end-9">
         <Navbar toggleSidebar={toggleSidebar}></Navbar>
         <div className="lg:p-8 lg:pb-8 w-full  default-background-color">
-        {children}
+          {children}
         </div>
       </div>
     </div>
