@@ -2,6 +2,7 @@
 import FriendRequest from "@/components/shared/navbar/friendRequest/FriendRequest";
 import Notification from "@/components/shared/navbar/notification/Notification";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 import { FaBars, FaAngleRight } from "react-icons/fa";
 const Navbar = ({ toggleSidebar }) => {
@@ -45,7 +46,9 @@ const Navbar = ({ toggleSidebar }) => {
           height={33}></Image>
       </div>
       <div className="flex w-fit h-full items-center gap-4 xl:gap-5 z-20 lg:absolute right-14">
+        <Link href={"/login"}>
         <button className="px-[13px] py-[2px] bg-[#BFB1D6] text-[#624652] font-berlin rounded-md">Log in</button>
+        </Link>
         <Image
           onClick={() => toggleNotificationModal("friendRequest")}
           src={"https://i.ibb.co/RTPVZK9/notification-modified-1.png"}
