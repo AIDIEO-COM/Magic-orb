@@ -14,7 +14,7 @@ const Policies = () => {
               <p>1.</p>
               <div>
                 <p className="inline-block">Terms and Conditions:</p>
-                <article className="inline ml-0.5 text-[#E5BD9D]">
+                <article className="inline ml-0.5 text-[#E5BD9D] ">
                   By accessing and using our website, you agree to comply with
                   the terms and conditions outlined below. b. The content on our
                   website is provided for informational and entertainment
@@ -32,7 +32,7 @@ const Policies = () => {
               <p>2.</p>
               <div>
                 <p className="inline-block">Accuracy of Information:</p>
-                <article className="inline ml-0.5 text-[#E5BD9D]">
+                <article className="inline ml-0.5 text-[#E5BD9D] ">
                   a. While we strive to provide accurate and up-to-date
                   information, we make no warranties or representations
                   regarding the completeness, accuracy, reliability, or
@@ -46,7 +46,7 @@ const Policies = () => {
               <p>3.</p>
               <div>
                 <p className="inline-block">Spiritual Advice:</p>
-                <article className="inline ml-0.5 text-[#E5BD9D]">
+                <article className="inline ml-0.5 text-[#E5BD9D] ">
                   a. The spiritual advice provided on our website is intended to
                   offer guidance and support. However, it is important to note
                   that everyone spiritual journey is unique, and our advice may

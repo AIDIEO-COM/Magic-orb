@@ -1,6 +1,5 @@
 import FirstSection from "@/components/pages/account/FirstSection";
 import GrapSection from "@/components/pages/account/GrapSection";
-import Image from "next/image";
 
 const subscriptionModel = [
   {
