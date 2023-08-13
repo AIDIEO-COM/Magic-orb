@@ -119,7 +119,7 @@ const Sidebar = () => {
           ))}
         </ul>
       </div>
-      <p className="absolute bottom-2 translate-x-[50%] text-white text-lg hidden sm:inline-block">
+      <p className="text-center w-full pt-2 text-white text-lg hidden sm:inline-block">
         #Com-orb
       </p>
     </div>
