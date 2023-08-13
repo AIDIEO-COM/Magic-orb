@@ -4,18 +4,18 @@ import { BiSolidChevronsLeft, BiSolidChevronsRight } from "react-icons/bi";
 
 const ToolsContent = ({ activeCard }) => {
   return (
-    <div className="max-auto w-[90%] md:w- max-w-[600px] min-h-[900px] -mt-28 border-r-2 sm:rotate-[3.00deg] bg-gradient-to-r from-[#442143] to-[#2B3057] lg:z-3">
-      <div className="mt-20 h-[350px] overflow-hidden">
-        <h3 className="text-center sm:-rotate-[3.00deg]  text-3xl font-bold text-[#DBCBF4]">
+    <div className=" w-[90%]  max-w-[600px]  -mt-28 border-r-2 sm:rotate-[3.00deg] bg-gradient-to-r from-[#442143] to-[#2B3057] lg:z-3 overflow-hidden">
+      <div className="mt-20 h-[350px] overflow-hidden sm:-rotate-3 w-[110%] -translate-x-[5%]">
+        <h3 className="text-center  text-3xl font-bold text-[#DBCBF4]">
           The Magic Orb
         </h3>
-        <div className="w-[650px] h-full sm:-rotate-3">
+        <div className="w-full h-full ">
           <Image
             src={activeCard.card_img_link}
             alt="the magic orb"
             width={700}
             height={500}
-            className="w-full h-full mt-6 sm:-ml-4 object-cover"
+            className="w-full h-full mt-6 object-cover"
           />
         </div>
       </div>
