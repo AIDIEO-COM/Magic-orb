@@ -62,17 +62,7 @@ const sidebarRoute2 = [
     id: "3",
     routeName: "About us",
     href: "/about-us",
-  },
-  {
-    id: "4",
-    routeName: "Registration",
-    href: "/registration",
-  },
-  {
-    id: "5",
-    routeName: "Log in",
-    href: "/login",
-  },
+  }
 ];
 
 const Sidebar = () => {

@@ -44,7 +44,8 @@ const Navbar = ({ toggleSidebar }) => {
           width={125}
           height={33}></Image>
       </div>
-      <div className="flex w-fit h-full items-center gap-4 z-20 lg:absolute right-14 ">
+      <div className="flex w-fit h-full items-center gap-4 xl:gap-5 z-20 lg:absolute right-14">
+        <button className="px-[13px] py-[2px] bg-[#BFB1D6] text-[#624652] font-berlin rounded-md">Log in</button>
         <Image
           onClick={() => toggleNotificationModal("friendRequest")}
           src={"https://i.ibb.co/RTPVZK9/notification-modified-1.png"}
