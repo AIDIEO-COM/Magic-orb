@@ -28,7 +28,7 @@ const Navbar = ({ toggleSidebar }) => {
           className="text-white text-2xl ml-3 cursor-pointer"></FaBars>
       </div>
       {/* navbar content here */}
-      <div className="w-[30%] h-7 bg-[#635B74] rounded-md py-[3px] px-2 font-berlin lg:flex justify-between hidden lg:absolute z-10">
+      <div className="w-[30%] h-7 bg-[#635B74] rounded-md py-[3px] px-2 font-berlin lg:flex justify-between hidden xl:absolute z-10">
         <input
           name="search"
           className="outline-none w-[80%] h-full bg-transparent text-white text-sm pl-1"
@@ -38,16 +38,16 @@ const Navbar = ({ toggleSidebar }) => {
         </button>
       </div>
       {/* logo for mobile device */}
-      <div className="lg:hidden">
+      <div className="xl:hidden">
         <Image
           src={"https://i.ibb.co/kxxsFW7/home-modified-3.png"}
           alt="logo"
           width={125}
           height={33}></Image>
       </div>
-      <div className="flex w-fit h-full items-center gap-4 xl:gap-5 z-20 lg:absolute right-14">
+      <div className="flex w-fit h-full items-center gap-4 xl:gap-5 z-20 xl:absolute right-14">
         <Link href={"/login"}>
-        <button className="px-[13px] py-[2px] bg-[#BFB1D6] text-[#624652] font-berlin rounded-md">Log in</button>
+        <button className="px-[13px] py-[2px] bg-[#BFB1D6] text-[#624652] font-berlin rounded-md hidden sm:inline-block">Log in</button>
         </Link>
         <Image
           onClick={() => toggleNotificationModal("friendRequest")}
