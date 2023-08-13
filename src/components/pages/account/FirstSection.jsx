@@ -34,7 +34,7 @@ const FirstSection = ({ subscriptionModel }) => {
             width={108}
             height={148}
           />
-          <button className="mx-auto text-[#E5BD9D] text-xs bg-[#674B53] px-2 font-semibold rounded-lg py-1">
+          <button className="mx-auto text-[#E5BD9D] text-xs bg-[#674B53] px-1 font-semibold rounded-lg py-1">
             Take the card
           </button>
         </div>

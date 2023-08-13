@@ -11,7 +11,7 @@ const stats = [
 const GrapSection = () => {
   return (
     <div className="flex flex-col sm:flex-row w-full gap-2 mt-8">
-      <div className="flex items-center gap-2 justify-between px-4 rounded-xl bg-[#221c3de0] shadow-[10px_10px_8px_10px_#00000024] grow sm:w-[40%]">
+      <div className="flex items-center gap-2 justify-between px-4 rounded-xl bg-[#221c3de0] shadow-[10px_10px_8px_10px_#00000024] grow sm:w-[35%]">
         <div className="flex flex-col items-start justify-center w-[50%] md:[40%]">
           <Image
             src="https://i.ibb.co/wNkY8bD/Screenshot-2023-08-10-112323-removebg-preview.png"
@@ -59,8 +59,8 @@ const GrapSection = () => {
           </div>
         </div>
       </div>
-      <div className="default-gradient hidden md:flex items-center justify-between px-4 rounded-xl grow-0 w-[15%]"></div>
-      <div className="flex  items-center justify-between px-4 rounded-xl bg-[#221c3de0] shadow-[10px_10px_8px_10px_#00000024] grow sm:w-[33%]">
+      <div className="default-gradient hidden md:flex items-center justify-between px-4 rounded-xl grow-0 w-[30%]"></div>
+      <div className="flex  items-center justify-between px-4 rounded-xl bg-[#221c3de0] shadow-[10px_10px_8px_10px_#00000024] grow sm:w-[35%]">
         <div className="flex flex-col w-full justify-between gap-y-2 p-4">
           <div className="flex flex-col">
             <p className="text-[#E5BD9D] font-bold text-lg md:text-2xl text-center">
