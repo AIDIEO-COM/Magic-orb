@@ -4,18 +4,18 @@ import React from "react";
 const FirstSection = ({ subscriptionModel }) => {
   return (
     <div className="flex flex-col lg:flex-row gap-4">
-      <div className="flex gap-4 w-full lg:w-auto justify-center">
+      <div className="flex gap-2 md:gap-4 w-full lg:w-auto justify-center">
         <div
-          className="w-full min-w-[280px] p-2 rounded-xl
+          className="w-full  p-2 rounded-xl
         shadow-[10px_10px_8px_10px_#00000024] ">
-          <p className="text-center text-[#DBCBF4] text-2xl font-semibold">
+          <p className="text-center text-[#DBCBF4] text-xl md:text-2xl font-semibold">
             Daily tasks
           </p>
           <ul className="mt-4">
             {[1, 2, 3].map((taskItem) => (
               <li
                 key={taskItem}
-                className="bg-gradient-to-r from-[#523843] to-[#634b56] px-4 py-2 text-[#E5BD9D] text-xs rounded-lg mb-2 md:w-fit mx-auto ">
+                className="bg-gradient-to-r from-[#523843] to-[#634b56] px-2 md:px-4 py-2 text-[#E5BD9D] text-xs rounded-lg mb-2 md:w-fit mx-auto ">
                 Talk with the orb 2 hours:
                 <span className="text-[#DBCBF4] text-[10px] tracking-wider ml-0.5">
                   3min/2hours
@@ -24,7 +24,7 @@ const FirstSection = ({ subscriptionModel }) => {
             ))}
           </ul>
         </div>
-        <div className="hidden p-4 sm:flex flex-col w-36 items-center justify-between rounded-xl bg-[#221c3de0] shadow-[10px_10px_8px_10px_#00000024]">
+        <div className=" p-4 flex flex-col w-fit md:w-36 items-center justify-between rounded-xl bg-[#221c3de0] shadow-[10px_10px_8px_10px_#00000024]">
           <p className="text-[#E5BD9D] text-xs font-semibold text-center">
             Redeem your gift card
           </p>
@@ -47,7 +47,7 @@ const FirstSection = ({ subscriptionModel }) => {
               width={120}
               height={120}
               alt="profile icon"
-              className="w-[90px] h-[90px] md:w-[120px] md:h-[120px]"
+              className="w-[70px] h-[70px] md:w-[120px] md:h-[120px]"
             />
             <p className="text-[#E5BD9D] font-semibold text-sm">Bulbul Ahmed</p>
             <p className="text-[#DBCBF4] font-semibold text-sm">

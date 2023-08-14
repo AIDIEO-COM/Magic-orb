@@ -13,7 +13,7 @@ const AstrologyContent = () => {
 
   return (
     <div className=" w-full h-full lg:p-7 xl:p-10 lg:overflow-hidden">
-      <div className="w-full flex flex-col items-center">
+      <div className="left-1/2 -translate-x-1/2 lg:w-full flex flex-col items-center absolute top-14 lg:relative lg:top-auto ">
         <h1 className="text-lg md:text-xl lg:text-3xl font-berlin font-semibold text-[#DBCBF4]">
           Create birth chart
         </h1>
@@ -34,7 +34,7 @@ const AstrologyContent = () => {
           <p className="text-sm lg:text-base">Chines</p>
         </div>
       </div>
-      <div className="h-ful w-full flex flex-col items-center md:items-start  md:flex-row justify-center gap-10 sm:gap-20 lg:gap-0 lg:justify-between pt-10 lg:pt-20">
+      <div className=" w-full flex flex-col items-center md:items-start  md:flex-row justify-center gap-10 sm:gap-20 lg:gap-0 lg:justify-between pt-10 lg:pt-20">
         <div className="w-[85%] sm:w-[60%] md:w-[25%] default-shadow bg-[#20192A] h-[500px] rounded-[50px] p-4 xl:px-8 text-[#DBCBF4] flex flex-col justify-between">
           <h1 className="text-base lg:text-3xl font-berlin text-center">
             New persons

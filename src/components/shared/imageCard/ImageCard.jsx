@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 
 const ImageCard = ({
@@ -12,16 +13,18 @@ const ImageCard = ({
   setActiveCard,
 }) => {
   return (
-    <div className="w-full h-full flex justify-center rounded-xl">
+    <div className={`w-full h-full flex justify-center rounded-xl `}>
       <Link
         className="relative w-[130px] h-[110px] sm:w-[170px] sm:h-[140px] lg:w-full lg:h-full bg-cover bg-center font-berlin  rounded-xl"
-        href={home ? href : "/tools"}>
+        href={home ? href : "/tools"}
+      >
         <div
           onClick={setActiveCard}
           className="relative w-[130px] default-shadow h-[110px] sm:w-[170px] sm:h-[140px] md:w-[200px] md:h-[160px] lg:w-full lg:h-full bg-cover bg-center font-berlin  rounded-xl"
           style={{
             backgroundImage: `url(${card_img_link})`,
-          }}>
+          }}
+        >
           <div className="absolute top-4 left-4 text-white text-sm hidden md:inline-block">
             <h2 className="text-sm text-[#FFC8AA]">{card_title}</h2>
             <p className="text-xs text-[#DBCBF4]">{card_subtitle}</p>
