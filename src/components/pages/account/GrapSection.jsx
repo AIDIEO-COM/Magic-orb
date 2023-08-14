@@ -2,10 +2,10 @@ import Image from "next/image";
 import React from "react";
 
 const stats = [
-  { id: "1", stats_color: "#7ECCF8", stats_time: 8, total_time: 3.6 },
-  { id: "2", stats_color: "#F8693C", stats_time: 8, total_time: 3.6 },
-  { id: "3", stats_color: "#9DF87E", stats_time: 8, total_time: 3.6 },
-  { id: "4", stats_color: "#DBCBF4", stats_time: 8, total_time: 3.6 },
+  { id: "1", stats_color: "bg-[#7ECCF8]", stats_time: 8, total_time: 3.6 },
+  { id: "2", stats_color: "bg-[#F8693C]", stats_time: 8, total_time: 3.6 },
+  { id: "3", stats_color: "bg-[#9DF87E]", stats_time: 8, total_time: 3.6 },
+  { id: "4", stats_color: "bg-[#DBCBF4]", stats_time: 8, total_time: 3.6 },
 ];
 
 const GrapSection = () => {
@@ -24,7 +24,8 @@ const GrapSection = () => {
             <div
               key={singleStats.id}
               className="flex items-center gap-1 md:gap-4 mb-2">
-              <p className={`w-4 h-4 bg-[#DBCBF4] rounded-full`}></p>
+              <p
+                className={`w-4 h-4 ${singleStats.stats_color} rounded-full`}></p>
               {/* TODO: Stats color not working */}
               <span className="text-[#DBCBF4] text-[10px] tracking-wider">
                 Today: {singleStats.stats_time}min
