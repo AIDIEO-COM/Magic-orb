@@ -1,11 +1,11 @@
-import PageWrapper from "@/app/PageWrapper";
+import PageWrapper from "@/components/shared/pageWrapper/PageWrapper";
 
 const Contact = () => {
   return (
     <PageWrapper>
-      <div className="font-berlin p-3 md:p-4 lg:p-0 min-h-[calc(100vh-60px)] h-full flex flex-col justify-center">
+      <div className="font-berlin p-3 md:p-4 lg:p-0 min-h-[calc(100vh-60px)] h-full flex flex-col justify-center lg:justify-start">
         <div className="max-w-[550px] h-fit mx-auto px-5 md:px-10 pb-4 rounded-xl bg-[#221c3de0] shadow-[10px_10px_8px_10px_#00000024] py-4  sm:py-6 sm:translate-y-1/3">
-          <div className="flex flex-col justify-center ">
+          <div className="flex flex-col justify-center  ">
             <p className="text-[#DBCBF4] font-semibold text-lg sm:text-3xl text-center">
               Contact us
             </p>
