@@ -6,7 +6,7 @@ const DreamInterContent = ({genarateIcon}) => {
     const [checkBtnIsClicked, setCheckBtnIsClicked] = useState(false);
   return (
     <div className=" w-full h-full lg:p-7 xl:p-10 lg:overflow-hidden">
-      <div className="w-full flex flex-col items-center">
+      <div className="left-1/2 -translate-x-1/2 w-full flex flex-col items-center absolute top-14 lg:relative lg:top-auto">
         <h1 className="text-lg md:text-xl lg:text-3xl font-berlin font-semibold text-[#FFC8AA]">
           Interpret your dream
         </h1>
@@ -27,8 +27,8 @@ const DreamInterContent = ({genarateIcon}) => {
           <p className="text-sm lg:text-base">Full dream meaning</p>
         </div>
       </div>
-      <div className="h-ful w-full flex flex-col items-center md:items-start  md:flex-row justify-center gap-10 sm:gap-20 lg:gap-0 lg:justify-between pt-10 lg:pt-20">
-        <div className="w-[85%] sm:w-[60%] md:w-[27%] xl:w-[22%] default-shadow bg-[#20192A] h-[500px] rounded-[50px] p-4 xl:px-5 text-[#FFC8AA] flex flex-col  bg-opacity-60">
+      <div className="h-ful w-full flex flex-col items-center md:items-start  md:flex-row justify-center gap-10 sm:gap-20 lg:gap-8 lg:justify-between pt-10 lg:pt-20">
+        <div className="w-[85%] sm:w-[60%] md:min-w-[27%] lg:min-w-[30%] 2xl:w-[22%] default-shadow bg-[#20192A] min-h-[400px] 2xl:min-h-[500px] rounded-[50px] p-4 xl:px-5 text-[#FFC8AA] flex flex-col  bg-opacity-60">
           <h1 className="text-base lg:text-3xl font-berlin text-center">
             Select symbols
           </h1>
@@ -49,7 +49,7 @@ const DreamInterContent = ({genarateIcon}) => {
             ))}
           </div>
         </div>
-        <div className="w-[85%] sm:w-[60%] md:w-[27%] xl:w-[22%] default-shadow bg-[#20192A] h-[500px] rounded-[50px] p-4 xl:px-8 text-[#FFC8AA] bg-opacity-60">
+        <div className="w-[85%] sm:w-[60%] md:min-w-[27%] lg:min-w-[30%] 2xl:w-[22%] default-shadow bg-[#20192A] min-h-[400px] 2xl:min-h-[500px]  rounded-[50px] p-4 xl:px-8 text-[#FFC8AA] bg-opacity-60">
           <h1 className="text-base lg:text-3xl font-berlin text-center">
             Dream history
           </h1>

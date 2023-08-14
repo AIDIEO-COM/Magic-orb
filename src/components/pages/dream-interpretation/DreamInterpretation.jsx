@@ -30,10 +30,10 @@ const DreamInterpretation = () => {
         alt="img"
         width={1000}
         height={1000}
-        className={`${firstTransitionImg} duration-700 absolute`}
+        className={`${firstTransitionImg} duration-700 lg:absolute`}
       ></Image>
       <div
-        className={`absolute top-10 lg:top-0 right-0 left-0 bottom-0 w-full h-full duration-1000 ${contentTransition}`}
+        className={`lg:absolute top-10 lg:top-0 right-0 left-0 bottom-0 w-full h-full duration-1000 ${contentTransition}`}
       >
         <DreamInterContent genarateIcon={genarateIcon}></DreamInterContent>
       </div>

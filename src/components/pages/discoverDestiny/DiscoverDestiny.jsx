@@ -45,7 +45,7 @@ const DiscoverDestiny = () => {
         className={`${secondBgImg} duration-700 w-full md:h-full`}
       ></Image>
       <div
-        className={`absolute top-10 lg:top-0 right-0 left-0 bottom-0 w-full h-full duration-1000 ${contentVisible} `}
+        className={`lg:absolute lg:top-0 right-0 left-0 bottom-0 w-full h-full duration-1000 ${contentVisible} `}
       >
         <DiscoverContent></DiscoverContent>
       </div>

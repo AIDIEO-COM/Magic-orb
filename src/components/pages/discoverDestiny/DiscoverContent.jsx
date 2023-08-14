@@ -25,8 +25,8 @@ const DiscoverContent = () => {
     setSelectRandomCards(true);
   }
   return (
-    <div className=" w-full h-full lg:p-7 xl:p-10  relative">
-      <div className="w-full flex flex-col items-center  relative">
+    <div className=" w-full h-full lg:p-7 xl:p-10 ">
+      <div className="left-1/2 -translate-x-1/2 w-full flex flex-col items-center absolute top-14 lg:relative lg:top-auto ">
         <h1 className="text-lg md:text-xl lg:text-3xl font-berlin font-semibold text-[#FFC8AA]">
           Choose cards to predict future
         </h1>
@@ -37,14 +37,14 @@ const DiscoverContent = () => {
           Select random cards
         </button>
       </div>
-      <div className="flex flex-col items-center pt-28 lg:pt-0 lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:top-28">
+      <div className="flex flex-col items-center pt-10 md:pt-28 lg:pt-0 lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:top-28">
         {selectRandomCards && <PredictCards selectedCards={selectedCards} togglePredictDetails={togglePredictDetails} showPredictDetails={showPredictDetails}></PredictCards>}
         {showPredictDetails && <PredictDetails resetPredict={resetPredict}></PredictDetails>}
       </div>
       {/* card containers */}
-      <div className="h-ful w-full flex flex-col items-center md:items-start  md:flex-row justify-center gap-10 sm:gap-20 lg:gap-0 lg:justify-between pt-10 lg:pt-16">
+      <div className="h-full w-full flex flex-col items-center md:items-start  md:flex-row justify-center gap-10 sm:gap-20 lg:gap-0 lg:justify-between lg:pt-16">
         <CardContainer selectRandomCards={selectRandomCards} genarateCards={genarateCards} setCard={setCard}></CardContainer>
-        <div className="w-[85%] sm:w-[60%] md:w-[27%] xl:w-[25%] default-shadow  h-[500px] rounded-[50px] p-4  xl:px-7 text-[#FFC8AA] bg-opacity-60">
+        <div className="w-[85%] mt-5 lg:mt-0 sm:w-[60%] md:w-[27%] xl:w-[25%] default-shadow md:shadow-none lg:default-shadow  h-[500px] rounded-[50px] p-4  xl:px-7 text-[#FFC8AA] bg-opacity-60">
           <h1 className="text-base lg:text-3xl font-berlin text-center">
             Prediction history
           </h1>
