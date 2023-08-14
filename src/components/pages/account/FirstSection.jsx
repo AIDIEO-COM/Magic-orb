@@ -3,8 +3,8 @@ import React from "react";
 
 const FirstSection = ({ subscriptionModel }) => {
   return (
-    <div className="flex flex-col lg:flex-row gap-4">
-      <div className="flex gap-2 md:gap-4 w-full lg:w-auto justify-center">
+    <div className="flex flex-col lg:grid grid-cols-3 gap-4">
+      <div className="flex gap-2 md:gap-4 w-full lg:w-auto justify-center lg:col-start-1 lg:col-end-2">
         <div
           className="w-full  p-2 rounded-xl
         shadow-[10px_10px_8px_10px_#00000024] ">
@@ -24,7 +24,7 @@ const FirstSection = ({ subscriptionModel }) => {
             ))}
           </ul>
         </div>
-        <div className=" p-4 flex flex-col w-fit md:w-36 items-center justify-between rounded-xl bg-[#221c3de0] shadow-[10px_10px_8px_10px_#00000024]">
+        <div className=" p-4 flex flex-col w-fit md:w-36 lg:w-40 items-center justify-between rounded-xl bg-[#221c3de0] shadow-[10px_10px_8px_10px_#00000024]">
           <p className="text-[#E5BD9D] text-xs font-semibold text-center">
             Redeem your gift card
           </p>
@@ -39,7 +39,7 @@ const FirstSection = ({ subscriptionModel }) => {
           </button>
         </div>
       </div>
-      <div className="grid sm:grid-cols-2 gap-4 w-fit lg:w-fit justify-center">
+      <div className="grid sm:grid-cols-2 gap-4 w-fit lg:w-fit justify-center col-start-2 col-end-4">
         <div className="default-gradient flex  items-center gap-4 p-4  shadow-[10px_10px_8px_10px_#00000024] rounded-xl ">
           <div className="flex flex-col items-center justify-center border-r-2 w-[60%]">
             <Image
