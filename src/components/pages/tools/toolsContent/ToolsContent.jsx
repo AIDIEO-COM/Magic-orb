@@ -8,10 +8,10 @@ const ToolsContent = ({ activeCard }) => {
     <AnimatePresence>
       <motion.div
        key="toolsContent"
-       initial={{ opacity: 0, duration: 5 }}
-       animate={{ opacity: 1, duration: 5 }}
-       exit={{ opacity: 0, duration: 5 }}
-       className="mx-auto w-[90%]  max-w-[600px]  -mt-28 border-r-2 sm:rotate-[3.00deg] bg-gradient-to-r from-[#442143] to-[#2B3057] lg:z-3 overflow-hidden">
+       initial={{ opacity: 0 }}
+       animate={{ opacity: 1 }}
+       exit={{ opacity: 0 }}
+       className="mx-auto w-[95%]  max-w-[600px]  -mt-28 border-r-2 sm:rotate-[3.00deg] bg-gradient-to-r from-[#442143] to-[#2B3057] lg:z-3 overflow-hidden">
         <div className="mt-20 h-[350px] overflow-hidden sm:-rotate-3 w-[110%] -translate-x-[5%]">
           <h3 className="text-center  text-3xl font-bold text-[#DBCBF4]">
             The Magic Orb
