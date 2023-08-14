@@ -1,4 +1,4 @@
-import PageWrapper from "@/app/PageWrapper";
+import PageWrapper from "@/components/shared/pageWrapper/PageWrapper";
 
 const AboutUs = () => {
   return (

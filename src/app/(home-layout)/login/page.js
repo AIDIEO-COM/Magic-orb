@@ -1,4 +1,4 @@
-import PageWrapper from "@/app/PageWrapper";
+import PageWrapper from "@/components/shared/pageWrapper/PageWrapper";
 import Link from "next/link";
 import { AiOutlineGoogle } from "react-icons/ai";
 import { FaFacebookF } from "react-icons/fa";

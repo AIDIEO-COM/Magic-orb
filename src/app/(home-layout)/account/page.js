@@ -1,4 +1,4 @@
-import PageWrapper from "@/app/pageWrapper";
+import PageWrapper from "@/components/shared/pageWrapper/PageWrapper";
 import FirstSection from "@/components/pages/account/FirstSection";
 import GrapSection from "@/components/pages/account/GrapSection";
 
