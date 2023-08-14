@@ -16,7 +16,7 @@ const HomeLayout = ({ children }) => {
     }
   }, [currentPath])
   return (
-    <div className="xl:grid grid-cols-8  relative bg-gradient-to-b from-[#442143] to-[#2B3057]">
+    <div className="xl:grid grid-cols-8  relative bg-gradient-to-b from-[#442143] to-[#2B3057] h-full">
       {/* mobile side drawer */}
       <div className="overflow-hidden h-fit w-fit xl:hidden">
         <div
