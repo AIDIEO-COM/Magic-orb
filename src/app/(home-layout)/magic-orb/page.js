@@ -3,11 +3,11 @@ import Image from "next/image"
 import { useEffect, useState } from "react";
 
 const MagicOrb = () => {
-  const [bannerClassName, setBannerClassName] = useState("w-[80%] h-[65%] duration-500");
+  const [bannerClassName, setBannerClassName] = useState("md:w-[80%] md:h-[65%] duration-500");
   const [chatBoxClassName, setChatBoxClassName] = useState("translate-y-[100%]");
   useEffect(() => {
     const timeOut = setTimeout(() => {
-      setBannerClassName("w-full h-[200px] md:h-[84%] duration-700")
+      setBannerClassName("w-full h-auto md:h-[84%] duration-700")
       setChatBoxClassName("translate-y-0")
     }, 5)
     return () => clearTimeout(timeOut)

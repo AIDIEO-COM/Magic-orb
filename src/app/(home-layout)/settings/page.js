@@ -1,9 +1,9 @@
 const Settings = () => {
   return (
-    <div className="font-berlin p-3 md:p-4 lg:p-0 h-[calc(100vh-60px)]">
-      <div className="default-gradient max-w-[550px] h-fit rounded-2xl mx-auto px-10 pb-4 ">
-        <div className="flex flex-col justify-center ">
-          <p className="text-[#E5BD9D] font-semibold text-[28px] text-center">
+    <div className="font-berlin p-3 md:p-4 lg:p-0 min-h-[calc(100vh-60px)] py-10 md:py-0">
+      <div className="default-gradient max-w-[550px] h-fit rounded-2xl mx-auto px-5 md:px-10 pb-4 ">
+        <div className="flex flex-col justify-center py-2 md:py-0">
+          <p className="text-[#E5BD9D] font-semibold text-lg sm:text-[28px] text-center">
             Settings
           </p>
           <hr className="border w-full border-[#DBCBF4] mb-0.5 mx-auto" />

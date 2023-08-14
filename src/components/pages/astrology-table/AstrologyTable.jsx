@@ -50,7 +50,7 @@ const AstrologyTable = () => {
           height={1000}
           className={`h-full w-full ${secondBgImg}  duration-1000 `}
         ></Image>
-        <div className={`absolute top-10 lg:top-0 right-0 left-0 bottom-0 w-full h-full ${astrologyContent} duration-1000`}>
+        <div className={`lg:absolute lg:top-0 right-0 left-0 bottom-0 w-full h-full ${astrologyContent} duration-1000`}>
           <AstrologyContent></AstrologyContent>
         </div>
       </div>
