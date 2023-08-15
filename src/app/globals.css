@@ -25,6 +25,12 @@
 }
 
 .nav-bg {
-    fill: linear-gradient(74deg, rgba(67, 33, 68, 0.50) 0%, rgba(82, 57, 70, 0.50) 100%);
-    filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.05));
+    background: linear-gradient(74deg, rgba(67, 33, 68, 0.50) 0%, rgba(82, 57, 70, 0.50) 100%);
+    box-shadow: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.05));
+}
+.account-box-gradient {
+    background: linear-gradient(212deg, #624652 10.17%, rgba(45, 34, 51, 0.35) 100%);
+}
+.account-box-shadow {
+    filter: drop-shadow(-17.716169357299805px 17.716169357299805px 7.086467742919922px rgba(0, 0, 0, 0.25)); 
 }

@@ -34,7 +34,7 @@ const Home = () => {
               alt="homepageimg"
               width={1000}
               height={1000}
-              className={`w-full h-full ${bannerClassName} duration-700 pr-3`}
+              className={`w-full h-full ${bannerClassName} duration-700 lg:pr-3`}
             ></Image>
             <div className="lg:hidden">
               <BannerContent></BannerContent>
