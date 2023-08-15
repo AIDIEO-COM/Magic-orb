@@ -7,7 +7,8 @@ import { AnimatePresence, motion } from "framer-motion";
 
 
 const Tools = () => {
-  const [activeCard, setActiveCard] = useState(imageCardInfo[0]);
+  const [activeCard, setActiveCard] = useState(imageCardInfo[6]);
+  const [previousActiveCardId, setPreviousActiveCardId] = useState(6);
   // const [initialCardTransition, setInitialCardTransition] = useState("grid-rows-1 absolute left-0 bottom-0 w-fit h-[200px]");
   // useEffect(() => {
   //   const timeOut = setTimeout(() => {
@@ -15,6 +16,13 @@ const Tools = () => {
   //   }, 700);
   //   return () => clearTimeout(timeOut);
   // }, []);
+  let cardsInfo = imageCardInfo;
+  const controlsSetCard = (singleImageCardInfo) => {
+    const getIndex = imageCardInfo.findIndex(card => card.id === singleImageCardInfo.id);
+    setPreviousActiveCardId(activeCard.id)
+    cardsInfo[getIndex] = activeCard;
+    setActiveCard({...singleImageCardInfo});
+  }
   return (
     <div className="grid justify-items-center md:justify-items-stretch pt-32 md:pt-0 md:grid-cols-2 gap-8 z-0 font-berlin p-3 md:p-4 lg:p-0 min-h-[calc(100vh-60px)]  h-full ">
       <ToolsContent activeCard={activeCard}></ToolsContent>
@@ -23,11 +31,13 @@ const Tools = () => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 0 }}
         className={` grid grid-cols-2 gap-4 2xl:gap-5 duration-700 pb-5`}>
-        {imageCardInfo.map((singleImageCardInfo) => (
+        {cardsInfo.slice(0,6).map((singleImageCardInfo, index) => (
           <ImageCard
-            key={singleImageCardInfo.id}
+            key={index}
             {...singleImageCardInfo}
-            setActiveCard={() => setActiveCard({ ...singleImageCardInfo })}
+            activeCard={activeCard}
+            previousActiveCardId={previousActiveCardId}
+            setActiveCard={()=> controlsSetCard(singleImageCardInfo)}
           />
         ))}
       </motion.div>

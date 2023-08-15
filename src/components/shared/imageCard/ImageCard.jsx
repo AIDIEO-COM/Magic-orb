@@ -1,6 +1,6 @@
-
+"use client"
 import Link from "next/link";
-
+import { useEffect, useState } from "react";
 const ImageCard = ({
   card_img_link,
   card_title,
@@ -11,22 +11,32 @@ const ImageCard = ({
   href,
   home,
   setActiveCard,
+  id,
+  previousActiveCardId
 }) => {
+  const [cardTransition2, setCardTransition2] = useState("");
+  useEffect(() => {
+    setCardTransition2("opacity-0")
+    const timer = setTimeout(() => {
+      setCardTransition2("transition duration-500 ease-in-out opacity-100");
+    },5)
+    return () => clearTimeout(timer);
+  }, [previousActiveCardId]);
   return (
-    <div className={`w-full h-full flex justify-center rounded-xl `}>
+    <div className={`w-full h-full flex justify-center rounded-xl`}>
       <Link
         className="relative w-[130px] h-[110px] sm:w-[170px] sm:h-[140px] lg:w-full lg:h-full bg-cover bg-center font-berlin  rounded-xl"
         href={home ? href : "/tools"}
       >
         <div
           onClick={setActiveCard}
-          className="relative w-[130px] default-shadow h-[110px] sm:w-[170px] sm:h-[140px] md:w-[200px] md:h-[160px] lg:w-full lg:h-full bg-cover bg-center font-berlin  rounded-xl"
+          className={`relative w-[130px] default-shadow h-[110px] sm:w-[170px] sm:h-[140px] md:w-[200px] md:h-[160px] lg:w-full lg:h-full bg-cover bg-center font-berlin rounded-xl ${previousActiveCardId === id && cardTransition2}`}
           style={{
             backgroundImage: `url(${card_img_link})`,
           }}
         >
           <div className="absolute top-4 left-4 text-white text-sm hidden md:inline-block">
-            <h2 className="text-sm text-[#FFC8AA]">{card_title}</h2>
+            <h2 className="text-sm lg:text-lg 2xl:text-xl text-[#FFC8AA]">{card_title}</h2>
             <p className="text-xs text-[#DBCBF4]">{card_subtitle}</p>
           </div>
           <div className="absolute bottom-2 left-4 text-[#FFC8AA] text-3xl hidden md:inline-block">
