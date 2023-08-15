@@ -18,12 +18,12 @@ const BannerSideContent = ({ bannerSideContent }) => {
           alt="sideimg"
           width={300}
           height={250}
-          className="w-full h-full"></Image>
+          className="w-full h-full z-1"></Image>
         <BannerContent></BannerContent>
       </div>
       <div
         onClick={handleStatisticShow}
-        className="min-h-fit xl:h-[65%] w-full pr-1 xl:px-2 xl:pb-3 pt-4 xl:pt-0 cursor-pointer mt-auto">
+        className="min-h-fit xl:h-[62%] w-full pr-1 xl:px-2 xl:pb-3 pt-4 xl:pt-0 cursor-pointer mt-auto">
         {isStatisticsShow === false && (
           <div className="default-gradient rounded-[16px] w-full h-full min-h-fit flex  items-center">
             <p className="font-berlin text-[#FFC8AA] text-xl md:text-2xl p-6 ">
