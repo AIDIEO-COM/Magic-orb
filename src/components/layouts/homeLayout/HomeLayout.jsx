@@ -33,7 +33,7 @@ const HomeLayout = ({ children }) => {
         )}
       </div>
       {/* desktop sidebar */}
-      <div className="hidden xl:inline-block w-[210px] border-r-2 border-white h-full">
+      <div className="hidden xl:inline-block w-[220px] border-r-2 border-white h-full">
         <Sidebar></Sidebar>
       </div>
       <div className="w-full h-full  overflow-hidden relative">

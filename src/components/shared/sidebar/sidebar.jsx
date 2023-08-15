@@ -16,14 +16,14 @@ const Sidebar = () => {
           className="mx-auto"
         />
       </div>
-      <div className="mt-8 flex flex-col gap-y-4 lg:gap-y-[30px]">
+      <div className="mt-8 flex flex-col gap-y-3 2xl:gap-y-[30px]">
         {sidebarRoute.map((singleRoute) => (
           <NavLink
             key={singleRoute.id}
             exact={singleRoute.href === "/"}
             activeClassName="bg-gradient-to-b from-[#281B32] to-[#2d1e38f4] duration-500 transition-all"
             href={singleRoute.href}
-            className="px-4 py-2 mx-3 2xl:mx-4 rounded-lg ">
+            className="px-4 py-2 mx-2 2xl:mx-4 rounded-lg ">
             <div className="flex items-center gap-[10px] ">
               <Image
                 src={singleRoute.iconLink}
@@ -38,18 +38,20 @@ const Sidebar = () => {
           </NavLink>
         ))}
       </div>
-      <hr className="mt-4 mx-4 border-2 border-[#00000075]" />
-      <div className="flex justify-center w-full mt-4">
-        <ul className="list-disc w-fit mx-auto list-white">
+      <hr className="my-4 mx-3 border-2 border-[#00000075]" />
+      <div className="mt-4 ml-8">
+        <ul className="list-disc list-white mt-2">
           {relationalRoute.map((singleRoute) => (
-            <li key={singleRoute.id} className="mb-1 text-white font-berlin">
+            <li
+              key={singleRoute.id}
+              className="mb-1 mx-6 text-white font-berlin">
               <Link href={singleRoute.href}>{singleRoute.routeName}</Link>
             </li>
           ))}
         </ul>
       </div>
-      <p className="text-center w-full pt-2 text-white text-lg hidden sm:inline-block absolute bottom-3">
-        #CoM-orb
+      <p className="text-center w-full pt-2 text-white text-lg hidden sm:inline-block absolute bottom-1 2xl:bottom-3">
+        @CoM-orb
       </p>
     </div>
   );

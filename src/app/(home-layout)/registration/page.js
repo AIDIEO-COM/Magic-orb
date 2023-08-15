@@ -57,7 +57,7 @@ const Registration = () => {
               </button>
               <Link href="/login">
                 <button className="text-[#E5BD9D] text-xs px-2 font-semibold rounded-lg py-1 underline">
-                  Logi
+                  Login
                 </button>
               </Link>
             </div>
