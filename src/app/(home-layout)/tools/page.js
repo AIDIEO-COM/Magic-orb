@@ -3,19 +3,12 @@ import ToolsContent from "@/components/pages/tools/toolsContent/ToolsContent";
 import ImageCard from "@/components/shared/imageCard/ImageCard";
 import imageCardInfo from "@/temp-data/imageCardInfo";
 import {  useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 
 const Tools = () => {
   const [activeCard, setActiveCard] = useState(imageCardInfo[6]);
   const [previousActiveCardId, setPreviousActiveCardId] = useState(6);
-  // const [initialCardTransition, setInitialCardTransition] = useState("grid-rows-1 absolute left-0 bottom-0 w-fit h-[200px]");
-  // useEffect(() => {
-  //   const timeOut = setTimeout(() => {
-  //     // setInitialCardTransition("grid-cols-2 ");
-  //   }, 700);
-  //   return () => clearTimeout(timeOut);
-  // }, []);
   let cardsInfo = imageCardInfo;
   const controlsSetCard = (singleImageCardInfo) => {
     const getIndex = imageCardInfo.findIndex(card => card.id === singleImageCardInfo.id);
@@ -24,7 +17,7 @@ const Tools = () => {
     setActiveCard({...singleImageCardInfo});
   }
   return (
-    <div className="grid justify-items-center md:justify-items-stretch pt-32 md:pt-0 md:grid-cols-2 gap-8 z-0 font-berlin p-3 md:p-4 lg:p-0 min-h-[calc(100vh-60px)]  h-full ">
+    <div className="grid justify-items-center md:justify-items-stretch pt-32 md:pt-0 md:grid-cols-2 gap-8 z-0 font-berlin p-3 md:p-4 lg:p-0 h-full ">
       <ToolsContent activeCard={activeCard}></ToolsContent>
       <motion.div
       initial={{ opacity: 0, y: 0 }}

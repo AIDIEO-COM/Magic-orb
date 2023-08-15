@@ -3,13 +3,14 @@ import FriendRequest from "@/components/shared/navbar/friendRequest/FriendReques
 import Notification from "@/components/shared/navbar/notification/Notification";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import { FaBars, FaAngleRight } from "react-icons/fa";
 const Navbar = ({ toggleSidebar }) => {
   const [isFrdReqNotificationModalOpen, setIsFrdReqNotificationModalOpen] =
     useState(false);
   const [isNotificationModalOpen, setIsNotificationModalOpen] = useState(false);
-
+  const path = usePathname();
   const toggleNotificationModal = (modalName) => {
     if (modalName === "friendRequest") {
       setIsNotificationModalOpen(false);
@@ -28,7 +29,7 @@ const Navbar = ({ toggleSidebar }) => {
           className="text-white text-2xl ml-3 cursor-pointer"></FaBars>
       </div>
       {/* navbar content here */}
-      <div className="w-[315px] lg:ml-0 xl:ml-[7%] bg-[#635B74] rounded-md py-[3px] px-[7px] font-berlin lg:flex justify-between items-center hidden xl:absolute z-10">
+      <div className={`w-[25%] lg:ml-0  ${path === '/tools' ? 'xl:ml-[14%]' : 'xl:ml-[7%]'} bg-[#635B74] rounded-md py-[3px] px-[7px] font-berlin lg:flex justify-between items-center hidden xl:absolute z-10`}>
         <input
           name="search"
           className="outline-none w-[80%] h-[16px] bg-transparent text-white text-sm pl-1 bg-[#635B74]"
