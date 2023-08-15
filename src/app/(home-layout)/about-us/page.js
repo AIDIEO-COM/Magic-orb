@@ -33,7 +33,7 @@ const AboutUs = () => {
                     and advisors share their knowledge and expertise to offer
                     guidance on a wide range of spiritual topics. Through
                     articles, blog posts, and personalized consultations, we aim
-                    to support individuals in finding answers, gaining new
+                    to support individuals, gaining new
                     perspectives, and deepening their understanding of
                     themselves and the universe.
                   </article>
