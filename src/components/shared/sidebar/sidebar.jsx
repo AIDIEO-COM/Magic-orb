@@ -25,8 +25,7 @@ const Sidebar = () => {
             exact={singleRoute.href === "/"}
             activeClassName="bg-gradient-to-b from-[#281B32] to-[#2d1e38f4] duration-500 transition-all"
             href={singleRoute.href}
-            className="px-4 py-2 mx-2 2xl:mx-4 rounded-lg "
-          >
+            className="px-4 py-2 mx-2 2xl:mx-4 rounded-lg font-berlin">
             <div className="flex items-center gap-[10px] ">
               <Image
                 src={singleRoute.iconLink}
@@ -34,7 +33,7 @@ const Sidebar = () => {
                 height={23}
                 alt={singleRoute.routeName}
               />
-              <p className="text-[20px] text-white font-berlin font-normal">
+              <p className="text-[20px] text-white font-berlin font-medium">
                 {singleRoute.routeName}
               </p>
             </div>
@@ -47,8 +46,7 @@ const Sidebar = () => {
           {relationalRoute.map((singleRoute) => (
             <li
               key={singleRoute.id}
-              className="mb-1 mx-6 text-white font-berlin"
-            >
+              className="mb-1 mx-6 text-white font-berlin">
               <Link href={singleRoute.href}>{singleRoute.routeName}</Link>
             </li>
           ))}

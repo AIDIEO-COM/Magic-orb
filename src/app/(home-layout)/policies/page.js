@@ -3,9 +3,9 @@ import PageWrapper from "@/components/transitions/pageWrapper/PageWrapper";
 const Policies = () => {
   return (
     <PageWrapper>
-      <div className="font-berlin p-3 md:p-4 lg:p-0  py-10 md:py-0 min-h-[calc(100vh-100px)] flex items-center">
+      <div className="font-sans p-3 md:p-4 lg:p-0  py-10 md:py-0 min-h-[calc(100vh-100px)] flex items-center">
         <div className="flex flex-col items-center justify-center max-w-[750px] rounded-xl bg-[#1A1725] shadow-[10px_10px_8px_10px_#00000024] p-5 md:py-8 md:px-14  mx-auto mb-4">
-          <p className="text-[#DBCBF4] font-berlin font-semibold text-xl sm:text-3xl">
+          <p className="text-[#DBCBF4] font-sans font-semibold text-xl sm:text-3xl">
             Policies
           </p>
           <div>
