@@ -45,7 +45,7 @@ const ImageCard = ({
             {try_count}
           </div>
           <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2  bg-[#6b5863] rounded-xl px-3 hidden md:inline-block">
-            <p className="text-[#E5BD9D] text-[11px]  lg:font-semibold tracking-wider text-center">
+            <p className="text-[#E5BD9D] text-[11px]  lg:font-semibold tracking-wider text-center font-berlin">
               {game_name}
             </p>
           </div>

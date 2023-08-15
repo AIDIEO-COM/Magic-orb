@@ -11,19 +11,18 @@ const HomeLayout = ({ children }) => {
   };
   const currentPath = usePathname();
   useEffect(() => {
-    if(currentPath === currentPath){
+    if (currentPath === currentPath) {
       setSidebarOpen(false);
     }
-  }, [currentPath])
+  }, [currentPath]);
   return (
-    <div className="flex  relative bg-gradient-to-b from-[#442143] to-[#2B3057] lg:h-screen w-screen">
+    <div className="flex  relative bg-gradient-to-b from-[#442143] to-[#2B3057] lg:h-screen w-screen font-berlin">
       {/* mobile side drawer */}
       <div className="overflow-hidden h-fit w-fit xl:hidden">
         <div
           className={`h-screen overflow-y-scroll xl:hidden bg-gradient-to-b from-[#3D2D3B] to-[#232141] fixed top-0 left-0 ${
             sidebarOpen ? "" : "-translate-x-[100%]"
-          } w-[60%] sm:w-[300px] z-50 duration-500`}
-        >
+          } w-[60%] sm:w-[300px] z-50 duration-500`}>
           <Sidebar></Sidebar>
         </div>
         {sidebarOpen && (
