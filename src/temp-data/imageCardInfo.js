@@ -117,7 +117,7 @@ const imageCardInfo = [
     try_count: 0,
     game_name: "Read now",
     try_remaining: 32,
-    href: "",
+    href: "/library",
     card_info: [
       {
         info_headline: "Spiritual Guidance",
@@ -148,7 +148,33 @@ const imageCardInfo = [
     try_count: 0,
     game_name: "Shop now",
     try_remaining: 32,
-    href: "",
+    href: "shop",
+    card_info: [
+      {
+        info_headline: "Spiritual Guidance",
+        info_description:
+          "Our experienced team of spiritual practitioners, mentors, and advisors share their knowledge and expertise to offer guidance on a wide range of spiritual topics. Through articles, blog posts, and personalized consultations, we aim to support individuals in finding answers, gaining new perspectives, and deepening their understanding _of themselves and the universe.",
+      },
+      {
+        info_headline: "Spiritual Guidance",
+        info_description:
+          "Our experienced team of spiritual practitioners, mentors, and advisors share their knowledge and expertise to offer guidance on a wide range of spiritual topics. Through articles, blog posts, and personalized consultations, we aim to support individuals in finding answers, gaining new perspectives, and deepening their understanding _of themselves and the universe.",
+      },
+    ],
+    activity: {
+      time: [8, 4],
+      total: [3.5, 5],
+    },
+  },
+  {
+    id: "7",
+    card_img_link: "https://i.ibb.co/RD05jMX/Tool-label-1.png",
+    card_title: "Magic Orb",
+    card_subtitle: "Talk with your personal assistant",
+    try_count: 0,
+    game_name: "Shop now",
+    try_remaining: 32,
+    href: "/magic-orb",
     card_info: [
       {
         info_headline: "Spiritual Guidance",

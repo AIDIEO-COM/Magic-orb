@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import GiftCardHome from "./GiftCardHome";
 import BannerSideContent from "./BannerSideContent";
 import imageCardInfo from '@/temp-data/imageCardInfo'
+import GiftCard from "@/components/shared/giftCard/GiftCard";
 
 
 const Home = () => {
@@ -54,7 +55,9 @@ const Home = () => {
           ))}
         </div>
         {/* gift card */}
-        <GiftCardHome></GiftCardHome>
+        <div className="col-start-4 col-end-5 mt-2 justify-items-center hidden lg:inline-block">
+          <GiftCard home={true}></GiftCard>
+        </div>
         <div
           className={`flex justify-between gap-x-4  lg:col-start-5 lg:col-end-8 mt-10 lg:mt-[25px] items-center `}
         >
