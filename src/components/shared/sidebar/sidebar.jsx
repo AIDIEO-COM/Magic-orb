@@ -6,32 +6,32 @@ import relationalRoute from "@/routes-data/sidebarRoute/relationalRoute";
 
 const Sidebar = () => {
   return (
-    <div className="font-berlin">
-      <div className="mt-4">
+    <div className="font-berlin relative h-full">
+      <div className="pt-5">
         <Image
-          width={160}
+          width={120}
           height={51}
           src="https://i.ibb.co/kxxsFW7/home-modified-3.png"
           alt="magic orb logo"
           className="mx-auto"
         />
       </div>
-      <div className="mt-8 flex flex-col gap-y-4 lg:gap-y-3">
+      <div className="mt-8 flex flex-col gap-y-4 lg:gap-y-[30px]">
         {sidebarRoute.map((singleRoute) => (
           <NavLink
             key={singleRoute.id}
             exact={singleRoute.href === "/"}
             activeClassName="bg-gradient-to-b from-[#281B32] to-[#2d1e38f4] duration-500 transition-all"
             href={singleRoute.href}
-            className="p-2 mx-4 rounded-lg ">
-            <div className="flex items-center gap-2 ">
+            className="px-4 py-2 mx-3 2xl:mx-4 rounded-lg ">
+            <div className="flex items-center gap-[10px] ">
               <Image
                 src={singleRoute.iconLink}
-                width={41}
-                height={41}
+                width={23}
+                height={23}
                 alt={singleRoute.routeName}
               />
-              <p className="text-lg text-white font-berlin font-semibold">
+              <p className="text-[20px] text-white font-berlin font-normal">
                 {singleRoute.routeName}
               </p>
             </div>
@@ -48,8 +48,8 @@ const Sidebar = () => {
           ))}
         </ul>
       </div>
-      <p className="text-center w-full pt-2 text-white text-lg hidden sm:inline-block">
-        #Com-orb
+      <p className="text-center w-full pt-2 text-white text-lg hidden sm:inline-block absolute bottom-3">
+        #CoM-orb
       </p>
     </div>
   );

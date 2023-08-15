@@ -16,7 +16,7 @@ const HomeLayout = ({ children }) => {
     }
   }, [currentPath])
   return (
-    <div className="xl:grid grid-cols-8 relative bg-gradient-to-b from-[#442143] to-[#2B3057] lg:h-screen w-screen">
+    <div className="flex  relative bg-gradient-to-b from-[#442143] to-[#2B3057] lg:h-screen w-screen">
       {/* mobile side drawer */}
       <div className="overflow-hidden h-fit w-fit xl:hidden">
         <div
@@ -33,12 +33,12 @@ const HomeLayout = ({ children }) => {
         )}
       </div>
       {/* desktop sidebar */}
-      <div className="hidden xl:inline-block lg:col-start-1 lg:col-end-2  border-r-2 border-white h-full">
+      <div className="hidden xl:inline-block w-[210px] border-r-2 border-white h-full">
         <Sidebar></Sidebar>
       </div>
-      <div className="xl:col-start-2 xl:col-end-9 h-full  overflow-hidden relative">
+      <div className="w-full h-full  overflow-hidden relative">
         <Navbar toggleSidebar={toggleSidebar}></Navbar>
-        <div className="lg:py-[37px] lg:px-[42px] w-full h-full default-background-color">
+        <div className="lg:pt-[25px] lg:pb-[40px] lg:px-[32px] xl:pb-[45px] xl:px-[42px] w-full h-full default-background-color">
           {children}
         </div>
       </div>

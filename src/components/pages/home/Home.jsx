@@ -47,18 +47,18 @@ const Home = () => {
         className={` w-full lg:grid lg:grid-cols-7  overflow-hidden gap-x-[29px] duration-700 ${cardClassName}`}
       >
         <div
-          className={`flex justify-between lg:col-start-1 lg:col-end-4 mt-[25px] items-center gap-x-[29px] `}
+          className={`flex justify-between lg:col-start-1 lg:col-end-4 mt-[20px] items-center gap-x-[29px] `}
         >
           {imageCardInfo.slice(0, 2).map((singleImageCardInfo) => (
             <ImageCard key={singleImageCardInfo.id} {...singleImageCardInfo} home={true}/>
           ))}
         </div>
         {/* gift card */}
-        <div className="col-start-4 col-end-5 mt-2 justify-items-center w-full hidden lg:inline-block">
+        <div className="col-start-4 col-end-5 mt-1 justify-items-center w-full hidden lg:inline-block">
           <GiftCard home={true}></GiftCard>
         </div>
         <div
-          className={`flex justify-between gap-x-[30px]  lg:col-start-5 lg:col-end-8 mt-10 lg:mt-[25px] items-center `}
+          className={`flex justify-between gap-x-[30px]  lg:col-start-5 lg:col-end-8 mt-10 lg:mt-[20px] items-center `}
         >
           {imageCardInfo.slice(2, 4).map((singleImageCardInfo) => (
             <ImageCard key={singleImageCardInfo.id} {...singleImageCardInfo} home={true}/>
