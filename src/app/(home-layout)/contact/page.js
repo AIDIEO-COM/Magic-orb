@@ -1,4 +1,4 @@
-import PageWrapper from "@/components/shared/pageWrapper/PageWrapper";
+import PageWrapper from "@/components/transitions/pageWrapper/PageWrapper";
 
 const Contact = () => {
   return (

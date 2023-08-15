@@ -1,3 +1,4 @@
+import GiftCard from "@/components/shared/giftCard/GiftCard";
 import Image from "next/image";
 import React from "react";
 
@@ -24,20 +25,7 @@ const FirstSection = ({ subscriptionModel }) => {
             ))}
           </ul>
         </div>
-        <div className=" p-4 flex flex-col w-fit md:w-36 lg:w-40 items-center justify-between rounded-xl bg-[#221c3de0] shadow-[10px_10px_8px_10px_#00000024]">
-          <p className="text-[#E5BD9D] text-xs font-semibold text-center">
-            Redeem your gift card
-          </p>
-          <Image
-            src="https://i.ibb.co/GCDyhJw/Default-cosmic-pink-gift-card-0-3507d5d2-e214-4bf6-b126-ff41039a25cf-0-1.png"
-            alt="gift card"
-            width={108}
-            height={148}
-          />
-          <button className="mx-auto text-[#E5BD9D] text-xs bg-[#674B53] px-1 font-semibold rounded-lg py-1">
-            Take the card
-          </button>
-        </div>
+        <GiftCard></GiftCard>
       </div>
       <div className="grid sm:grid-cols-2 gap-4 w-fit lg:w-fit justify-center col-start-2 col-end-4">
         <div className="default-gradient flex  items-center gap-4 p-4  shadow-[10px_10px_8px_10px_#00000024] rounded-xl ">

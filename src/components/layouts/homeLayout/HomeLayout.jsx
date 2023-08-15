@@ -36,9 +36,9 @@ const HomeLayout = ({ children }) => {
       <div className="hidden xl:inline-block lg:col-start-1 lg:col-end-2  border-r-2 border-white h-full">
         <Sidebar></Sidebar>
       </div>
-      <div className="xl:col-start-2 xl:col-end-9 h-full default-background-color">
+      <div className="xl:col-start-2 xl:col-end-9 h-full default-background-color overflow-hidden relative">
         <Navbar toggleSidebar={toggleSidebar}></Navbar>
-        <div className="lg:p-8 lg:pb-8 w-full default-background-color">
+        <div className="lg:p-8 lg:pb-0 w-full default-background-color">
           {children}
         </div>
       </div>

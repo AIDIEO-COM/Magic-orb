@@ -1,7 +1,8 @@
-import Image from "next/image";
 import React from "react";
 import { BiSolidChevronsLeft, BiSolidChevronsRight } from "react-icons/bi";
 import { AnimatePresence, motion } from "framer-motion";
+import ToolsContentImgAnimate from "@/components/transitions/toolsContentImgAnimate/ToolsContentImgAnimate";
+import Link from "next/link";
 
 const ToolsContent = ({ activeCard }) => {
   return (
@@ -11,20 +12,12 @@ const ToolsContent = ({ activeCard }) => {
        initial={{ opacity: 0 }}
        animate={{ opacity: 1 }}
        exit={{ opacity: 0 }}
-       className="mx-auto w-[95%]  max-w-[600px]  -mt-28 border-r-2 sm:rotate-[3.00deg] bg-gradient-to-r from-[#442143] to-[#2B3057] lg:z-3 overflow-hidden">
-        <div className="mt-20 h-[350px] overflow-hidden sm:-rotate-3 w-[110%] -translate-x-[5%]">
-          <h3 className="text-center  text-3xl font-bold text-[#DBCBF4]">
-            The Magic Orb
+       className="mx-auto w-[95%]   max-w-[600px]  -mt-28 border-r-2 sm:rotate-[3.00deg] bg-gradient-to-r from-[#442143] to-[#2B3057] lg:z-3 overflow-hidden h-[120%] ">
+        <div className="mt-24 h-[350px] overflow-hidden sm:-rotate-3 w-[110%] -translate-x-[5%]">
+          <h3 className="text-center text-xl md:text-3xl font-semibold text-[#DBCBF4]">
+            {activeCard.card_title === "Magic Orb" ? "The Magic Orb" : activeCard.card_title}
           </h3>
-          <div className="w-full h-full ">
-            <Image
-              src={activeCard.card_img_link}
-              alt="the magic orb"
-              width={700}
-              height={500}
-              className="w-full h-full mt-6 object-cover"
-            />
-          </div>
+          <ToolsContentImgAnimate imgLink={activeCard.card_img_link}></ToolsContentImgAnimate>
         </div>
         <div className="mt-14 px-8 grid sm:grid-cols-2 justify-items-end">
           <div>
@@ -61,9 +54,11 @@ const ToolsContent = ({ activeCard }) => {
               </div>
             </div>
             <div className="sm:-rotate-3 mb-8 relative">
-              <p className="bg-[#BFB1D6] text-[#624652] text-[15px] w-fit px-3 py-1 font-semibold rounded-md cursor-pointer">
+              <Link href={activeCard.href}>
+              <button className="bg-[#BFB1D6] text-[#624652] text-[15px] w-fit px-3 py-1 font-semibold rounded-md cursor-pointer">
                 Use tool
-              </p>
+              </button>
+              </Link>
               <BiSolidChevronsLeft
                 className="absolute -top-4 -left-14"
                 size={25}
