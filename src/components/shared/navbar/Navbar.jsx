@@ -20,7 +20,7 @@ const Navbar = ({ toggleSidebar }) => {
     }
   };
   return (
-    <div className=" h-[49px] bg-gradient-to-b from-[#3D2D3B] to-[#232141] flex items-center justify-between relative z-1">
+    <div className=" h-[49px] flex items-center justify-between relative z-1 nav-bg" >
       {/* menubar for mobile */}
       <div className="xl:hidden">
         <FaBars

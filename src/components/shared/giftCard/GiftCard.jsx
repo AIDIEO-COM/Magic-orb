@@ -13,7 +13,7 @@ const GiftCard = ({ home }) => {
   return (
     <div
       className={`p-5 ${
-        home && "mt-4"
+        home && "mt-4 w-full"
       } mx-auto   xl:w-40 xl:h-[180px] 2xl:w-44 2xl:h-[250px]  rounded-xl bg-[#221c3de0] shadow-[10px_10px_8px10px#00000024] default-shadow relative`}
     >
       <button
