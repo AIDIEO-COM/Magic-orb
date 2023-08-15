@@ -19,14 +19,14 @@ const ToolsContent = ({ activeCard }) => {
           </h3>
           <ToolsContentImgAnimate imgLink={activeCard.card_img_link}></ToolsContentImgAnimate>
         </div>
-        <div className="mt-14 px-8 grid sm:grid-cols-2 justify-items-end">
+        <div className="mt-14 px-8 grid sm:grid-cols-2 justify-items-end ">
           <div>
             <p className="text-[#DBCBF4] sm:-rotate-3">Info</p>
             <div className="sm:-rotate-3 ml-2">
               {activeCard.card_info.map((infoItem, index) => (
                 <p key={index} className="text-[10px] mb-4 text-[#E5BD9D]">
                   <span className="text-[#DBCBF4]">
-                    {infoItem.info_headline}:{" "}
+                    {infoItem.info_headline}:
                   </span>
                   {infoItem.info_description}
                 </p>

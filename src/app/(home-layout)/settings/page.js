@@ -3,11 +3,11 @@ const Settings = () => {
     <div className="font-berlin p-3 md:p-4 lg:p-0 min-h-[calc(100vh-60px)] py-10 md:py-0">
       <div className="default-gradient max-w-[550px] h-fit rounded-2xl mx-auto px-5 md:px-10 pb-4 ">
         <div className="flex flex-col justify-center py-2 md:py-0">
-          <p className="text-[#E5BD9D] font-semibold text-lg sm:text-[28px] text-center">
+          <p className="text-[#E5BD9D] font-semibold text-lg sm:text-[28px] text-center pt-6 pb-3">
             Settings
           </p>
           <hr className="border w-full border-[#DBCBF4] mb-0.5 mx-auto" />
-          <p className="text-[10px] text-[#DBCBF4] tracking-wider text-center">
+          <p className="text-[10px] text-[#DBCBF4] tracking-wider text-center pt-[2px]">
             Make sure you have the best environment
           </p>
           <p className="text-[#E5BD9D] text-sm font-semibold mt-2">Account:</p>
