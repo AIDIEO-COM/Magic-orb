@@ -23,7 +23,7 @@ const CompatibilityCheck = () => {
         height={1000}
         className={`${firstTransitionImg} duration-700 lg:absolute`}
       ></Image>
-      <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:flex xl:gap-12 2xl:gap-24 hidden ${secondBgImg} duration-700`}>
+      <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/3 lg:flex xl:gap-12 2xl:gap-24 hidden ${secondBgImg} duration-700`}>
         <Image
           src={"https://i.ibb.co/7WQWsnk/LEft.png"}
           alt="img"

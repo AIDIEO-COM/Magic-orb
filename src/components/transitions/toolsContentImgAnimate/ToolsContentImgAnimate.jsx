@@ -11,15 +11,14 @@ const ToolsContentImgAnimate = ({imgLink}) => {
         }, 5)
         return () => clearTimeout(timer);
     }, [imgLink]);
-    console.log(imgLink)
     return (
         <div className={`w-full h-full duration-500 ${imgLink === imgLink && transition}`}>
             <Image
               src={imgLink}
               alt="the magic orb"
-              width={700}
-              height={500}
-              className="w-full h-full mt-6 object-cover"
+              width={1000}
+              height={1000}
+              className="w-full h-full mt-6 bg-center"
             />
           </div>
     );

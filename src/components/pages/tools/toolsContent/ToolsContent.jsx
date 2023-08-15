@@ -15,13 +15,13 @@ const ToolsContent = ({ activeCard }) => {
        className="mx-auto w-[95%]   max-w-[600px]  -mt-28 border-r-2 sm:rotate-[3.00deg] bg-gradient-to-r from-[#442143] to-[#2B3057] lg:z-3 overflow-hidden h-[120%] "
        style={{boxShadow: '20px 4px 20px 0px rgba(0, 0, 0, 0.25), 20px 4px 20px 0px rgba(0, 0, 0, 0.25) inset'}}
        >
-        <div className="mt-24 h-[350px] overflow-hidden sm:-rotate-3 w-[110%] -translate-x-[5%]">
+        <div className="mt-24 h-[400px] overflow-hidden sm:-rotate-3 w-[110%] -translate-x-[5%]">
           <h3 className="text-center text-xl md:text-3xl font-semibold text-[#DBCBF4]">
             {activeCard.card_title === "Magic Orb" ? "The Magic Orb" : activeCard.card_title}
           </h3>
           <ToolsContentImgAnimate imgLink={activeCard.card_img_link}></ToolsContentImgAnimate>
         </div>
-        <div className="mt-14 px-8 grid sm:grid-cols-2 justify-items-end ">
+        <div className="mt-14 px-8 grid sm:grid-cols-2 justify-items-center gap-y-3 md:justify-items-end ">
           <div>
             <p className="text-[#DBCBF4] sm:-rotate-3">Info</p>
             <div className="sm:-rotate-3 ml-2">

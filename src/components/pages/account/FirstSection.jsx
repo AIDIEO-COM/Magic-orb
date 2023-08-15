@@ -29,7 +29,7 @@ const FirstSection = ({ subscriptionModel }) => {
         </div>
         <GiftCard></GiftCard>
       </div>
-      <div className="grid sm:grid-cols-2 gap-4 w-fit lg:w-full justify-center col-start-2 col-end-4">
+      <div className="grid sm:grid-cols-2 gap-4 w-fit lg:w-full justify-center col-start-2 col-end-4 ">
         <div className="account-box-gradient flex  items-center gap-4 p-4  shadow-[10px_10px_8px_10px_#00000024] rounded-xl ">
           <div className="flex flex-col items-center justify-center border-r-2 w-[60%]">
             <Image
@@ -81,7 +81,7 @@ const FirstSection = ({ subscriptionModel }) => {
             </button>
           </div>
         </div>
-        <div className="rounded-xl bg-[#20192A] shadow-[10px_10px_8px_10px_#00000024]  p-[15px] h-full">
+        <div className="rounded-xl bg-[#20192A] shadow-[10px_10px_8px_10px_#00000024]  p-[15px] h-full lg:w-[100%]">
           <p className="text-2xl font-semibold text-[#DBCBF4] text-center font-sans">
             Subscriptions
           </p>
