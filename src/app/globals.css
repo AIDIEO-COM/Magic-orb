@@ -3,10 +3,57 @@
 @tailwind utilities;
 @import url('https://fonts.cdnfonts.com/css/berlin-sans-fb');
 
-.default-gradient {
-    background: linear-gradient(223deg, #704F5A 0%, #0F1020 100%);
-    box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.25);
+@font-face {
+  font-family: "BerlinSansFB";
+  src: url("/BerlinSansFB.ttf") format("truetype");
+  /* You can include additional font weights and formats if needed */
 }
+
+* {
+  font-family: "BerlinSansFB", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.default-gradient {
+  background: linear-gradient(223deg, #704f5a 0%, #0f1020 100%);
+  box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
 .default-shadow {
-    box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.default-background-color {
+  background: linear-gradient(
+      45deg,
+      #0d0f1e 0%,
+      rgba(0, 0, 0, 0) 100%,
+      rgba(0, 0, 0, 0) 100%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    linear-gradient(0deg, #232141 0%, #3d2d3b 100%);
+}
+
+.nav-bg {
+  background: linear-gradient(
+    74deg,
+    rgba(67, 33, 68, 0.5) 0%,
+    rgba(82, 57, 70, 0.5) 100%
+  );
+  box-shadow: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.05));
+}
+.account-box-gradient {
+  background: linear-gradient(
+    212deg,
+    #624652 10.17%,
+    rgba(45, 34, 51, 0.35) 100%
+  );
+}
+.account-box-shadow {
+  filter: drop-shadow(
+    -17.716169357299805px 17.716169357299805px 7.086467742919922px rgba(0, 0, 0, 0.25)
+  );
 }

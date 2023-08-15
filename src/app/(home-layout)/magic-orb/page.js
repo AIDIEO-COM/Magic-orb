@@ -3,11 +3,11 @@ import Image from "next/image"
 import { useEffect, useState } from "react";
 
 const MagicOrb = () => {
-  const [bannerClassName, setBannerClassName] = useState("w-[80%] h-[65%] duration-500");
+  const [bannerClassName, setBannerClassName] = useState("md:w-[80%] md:h-[65%] duration-500");
   const [chatBoxClassName, setChatBoxClassName] = useState("translate-y-[100%]");
   useEffect(() => {
     const timeOut = setTimeout(() => {
-      setBannerClassName("w-full h-[200px] md:h-[84%] duration-700")
+      setBannerClassName("w-full h-auto md:h-[84%] duration-700")
       setChatBoxClassName("translate-y-0")
     }, 5)
     return () => clearTimeout(timeOut)
@@ -24,7 +24,7 @@ const MagicOrb = () => {
         ></Image>
         {/* chat box */}
         <div className="overflow-hidden">
-        <div className={`mx-auto md:absolute left-1/2 md:-translate-x-1/2 ${chatBoxClassName} md:bottom-12 w-[90%] md:w-[60%] xl:w-[850px] h-[400px] md:h-[300px] rounded-xl bg-[#20192A] px-5 md:px-10 py-5 duration-700`}>
+        <div className={`mx-auto absolute left-1/2 -translate-x-1/2 top-[20vh] md:top-auto ${chatBoxClassName} md:bottom-12 w-[90%] md:w-[60%] xl:w-[850px] h-[50vh] md:h-[300px] rounded-xl bg-[#20192A] px-5 md:px-10 py-5 duration-700`}>
           <h1 className="text-[#DBCBF4] font-berlin text-xl md:text-3xl text-center">Chat with the magic orb</h1>
           <div className="text-left w-full h-fit px-2 mt-5">
             <p className="text-[#E5BD9D] font-berlin text-base md:text-lg ">Orb: How can I help you today?</p>

@@ -11,7 +11,7 @@ const CompatibilityContent = () => {
   const [checkBtnIsClicked, setCheckBtnIsClicked] = useState(false);
   return (
     <div className=" w-full h-full lg:p-7 xl:p-10 lg:overflow-hidden">
-      <div className="w-full flex flex-col items-center">
+      <div className="left-1/2 -translate-x-1/2 w-full flex flex-col items-center absolute top-14 lg:relative lg:top-auto">
         <h1 className="text-lg md:text-xl lg:text-3xl font-berlin font-semibold text-[#FFC8AA]">
           Check Compatibility
         </h1>
@@ -31,10 +31,16 @@ const CompatibilityContent = () => {
           </div>
           <p className="text-sm lg:text-base">Chines</p>
         </div>
-        {/* TODO: some design messing here */}
+        <div className="mt-3 flex flex-col items-center">
+          <div className="flex gap-[45px]">
+            <div className="w-[52px] h-[52px] bg-[#FFFFFF45] rounded-full flex justify-center items-center"></div>
+            <div className="w-[50px] h-[50px] bg-[#FFFFFF45] rounded-full flex justify-center items-center"></div>
+          </div>
+          <button className="bg-[#674B53] text-[#E5BD9D] px-[11px] py-1 rounded-3xl mt-4 text-sm">Check soulmates</button>
+        </div>
       </div>
-      <div className="h-ful w-full flex flex-col items-center md:items-start  md:flex-row justify-center gap-10 sm:gap-20 lg:gap-0 lg:justify-between pt-10 lg:pt-20">
-        <div className="w-[85%] sm:w-[60%] md:w-[27%] xl:w-[22%] default-shadow bg-[#20192A] h-[500px] rounded-[50px] p-4 xl:px-8 text-[#FFC8AA] flex flex-col justify-between bg-opacity-60">
+      <div className="h-full w-full flex flex-col items-center md:items-start  md:flex-row justify-center gap-10 sm:gap-20 lg:gap-0 lg:justify-between pt-10 ">
+        <div className="w-[85%] sm:w-[60%] md:w-[27%] xl:w-[19%] default-shadow bg-[#20192A] h-[500px] rounded-[50px] px-3 py-4  text-[#FFC8AA] flex flex-col justify-between bg-opacity-60">
           <h1 className="text-base lg:text-3xl font-berlin text-center">
             New persons
           </h1>
@@ -89,7 +95,7 @@ const CompatibilityContent = () => {
             </button>
           </div>
         </div>
-        <div className="w-[85%] sm:w-[60%] md:w-[27%] xl:w-[22%] default-shadow bg-[#20192A] h-[500px] rounded-[50px] p-4 xl:px-8 text-[#FFC8AA] bg-opacity-60">
+        <div className="w-[85%] sm:w-[60%] md:w-[27%] xl:w-[19%] default-shadow bg-[#20192A] h-[500px] rounded-[50px] px-3 py-4 text-[#FFC8AA] bg-opacity-60">
           <h1 className="text-base lg:text-3xl font-berlin text-center">
             Select saved & friends
           </h1>
