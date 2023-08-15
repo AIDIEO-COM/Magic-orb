@@ -29,10 +29,12 @@ const subscriptionModel = [
 const Account = () => {
   return (
     <PageWrapper>
-      <div className="font-berlin p-3 md:p-4 lg:p-0 min-h-[calc(100vh-60px)] ">
-      <FirstSection subscriptionModel={subscriptionModel}></FirstSection>
-      <GrapSection></GrapSection>
-    </div>
+      <div className="font-berlin p-3 md:p-4 lg:p-0 h-full w-full flex items-center">
+        <div className="">
+          <FirstSection subscriptionModel={subscriptionModel}></FirstSection>
+          <GrapSection></GrapSection>
+        </div>
+      </div>
     </PageWrapper>
   );
 };

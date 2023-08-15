@@ -13,8 +13,8 @@ const GiftCard = ({ home }) => {
   return (
     <div
       className={`p-5 ${
-        home && "mt-4"
-      } mx-auto   xl:w-40 xl:h-[180px] 2xl:w-44 2xl:h-[250px]  rounded-xl bg-[#221c3de0] shadow-[10px_10px_8px10px#00000024] default-shadow relative`}
+        home ? "mt-4 w-full lg:h-[80%] 2xl:h-full 2xl:w-44" : "2xl:w-48 xl:h-full"
+      } mx-auto   xl:w-36 xl:h-full  2xl:h-[250px]  rounded-xl bg-[#221c3de0] shadow-[10px_10px_8px10px#00000024] default-shadow relative`}
     >
       <button
         onClick={() => setTakeCardIsClicked(false)}
@@ -35,7 +35,7 @@ const GiftCard = ({ home }) => {
         />
         <button
           onClick={() => setTakeCardIsClicked(true)}
-          className="mx-auto text-[#E5BD9D] text-[10px] sm:text-xs bg-[#674B53] px-1 sm:px-2 font-semibold rounded-lg py-1"
+          className="mx-auto text-[#E5BD9D] text-[10px] sm:text-xs bg-[#674B53] px-1 sm:px-2 font-semibold rounded-full py-1"
         >
           Take the card
         </button>

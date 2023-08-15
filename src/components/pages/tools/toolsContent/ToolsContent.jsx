@@ -12,7 +12,9 @@ const ToolsContent = ({ activeCard }) => {
        initial={{ opacity: 0 }}
        animate={{ opacity: 1 }}
        exit={{ opacity: 0 }}
-       className="mx-auto w-[95%]   max-w-[600px]  -mt-28 border-r-2 sm:rotate-[3.00deg] bg-gradient-to-r from-[#442143] to-[#2B3057] lg:z-3 overflow-hidden h-[120%] ">
+       className="mx-auto w-[95%]   max-w-[600px]  -mt-28 border-r-2 sm:rotate-[3.00deg] bg-gradient-to-r from-[#442143] to-[#2B3057] lg:z-3 overflow-hidden h-[120%] "
+       style={{boxShadow: '20px 4px 20px 0px rgba(0, 0, 0, 0.25), 20px 4px 20px 0px rgba(0, 0, 0, 0.25) inset'}}
+       >
         <div className="mt-24 h-[350px] overflow-hidden sm:-rotate-3 w-[110%] -translate-x-[5%]">
           <h3 className="text-center text-xl md:text-3xl font-semibold text-[#DBCBF4]">
             {activeCard.card_title === "Magic Orb" ? "The Magic Orb" : activeCard.card_title}

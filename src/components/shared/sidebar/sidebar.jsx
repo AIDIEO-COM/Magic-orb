@@ -6,40 +6,40 @@ import relationalRoute from "@/routes-data/sidebarRoute/relationalRoute";
 
 const Sidebar = () => {
   return (
-    <div className="font-berlin mx-4">
-      <div className="mt-4">
+    <div className="font-berlin relative h-full">
+      <div className="pt-5">
         <Image
-          width={160}
+          width={120}
           height={51}
           src="https://i.ibb.co/kxxsFW7/home-modified-3.png"
           alt="magic orb logo"
           className="mx-auto"
         />
       </div>
-      <div className="mt-8 flex flex-col gap-y-4 lg:gap-y-3">
+      <div className="mt-8 flex flex-col gap-y-3 2xl:gap-y-[30px]">
         {sidebarRoute.map((singleRoute) => (
           <NavLink
             key={singleRoute.id}
             exact={singleRoute.href === "/"}
             activeClassName="bg-gradient-to-b from-[#281B32] to-[#2d1e38f4] duration-500 transition-all"
             href={singleRoute.href}
-            className="p-2 rounded-lg ">
-            <div className="flex items-center gap-2">
+            className="px-4 py-2 mx-2 2xl:mx-4 rounded-lg ">
+            <div className="flex items-center gap-[10px] ">
               <Image
                 src={singleRoute.iconLink}
-                width={24}
-                height={24}
+                width={23}
+                height={23}
                 alt={singleRoute.routeName}
               />
-              <p className="text-xl text-white font-berlin font-normal">
+              <p className="text-[20px] text-white font-berlin font-normal">
                 {singleRoute.routeName}
               </p>
             </div>
           </NavLink>
         ))}
       </div>
-      {/* <hr className="my-4 mx-3 border-2 border-[#00000075]" /> */}
-      <div className="border-t-4 border-[#00000075] mt-4">
+      <hr className="my-4 mx-3 border-2 border-[#00000075]" />
+      <div className="mt-4 ml-8">
         <ul className="list-disc list-white mt-2">
           {relationalRoute.map((singleRoute) => (
             <li
@@ -50,8 +50,8 @@ const Sidebar = () => {
           ))}
         </ul>
       </div>
-      <p className="text-center w-full pt-2 text-white text-lg hidden sm:inline-block">
-        #Com-orb
+      <p className="text-center w-full pt-2 text-white text-lg hidden sm:inline-block absolute bottom-1 2xl:bottom-3">
+        @CoM-orb
       </p>
     </div>
   );
