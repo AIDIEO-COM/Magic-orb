@@ -11,7 +11,7 @@ const ToolsContent = ({ activeCard }) => {
        initial={{ opacity: 0 }}
        animate={{ opacity: 1 }}
        exit={{ opacity: 0 }}
-       className="mx-auto w-[95%]  max-w-[600px]  -mt-28 border-r-2 sm:rotate-[3.00deg] bg-gradient-to-r from-[#442143] to-[#2B3057] lg:z-3 overflow-hidden">
+       className="mx-auto w-[95%]   max-w-[600px]  -mt-28 border-r-2 sm:rotate-[3.00deg] bg-gradient-to-r from-[#442143] to-[#2B3057] lg:z-3 overflow-hidden h-[120%] ">
         <div className="mt-20 h-[350px] overflow-hidden sm:-rotate-3 w-[110%] -translate-x-[5%]">
           <h3 className="text-center  text-3xl font-bold text-[#DBCBF4]">
             The Magic Orb
