@@ -44,7 +44,7 @@ const Home = () => {
         <BannerSideContent bannerSideContent={bannerSideContent}></BannerSideContent>
       </div>
       <div
-        className={` w-full lg:grid lg:grid-cols-7  overflow-hidden gap-x-[29px] duration-700 ${cardClassName}`}
+        className={` w-full lg:grid lg:grid-cols-7  overflow-hidden pb-3 gap-x-[29px] duration-700 ${cardClassName}`}
       >
         <div
           className={`flex justify-between lg:col-start-1 lg:col-end-4 mt-[20px] items-center gap-x-[29px] `}

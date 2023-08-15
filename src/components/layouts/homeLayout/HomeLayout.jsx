@@ -16,7 +16,7 @@ const HomeLayout = ({ children }) => {
     }
   }, [currentPath])
   return (
-    <div className="flex  relative bg-gradient-to-b from-[#442143] to-[#2B3057] lg:h-screen w-screen">
+    <div className="flex relative bg-gradient-to-b from-[#442143] to-[#2B3057] min-h-screen lg:h-screen lg:w-screen ">
       {/* mobile side drawer */}
       <div className="overflow-hidden h-fit w-fit xl:hidden">
         <div
@@ -38,7 +38,7 @@ const HomeLayout = ({ children }) => {
       </div>
       <div className="w-full h-full  overflow-hidden relative">
         <Navbar toggleSidebar={toggleSidebar}></Navbar>
-        <div className="lg:pt-[25px] lg:pb-[40px] lg:px-[32px] xl:pb-[45px] xl:px-[42px] w-full h-full default-background-color">
+        <div className="lg:pt-[25px] lg:pb-[40px] lg:px-[32px] xl:pb-[45px] xl:px-[42px] w-full min-h-screen h-full default-background-color">
           {children}
         </div>
       </div>

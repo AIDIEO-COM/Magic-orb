@@ -1,7 +1,7 @@
 const imageCardInfo = [
   {
     id: "1",
-    card_img_link: "https://i.ibb.co/zNrsZKZ/Tarot-1.png",
+    card_img_link: "https://i.ibb.co/QHZWYxj/Tarot-2.png",
     card_title: "Astrology table",
     card_subtitle: "Discover your character",
     try_count: 0,
@@ -27,7 +27,8 @@ const imageCardInfo = [
   },
   {
     id: "2",
-    card_img_link: "https://i.ibb.co/DL2dzN9/Tarot-5.png",
+    card_img_link: "https://i.ibb.co/ZxxRHPT/Tarot-1.png",
+    card_full_img: "https://i.ibb.co/DL2dzN9/Tarot-5.png",
     card_title: "Compatibility check",
     card_subtitle: "Discover your real soulmates",
     try_count: 0,
@@ -53,7 +54,7 @@ const imageCardInfo = [
   },
   {
     id: "3",
-    card_img_link: "https://i.ibb.co/2YnxRVQ/Tarot-3.png",
+    card_img_link: "https://i.ibb.co/grBWbWH/Tarot-3.png",
     card_title: "Tarot table and cards",
     card_subtitle: "Discover destiny",
     try_count: 0,
