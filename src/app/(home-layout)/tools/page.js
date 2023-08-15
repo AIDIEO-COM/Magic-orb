@@ -23,7 +23,7 @@ const Tools = () => {
       initial={{ opacity: 0, y: 0 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 0 }}
-        className={` grid grid-cols-2 gap-4 2xl:gap-5 duration-700 pb-5`}>
+        className={` grid grid-cols-2 gap-y-6 md:gap-y-4 mt-24 md:mt-0 md:gap-4 w-full justify-between 2xl:gap-5 duration-700 pb-5`}>
         {cardsInfo.slice(0,6).map((singleImageCardInfo, index) => (
           <ImageCard
             key={index}

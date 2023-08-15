@@ -1,3 +1,5 @@
+import AccountBtnFill from '@/components/shared/btn/accountPageBtn/accountBtnFill/AccountBtnFill';
+import AccountBtnOutline from '@/components/shared/btn/accountPageBtn/accountBtnOutline/AccountBtnOutline';
 import Image from 'next/image';
 
 const HomeStatistics = () => {
@@ -28,13 +30,9 @@ const HomeStatistics = () => {
           <p>Exposure: 5% down</p>
           <p>Self care: 23% up</p>
         </div>
-        <div className="flex items-center full mx-auto mt-2 gap-4">
-          <button className="text-[#E5BD9D] text-[10px] bg-[#674B53] px-1 font-semibold rounded-lg py-1">
-            See full stats
-          </button>
-          <button className="text-[#E5BD9D] text-[10px] px-1 font-semibold rounded-lg py-1 underline">
-            Improve statistics
-          </button>
+        <div className="flex items-center full mx-auto mt-2 gap-2">
+          <AccountBtnFill>See full stats</AccountBtnFill>
+          <AccountBtnOutline>Improve statistic</AccountBtnOutline>
         </div>
       </div>
 );
