@@ -6,7 +6,7 @@ import relationalRoute from "@/routes-data/sidebarRoute/relationalRoute";
 
 const Sidebar = () => {
   return (
-    <div className="font-berlin">
+    <div className="font-berlin mx-4">
       <div className="mt-4">
         <Image
           width={160}
@@ -23,26 +23,28 @@ const Sidebar = () => {
             exact={singleRoute.href === "/"}
             activeClassName="bg-gradient-to-b from-[#281B32] to-[#2d1e38f4] duration-500 transition-all"
             href={singleRoute.href}
-            className="p-2 mx-4 rounded-lg ">
-            <div className="flex items-center gap-2 ">
+            className="p-2 rounded-lg ">
+            <div className="flex items-center gap-2">
               <Image
                 src={singleRoute.iconLink}
-                width={41}
-                height={41}
+                width={24}
+                height={24}
                 alt={singleRoute.routeName}
               />
-              <p className="text-lg text-white font-berlin font-semibold">
+              <p className="text-xl text-white font-berlin font-normal">
                 {singleRoute.routeName}
               </p>
             </div>
           </NavLink>
         ))}
       </div>
-      <hr className="mt-4 mx-4 border-2 border-[#00000075]" />
-      <div className="flex justify-center w-full mt-4">
-        <ul className="list-disc w-fit mx-auto list-white">
+      {/* <hr className="my-4 mx-3 border-2 border-[#00000075]" /> */}
+      <div className="border-t-4 border-[#00000075] mt-4">
+        <ul className="list-disc list-white mt-2">
           {relationalRoute.map((singleRoute) => (
-            <li key={singleRoute.id} className="mb-1 text-white font-berlin">
+            <li
+              key={singleRoute.id}
+              className="mb-1 mx-6 text-white font-berlin">
               <Link href={singleRoute.href}>{singleRoute.routeName}</Link>
             </li>
           ))}
