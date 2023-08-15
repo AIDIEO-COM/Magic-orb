@@ -11,8 +11,8 @@ const BannerSideContent = ({ bannerSideContent }) => {
   };
   return (
     <div
-      className={`col-start-9 col-end-11 flex flex-col gap-y-3 ${bannerSideContent} duration-700`}>
-      <div className="h-[30%] w-full relative overflow-hidden hidden lg:inline-block">
+      className={`col-start-9 col-end-11 flex flex-col gap-y-3 ${bannerSideContent} duration-700 relative`}>
+      <div className="h-[35%] w-[120%] absolute -left-[20%] z-1 overflow-hidden hidden lg:inline-block">
         <Image
           src={"https://i.ibb.co/QN7h6G0/orb22-1.png"}
           alt="sideimg"
@@ -23,9 +23,9 @@ const BannerSideContent = ({ bannerSideContent }) => {
       </div>
       <div
         onClick={handleStatisticShow}
-        className="min-h-fit xl:h-[70%] w-full pr-1 xl:px-2 xl:pb-3 pt-4 xl:pt-0 cursor-pointer">
+        className="min-h-fit xl:h-[65%] w-full pr-1 xl:px-2 xl:pb-3 pt-4 xl:pt-0 cursor-pointer mt-auto">
         {isStatisticsShow === false && (
-          <div className="default-gradient rounded-[16px] w-full h-full min-h-fit ">
+          <div className="default-gradient rounded-[16px] w-full h-full min-h-fit flex  items-center">
             <p className="font-berlin text-[#FFC8AA] text-xl md:text-2xl p-6 ">
               Adds here for free version. Click to swap to the premium version
               view
