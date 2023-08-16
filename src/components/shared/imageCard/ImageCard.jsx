@@ -1,6 +1,8 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const ImageCard = ({
   card_img_link,
   card_title,
@@ -13,7 +15,11 @@ const ImageCard = ({
   setActiveCard,
   id,
   previousActiveCardId,
+  animate_origin
 }) => {
+  useEffect(() => {
+    AOS.init({ duration: 700 });
+  }, []);
   const [cardTransition2, setCardTransition2] = useState("");
   useEffect(() => {
     setCardTransition2("opacity-0");
@@ -23,7 +29,7 @@ const ImageCard = ({
     return () => clearTimeout(timer);
   }, [previousActiveCardId]);
   return (
-    <div className={`w-full h-full flex justify-center rounded-xl`}>
+    <div className={`w-full h-full flex justify-center rounded-xl`} data-aos={home ? animate_origin[1] : animate_origin[0]}>
       <Link
         className="relative w-[130px] h-[110px] sm:w-[170px] sm:h-[140px] lg:w-full lg:h-[90%] 2xl:h-full bg-cover bg-center font-berlin  rounded-xl"
         href={home ? href : "/tools"}>

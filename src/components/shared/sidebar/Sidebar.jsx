@@ -52,7 +52,7 @@ const Sidebar = () => {
           ))}
         </ul>
       </div>
-      <p className="text-center w-full pt-2 text-white text-lg hidden sm:inline-block absolute bottom-1 2xl:bottom-3">
+      <p className="text-center w-full pt-2 text-white text-base sm:text-lg inline-block absolute bottom-1 2xl:bottom-3">
         @CoM-orb
       </p>
     </div>
