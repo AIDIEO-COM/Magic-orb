@@ -22,7 +22,7 @@ const Policies = () => {
                     the terms and conditions outlined below. b. The content on our
                     website is provided for informational and entertainment
                     purposes only. It should not be considered a substitute for
-                    professional advice or treatment. c. We reserve the right to
+                    professional advice or treatment.We reserve the right to
                     modify or discontinue any aspect of the website at any time
                     without prior notice. d. Users must be at least 18 years old
                     to use our website or have parental consent. e. We are not
