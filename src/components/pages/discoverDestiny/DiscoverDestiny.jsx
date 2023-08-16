@@ -5,7 +5,7 @@ import DiscoverContent from "./DiscoverContent";
 
 const DiscoverDestiny = () => {
   const [firstTransitionImg, setFirstTransitionImg] = useState(
-    "w-[400px] h-[300px] bottom-0 left-[50%]"
+    "w-[400px] h-[300px] bottom-0 left-[50%] hidden md:inline-block"
   );
   const [secondBgImg, setSecondBgImg] = useState(" opacity-0");
   const [contentVisible, setContentVisible] = useState("opacity-0");
@@ -34,7 +34,7 @@ const DiscoverDestiny = () => {
         alt="img"
         width={1000}
         height={1000}
-        className={`${firstTransitionImg} duration-700 absolute hidden md:inline-block`}
+        className={`${firstTransitionImg} duration-700 absolute`}
       ></Image>
       <Image
         src={"https://i.ibb.co/9GBC0PP/image-6.png"}
