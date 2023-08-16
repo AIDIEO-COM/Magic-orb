@@ -11,7 +11,7 @@ const CompatibilityContent = () => {
   const [checkBtnIsClicked, setCheckBtnIsClicked] = useState(false);
   return (
     <div className=" w-full h-full lg:p-7 xl:p-10 lg:overflow-hidden">
-      <div className="left-1/2 -translate-x-1/2 w-full flex flex-col items-center absolute top-14 lg:relative lg:top-auto">
+      <div className="left-1/2 -translate-x-1/2 w-full flex flex-col items-center absolute top-5 lg:relative lg:top-auto">
         <h1 className="text-lg md:text-xl lg:text-3xl font-berlin font-semibold text-[#FFC8AA]">
           Check Compatibility
         </h1>

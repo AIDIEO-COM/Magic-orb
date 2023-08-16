@@ -5,7 +5,7 @@ import AstrologyContent from "./AstrologyContent";
 
 const AstrologyTable = () => {
   const [firstTransitionImg, setFirstTransitionImg] = useState(
-    " w-[320px] h-[250px] bottom-0 left-0"
+    " md:w-[320px] md:h-[250px] bottom-0 left-0"
   );
   const [secondBgImg, setSecondBgImg] = useState(
     "opacity-0 "
@@ -40,7 +40,7 @@ const AstrologyTable = () => {
         alt="astrologyTransitionImg"
         width={1000}
         height={800}
-        className={`absolute ${firstTransitionImg} duration-700`}
+        className={`absolute ${firstTransitionImg} duration-700 hidden md:inline-block`}
       ></Image>
       <div className="w-full h-full">
         <Image

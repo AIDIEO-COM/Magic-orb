@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import CompatibilityContent from "../compatibilityCheck/CompatibilityContent";
 import DiscoverContent from "./DiscoverContent";
 
 const DiscoverDestiny = () => {
@@ -35,7 +34,7 @@ const DiscoverDestiny = () => {
         alt="img"
         width={1000}
         height={1000}
-        className={`${firstTransitionImg} duration-700 absolute`}
+        className={`${firstTransitionImg} duration-700 absolute hidden md:inline-block`}
       ></Image>
       <Image
         src={"https://i.ibb.co/9GBC0PP/image-6.png"}
