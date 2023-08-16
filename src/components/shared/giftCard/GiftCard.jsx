@@ -1,8 +1,6 @@
 "use client";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import Aos from "aos";
-import "aos/dist/aos.css";
 
 const GiftCard = ({ home }) => {
   const [takeCardIsClicked, setTakeCardIsClicked] = useState(false);
@@ -12,9 +10,7 @@ const GiftCard = ({ home }) => {
     }, 3000);
     return () => clearTimeout(timer);
   }, [takeCardIsClicked]);
-  // useEffect(() => {
-  //   Aos.init({ duration: 700 });
-  // }, []);
+
   return (
     <div
     data-aos={home ? "fade-up" : ""}
