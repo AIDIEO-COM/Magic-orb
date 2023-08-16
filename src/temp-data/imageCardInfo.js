@@ -8,6 +8,7 @@ const imageCardInfo = [
     game_name: "Play astrology",
     try_remaining: 32,
     href: "/tools/astrology-table",
+    animate_origin: ["fade-up", "fade-down-left"],
     card_info: [
       {
         info_headline: "Spiritual Guidance",
@@ -35,6 +36,7 @@ const imageCardInfo = [
     game_name: "Find compatibility",
     try_remaining: 32,
     href: "/tools/compatibility-check",
+    animate_origin: ["fade-up-right", "fade-down-left"],
     card_info: [
       {
         info_headline: "Spiritual Guidance",
@@ -61,6 +63,7 @@ const imageCardInfo = [
     game_name: "Play tarot",
     try_remaining: 32,
     href: "/tools/discover-destiny",
+    animate_origin: ["fade-right", "zoom-in"],
     card_info: [
       {
         info_headline: "Spiritual Guidance",
@@ -88,6 +91,7 @@ const imageCardInfo = [
     game_name: "Interpretative dream",
     try_remaining: 32,
     href: "/tools/dream-interpretation",
+    animate_origin: ["fade-up", "fade-down"],
     card_info: [
       {
         info_headline: "Spiritual Guidance",
@@ -109,6 +113,7 @@ const imageCardInfo = [
     game_name: "Read now",
     try_remaining: 32,
     href: "/library",
+    animate_origin: ["zoom-in", ""],
     card_info: [
       {
         info_headline: "Spiritual Guidance",
@@ -134,7 +139,8 @@ const imageCardInfo = [
     try_count: 0,
     game_name: "Shop now",
     try_remaining: 32,
-    href: "shop",
+    href: "/shop",
+    animate_origin: ["fade-down-right", ""],
     card_info: [
       {
         info_headline: "Spiritual Guidance",
@@ -161,6 +167,7 @@ const imageCardInfo = [
     game_name: "Shop now",
     try_remaining: 32,
     href: "/magic-orb",
+    animate_origin: ["", ""],
     card_info: [
       {
         info_headline: "Spiritual Guidance",

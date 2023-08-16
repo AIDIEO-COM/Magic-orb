@@ -20,16 +20,18 @@ const Notification = ({ isOpen, onClose }) => {
     return null;
   }
   return (
-    <div className="default-gradient max-w-[400px] h-fit absolute top-16 md:top-14 right-2 md:right-16 rounded-xl p-4 z-20 transition-transform duration-500 notification-modal">
+    <div className=" max-w-[400px] h-fit absolute top-14 right-2 md:right-20  p-4 z-20 transition-transform duration-500 notification-modal" style={{borderRadius: '15px',
+    background: 'linear-gradient(199deg, #624652 0%, #432144 100%)',
+    boxShadow: '10px 10px 4px 0px rgba(0, 0, 0, 0.25)'}}>
       <p className="text-center text-[#E5BD9D] text-sm tracking-wide">
         Notifications
       </p>
-      <div className="mt-4">
+      <div className="mt-4" >
         {[1, 2, 3].map((friendReqNotification) => (
           <div
             key={friendReqNotification}
-            className="bg-gradient-to-r from-[#523843] to-[#4e3843] p-2 rounded-xl flex items-center justify-between mb-2">
-            <p className="text-xs text-[#83807d]">
+            className="fnd-notification-bg  p-2 px-3 rounded-2xl flex items-center justify-between mb-2">
+            <p className="text-xs text-[#E5BD9D]">
               Talk with orb 2 hours:
               <span className="text-[10px] text-[#DBCBF4] tracking-wider ml-2">
                 3min/2hours

@@ -1,7 +1,12 @@
-
+"use cilent";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const BannerContent = () => {
+  const router = useRouter();
+  const handleClick = () => {
+    router.push("/magic-orb");
+  }
   return (
     <div className="absolute top-0 left-0 lg:left-[20%] right-0 bottom-0 px-4 py-2 sm:px-5 sm:py-3">
       <div>
@@ -13,11 +18,9 @@ const BannerContent = () => {
         </p>
       </div>
       <div className="absolute bottom-5 md:bottom-10 lg:bottom-4 xl:bottom-7 left-1/2 transform -translate-x-1/2  bg-[#6b5863] rounded-xl px-3 " >
-      <Link href={"/magic-orb"} >
-      <div className="text-[#E5BD9D] text-base md:text-lg lg:text-sm font-semibold tracking-wider">
+      <button onClick={handleClick} className="text-[#E5BD9D] text-base md:text-lg lg:text-sm font-semibold tracking-wider">
         Chat Now
-      </div>
-      </Link>
+      </button>
     </div>
       <div className="absolute bottom-5 left-5 text-[#FFC8AA] text-3xl">0</div>
       <div className="absolute bottom-5 right-5 lg:right-10 text-[#FFC8AA] text-3xl">

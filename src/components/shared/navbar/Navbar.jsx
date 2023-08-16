@@ -46,7 +46,7 @@ const Navbar = ({ toggleSidebar }) => {
           width={125}
           height={33}></Image>
       </div>
-      <div className="flex w-fit h-full items-center gap-4 xl:gap-5 z-20 xl:absolute right-[81px]">
+      <div className="flex w-fit h-full items-center pr-3 md:pr-0 gap-4 xl:gap-5 z-20 xl:absolute right-[81px]">
         <Link href={"/login"}>
         <button className="px-[13px] py-[2px] text-[15px] bg-[#BFB1D6] text-[#624652] font-berlin rounded-md hidden sm:inline-block">Log in</button>
         </Link>
