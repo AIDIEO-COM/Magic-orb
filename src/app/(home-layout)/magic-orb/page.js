@@ -20,11 +20,11 @@ const MagicOrb = () => {
           alt="homepageimg"
           width={1500}
           height={1000}
-          className={`${bannerClassName} `}
+          className={`${bannerClassName} h-[280px] sm:h-full object-cover sm:object-fill rounded-2xl sm:rounded-none`}
         ></Image>
         {/* chat box */}
         <div className="overflow-hidden">
-        <div className={`mx-auto absolute left-1/2 -translate-x-1/2 top-[20vh] md:top-auto ${chatBoxClassName} md:bottom-12 w-[90%] md:w-[60%] xl:w-[850px] h-[50vh] md:h-[300px] rounded-xl bg-[#20192A] px-5 md:px-10 py-5 duration-700`}>
+        <div className={`mx-auto absolute left-1/2 -translate-x-1/2 top-[20vh] md:top-auto ${chatBoxClassName} md:bottom-12 w-[90%] md:w-[60%] xl:w-[850px] h-[50%] md:h-[300px] rounded-xl bg-[#20192A] px-5 md:px-10 py-5 duration-700`}>
           <h1 className="text-[#DBCBF4] font-berlin text-xl md:text-3xl text-center">Chat with the magic orb</h1>
           <div className="text-left w-full h-fit px-2 mt-5">
             <p className="text-[#E5BD9D] font-berlin text-base md:text-lg ">Orb: How can I help you today?</p>

@@ -1,7 +1,9 @@
 import Home from "@/components/pages/home/Home";
+import imageCardInfo from "@/temp-data/imageCardInfo";
 
 const HomePage = () => {
-  return <Home></Home>
+  const disconnectReferenceImageCards = [...imageCardInfo];
+  return <Home disconnectReferenceImageCards={disconnectReferenceImageCards}></Home>
 };
 
 export default HomePage;

@@ -1,21 +1,13 @@
 "use client"
-
-import { motion, AnimatePresence } from "framer-motion";
+import "aos/dist/aos.css";
 
 const PageWrapper = ({children}) => {
     return (
-        <>
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0, y: 5 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: 5 }}
-        transition={{ delay: 0.50 }}
+      <div
+      data-aos="zoom-in"
       >
         {children}
-      </motion.div>
-    </AnimatePresence>
-  </>
+      </div>
     );
 };
 

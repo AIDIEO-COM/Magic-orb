@@ -2,7 +2,6 @@ import Image from "next/image";
 import BannerContent from "./BannerContent";
 import HomeStatistics from "./HomeStatistics";
 import { useState } from "react";
-import Link from "next/link";
 
 const BannerSideContent = ({ bannerSideContent }) => {
   const [isStatisticsShow, setIsStatisticsShow] = useState(false);
@@ -11,7 +10,7 @@ const BannerSideContent = ({ bannerSideContent }) => {
   };
   return (
     <div
-      className={`col-start-9 col-end-11 flex flex-col gap-y-3 ${bannerSideContent} duration-700 relative`}>
+      className={`col-start-9 col-end-11 flex flex-col gap-y-3 ${bannerSideContent} duration-700 relative`} >
       <div className="h-[35%] w-[120%] absolute -left-[20%] z-1 overflow-hidden hidden lg:inline-block">
         <Image
           src={"https://i.ibb.co/QN7h6G0/orb22-1.png"}

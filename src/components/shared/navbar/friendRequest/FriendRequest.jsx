@@ -21,7 +21,9 @@ const FriendRequest = ({ isOpen, onClose }) => {
     return null;
   }
   return (
-    <div className="default-gradient max-w-[400px] h-fit absolute top-16 md:top-14 md:right-24 rounded-xl p-4 z-20 transition-transform duration-500 friend-Notification-modal">
+    <div className=" max-w-[400px] h-fit absolute top-14  right-5 md:right-32  p-4 z-20 transition-transform duration-500 friend-Notification-modal" style={{borderRadius: '15px',
+    background: 'linear-gradient(199deg, #624652 0%, #432144 100%)',
+    boxShadow: '10px 10px 4px 0px rgba(0, 0, 0, 0.25)'}}>
       <p className="text-center text-[#E5BD9D] text-sm tracking-wide">
         Friend request
       </p>
@@ -29,7 +31,7 @@ const FriendRequest = ({ isOpen, onClose }) => {
         {[1, 2, 3].map((friendReqNotification) => (
           <div
             key={friendReqNotification}
-            className="bg-gradient-to-r from-[#523843] to-[#4e3843] p-2 rounded-xl flex items-center justify-between gap-4 mb-2">
+            className="fnd-notification-bg  p-2 rounded-2xl flex items-center justify-between gap-4 mb-2">
             <div className="flex items-center gap-1">
               <div className="w-[36px] h-[36px] bg-[#6d6971] rounded-full flex items-center justify-center">
                 <Image

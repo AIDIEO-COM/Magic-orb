@@ -1,4 +1,3 @@
-import PageWrapper from "@/components/transitions/pageWrapper/PageWrapper";
 import FirstSection from "@/components/pages/account/FirstSection";
 import GrapSection from "@/components/pages/account/GrapSection";
 
@@ -28,14 +27,12 @@ const subscriptionModel = [
 
 const Account = () => {
   return (
-    <PageWrapper>
       <div className="font-berlin p-3 md:p-4 lg:p-0 h-full w-full flex items-center min-h-[calc(100vh-100px)]">
         <div className="">
           <FirstSection subscriptionModel={subscriptionModel}></FirstSection>
           <GrapSection></GrapSection>
         </div>
       </div>
-    </PageWrapper>
   );
 };
 
