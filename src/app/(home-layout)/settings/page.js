@@ -6,16 +6,18 @@ const Settings = () => {
       <div className="font-berlin p-3 md:p-4 lg:p-0  py-10 md:py-5">
         <div className="default-gradient max-w-[550px] h-fit rounded-2xl mx-auto px-5 md:px-10 pb-4 ">
           <div className="flex flex-col justify-center py-2 md:py-3">
-            <p className="text-[#E5BD9D] font-semibold text-lg sm:text-[28px] text-center pt-6 pb-3">
+            <p className="text-[#E5BD9D] font-semibold text-lg sm:text-[28px] text-center pt-2 pb-2 tracking-wide">
               Settings
             </p>
             <hr className="border w-full border-[#DBCBF4] mb-0.5 mx-auto" />
             <p className="text-[10px] text-[#DBCBF4] tracking-wider text-center pt-[2px]">
               Make sure you have the best environment
             </p>
-            <p className="text-[#E5BD9D] text-sm font-semibold mt-2">Account:</p>
+            <p className="text-[#E5BD9D] text-sm font-semibold mt-2">
+              Account:
+            </p>
             <form className="mt-1">
-              <div className="flex flex-col mb-2.5">
+              <div className="flex flex-col mb-2">
                 <label
                   htmlFor="username"
                   className="text-[#E5BD9D] mb-1 text-[12px] tracking-wide">
@@ -27,7 +29,7 @@ const Settings = () => {
                   className="bg-[#674B53] h-6 px-2 rounded-2xl text-[#E5BD9D] tracking-wide outline-none placeholder-[#E5BD9D]"
                 />
               </div>
-              <div className="flex flex-col mb-2.5">
+              <div className="flex flex-col mb-2">
                 <label
                   htmlFor="email"
                   className="text-[#E5BD9D] mb-1 text-[12px] tracking-wide">
@@ -39,7 +41,7 @@ const Settings = () => {
                   className="bg-[#674B53] h-6  px-2 rounded-2xl text-[#E5BD9D] tracking-wide outline-none placeholder-[#E5BD9D]"
                 />
               </div>
-              <div className="flex flex-col mb-2.5">
+              <div className="flex flex-col mb-2">
                 <label
                   htmlFor="phone"
                   className="text-[#E5BD9D] mb-1 text-[12px] tracking-wide">
@@ -86,7 +88,7 @@ const Settings = () => {
               Personal Info:
             </p>
             <form className="mt-1">
-              <div className="flex flex-col mb-2.5">
+              <div className="flex flex-col mb-2">
                 <label
                   htmlFor="firstName"
                   className="text-[#E5BD9D] mb-1 text-[12px] tracking-wide">
@@ -98,7 +100,7 @@ const Settings = () => {
                   className="bg-[#674B53] h-6  px-2 rounded-2xl text-[#E5BD9D] tracking-wide outline-none placeholder-[#E5BD9D]"
                 />
               </div>
-              <div className="flex flex-col mb-2.5">
+              <div className="flex flex-col mb-2">
                 <label
                   htmlFor="secondName"
                   className="text-[#E5BD9D] mb-1 text-[12px] tracking-wide">
@@ -110,7 +112,7 @@ const Settings = () => {
                   className="bg-[#674B53] h-6  px-2 rounded-2xl text-[#E5BD9D] tracking-wide outline-none placeholder-[#E5BD9D] "
                 />
               </div>
-              <div className="flex flex-col mb-2.5">
+              <div className="flex flex-col mb-2">
                 <label
                   htmlFor="countryName"
                   className="text-[#E5BD9D] mb-1 text-[12px] tracking-wide">
@@ -122,7 +124,7 @@ const Settings = () => {
                   className="bg-[#674B53] h-6  px-2 rounded-2xl text-[#E5BD9D] tracking-wide outline-none placeholder-[#E5BD9D]"
                 />
               </div>
-              <div className="flex flex-col mb-2.5">
+              <div className="flex flex-col mb-2">
                 <label
                   htmlFor="dateOfBirth"
                   className="text-[#E5BD9D] mb-1 text-[12px] tracking-wide">
