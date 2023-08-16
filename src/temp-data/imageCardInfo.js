@@ -13,12 +13,12 @@ const imageCardInfo = [
       {
         info_headline: "Spiritual Guidance",
         info_description:
-          "Our experienced team of spiritual practitioners, mentors, and advisors share their knowledge and expertise to offer guidance on a wide range of spiritual topics. Through articles, blog posts, and personalized consultations.",
+          "Our experienced team of spiritual practitioners, mentors, and advisors share their knowledge and    expertise to offer guidance on a wide range of spiritual topics. Through articles, blog posts, and personalized consultations.",
       },
       {
         info_headline: "Spiritual Guidance",
         info_description:
-          "Our experienced team of spiritual practitioners, mentors, and advisors share their knowledge and expertise to offer guidance on a wide range of spiritual topics. Through articles, blog posts, and personalized consultations, we aim to support individuals in finding answers, gaining new perspectives, and deepening their understanding _of themselves and the universe.",
+          "Our experienced team of spiritual practitioners, mentors, and advisors share their knowledge and expertise to offer guidance on a wide range of spiritual     topics. Through articles, blog posts, and personalized consultations, we aim to support individuals in finding answers, gaining new perspectives, and deepening their understanding _of themselves and the universe.",
       },
     ],
     activity: {

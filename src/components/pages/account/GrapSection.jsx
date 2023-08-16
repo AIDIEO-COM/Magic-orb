@@ -25,11 +25,9 @@ const GrapSection = () => {
           {stats.map((singleStats) => (
             <div
               key={singleStats.id}
-              className="flex items-center gap-1 md:gap-4 mb-2"
-            >
+              className="flex items-center gap-1 md:gap-4 mb-2">
               <p
-                className={`w-4 h-4 ${singleStats.stats_color} rounded-full`}
-              ></p>
+                className={`w-4 h-4 ${singleStats.stats_color} rounded-full`}></p>
               <span className="text-[#DBCBF4] text-[10px] tracking-wider">
                 Today: {singleStats.stats_time}min
               </span>
@@ -48,14 +46,14 @@ const GrapSection = () => {
             <span className="text-[#DBCBF4] text-[10px] tracking-wider text-center font-sans">
               IFTP Personality
             </span>
-          <p className="text-[#E5BD9D] text-[9px] text-justify">
-            Your personality is based on the emotions and trauma from the past.
-            The best way to free the real you is by talking with a qualified
-            person
-          </p>
+            <p className="text-[#E5BD9D] text-[9px] text-justify">
+              Your personality is based on the emotions and trauma from the
+              past. The best way to free the real you is by talking with a
+              qualified person
+            </p>
           </div>
           <div className="flex items-center mb-8 gap-1">
-          <AccountBtnFill>Free yourself</AccountBtnFill>
+            <AccountBtnFill>Free yourself</AccountBtnFill>
             <AccountBtnOutline>See full stats</AccountBtnOutline>
           </div>
         </div>
@@ -87,7 +85,7 @@ const GrapSection = () => {
             <p>Exposure: 5% down</p>
             <p>Self care: 23% up</p>
           </div>
-          <div className="flex items-center full mx-auto mt-2  gap-x-4 ">
+          <div className="flex items-center full mx-auto mt-2 gap-x-4">
             <AccountBtnFill>See full stats</AccountBtnFill>
             <AccountBtnOutline>Improve Statistics</AccountBtnOutline>
           </div>

@@ -37,7 +37,7 @@ const GiftCard = ({ home }) => {
         />
         <button
           onClick={() => setTakeCardIsClicked(true)}
-          className="mx-auto text-[#E5BD9D] text-[10px] sm:text-xs bg-[#674B53] px-1 sm:px-2 font-semibold rounded-full py-1"
+          className="mx-auto text-[#E5BD9D] text-[10px] sm:text-xs bg-[#674B53] px-1 sm:px-2 font-normal tracking-wide rounded-full py-1 "
         >
           Take the card
         </button>

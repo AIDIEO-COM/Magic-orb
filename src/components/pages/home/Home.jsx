@@ -19,7 +19,7 @@ const Home = ({ disconnectReferenceImageCards }) => {
   });
 
   useEffect(() => {
-    Aos.init({ duration: 700, offset: 10, easing: "ease-in-sine" });
+    Aos.init({ duration: 700, offset: 0, easing: "ease-in-sine" });
   }, []);
 
   return (
