@@ -6,6 +6,8 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import BannerSideContent from "./BannerSideContent";
 import GiftCard from "@/components/shared/giftCard/GiftCard";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Home = ({ disconnectReferenceImageCards }) => {
   const [bannerSideContent, setBannerSideContent] = useState("opacity-0");
@@ -15,6 +17,11 @@ const Home = ({ disconnectReferenceImageCards }) => {
     }, 5);
     return () => clearTimeout(timeOut);
   });
+
+  useEffect(() => {
+    Aos.init({ duration: 700, offset: 10, easing: "ease-in-sine" });
+  }, []);
+
   return (
     <div className="font-berlin p-3 md:p-4 lg:p-0 h-full">
       <div className="lg:grid grid-cols-10">

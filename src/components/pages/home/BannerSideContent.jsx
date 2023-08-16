@@ -21,6 +21,7 @@ const BannerSideContent = ({ bannerSideContent }) => {
         <BannerContent></BannerContent>
       </div>
       <div
+      data-aos="fade-up"
         onClick={handleStatisticShow}
         className="min-h-fit xl:h-[62%] w-full pr-1 xl:px-2 xl:pb-3 pt-4 xl:pt-0 cursor-pointer mt-auto">
         {isStatisticsShow === false && (
