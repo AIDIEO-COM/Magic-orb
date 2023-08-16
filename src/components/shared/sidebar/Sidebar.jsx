@@ -33,7 +33,7 @@ const Sidebar = () => {
                 height={23}
                 alt={singleRoute.routeName}
               />
-              <p className="text-[20px] text-white font-berlin font-medium">
+              <p className="text-[20px] text-white font-berlin ">
                 {singleRoute.routeName}
               </p>
             </div>

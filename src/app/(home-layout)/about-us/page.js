@@ -3,9 +3,9 @@ import PageWrapper from "@/components/transitions/pageWrapper/PageWrapper";
 const AboutUs = () => {
   return (
     <PageWrapper>
-      <div className="font-serif p-3 md:p-4 lg:p-0 min-h-[calc(100vh-100px)] flex items-center py-10 md:py-0">
+      <div className="font-sans p-3 md:p-4 lg:p-0 min-h-[calc(100vh-100px)] flex items-center py-10 md:py-0">
         <div className="flex flex-col items-center justify-center h-fit max-w-[750px] rounded-xl bg-[#1A1725] shadow-[10px_10px_8px_10px_#00000024] p-5 md:py-8  md:px-14  mx-auto mb-4">
-          <p className="text-[#DBCBF4] font-semibold text-xl sm:text-3xl">
+          <p className="text-[#DBCBF4] font-semibold text-xl sm:text-3xl font-berlin">
             About us
           </p>
           <p className="mt-4 text-[#DBCBF4] text-xs tracking-wide font-sans text-justify">
@@ -33,9 +33,9 @@ const AboutUs = () => {
                     and advisors share their knowledge and expertise to offer
                     guidance on a wide range of spiritual topics. Through
                     articles, blog posts, and personalized consultations, we aim
-                    to support individuals, gaining new
-                    perspectives, and deepening their understanding of
-                    themselves and the universe.
+                    to support individuals, gaining new perspectives, and
+                    deepening their understanding of themselves and the
+                    universe.
                   </article>
                 </div>
               </div>
