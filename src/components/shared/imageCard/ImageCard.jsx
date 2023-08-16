@@ -17,9 +17,9 @@ const ImageCard = ({
 }) => {
   const [cardTransition2, setCardTransition2] = useState("");
   useEffect(() => {
-    setCardTransition2("opacity-0");
+    setCardTransition2("opacity-0 scale-90");
     const timer = setTimeout(() => {
-      setCardTransition2("transition duration-500 ease-in-out opacity-100");
+      setCardTransition2("transition duration-700 scale-100  ease-in-out opacity-100");
     }, 5);
     return () => clearTimeout(timer);
   }, [previousActiveCardId]);
