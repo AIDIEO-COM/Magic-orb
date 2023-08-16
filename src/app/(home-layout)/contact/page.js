@@ -38,7 +38,7 @@ const Contact = () => {
                   className="bg-[#674B53] px-3 pt-1 rounded-2xl text-[#E5BD9D] tracking-wide outline-none placeholder-[#E5BD9D] resize-none"
                 />
               </div>
-              <button className="text-[#E5BD9D] text-xs bg-[#674B53] px-4 font-semibold rounded-lg py-1">
+              <button className="text-[#E5BD9D] text-xs md:text-sm bg-[#674B53] px-4  rounded-lg py-1">
                 Send
               </button>
             </form>

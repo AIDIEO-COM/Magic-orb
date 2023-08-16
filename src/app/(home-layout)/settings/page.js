@@ -74,10 +74,10 @@ const Settings = () => {
                 </div>
               </div>
               <div className="flex items-center justify-center mt-2">
-                <button className="text-[#E5BD9D] text-xs bg-[#674B53] px-8 font-semibold rounded-lg py-1">
+                <button className="text-[#E5BD9D] text-xs md:text-sm bg-[#674B53] px-8 font-semibold rounded-lg py-1">
                   Save
                 </button>
-                <button className="text-[#E5BD9D] text-xs px-2 font-semibold rounded-lg py-1 underline">
+                <button className="text-[#E5BD9D] text-xs md:text-sm px-2 font-semibold rounded-lg py-1 underline">
                   Change password
                 </button>
               </div>
@@ -157,10 +157,10 @@ const Settings = () => {
                 </div>
               </div>
               <div className="flex items-center justify-center mt-2 pb-3">
-                <button className="text-[#E5BD9D] text-xs bg-[#674B53] px-8 font-semibold rounded-lg py-1">
+                <button className="text-[#E5BD9D] text-xs md:text-sm  bg-[#674B53] px-8 font-semibold rounded-lg py-1">
                   Save
                 </button>
-                <button className="text-[#E5BD9D] text-xs px-2 font-semibold rounded-lg py-1 underline">
+                <button className="text-[#E5BD9D] text-xs md:text-sm px-2 font-semibold rounded-lg py-1 underline">
                   Exit without saving
                 </button>
               </div>

@@ -50,11 +50,11 @@ const page = () => {
                 <p className="text-[#DBCBF4] text-sm">Keep logged in</p>
               </div>
               <div className="flex items-center justify-center gap-6 mt-8">
-                <button className="text-[#E5BD9D] text-xs bg-[#674B53] px-8 font-semibold rounded-lg py-1">
+                <button className="text-[#E5BD9D] text-xs md:text-sm bg-[#674B53] px-6 rounded-lg py-1">
                   Log-in
                 </button>
                 <Link href="/registration">
-                  <button className="text-[#E5BD9D] text-xs px-2 font-semibold rounded-lg py-1 underline">
+                  <button className="text-[#E5BD9D] text-xs md:text-sm px-2 rounded-lg py-1 underline">
                     Sign-in
                   </button>
                 </Link>

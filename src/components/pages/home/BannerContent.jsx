@@ -12,7 +12,7 @@ const BannerContent = () => {
       data-aos="zoom-in"
       className="absolute top-0 left-0 lg:left-[20%] right-0 bottom-0 px-4 py-2 sm:px-5 sm:py-3">
       <div>
-        <h1 className="text-[#FFC8AA] text-xl font-semibold font-berlin">
+        <h1 className="text-[#FFC8AA] text-xl font-normal font-berlin">
           Magic Orb
         </h1>
         <p className="text-[#DBCBF4] font-berlin text-xs">
@@ -22,7 +22,7 @@ const BannerContent = () => {
       <div className="absolute bottom-5 md:bottom-10 lg:bottom-4 xl:bottom-7 left-1/2 transform -translate-x-1/2  bg-[#6b5863] rounded-xl px-3 ">
         <button
           onClick={handleClick}
-          className="text-[#E5BD9D] text-base md:text-lg lg:text-sm font-semibold tracking-wider">
+          className="text-[#E5BD9D] text-base md:text-lg lg:text-sm font-normal tracking-wider">
           Chat Now
         </button>
       </div>

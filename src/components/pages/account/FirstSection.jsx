@@ -39,7 +39,7 @@ const FirstSection = ({ subscriptionModel }) => {
               alt="profile icon"
               className="w-[70px] h-[70px] md:w-[120px] md:h-[120px]"
             />
-            <p className="text-[#E5BD9D] font-semibold text-sm">Drelciuc Petru Alexandru</p>
+            <p className="text-[#E5BD9D] font-normal text-sm">Drelciuc Petru Alexandru</p>
             <p className="text-[#DBCBF4] font-semibold text-sm">
             #dudewithbigd13
             </p>
@@ -88,10 +88,10 @@ const FirstSection = ({ subscriptionModel }) => {
           <div className="grid grid-cols-3 gap-3 mt-3 h-[calc(100%-44px)]">
             {subscriptionModel.map((subscription) => (
               <div key={subscription.id} className="account-box-gradient text-center p-3 rounded-2xl h-full">
-                <p className="text-[#E5BD9D] font-bold text-sm">
+                <p className="text-[#E5BD9D]  text-sm">
                   {subscription.subscriptionType}
                 </p>
-                <p className="text-[#DBCBF4] font-semibold text-xs">
+                <p className="text-[#DBCBF4] text-xs tracking-wide">
                   {subscription.price}$/mo.
                 </p>
                 <p className="text-[9px] text-[#E5BD9D] mt-3">
