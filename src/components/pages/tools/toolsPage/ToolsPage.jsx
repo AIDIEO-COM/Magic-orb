@@ -1,6 +1,8 @@
 "use client";
 import ToolsContent from "@/components/pages/tools/toolsContent/ToolsContent";
 import ImageCard from "@/components/shared/imageCard/ImageCard";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
 
 const ToolsPage = ({ imageCardInfo, changeReferenceTools }) => {
@@ -56,6 +58,11 @@ const ToolsPage = ({ imageCardInfo, changeReferenceTools }) => {
     }, 5);
     return () => clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+    Aos.init({ duration: 700, offset: 0, once: true });
+  }, []);
+
   return (
     <div className="grid justify-items-center md:justify-items-stretch pt-32 md:pt-0 md:grid-cols-2 gap-8 z-0 font-berlin p-3 md:p-4 lg:p-0 h-full ">
       <ToolsContent
