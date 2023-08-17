@@ -1,4 +1,5 @@
 "use client";
+import Aos from "aos";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 const ImageCard = ({
@@ -25,6 +26,16 @@ const ImageCard = ({
     }, 5);
     return () => clearTimeout(timer);
   }, [previousActiveCardId]);
+
+  useEffect(() => {
+    console.log("render");
+    Aos.init({ duration: 700, offset: 0, easing: "ease-in-sine", once: true });
+  }, []);
+
+  useEffect(() => {
+    Aos.refresh()
+  }, [])
+
   return (
     <div
       className={`w-full h-full flex justify-center rounded-xl`}
