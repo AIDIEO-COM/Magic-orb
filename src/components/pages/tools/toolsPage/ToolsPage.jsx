@@ -71,7 +71,7 @@ const ToolsPage = ({ imageCardInfo, changeReferenceTools }) => {
         activeCard={activeCard}
         animateToolsContent={animateToolsContent}></ToolsContent>
       <div
-        className={`grid grid-cols-2 gap-y-6 md:gap-y-4 mt-16 md:mt-0 md:gap-4 w-full justify-between 2xl:gap-5 duration-700 pb-5`}>
+        className={`grid grid-cols-2  mt-16 md:mt-0 gap-4 w-full justify-between 2xl:gap-5 duration-700 pb-5`}>
         {cardsInfo.slice(0, 6).map((singleImageCardInfo, index) => (
           <ImageCard
             key={index}
