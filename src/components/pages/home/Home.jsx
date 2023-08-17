@@ -41,7 +41,7 @@ const Home = ({ disconnectReferenceImageCards }) => {
       <div
         className={` w-full lg:grid lg:grid-cols-7  overflow-hidden pb-3 gap-x-[29px] duration-700 ${toolsCardAnimate}`}>
         <div
-          className={`flex justify-between lg:col-start-1 lg:col-end-4 mt-[20px] items-center gap-x-[29px] `}>
+          className={`grid grid-cols-2 w-full  lg:col-start-1 lg:col-end-4 mt-[20px] items-center gap-x-4 md:gap-x-[29px] `}>
           {disconnectReferenceImageCards
             .slice(0, 2)
             .map((singleImageCardInfo) => (
@@ -57,7 +57,7 @@ const Home = ({ disconnectReferenceImageCards }) => {
           <GiftCard home={true}></GiftCard>
         </div>
         <div
-          className={`flex justify-between gap-x-[30px]  lg:col-start-5 lg:col-end-8 mt-10 lg:mt-[20px] items-center `}>
+          className={`grid grid-cols-2 gap-x-4 md:flex justify-between md:gap-x-[30px]  lg:col-start-5 lg:col-end-8 mt-4 lg:mt-[20px] items-center `}>
           {disconnectReferenceImageCards
             .slice(2, 4)
             .map((singleImageCardInfo) => (

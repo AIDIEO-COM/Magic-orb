@@ -40,11 +40,11 @@ const ImageCard = ({
       className={`w-full h-full flex justify-center rounded-xl`}
       data-aos={home || animate_origin[0]}>
       <Link
-        className="relative w-[150px] h-[150px] sm:w-[170px] sm:h-[140px] lg:w-full lg:h-[90%] 2xl:h-full bg-cover bg-center font-berlin  rounded-xl"
+        className="relative w-full h-full sm:w-[170px] sm:h-[140px] lg:w-full lg:h-[90%] 2xl:h-full bg-cover bg-center font-berlin  rounded-xl"
         href={home ? href : "/tools"}>
         <div
           onClick={setActiveCard}
-          className={`relative w-[150px] h-[150px] default-shadow sm:w-[170px] sm:h-[140px] md:w-[200px] md:h-[160px] lg:w-full lg:h-full bg-cover bg-no-repeat bg-center font-berlin rounded-xl ${
+          className={`relative w-full h-[160px] default-shadow sm:w-[170px] sm:h-[140px] md:w-[200px] md:h-[160px] lg:w-full lg:h-full bg-cover bg-no-repeat bg-center font-berlin rounded-xl ${
             previousActiveCardId === id && cardTransition2
           }`}
           style={{
