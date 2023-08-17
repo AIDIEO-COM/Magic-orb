@@ -1,5 +1,6 @@
 "use client";
 import Aos from "aos";
+import "aos/dist/aos.css";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 const ImageCard = ({
@@ -28,18 +29,16 @@ const ImageCard = ({
   }, [previousActiveCardId]);
 
   useEffect(() => {
-    console.log("render");
     Aos.init({ duration: 700, offset: 0, easing: "ease-in-sine", once: true });
   }, []);
 
   useEffect(() => {
     Aos.refresh()
   }, [])
-
   return (
     <div
       className={`w-full h-full flex justify-center rounded-xl`}
-      data-aos={home ? animate_origin[1] : animate_origin[0]}>
+      data-aos={home || animate_origin[0]}>
       <Link
         className="relative w-[150px] h-[150px] sm:w-[170px] sm:h-[140px] lg:w-full lg:h-[90%] 2xl:h-full bg-cover bg-center font-berlin  rounded-xl"
         href={home ? href : "/tools"}>
