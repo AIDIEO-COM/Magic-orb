@@ -13,8 +13,8 @@ const MagicOrb = () => {
     return () => clearTimeout(timeOut)
   })
   return (
-    <div className="font-berlin p-3 md:p-4 lg:p-0 h-[calc(100vh-00px)]">
-      <div className="overflow-hidden w-full h-full relative">
+    <div className="font-berlin p-3 md:p-4 lg:p-0 h-[calc(100vh-60px)]">
+      <div className="md:overflow-hidden w-full h-full relative">
         <Image
           src={"https://i.ibb.co/RD05jMX/Tool-label-1.png"}
           alt="homepageimg"
