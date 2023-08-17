@@ -1,6 +1,8 @@
 "use client";
 import ToolsContent from "@/components/pages/tools/toolsContent/ToolsContent";
 import ImageCard from "@/components/shared/imageCard/ImageCard";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
 
 const ToolsPage = ({ imageCardInfo, changeReferenceTools }) => {
