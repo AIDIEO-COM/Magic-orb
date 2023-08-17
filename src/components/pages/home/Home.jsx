@@ -57,7 +57,7 @@ const Home = ({ disconnectReferenceImageCards }) => {
           <GiftCard home={true}></GiftCard>
         </div>
         <div
-          className={`grid grid-cols-2 gap-x-4 md:flex justify-between md:gap-x-[30px]  lg:col-start-5 lg:col-end-8 mt-10 lg:mt-[20px] items-center `}>
+          className={`grid grid-cols-2 gap-x-4 md:flex justify-between md:gap-x-[30px]  lg:col-start-5 lg:col-end-8 mt-4 lg:mt-[20px] items-center `}>
           {disconnectReferenceImageCards
             .slice(2, 4)
             .map((singleImageCardInfo) => (
