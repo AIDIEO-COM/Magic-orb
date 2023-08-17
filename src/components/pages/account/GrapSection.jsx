@@ -11,7 +11,7 @@ const stats = [
 
 const GrapSection = () => {
   return (
-    <div className="flex flex-col sm:flex-row w-full gap-[30px] mt-[23px]">
+    <div className="flex flex-col sm:flex-row w-full gap-[30px] mt-[23px] lg:h-[260px]">
       <div className="grid grid-cols-2 justify-items-center px-4 rounded-xl bg-[#1A1725] default-shadow grow sm:w-[35%]">
         <div className="flex flex-col items-center justify-center ">
           <Image
@@ -19,7 +19,7 @@ const GrapSection = () => {
             alt="statistics"
             width={200}
             height={180}
-            className="w-[140px] md:w-[200px] "
+            className="w-[120px] md:w-[150px] "
           />
           {stats.map((singleStats) => (
             <div
@@ -36,22 +36,21 @@ const GrapSection = () => {
             </div>
           ))}
         </div>
-        <div className="flex flex-col items-center justify-between gap-y-3 p-8 max-w-[380px]">
-          <div></div>
-          <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center h-full justify-between gap-y-3 p-8 max-w-[380px]">
+          <div className="flex flex-col items-center pt-6">
             <p className="text-[#E5BD9D] font-semibold font-sans text-[24px] md:text-2xl">
               Personality
             </p>
             <span className="text-[#DBCBF4] text-[10px] tracking-wider text-center font-sans">
               IFTP Personality
             </span>
-            <p className="text-[#E5BD9D] text-[9px] text-justify">
+          </div>
+          <p className="text-[#E5BD9D] text-[9px] text-justify">
               Your personality is based on the emotions and trauma from the
               past. The best way to free the real you is by talking with a
               qualified person
             </p>
-          </div>
-          <div className="flex items-center mb-8 gap-1">
+          <div className="flex items-center gap-1">
             <AccountBtnFill>Free yourself</AccountBtnFill>
             <AccountBtnOutline>See full stats</AccountBtnOutline>
           </div>
@@ -77,7 +76,7 @@ const GrapSection = () => {
             alt="statistics"
             width={600}
             height={200}
-            className="w-full h-[120px] mx-auto"
+            className="max-w-[390px] h-[80px] mx-auto"
           />
           <div className="flex items-center justify-between text-[#E5BD9D] text-[10px]">
             <p>Extrovert: 35% up</p>

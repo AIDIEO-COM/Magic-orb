@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const FirstSection = ({ subscriptionModel }) => {
   return (
-    <div className="flex flex-col lg:grid grid-cols-3 gap-5">
+    <div className="flex flex-col lg:grid grid-cols-3 gap-5 lg:h-[260px]">
       <div className="flex gap-2 md:gap-4 w-full lg:w-auto justify-center lg:col-start-1 lg:col-end-2">
         <div
           className="default-shadow w-full px-2 lg:px-[17px] xl:px-[25px] py-[17px] rounded-xl
@@ -28,9 +28,9 @@ const FirstSection = ({ subscriptionModel }) => {
         </div>
         <GiftCard></GiftCard>
       </div>
-      <div className="grid sm:grid-cols-2 gap-5 w-fit lg:w-full justify-center col-start-2 col-end-4 ">
-        <div className="default-shadow account-box-gradient flex items-center gap-4 p-4 rounded-xl ">
-          <div className="flex flex-col items-center justify-center border-r-2 w-[60%]">
+      <div className="grid sm:grid-cols-2 gap-5 w-fit lg:w-fit justify-center col-start-2 col-end-4 ">
+        <div className="default-shadow account-box-gradient flex items-center gap-4 p-4 rounded-xl lg:mr-1">
+          <div className="flex flex-col items-center justify-center border-r-2 w-[55%]">
             <Image
               src="https://i.ibb.co/VJM51Tn/profile-modified-2.png"
               width={147}
@@ -82,7 +82,7 @@ const FirstSection = ({ subscriptionModel }) => {
             </button>
           </div>
         </div>
-        <div className="default-shadow rounded-xl ml-2 bg-[#20192A] p-[15px] h-full lg:w-[100%]">
+        <div className="default-shadow rounded-xl md:ml-2 bg-[#20192A] p-[15px] h-full lg:w-[100%]">
           <p className="text-2xl font-semibold text-[#DBCBF4] text-center font-sans">
             Subscriptions
           </p>
