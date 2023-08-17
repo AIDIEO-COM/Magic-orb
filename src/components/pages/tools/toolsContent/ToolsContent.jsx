@@ -6,7 +6,7 @@ import Link from "next/link";
 const ToolsContent = ({ activeCard, animateToolsContent, controlsForwardBtn, controlsBackwardBtn }) => {
   return (
     <div
-      className={`mx-auto w-[95%]   max-w-[600px]  -mt-28 border-r-2 sm:rotate-[3.00deg] bg-gradient-to-r from-[#442143] to-[#2B3057] lg:z-3 overflow-hidden h-[120%] ${animateToolsContent}} duration-700 `}
+      className={`mx-auto w-[95%] max-w-[600px] -mt-28 border-r-2 sm:rotate-[3.00deg] bg-gradient-to-r from-[#442143] to-[#2B3057] lg:z-10 overflow-hidden h-[120%] ${animateToolsContent}} duration-700 `}
       style={{
         boxShadow:
           "20px 4px 20px 0px rgba(0, 0, 0, 0.25), 20px 4px 20px 0px rgba(0, 0, 0, 0.25) inset",
@@ -20,12 +20,14 @@ const ToolsContent = ({ activeCard, animateToolsContent, controlsForwardBtn, con
         <ToolsContentImgAnimate
           imgLink={activeCard?.card_img_link}></ToolsContentImgAnimate>
       </div>
-      <div className="mt-14 px-8 grid sm:grid-cols-2 justify-items-center gap-y-3 md:justify-items-end ">
+      <div className="mt-14 grid sm:grid-cols-2 justify-items-center gap-y-3 md:justify-items-center mx-4">
         <div>
-          <p className="text-[#DBCBF4] sm:-rotate-3">Info</p>
-          <div className="sm:-rotate-3 ml-2 md:mt-1">
-            {activeCard?.card_info?.map((infoItem, index) => (
-              <p key={index} className="text-[10px] mb-4 text-[#E5BD9D]">
+          <p className="text-[#DBCBF4] sm:-rotate-3 ml-6">Info</p>
+          <div className="ml-2 md:mt-1 ">
+            {activeCard.card_info.map((infoItem, index) => (
+              <p
+                key={index}
+                className="text-[10px] mb-4 pl-6 text-[#E5BD9D] sm:-rotate-3 ">
                 <span className="text-[#DBCBF4] ml-6 mr-1">
                   {infoItem?.info_headline}:
                 </span>
