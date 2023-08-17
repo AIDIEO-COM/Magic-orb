@@ -13,7 +13,6 @@ const GiftCard = ({ home }) => {
 
   return (
     <div
-    data-aos={home ? "fade-up" : ""}
       className={`p-5 ${
         home ? "mt-4 w-full lg:h-[90%] 2xl:w-44" : "2xl:w-48 xl:h-full"
       } mx-auto   xl:w-36  2xl:h-[250px]  rounded-xl bg-[#1A1725] shadow-[10px_10px_8px10px#00000024] default-shadow relative`}
@@ -37,7 +36,7 @@ const GiftCard = ({ home }) => {
         />
         <button
           onClick={() => setTakeCardIsClicked(true)}
-          className="mx-auto text-[#E5BD9D] text-[10px] sm:text-xs bg-[#674B53] px-1 sm:px-2 font-semibold rounded-full py-1"
+          className="mx-auto text-[#E5BD9D] text-[10px] sm:text-xs bg-[#674B53] px-1 sm:px-2 font-normal tracking-wide rounded-full py-1 "
         >
           Take the card
         </button>

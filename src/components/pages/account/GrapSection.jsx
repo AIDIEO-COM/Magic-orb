@@ -1,7 +1,6 @@
 import AccountBtnFill from "@/components/shared/btn/accountPageBtn/accountBtnFill/AccountBtnFill";
 import AccountBtnOutline from "@/components/shared/btn/accountPageBtn/accountBtnOutline/AccountBtnOutline";
 import Image from "next/image";
-import React from "react";
 
 const stats = [
   { id: "1", stats_color: "bg-[#7ECCF8]", stats_time: 8, total_time: 3.6 },
@@ -13,7 +12,7 @@ const stats = [
 const GrapSection = () => {
   return (
     <div className="flex flex-col sm:flex-row w-full gap-[30px] mt-[23px]">
-      <div className="grid grid-cols-2 justify-items-center px-4 rounded-xl bg-[#1A1725] shadow-[10px_10px_8px_10px_#00000024] grow sm:w-[35%]">
+      <div className="grid grid-cols-2 justify-items-center px-4 rounded-xl bg-[#1A1725] default-shadow grow sm:w-[35%]">
         <div className="flex flex-col items-center justify-center ">
           <Image
             src="https://i.ibb.co/wNkY8bD/Screenshot-2023-08-10-112323-removebg-preview.png"
@@ -25,11 +24,9 @@ const GrapSection = () => {
           {stats.map((singleStats) => (
             <div
               key={singleStats.id}
-              className="flex items-center gap-1 md:gap-4 mb-2"
-            >
+              className="flex items-center gap-1 md:gap-4 mb-2">
               <p
-                className={`w-4 h-4 ${singleStats.stats_color} rounded-full`}
-              ></p>
+                className={`w-4 h-4 ${singleStats.stats_color} rounded-full`}></p>
               <span className="text-[#DBCBF4] text-[10px] tracking-wider">
                 Today: {singleStats.stats_time}min
               </span>
@@ -48,20 +45,20 @@ const GrapSection = () => {
             <span className="text-[#DBCBF4] text-[10px] tracking-wider text-center font-sans">
               IFTP Personality
             </span>
-          <p className="text-[#E5BD9D] text-[9px] text-justify">
-            Your personality is based on the emotions and trauma from the past.
-            The best way to free the real you is by talking with a qualified
-            person
-          </p>
+            <p className="text-[#E5BD9D] text-[9px] text-justify">
+              Your personality is based on the emotions and trauma from the
+              past. The best way to free the real you is by talking with a
+              qualified person
+            </p>
           </div>
           <div className="flex items-center mb-8 gap-1">
-          <AccountBtnFill>Free yourself</AccountBtnFill>
+            <AccountBtnFill>Free yourself</AccountBtnFill>
             <AccountBtnOutline>See full stats</AccountBtnOutline>
           </div>
         </div>
       </div>
-      <div className="account-box-gradient hidden md:flex items-center justify-between px-4 rounded-xl grow-0 w-[27%]"></div>
-      <div className="flex  items-center justify-between px-5 py-4 rounded-xl bg-[#1A1725] shadow-[10px_10px_8px_10px_#00000024] grow sm:w-[31%]">
+      <div className="account-box-gradient default-shadow hidden md:flex items-center justify-between pl-4 rounded-xl grow-0 w-[28%]"></div>
+      <div className="flex items-center justify-between px-5 py-4 rounded-xl bg-[#1A1725] default-shadow grow sm:w-[31%]">
         <div className="flex flex-col w-full justify-between gap-y-2 p-4">
           <div className="flex flex-col">
             <p className="text-[#E5BD9D] font-sans font-semibold text-lg md:text-2xl text-center">
@@ -87,7 +84,7 @@ const GrapSection = () => {
             <p>Exposure: 5% down</p>
             <p>Self care: 23% up</p>
           </div>
-          <div className="flex items-center full mx-auto mt-2  gap-x-4 ">
+          <div className="flex items-center full mx-auto mt-2 gap-x-4">
             <AccountBtnFill>See full stats</AccountBtnFill>
             <AccountBtnOutline>Improve Statistics</AccountBtnOutline>
           </div>

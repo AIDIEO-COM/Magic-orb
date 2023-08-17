@@ -2,15 +2,14 @@ import AccountBtnFill from "@/components/shared/btn/accountPageBtn/accountBtnFil
 import AccountBtnOutline from "@/components/shared/btn/accountPageBtn/accountBtnOutline/AccountBtnOutline";
 import GiftCard from "@/components/shared/giftCard/GiftCard";
 import Image from "next/image";
-import React from "react";
 
 const FirstSection = ({ subscriptionModel }) => {
   return (
     <div className="flex flex-col lg:grid grid-cols-3 gap-5">
       <div className="flex gap-2 md:gap-4 w-full lg:w-auto justify-center lg:col-start-1 lg:col-end-2">
         <div
-          className="w-full px-2 lg:px-[17px] xl:px-[25px] py-[17px] rounded-xl
-        shadow-[10px_10px_8px_10px_#00000024] bg-[#20192A]">
+          className="default-shadow w-full px-2 lg:px-[17px] xl:px-[25px] py-[17px] rounded-xl
+         bg-[#20192A]">
           <p className="text-center text-[#DBCBF4] text-xl md:text-2xl font-semibold font-sans">
             Daily tasks
           </p>
@@ -18,7 +17,7 @@ const FirstSection = ({ subscriptionModel }) => {
             {[1, 2, 3].map((taskItem) => (
               <li
                 key={taskItem}
-                className=" px-2 h-[48px] xl:px-[34px] flex items-center justify-center text-[#E5BD9D] text-[10px] sm:text-xs rounded-full mb-2 mx-auto w-full account-box-gradient account-box-shadow" >
+                className=" px-2 h-[48px] xl:px-[34px] flex items-center justify-center text-[#E5BD9D] text-[10px] sm:text-xs rounded-full mb-2 mx-auto w-full account-box-gradient account-box-shadow">
                 Talk with the orb 2 hours:
                 <span className="text-[#DBCBF4] text-[8px] sm:text-[10px] tracking-wider ml-1">
                   3min/2hours
@@ -30,7 +29,7 @@ const FirstSection = ({ subscriptionModel }) => {
         <GiftCard></GiftCard>
       </div>
       <div className="grid sm:grid-cols-2 gap-4 w-fit lg:w-full justify-center col-start-2 col-end-4 ">
-        <div className="account-box-gradient flex  items-center gap-4 p-4  shadow-[10px_10px_8px_10px_#00000024] rounded-xl ">
+        <div className="default-shadow account-box-gradient flex items-center gap-4 p-4 rounded-xl ">
           <div className="flex flex-col items-center justify-center border-r-2 w-[60%]">
             <Image
               src="https://i.ibb.co/VJM51Tn/profile-modified-2.png"
@@ -39,13 +38,15 @@ const FirstSection = ({ subscriptionModel }) => {
               alt="profile icon"
               className="w-[70px] h-[70px] md:w-[120px] md:h-[120px]"
             />
-            <p className="text-[#E5BD9D] font-semibold text-sm">Drelciuc Petru Alexandru</p>
-            <p className="text-[#DBCBF4] font-semibold text-sm">
-            #dudewithbigd13
+            <p className="text-[#E5BD9D] font-normal text-sm">
+              Drelciuc Petru Alexandru
+            </p>
+            <p className="text-[#DBCBF4] font-normal text-sm tracking-wide">
+              #dudewithbigd13
             </p>
             <div className="flex items-center mt-[11px] gap-1">
-            <AccountBtnFill>Share profile</AccountBtnFill>
-            <AccountBtnOutline>Edit profile</AccountBtnOutline>
+              <AccountBtnFill>Share profile</AccountBtnFill>
+              <AccountBtnOutline>Edit profile</AccountBtnOutline>
             </div>
           </div>
           <div className="flex flex-col justify-between p-4 h-full">
@@ -81,17 +82,19 @@ const FirstSection = ({ subscriptionModel }) => {
             </button>
           </div>
         </div>
-        <div className="rounded-xl bg-[#20192A] shadow-[10px_10px_8px_10px_#00000024]  p-[15px] h-full lg:w-[100%]">
+        <div className="default-shadow rounded-xl bg-[#20192A] p-[15px] h-full lg:w-[100%]">
           <p className="text-2xl font-semibold text-[#DBCBF4] text-center font-sans">
             Subscriptions
           </p>
           <div className="grid grid-cols-3 gap-3 mt-3 h-[calc(100%-44px)]">
             {subscriptionModel.map((subscription) => (
-              <div key={subscription.id} className="account-box-gradient text-center p-3 rounded-2xl h-full">
-                <p className="text-[#E5BD9D] font-bold text-sm">
+              <div
+                key={subscription.id}
+                className="account-box-gradient text-center p-3 rounded-2xl h-full">
+                <p className="text-[#E5BD9D]  text-sm">
                   {subscription.subscriptionType}
                 </p>
-                <p className="text-[#DBCBF4] font-semibold text-xs">
+                <p className="text-[#DBCBF4] text-xs tracking-wide">
                   {subscription.price}$/mo.
                 </p>
                 <p className="text-[9px] text-[#E5BD9D] mt-3">

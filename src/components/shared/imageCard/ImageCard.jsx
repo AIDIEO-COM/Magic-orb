@@ -1,4 +1,6 @@
 "use client";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 const ImageCard = ({
@@ -19,20 +21,30 @@ const ImageCard = ({
   useEffect(() => {
     setCardTransition2("opacity-0 scale-90");
     const timer = setTimeout(() => {
-      setCardTransition2("transition duration-700 scale-100  ease-in-out opacity-100");
+      setCardTransition2(
+        "transition duration-700 scale-100  ease-in-out opacity-100"
+      );
     }, 5);
     return () => clearTimeout(timer);
   }, [previousActiveCardId]);
+
+  useEffect(() => {
+    Aos.init({ duration: 700, offset: 0, easing: "ease-in-sine", once: true });
+  }, []);
+
+  useEffect(() => {
+    Aos.refresh()
+  }, [])
   return (
     <div
       className={`w-full h-full flex justify-center rounded-xl`}
-      data-aos={home ? animate_origin[1] : animate_origin[0]}>
+      data-aos={home || animate_origin[0]}>
       <Link
-        className="relative w-[130px] h-[110px] sm:w-[170px] sm:h-[140px] lg:w-full lg:h-[90%] 2xl:h-full bg-cover bg-center font-berlin  rounded-xl"
+        className="relative w-[150px] h-[150px] sm:w-[170px] sm:h-[140px] lg:w-full lg:h-[90%] 2xl:h-full bg-cover bg-center font-berlin  rounded-xl"
         href={home ? href : "/tools"}>
         <div
           onClick={setActiveCard}
-          className={`relative w-[130px] default-shadow h-[110px] sm:w-[170px] sm:h-[140px] md:w-[200px] md:h-[160px] lg:w-full lg:h-full bg-cover bg-no-repeat bg-center font-berlin rounded-xl ${
+          className={`relative w-[150px] h-[150px] default-shadow sm:w-[170px] sm:h-[140px] md:w-[200px] md:h-[160px] lg:w-full lg:h-full bg-cover bg-no-repeat bg-center font-berlin rounded-xl ${
             previousActiveCardId === id && cardTransition2
           }`}
           style={{
@@ -47,8 +59,8 @@ const ImageCard = ({
           <div className="absolute bottom-2 left-4 text-[#FFC8AA] text-3xl hidden md:inline-block">
             {try_count}
           </div>
-          <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2  bg-[#6b5863] rounded-xl px-3 hidden md:inline-block">
-            <p className="text-[#E5BD9D] text-[11px]  lg:font-semibold tracking-wider text-center font-berlin">
+          <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2  bg-[#6b5863] rounded-xl px-3 py-1 hidden md:inline-block">
+            <p className="text-[#E5BD9D] font-berlin text-[12px] lg:font-normal tracking-wider text-center ">
               {game_name}
             </p>
           </div>

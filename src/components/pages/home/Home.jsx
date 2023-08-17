@@ -6,22 +6,17 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import BannerSideContent from "./BannerSideContent";
 import GiftCard from "@/components/shared/giftCard/GiftCard";
-import Aos from "aos";
-import "aos/dist/aos.css";
 
 const Home = ({ disconnectReferenceImageCards }) => {
   const [bannerSideContent, setBannerSideContent] = useState("opacity-0");
+  const [toolsCardAnimate, setToolsCardAnimate] = useState("opacity-0 translate-y-[100%]");
   useEffect(() => {
     const timeOut = setTimeout(() => {
       setBannerSideContent("opacity-100");
+      setToolsCardAnimate("opacity-100 translate-y-0");
     }, 5);
     return () => clearTimeout(timeOut);
   });
-
-  useEffect(() => {
-    Aos.init({ duration: 700, offset: 10, easing: "ease-in-sine" });
-  }, []);
-
   return (
     <div className="font-berlin p-3 md:p-4 lg:p-0 h-full">
       <div className="lg:grid grid-cols-10">
@@ -42,8 +37,9 @@ const Home = ({ disconnectReferenceImageCards }) => {
         <BannerSideContent
           bannerSideContent={bannerSideContent}></BannerSideContent>
       </div>
+      {/* tools card start from here */}
       <div
-        className={` w-full lg:grid lg:grid-cols-7  overflow-hidden pb-3 gap-x-[29px] duration-700 `}>
+        className={` w-full lg:grid lg:grid-cols-7  overflow-hidden pb-3 gap-x-[29px] duration-700 ${toolsCardAnimate}`}>
         <div
           className={`flex justify-between lg:col-start-1 lg:col-end-4 mt-[20px] items-center gap-x-[29px] `}>
           {disconnectReferenceImageCards

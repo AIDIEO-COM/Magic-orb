@@ -10,7 +10,7 @@ const BannerSideContent = ({ bannerSideContent }) => {
   };
   return (
     <div
-      className={`col-start-9 col-end-11 flex flex-col gap-y-3 ${bannerSideContent} duration-700 relative`} >
+      className={`col-start-9 col-end-11 flex flex-col gap-y-3 ${bannerSideContent} duration-700 relative`}>
       <div className="h-[35%] w-[120%] absolute -left-[20%] z-1 overflow-hidden hidden lg:inline-block">
         <Image
           src={"https://i.ibb.co/QN7h6G0/orb22-1.png"}
@@ -21,7 +21,7 @@ const BannerSideContent = ({ bannerSideContent }) => {
         <BannerContent></BannerContent>
       </div>
       <div
-      data-aos="fade-up"
+        data-aos="fade-up"
         onClick={handleStatisticShow}
         className="min-h-fit xl:h-[62%] w-full pr-1 xl:px-2 xl:pb-3 pt-4 xl:pt-0 cursor-pointer mt-auto">
         {isStatisticsShow === false && (
