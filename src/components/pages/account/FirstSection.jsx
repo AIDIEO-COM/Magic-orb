@@ -82,7 +82,7 @@ const FirstSection = ({ subscriptionModel }) => {
             </button>
           </div>
         </div>
-        <div className="default-shadow rounded-xl ml-2 bg-[#20192A] p-[15px] h-full lg:w-[100%]">
+        <div className="default-shadow rounded-xl md:ml-2 bg-[#20192A] p-[15px] h-full lg:w-[100%]">
           <p className="text-2xl font-semibold text-[#DBCBF4] text-center font-sans">
             Subscriptions
           </p>
