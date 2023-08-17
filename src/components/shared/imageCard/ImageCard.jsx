@@ -1,4 +1,5 @@
 "use client";
+import Aos from "aos";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 const ImageCard = ({
@@ -25,6 +26,16 @@ const ImageCard = ({
     }, 5);
     return () => clearTimeout(timer);
   }, [previousActiveCardId]);
+
+  useEffect(() => {
+    console.log("render");
+    Aos.init({ duration: 700, offset: 0, easing: "ease-in-sine", once: true });
+  }, []);
+
+  useEffect(() => {
+    Aos.refresh()
+  }, [])
+
   return (
     <div
       className={`w-full h-full flex justify-center rounded-xl`}
@@ -50,7 +61,7 @@ const ImageCard = ({
             {try_count}
           </div>
           <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2  bg-[#6b5863] rounded-xl px-3 py-1 hidden md:inline-block">
-            <p className="text-[#E5BD9D] font-berlin text-[11px] lg:font-normal tracking-wider text-center ">
+            <p className="text-[#E5BD9D] font-berlin text-[12px] lg:font-normal tracking-wider text-center ">
               {game_name}
             </p>
           </div>

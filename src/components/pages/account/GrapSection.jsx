@@ -1,7 +1,7 @@
 import AccountBtnFill from "@/components/shared/btn/accountPageBtn/accountBtnFill/AccountBtnFill";
 import AccountBtnOutline from "@/components/shared/btn/accountPageBtn/accountBtnOutline/AccountBtnOutline";
 import Image from "next/image";
-import React from "react";
+
 
 const stats = [
   { id: "1", stats_color: "bg-[#7ECCF8]", stats_time: 8, total_time: 3.6 },

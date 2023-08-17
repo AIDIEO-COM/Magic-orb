@@ -2,7 +2,6 @@ import AccountBtnFill from "@/components/shared/btn/accountPageBtn/accountBtnFil
 import AccountBtnOutline from "@/components/shared/btn/accountPageBtn/accountBtnOutline/AccountBtnOutline";
 import GiftCard from "@/components/shared/giftCard/GiftCard";
 import Image from "next/image";
-import React from "react";
 
 const FirstSection = ({ subscriptionModel }) => {
   return (
@@ -18,7 +17,7 @@ const FirstSection = ({ subscriptionModel }) => {
             {[1, 2, 3].map((taskItem) => (
               <li
                 key={taskItem}
-                className=" px-2 h-[48px] xl:px-[34px] flex items-center justify-center text-[#E5BD9D] text-[10px] sm:text-xs rounded-full mb-2 mx-auto w-full account-box-gradient account-box-shadow" >
+                className=" px-2 h-[48px] xl:px-[34px] flex items-center justify-center text-[#E5BD9D] text-[10px] sm:text-xs rounded-full mb-2 mx-auto w-full account-box-gradient account-box-shadow">
                 Talk with the orb 2 hours:
                 <span className="text-[#DBCBF4] text-[8px] sm:text-[10px] tracking-wider ml-1">
                   3min/2hours
@@ -39,13 +38,15 @@ const FirstSection = ({ subscriptionModel }) => {
               alt="profile icon"
               className="w-[70px] h-[70px] md:w-[120px] md:h-[120px]"
             />
-            <p className="text-[#E5BD9D] font-normal text-sm">Drelciuc Petru Alexandru</p>
-            <p className="text-[#DBCBF4] font-semibold text-sm">
-            #dudewithbigd13
+            <p className="text-[#E5BD9D] font-normal text-sm">
+              Drelciuc Petru Alexandru
+            </p>
+            <p className="text-[#DBCBF4] font-normal text-sm tracking-wide">
+              #dudewithbigd13
             </p>
             <div className="flex items-center mt-[11px] gap-1">
-            <AccountBtnFill>Share profile</AccountBtnFill>
-            <AccountBtnOutline>Edit profile</AccountBtnOutline>
+              <AccountBtnFill>Share profile</AccountBtnFill>
+              <AccountBtnOutline>Edit profile</AccountBtnOutline>
             </div>
           </div>
           <div className="flex flex-col justify-between p-4 h-full">
@@ -87,7 +88,9 @@ const FirstSection = ({ subscriptionModel }) => {
           </p>
           <div className="grid grid-cols-3 gap-3 mt-3 h-[calc(100%-44px)]">
             {subscriptionModel.map((subscription) => (
-              <div key={subscription.id} className="account-box-gradient text-center p-3 rounded-2xl h-full">
+              <div
+                key={subscription.id}
+                className="account-box-gradient text-center p-3 rounded-2xl h-full">
                 <p className="text-[#E5BD9D]  text-sm">
                   {subscription.subscriptionType}
                 </p>

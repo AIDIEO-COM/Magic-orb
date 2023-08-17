@@ -26,8 +26,8 @@ const BannerContent = () => {
           Chat Now
         </button>
       </div>
-      <div className="absolute bottom-5 left-5 text-[#FFC8AA] text-3xl">0</div>
-      <div className="absolute bottom-5 right-5 lg:right-10 text-[#FFC8AA] text-3xl">
+      <div className="absolute bottom-5 left-3 text-[#FFC8AA] text-3xl">0</div>
+      <div className="absolute bottom-5 right-5 lg:right-5 text-[#FFC8AA] text-3xl">
         32
       </div>
     </div>
