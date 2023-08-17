@@ -8,8 +8,8 @@ const FirstSection = ({ subscriptionModel }) => {
     <div className="flex flex-col lg:grid grid-cols-3 gap-5">
       <div className="flex gap-2 md:gap-4 w-full lg:w-auto justify-center lg:col-start-1 lg:col-end-2">
         <div
-          className="w-full px-2 lg:px-[17px] xl:px-[25px] py-[17px] rounded-xl
-        shadow-[10px_10px_8px_10px_#00000024] bg-[#20192A]">
+          className="default-shadow w-full px-2 lg:px-[17px] xl:px-[25px] py-[17px] rounded-xl
+         bg-[#20192A]">
           <p className="text-center text-[#DBCBF4] text-xl md:text-2xl font-semibold font-sans">
             Daily tasks
           </p>
@@ -29,7 +29,7 @@ const FirstSection = ({ subscriptionModel }) => {
         <GiftCard></GiftCard>
       </div>
       <div className="grid sm:grid-cols-2 gap-4 w-fit lg:w-full justify-center col-start-2 col-end-4 ">
-        <div className="account-box-gradient flex  items-center gap-4 p-4  shadow-[10px_10px_8px_10px_#00000024] rounded-xl ">
+        <div className="default-shadow account-box-gradient flex items-center gap-4 p-4 rounded-xl ">
           <div className="flex flex-col items-center justify-center border-r-2 w-[60%]">
             <Image
               src="https://i.ibb.co/VJM51Tn/profile-modified-2.png"
@@ -82,7 +82,7 @@ const FirstSection = ({ subscriptionModel }) => {
             </button>
           </div>
         </div>
-        <div className="rounded-xl bg-[#20192A] shadow-[10px_10px_8px_10px_#00000024]  p-[15px] h-full lg:w-[100%]">
+        <div className="default-shadow rounded-xl bg-[#20192A] p-[15px] h-full lg:w-[100%]">
           <p className="text-2xl font-semibold text-[#DBCBF4] text-center font-sans">
             Subscriptions
           </p>

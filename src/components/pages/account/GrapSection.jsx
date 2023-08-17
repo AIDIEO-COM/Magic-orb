@@ -2,7 +2,6 @@ import AccountBtnFill from "@/components/shared/btn/accountPageBtn/accountBtnFil
 import AccountBtnOutline from "@/components/shared/btn/accountPageBtn/accountBtnOutline/AccountBtnOutline";
 import Image from "next/image";
 
-
 const stats = [
   { id: "1", stats_color: "bg-[#7ECCF8]", stats_time: 8, total_time: 3.6 },
   { id: "2", stats_color: "bg-[#F8693C]", stats_time: 8, total_time: 3.6 },
@@ -13,7 +12,7 @@ const stats = [
 const GrapSection = () => {
   return (
     <div className="flex flex-col sm:flex-row w-full gap-[30px] mt-[23px]">
-      <div className="grid grid-cols-2 justify-items-center px-4 rounded-xl bg-[#1A1725] shadow-[10px_10px_8px_10px_#00000024] grow sm:w-[35%]">
+      <div className="grid grid-cols-2 justify-items-center px-4 rounded-xl bg-[#1A1725] default-shadow grow sm:w-[35%]">
         <div className="flex flex-col items-center justify-center ">
           <Image
             src="https://i.ibb.co/wNkY8bD/Screenshot-2023-08-10-112323-removebg-preview.png"
@@ -58,8 +57,8 @@ const GrapSection = () => {
           </div>
         </div>
       </div>
-      <div className="account-box-gradient hidden md:flex items-center justify-between px-4 rounded-xl grow-0 w-[27%]"></div>
-      <div className="flex  items-center justify-between px-5 py-4 rounded-xl bg-[#1A1725] shadow-[10px_10px_8px_10px_#00000024] grow sm:w-[31%]">
+      <div className="account-box-gradient default-shadow hidden md:flex items-center justify-between pl-4 rounded-xl grow-0 w-[28%]"></div>
+      <div className="flex items-center justify-between px-5 py-4 rounded-xl bg-[#1A1725] default-shadow grow sm:w-[31%]">
         <div className="flex flex-col w-full justify-between gap-y-2 p-4">
           <div className="flex flex-col">
             <p className="text-[#E5BD9D] font-sans font-semibold text-lg md:text-2xl text-center">
