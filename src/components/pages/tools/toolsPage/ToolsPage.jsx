@@ -73,6 +73,7 @@ const ToolsPage = ({ imageCardInfo, changeReferenceTools }) => {
         {cardsInfo.slice(0, 6).map((singleImageCardInfo, index) => (
           <ImageCard
             key={index}
+            home={false}
             {...singleImageCardInfo}
             activeCard={activeCard}
             previousActiveCardId={previousActiveCardId}
