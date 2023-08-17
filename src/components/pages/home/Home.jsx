@@ -17,7 +17,6 @@ const Home = ({ disconnectReferenceImageCards }) => {
     }, 5);
     return () => clearTimeout(timeOut);
   });
-
   useEffect(() => {
     Aos.init({ duration: 700, offset: 0, easing: "ease-in-sine" });
   }, []);
