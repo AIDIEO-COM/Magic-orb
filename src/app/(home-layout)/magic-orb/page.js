@@ -14,17 +14,17 @@ const MagicOrb = () => {
   })
   return (
     <div className="font-berlin p-3 md:p-4 lg:p-0 h-[calc(100vh-60px)]">
-      <div className="overflow-hidden w-full h-full relative">
+      <div className="md:overflow-hidden w-full h-full relative">
         <Image
           src={"https://i.ibb.co/RD05jMX/Tool-label-1.png"}
           alt="homepageimg"
           width={1500}
           height={1000}
-          className={`${bannerClassName} h-[280px] sm:h-full object-cover sm:object-fill rounded-2xl sm:rounded-none`}
+          className={`${bannerClassName} h-[300px] sm:h-full object-cover sm:object-fill rounded-2xl sm:rounded-none`}
         ></Image>
         {/* chat box */}
-        <div className="md:overflow-hidden -mt-10  w-full md:w-auto h-[80%] md:h-auto ">
-          <div className={`mx-auto flex justify-between flex-col h-full md:absolute md:left-1/2 md:-translate-x-1/2  md:top-auto ${chatBoxClassName} md:bottom-12 w-[90%] md:w-[60%] xl:w-[850px] md:h-[300px] rounded-2xl bg-[#20192A] px-5 md:px-10 py-5 duration-700`}>
+        <div className="md:overflow-hidden -mt-10  w-full md:w-auto h-[85%] md:h-auto">
+          <div className={`mx-auto flex flex-col justify-between h-full md:absolute md:left-1/2 md:-translate-x-1/2  md:top-auto ${chatBoxClassName} md:bottom-12 w-[90%] md:w-[60%] xl:w-[850px] md:h-[300px] rounded-2xl bg-[#20192A] px-5 md:px-10 py-5 duration-700`}>
             <div className="text-left w-full h-fit ">
             <h1 className="text-[#DBCBF4] font-berlin text-xl md:text-3xl text-center">Chat with the magic orb</h1>
               <p className="text-[#E5BD9D] font-berlin text-base md:text-lg px-2 mt-5">Orb: How can I help you today?</p>

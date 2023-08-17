@@ -76,7 +76,7 @@ const GrapSection = () => {
             alt="statistics"
             width={600}
             height={200}
-            className="max-w-[390px] h-[80px] mx-auto"
+            className="w-full max-w-[390px] h-[80px] mx-auto"
           />
           <div className="flex items-center justify-between text-[#E5BD9D] text-[10px]">
             <p>Extrovert: 35% up</p>
