@@ -24,7 +24,7 @@ const DreamInterpretation = () => {
     return (() => clearTimeout(timeOut), () => clearTimeout(timeOut2));
   }, []);
   return (
-    <div className="h-full w-full relative">
+    <div className="h-[95%] w-full relative">
       <Image
         src={"https://i.ibb.co/HrLXbQ8/Tarot-2.png"}
         alt="img"

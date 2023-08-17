@@ -14,7 +14,7 @@ const CompatibilityCheck = () => {
     return () => clearTimeout(timeOut);
     }, []);
   return (
-    <div className="w-full h-full relative">
+    <div className="w-full h-[95%] relative">
       <Image
         src={"https://i.ibb.co/j69D2tn/Tarot.png"}
         alt="img"
