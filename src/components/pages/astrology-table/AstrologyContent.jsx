@@ -22,24 +22,22 @@ const AstrologyContent = () => {
           <div className=" h-[18px] w-10 bg-[#674B53] rounded-full overflow-hidden p-[3px] flex items-center justify-center cursor-pointer">
             <button
               className="relative w-full h-full rounded-full "
-              onClick={() => setCheckBtnIsClicked(!checkBtnIsClicked)}
-            >
+              onClick={() => setCheckBtnIsClicked(!checkBtnIsClicked)}>
               <div
                 className={`absolute top-0 duration-500  h-3 w-3 bg-[#D9D9D9] rounded-full ${
                   checkBtnIsClicked ? "translate-x-[22px]" : "left-0"
-                }`}
-              ></div>
+                }`}></div>
             </button>
           </div>
           <p className="text-sm lg:text-base">Chines</p>
         </div>
       </div>
-      <div className=" w-full flex flex-col items-center md:items-start  md:flex-row justify-center gap-10 sm:gap-20 lg:gap-0 lg:justify-between pt-10 lg:pt-20">
-        <div className="w-[85%] sm:w-[60%] md:w-[25%] default-shadow bg-[#20192A] h-[500px] rounded-[50px] p-4 xl:px-8 text-[#DBCBF4] flex flex-col justify-between">
-          <h1 className="text-base lg:text-3xl font-berlin text-center">
+      <div className=" w-full flex flex-col items-center md:items-start  md:flex-row justify-center gap-10 sm:gap-20 lg:gap-0 lg:justify-between pt-10 ">
+        <div className="w-[85%] sm:w-[60%] md:w-[20%] default-shadow bg-[#20192A] h-[500px] rounded-[50px] p-4 text-[#DBCBF4] flex flex-col justify-between">
+          <h1 className="text-base lg:text-2xl font-berlin text-center">
             New persons
           </h1>
-          <div className="">
+          <div>
             <p className="pl-[15%]">&lsaquo; 1998 &rsaquo;</p>
             <div className="flex gap-[6px] flex-wrap gap-y-3">
               <p className="pl-[7%] pr-[50px]">&lsaquo; June &rsaquo;</p>
@@ -49,8 +47,7 @@ const AstrologyContent = () => {
                   src={"https://i.ibb.co/3SHJXn0/Ellipse-23.png"}
                   alt="elipsis"
                   width={25}
-                  height={25}
-                ></Image>
+                  height={25}></Image>
               ))}
             </div>
           </div>
@@ -59,8 +56,7 @@ const AstrologyContent = () => {
               <input
                 name="birth-time"
                 className="outline-none w-[80%] h-full bg-transparent text-[#C5B7DC] text-sm pl-1"
-                placeholder="Birth time"
-              ></input>
+                placeholder="Birth time"></input>
               <button className="outline-none w-fit px-2 text-[#624652] h-full bg-[#BFB1D6] rounded-md flex items-center justify-center">
                 <FaAngleRight className="w-4 h-4 text-[#624652]"></FaAngleRight>
               </button>
@@ -69,8 +65,7 @@ const AstrologyContent = () => {
               <input
                 name="birth-location"
                 className="outline-none w-[80%] h-full bg-transparent text-[#C5B7DC] text-sm pl-1"
-                placeholder="Birth location"
-              ></input>
+                placeholder="Birth location"></input>
               <button className="outline-none w-fit px-2 text-[#624652] h-full bg-[#BFB1D6] rounded-md flex items-center justify-center">
                 <FaAngleRight className="w-4 h-4 text-[#624652]"></FaAngleRight>
               </button>
@@ -79,8 +74,7 @@ const AstrologyContent = () => {
               <input
                 name="name"
                 className="outline-none w-[80%] h-full bg-transparent text-[#C5B7DC] text-sm pl-1"
-                placeholder="Name"
-              ></input>
+                placeholder="Name"></input>
               <button className="outline-none w-fit px-2 text-[#624652] h-full bg-[#BFB1D6] rounded-md flex items-center justify-center">
                 <FaAngleRight className="w-4 h-4 text-[#624652]"></FaAngleRight>
               </button>
@@ -90,20 +84,21 @@ const AstrologyContent = () => {
             </button>
           </div>
         </div>
-        <div className="w-[85%] sm:w-[60%] md:w-[25%] default-shadow bg-[#20192A] h-[500px] rounded-[50px] p-4 xl:px-8 text-[#DBCBF4] ">
-          <h1 className="text-base lg:text-3xl font-berlin text-center">
+        <div className="w-[85%] sm:w-[60%] md:w-[20%] default-shadow bg-[#20192A] h-[500px] rounded-[50px] p-1 text-[#DBCBF4] ">
+          <h1 className="text-base lg:text-2xl font-berlin text-center mt-4 px-2">
             Select saved & friends
           </h1>
           <div className="flex gap-2 flex-wrap pt-7 justify-center">
-            {genarateIcon.slice(0,10).map((index) => (
-              <div key={index} className="w-[50px] h-[50px] bg-[#88848D] rounded-full flex justify-center items-center">
+            {genarateIcon.slice(0, 10).map((index) => (
+              <div
+                key={index}
+                className="w-[40px] h-[40px] bg-[#88848D] rounded-full flex justify-center items-center">
                 <Image
                   key={index}
                   src={"https://i.ibb.co/swDCL0H/libra-modified-1.png"}
                   alt="libraImg"
                   width={33}
-                  height={33}
-                ></Image>
+                  height={33}></Image>
               </div>
             ))}
           </div>

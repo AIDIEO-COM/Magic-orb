@@ -29,7 +29,7 @@ const FirstSection = ({ subscriptionModel }) => {
         <GiftCard></GiftCard>
       </div>
       <div className="grid sm:grid-cols-2 gap-5 w-fit lg:w-fit justify-center col-start-2 col-end-4 ">
-        <div className="default-shadow account-box-gradient flex items-center gap-4 p-4 rounded-xl lg:mr-1">
+        <div className="default-shadow account-box-gradient flex items-center gap-4 p-4 rounded-xl lg:mr-1 ">
           <div className="flex flex-col items-center justify-center border-r-2 w-[55%]">
             <Image
               src="https://i.ibb.co/VJM51Tn/profile-modified-2.png"
