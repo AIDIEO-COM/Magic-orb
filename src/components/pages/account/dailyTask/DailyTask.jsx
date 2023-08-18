@@ -3,7 +3,7 @@ import React from 'react';
 const DailyTask = () => {
     return (
         <div
-          className="default-shadow grow px-2 lg:px-[17px] xl:px-[25px] py-[17px] rounded-xl
+          className="default-shadow grow px-2 lg:px-[17px] xl:px-[25px] py-[17px] rounded-2xl
          bg-[#20192A]">
           <p className="text-center text-[#DBCBF4] text-xl md:text-2xl font-semibold font-sans">
             Daily tasks

@@ -1,5 +1,3 @@
-import FirstSection from "@/components/pages/account/FirstSection";
-import GrapSection from "@/components/pages/account/GrapSection";
 import Personality from "@/components/pages/account/activity&Personality/Personality";
 import DailyTask from "@/components/pages/account/dailyTask/DailyTask";
 import Profile from "@/components/pages/account/profile/Profile";
@@ -48,7 +46,7 @@ const Account = () => {
         </div>
         <div className=" w-full  lg:col-start-1 lg:col-end-5 lg:h-[257px] flex lg:gap-x-[18px] xl:gap-x-[28px] mt-5 lg:mt-0">
           <Personality></Personality>
-          <div className="account-box-gradient default-shadow hidden md:flex items-center justify-between rounded-xl grow-0 lg:w-[44%]"></div>
+          <div className="account-box-gradient default-shadow hidden md:flex items-center justify-between rounded-2xl grow-0 lg:w-[44%]"></div>
         </div>
         <div className=" w-full lg:col-start-5 lg:col-end-7 lg:h-[257px] mt-5 lg:mt-0">
           <Statistics></Statistics>

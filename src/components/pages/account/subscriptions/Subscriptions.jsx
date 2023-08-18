@@ -2,7 +2,7 @@ import React from 'react';
 
 const Subscriptions = ({subscriptionModel}) => {
     return (
-        <div className="default-shadow rounded-xl  bg-[#20192A] p-[15px] h-full lg:w-[100%]">
+        <div className="default-shadow rounded-2xl  bg-[#20192A] p-[15px] h-full lg:w-[100%]">
           <p className="text-2xl font-semibold text-[#DBCBF4] text-center font-sans">
             Subscriptions
           </p>

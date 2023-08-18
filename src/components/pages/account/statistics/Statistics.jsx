@@ -5,7 +5,7 @@ import React from 'react';
 
 const Statistics = () => {
     return (
-        <div className="flex items-center lg:h-[257px] justify-between px-5 py-4 rounded-xl bg-[#1A1725] default-shadow grow">
+        <div className="flex items-center lg:h-[257px] justify-between px-5 py-4 rounded-2xl bg-[#1A1725] default-shadow grow">
         <div className="flex flex-col w-full justify-between gap-y-2 p-4">
           <div className="flex flex-col">
             <p className="text-[#E5BD9D] font-sans font-semibold text-lg md:text-2xl text-center">

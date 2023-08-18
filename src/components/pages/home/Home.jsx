@@ -55,7 +55,7 @@ const Home = ({ disconnectReferenceImageCards }) => {
             ))}
         </div>
         {/* gift card */}
-        <div className="col-start-4 col-end-5 mt-1 justify-items-center w-full hidden lg:inline-block ">
+        <div className="col-start-4 col-end-5 mt-1 justify-items-center w-full hidden lg:inline-block rounded-xl">
           <GiftCard home={true}></GiftCard>
         </div>
         <div
