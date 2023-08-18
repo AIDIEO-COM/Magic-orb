@@ -20,7 +20,7 @@ const Home = ({ disconnectReferenceImageCards }) => {
     return () => clearTimeout(timeOut);
   });
   return (
-    <div className="font-berlin p-3 md:p-4 lg:p-0 h-full lg:-mt-3">
+    <div className="font-berlin p-3 md:p-4 lg:p-0 h-full lg:-mt-3 ">
       <div className="lg:grid grid-cols-10">
         <div className="col-start-1 col-end-9 relative h-[280px] sm:h-auto">
           <Link href={"/magic-orb"}>
