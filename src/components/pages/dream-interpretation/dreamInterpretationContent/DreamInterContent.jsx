@@ -25,16 +25,16 @@ const DreamInterContent = ({ genarateIcon }) => {
           <p className="text-sm lg:text-base">Full dream meaning</p>
         </div>
       </div>
-      <div className="h-ful w-full flex flex-col items-center md:items-start  md:flex-row justify-center gap-10 sm:gap-20 lg:gap-8 lg:justify-between pt-10 lg:pt-20 h-fit">
-        <div className="w-[85%] sm:w-[60%] md:min-w-[20%] lg:min-w-[20%] 2xl:w-[22%] default-shadow bg-[#20192A] min-h-[400px] 2xl:min-h-fit rounded-[50px] p-2 text-[#FFC8AA] flex flex-col  bg-opacity-60">
+      <div className="h-ful w-full flex flex-col items-center md:items-start  md:flex-row justify-center gap-10 sm:gap-20 lg:gap-8 lg:justify-between pt-10 lg:pt-20 h-[500px] ">
+        <div className="w-[85%] sm:w-[60%] md:min-w-[20%] lg:w-[20%] 2xl:w-[250px] default-shadow bg-[#20192A] h-full rounded-[50px] p-2 text-[#FFC8AA] flex flex-col  bg-opacity-60">
           <h1 className="text-base lg:text-2xl font-berlin text-center">
             Select symbols
           </h1>
           <div className="flex gap-2 flex-wrap pt-7 justify-center pb-3">
-            {genarateIcon.map((index) => (
+            {genarateIcon.slice(0, 20).map((index) => (
               <div
                 key={index}
-                className="w-[40px] h-[40px] bg-[#88848D] rounded-full flex justify-center items-center">
+                className="w-[40px] xl:w-[52px] xl:h-[52px] h-[40px] bg-[#88848D] rounded-full flex justify-center items-center">
                 <Image
                   key={index}
                   src={"https://i.ibb.co/swDCL0H/libra-modified-1.png"}
@@ -45,7 +45,7 @@ const DreamInterContent = ({ genarateIcon }) => {
             ))}
           </div>
         </div>
-        <div className="w-[85%] sm:w-[60%] md:min-w-[27%] lg:min-w-[20%] 2xl:w-[20%] default-shadow bg-[#20192A] min-h-[400px] 2xl:min-h-auto rounded-[50px]  text-[#FFC8AA] bg-opacity-60">
+        <div className="w-[85%] sm:w-[60%] md:min-w-[27%] lg:min-w-[20%] 2xl:w-[250px] default-shadow bg-[#20192A] h-full rounded-[50px] text-[#FFC8AA] bg-opacity-60">
           <h1 className="text-base lg:text-2xl font-berlin text-center mt-2">
             Dream history
           </h1>
@@ -53,7 +53,7 @@ const DreamInterContent = ({ genarateIcon }) => {
             {genarateIcon.slice(0, 10).map((index) => (
               <div
                 key={index}
-                className="w-[40px] h-[40px] bg-[#88848D] rounded-full flex justify-center items-center">
+                className="w-[40px] h-[40px] xl:w-[52px] xl:h-[52px] bg-[#88848D] rounded-full flex justify-center items-center">
                 <Image
                   key={index}
                   src={"https://i.ibb.co/swDCL0H/libra-modified-1.png"}

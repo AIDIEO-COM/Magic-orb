@@ -32,8 +32,8 @@ const AstrologyContent = () => {
           <p className="text-sm lg:text-base">Chines</p>
         </div>
       </div>
-      <div className=" w-full flex flex-col items-center md:items-start  md:flex-row justify-center gap-10 sm:gap-20 lg:gap-0 lg:justify-between pt-10 ">
-        <div className="w-[85%] sm:w-[60%] md:w-[20%] default-shadow bg-[#20192A] h-[500px] rounded-[50px] p-4 text-[#DBCBF4] flex flex-col justify-between">
+      <div className=" w-full flex flex-col items-center md:items-start  md:flex-row justify-center gap-10 sm:gap-20 lg:gap-0 lg:justify-between pt-10 h-[500px]">
+        <div className="w-[85%] sm:w-[60%] md:w-[20%] default-shadow bg-[#20192A] h-full rounded-[50px] p-4 text-[#DBCBF4] flex flex-col justify-between">
           <h1 className="text-base lg:text-2xl font-berlin text-center">
             New persons
           </h1>
@@ -51,7 +51,7 @@ const AstrologyContent = () => {
               ))}
             </div>
           </div>
-          <div className=" space-y-4 flex flex-col items-center pb-4">
+          <div className=" space-y-4 flex flex-col items-center pb-4 mt-2">
             <div className="h-7 bg-[#635B74] rounded-md py-[3px] px-1 font-berlin flex justify-between w-full">
               <input
                 name="birth-time"
@@ -84,11 +84,11 @@ const AstrologyContent = () => {
             </button>
           </div>
         </div>
-        <div className="w-[85%] sm:w-[60%] md:w-[20%] default-shadow bg-[#20192A] h-[500px] rounded-[50px] p-1 text-[#DBCBF4] ">
+        <div className="w-[85%] sm:w-[60%] md:w-[20%] default-shadow bg-[#20192A] h-full rounded-[50px] text-[#DBCBF4] ">
           <h1 className="text-base lg:text-2xl font-berlin text-center mt-4 px-2">
             Select saved & friends
           </h1>
-          <div className="flex gap-2 flex-wrap pt-7 justify-center">
+          <div className="flex gap-2 flex-wrap pt-7 justify-center px-0.5">
             {genarateIcon.slice(0, 10).map((index) => (
               <div
                 key={index}
