@@ -9,7 +9,9 @@ import GiftCard from "@/components/shared/giftCard/GiftCard";
 
 const Home = ({ disconnectReferenceImageCards }) => {
   const [bannerSideContent, setBannerSideContent] = useState("opacity-0");
-  const [toolsCardAnimate, setToolsCardAnimate] = useState("opacity-0 translate-y-[100%]");
+  const [toolsCardAnimate, setToolsCardAnimate] = useState(
+    "opacity-0 translate-y-[100%]"
+  );
   useEffect(() => {
     const timeOut = setTimeout(() => {
       setBannerSideContent("opacity-100");
@@ -39,9 +41,9 @@ const Home = ({ disconnectReferenceImageCards }) => {
       </div>
       {/* tools card start from here */}
       <div
-        className={` w-full lg:grid lg:grid-cols-7  overflow-hidden pb-3 gap-x-[29px] duration-700 ${toolsCardAnimate}`}>
+        className={` w-full lg:grid lg:grid-cols-7 overflow-hidden pb-4 gap-x-[29px] duration-700 ${toolsCardAnimate} `}>
         <div
-          className={`grid grid-cols-2 w-full  lg:col-start-1 lg:col-end-4 mt-[20px] items-center gap-x-4 md:gap-x-[29px] `}>
+          className={`grid grid-cols-2 w-full  lg:col-start-1 lg:col-end-4 mt-[20px] items-center gap-x-4 md:gap-x-[29px]`}>
           {disconnectReferenceImageCards
             .slice(0, 2)
             .map((singleImageCardInfo) => (
