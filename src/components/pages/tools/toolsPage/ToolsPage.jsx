@@ -13,14 +13,22 @@ const ToolsPage = ({ imageCardInfo, changeReferenceTools }) => {
   );
   // set active card in local storage
   useEffect(() => {
-    const getActiveCard = JSON.parse(localStorage.getItem("activeCardId"));
+    const getActiveCard = JSON.parse(sessionStorage.getItem("activeCardId"));
     if (getActiveCard) {
-      const findCard = changeReferenceTools.find(tools => tools.id == getActiveCard);
+      const findCard = changeReferenceTools.find(
+        (tools) => tools.id == getActiveCard
+      );
       setActiveCard(findCard);
-    }
-    else{
+    } else {
       setActiveCard(imageCardInfo[6]);
     }
+    const handleBeforeUnload = () => {
+      sessionStorage.removeItem("activeCardId");
+    };
+    window.addEventListener("beforeunload", handleBeforeUnload);
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+    };
   }, [changeReferenceTools, imageCardInfo]);
   // set tools for the details when click on tools card
   let cardsInfo = imageCardInfo;
@@ -31,7 +39,10 @@ const ToolsPage = ({ imageCardInfo, changeReferenceTools }) => {
     setPreviousActiveCardId(activeCard.id);
     cardsInfo[getIndex] = activeCard;
     setActiveCard({ ...singleImageCardInfo });
-    localStorage.setItem("activeCardId", JSON.stringify(singleImageCardInfo.id));
+    sessionStorage.setItem(
+      "activeCardId",
+      JSON.stringify(singleImageCardInfo.id)
+    );
   };
   // forward btn click handler
   const controlsForwardBtn = () => {
@@ -81,9 +92,11 @@ const ToolsPage = ({ imageCardInfo, changeReferenceTools }) => {
         controlsForwardBtn={controlsForwardBtn}
         controlsBackwardBtn={controlsBackwardBtn}
         activeCard={activeCard}
-        animateToolsContent={animateToolsContent}></ToolsContent>
+        animateToolsContent={animateToolsContent}
+      ></ToolsContent>
       <div
-        className={`grid grid-cols-2  mt-16 md:mt-0 gap-4 w-full justify-between 2xl:gap-5 duration-700 pb-5`}>
+        className={`grid grid-cols-2  mt-16 md:mt-0 gap-4 w-full justify-between 2xl:gap-5 duration-700 pb-5`}
+      >
         {cardsInfo.slice(0, 6).map((singleImageCardInfo, index) => (
           <ImageCard
             key={index}
