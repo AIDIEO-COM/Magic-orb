@@ -34,7 +34,7 @@ const AstrologyTable = () => {
     );
   }, []);
   return (
-    <div className="w-full h-full lg:h-[700px] 2xl:h-full  ">
+    <div className="w-full h-full lg:h-[700px] 2xl:h-[94%]  ">
       <Image
         src={"https://i.ibb.co/zNrsZKZ/Tarot-1.png"}
         alt="astrologyTransitionImg"
