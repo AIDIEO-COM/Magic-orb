@@ -6,11 +6,22 @@ import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
 
 const ToolsPage = ({ imageCardInfo, changeReferenceTools }) => {
-  const [activeCard, setActiveCard] = useState(imageCardInfo[6]);
+  const [activeCard, setActiveCard] = useState({});
   const [previousActiveCardId, setPreviousActiveCardId] = useState(6);
   const [animateToolsContent, setAnimateToolsContent] = useState(
     "opacity-0 duration-700"
   );
+  // set active card in local storage
+  useEffect(() => {
+    const getActiveCard = JSON.parse(localStorage.getItem("activeCardId"));
+    if (getActiveCard) {
+      const findCard = changeReferenceTools.find(tools => tools.id == getActiveCard);
+      setActiveCard(findCard);
+    }
+    else{
+      setActiveCard(imageCardInfo[6]);
+    }
+  }, [changeReferenceTools, imageCardInfo]);
   // set tools for the details when click on tools card
   let cardsInfo = imageCardInfo;
   const controlsSetCard = (singleImageCardInfo) => {
@@ -20,6 +31,7 @@ const ToolsPage = ({ imageCardInfo, changeReferenceTools }) => {
     setPreviousActiveCardId(activeCard.id);
     cardsInfo[getIndex] = activeCard;
     setActiveCard({ ...singleImageCardInfo });
+    localStorage.setItem("activeCardId", JSON.stringify(singleImageCardInfo.id));
   };
   // forward btn click handler
   const controlsForwardBtn = () => {

@@ -24,7 +24,7 @@ const ToolsContent = ({ activeCard, animateToolsContent, controlsForwardBtn, con
         <div>
           <p className="text-[#DBCBF4] sm:-rotate-3 ml-6">Info</p>
           <div className="ml-2 md:mt-1 ">
-            {activeCard.card_info.map((infoItem, index) => (
+            {activeCard?.card_info?.map((infoItem, index) => (
               <p
                 key={index}
                 className="text-[10px] mb-4 pl-6 text-[#E5BD9D] sm:-rotate-3 ">
