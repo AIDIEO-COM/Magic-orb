@@ -37,7 +37,7 @@ const HomeLayout = ({ children }) => {
       </div>
       <div className="w-full h-full  overflow-hidden relative">
         <Navbar toggleSidebar={toggleSidebar}></Navbar>
-        <div className="lg:pt-[25px] lg:pb-[40px] lg:px-[32px] xl:pb-[45px] xl:px-[42px] w-full min-h-screen h-full default-background-color">
+        <div className="lg:p-[34px] w-full min-h-screen h-full default-background-color">
           {children}
         </div>
       </div>
