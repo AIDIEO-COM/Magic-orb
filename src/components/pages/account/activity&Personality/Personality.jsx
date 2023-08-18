@@ -12,7 +12,7 @@ const stats = [
 
 const Personality = () => {
     return (
-        <div className="grid grid-cols-2 justify-items-center px-4 rounded-xl bg-[#1A1725] default-shadow grow sm:w-[35%]">
+        <div className="grid grid-cols-2 justify-items-center px-4 rounded-2xl bg-[#1A1725] default-shadow grow sm:w-[35%]">
         <div className="flex flex-col items-center justify-center ">
           <Image
             src="https://i.ibb.co/wNkY8bD/Screenshot-2023-08-10-112323-removebg-preview.png"
