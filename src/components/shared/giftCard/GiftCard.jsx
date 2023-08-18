@@ -15,7 +15,7 @@ const GiftCard = ({ home }) => {
     <div
       className={`p-5 ${
         home ? "mt-4 w-full lg:h-[90%] 2xl:w-44" : "xl:w-36 2xl:w-48 xl:h-full"
-      } mx-auto     2xl:h-[250px]  rounded-xl bg-[#1A1725] shadow-[10px_10px_8px10px#00000024] default-shadow relative`}
+      } mx-auto 2xl:h-[250px]  rounded-xl bg-[#1A1725] shadow-[10px_10px_8px10px#00000024] default-shadow relative`}
     >
       <button
         onClick={() => setTakeCardIsClicked(false)}
@@ -27,13 +27,13 @@ const GiftCard = ({ home }) => {
         <p className="text-[#E5BD9D] text-xs font-semibold text-center">
           Redeem your gift card
         </p>
-        <Image
+        {/* <Image
           src="https://i.ibb.co/GCDyhJw/Default-cosmic-pink-gift-card-0-3507d5d2-e214-4bf6-b126-ff41039a25cf-0-1.png"
           alt="gift card"
           width={108}
           height={148}
           className="lg:w-[70px] lg:h-[100px] xl:w-[80px] xl:h-[105px] 2xl:w-[108px] 2xl:h-[148px]"
-        />
+        /> */}
         <button
           onClick={() => setTakeCardIsClicked(true)}
           className="mx-auto text-[#E5BD9D] text-[10px] sm:text-xs bg-[#674B53] px-1 sm:px-2 font-normal tracking-wide rounded-full py-1 "
