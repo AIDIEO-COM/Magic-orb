@@ -5,7 +5,7 @@ import React from 'react';
 
 const Profile = () => {
     return (
-        <div className="default-shadow account-box-gradient flex items-center gap-4 p-4 rounded-xl  lg:w-[380px]  md:h-full">
+        <div className="default-shadow account-box-gradient flex items-center gap-4 p-4 rounded-2xl  lg:w-[380px]  md:h-full">
           <div className="flex flex-col items-center justify-center border-r-2 w-[55%]">
             <Image
               src="https://i.ibb.co/VJM51Tn/profile-modified-2.png"
