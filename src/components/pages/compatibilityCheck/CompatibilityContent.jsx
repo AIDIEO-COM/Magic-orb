@@ -91,11 +91,11 @@ const CompatibilityContent = () => {
             </button>
           </div>
         </div>
-        <div className="w-[85%] sm:w-[60%] md:w-[27%] xl:w-[20%] min-h-[82%]  default-shadow bg-[#20192A]  rounded-[50px] px-3 py-4 text-[#FFC8AA] bg-opacity-60">
-          <h1 className="text-base lg:text-2xl font-berlin text-center">
+        <div className="w-[85%] sm:w-[60%] md:w-[27%] xl:w-[20%] min-h-[82%]  default-shadow bg-[#20192A]  rounded-[50px] py-4 text-[#FFC8AA] bg-opacity-60">
+          <h1 className="text-base lg:text-2xl font-berlin text-center px-3">
             Select saved & friends
           </h1>
-          <div className="flex gap-2 flex-wrap pt-7 justify-center">
+          <div className="flex gap-2 flex-wrap pt-7 justify-center px-0.5">
             {genarateIcon.slice(0, 10).map((index) => (
               <div
                 key={index}
