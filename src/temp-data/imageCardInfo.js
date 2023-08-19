@@ -167,7 +167,7 @@ const imageCardInfo = [
     game_name: "Shop now",
     try_remaining: 32,
     href: "/magic-orb",
-    animate_origin: ["", ""],
+    animate_origin: ["fade-up", ""],
     card_info: [
       {
         info_headline: "Spiritual Guidance",
