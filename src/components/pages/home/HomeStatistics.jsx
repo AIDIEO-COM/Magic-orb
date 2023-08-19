@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const HomeStatistics = () => {
   return (
-    <div className="default-gradient rounded-[16px] flex flex-col min-w-[263px] 2xl:w-full justify-between gap-y-1 p-2 2xl:p-4 h-full">
+    <div className="default-gradient rounded-[16px] flex flex-col min-w-[263px] 2xl:w-full justify-between gap-y-1 p-3 sm:p-2 2xl:p-4 h-full">
       <div className="flex flex-col">
         <p className="text-[#E5BD9D] font-bold text-2xl text-center">
           Statistics
