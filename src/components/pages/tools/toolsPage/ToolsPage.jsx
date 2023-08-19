@@ -94,8 +94,9 @@ const ToolsPage = ({ imageCardInfo, changeReferenceTools }) => {
         activeCard={activeCard}
         animateToolsContent={animateToolsContent}
       ></ToolsContent>
+      <div className=" w-full h-full md:flex justify-end pt-16 md:pt-0">
       <div
-        className={`grid grid-cols-2  mt-16 md:mt-0 gap-4 w-full justify-between 2xl:gap-5 duration-700 pb-5`}
+        className={`grid grid-cols-2 h-full gap-4 2xl:gap-5 w-full 2xl:w-fit justify-between  duration-700`}
       >
         {cardsInfo.slice(0, 6).map((singleImageCardInfo, index) => (
           <ImageCard
@@ -107,6 +108,7 @@ const ToolsPage = ({ imageCardInfo, changeReferenceTools }) => {
             setActiveCard={() => controlsSetCard(singleImageCardInfo)}
           />
         ))}
+      </div>
       </div>
     </div>
   );
