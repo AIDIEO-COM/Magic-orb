@@ -23,7 +23,7 @@ const Home = ({ disconnectReferenceImageCards }) => {
   return (
     <div className="font-berlin p-3 md:p-4 lg:p-0 h-full lg:-mt-3 ">
       <div className="flex h-fit 2xl:h-[550px] w-full ">
-        <div className="relative h-[280px] sm:h-full w-full 2xl:w-[1290px] ">
+        <div className="relative h-[270px] sm:h-full w-full 2xl:w-[1290px] ">
           <Link href={"/magic-orb"}>
             <Image
               data-aos="zoom-out-left"
@@ -31,7 +31,7 @@ const Home = ({ disconnectReferenceImageCards }) => {
               alt="homepageimg"
               width={1000}
               height={1000}
-              className={`w-full object-cover sm:object-fill rounded-2xl sm:rounded-none default-shadow sm:shadow-none h-full duration-700  z-10`}></Image>
+              className={`w-full object-cover sm:object-fill rounded-2xl sm:rounded-none default-shadow sm:shadow-none h-[270px] sm:h-full duration-700  z-10`}></Image>
             <div className="lg:hidden">
               <BannerContent></BannerContent>
             </div>
