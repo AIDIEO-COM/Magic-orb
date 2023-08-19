@@ -44,6 +44,9 @@ const Home = ({ disconnectReferenceImageCards }) => {
           </div>
         </div>
       </div>
+      <div className="mt-4">
+        <AddsSection></AddsSection>
+      </div>
       {/* tools card start from here */}
       <div
         className={`w-full md:flex overflow-hidden h-full  gap-x-[29px] duration-700 ${toolsCardAnimate} `}>
