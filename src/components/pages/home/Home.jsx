@@ -44,7 +44,7 @@ const Home = ({ disconnectReferenceImageCards }) => {
           </div>
         </div>
       </div>
-      <div className="mt-4">
+      <div className="mt-4 md:hidden">
         <AddsSection></AddsSection>
       </div>
       {/* tools card start from here */}
