@@ -160,7 +160,7 @@ const imageCardInfo = [
   },
   {
     id: "7",
-    card_img_link: "https://i.ibb.co/RD05jMX/Tool-label-1.png",
+    card_img_link: "https://i.ibb.co/KWd5Th3/Tarot-4.png",
     card_title: "Magic Orb",
     card_subtitle: "Talk with your personal assistant",
     try_count: 0,
