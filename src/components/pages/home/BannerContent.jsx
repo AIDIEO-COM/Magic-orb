@@ -10,7 +10,7 @@ const BannerContent = () => {
   return (
     <div
       data-aos="zoom-in"
-      className="absolute top-0 left-0 lg:left-[20%] right-0 bottom-0 px-4 py-2 sm:px-5 sm:py-3">
+      className="absolute top-0 left-0 lg:left-[13%] right-0 bottom-0 px-4 py-2 sm:px-5 sm:py-3">
       <div>
         <h1 className="text-[#FFC8AA] text-xl font-normal font-berlin">
           Magic Orb
