@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const HomeStatistics = () => {
   return (
-    <div className="default-gradient rounded-[16px] flex flex-col w-full justify-between gap-y-1 p-4 h-full">
+    <div className="default-gradient rounded-[16px] flex flex-col min-w-[263px] 2xl:w-full justify-between gap-y-1 p-3 sm:p-2 2xl:p-4 h-full">
       <div className="flex flex-col">
         <p className="text-[#E5BD9D] font-bold text-2xl text-center">
           Statistics
@@ -23,9 +23,9 @@ const HomeStatistics = () => {
         width={500}
         height={200}
         priority
-        className="w-full h-full mx-auto"
+        className="w-full lg:h-[50px] 2xl:h-full mx-auto"
       />
-      <div className="flex flex-col gap-y-0.5 tracking-wider items-center justify-between text-[#E5BD9D] text-[10px]">
+      <div className="flex 2xl:flex-col 2xl:gap-y-0.5 tracking-wider items-center justify-between text-[#E5BD9D] text-[8px] xl:text-[10px]">
         <p>Extrovert: 35% up</p>
         <p>Exposure: 5% down</p>
         <p>Self care: 23% up</p>
