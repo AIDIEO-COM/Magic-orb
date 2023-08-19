@@ -16,7 +16,7 @@ const HomeLayout = ({ children }) => {
     }
   }, [currentPath]);
   return (
-    <div className="flex relative bg-gradient-to-b from-[#442143] to-[#2B3057] min-h-screen lg:h-screen lg:w-screen max-w-[1920px] mx-auto">
+    <div className="flex relative bg-gradient-to-b from-[#442143] to-[#2B3057] min-h-screen lg:h-screen lg:w-screen ">
       {/* mobile side drawer */}
       <div className="overflow-hidden h-fit w-fit xl:hidden">
         <div

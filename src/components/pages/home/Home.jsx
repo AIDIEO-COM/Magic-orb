@@ -21,8 +21,8 @@ const Home = ({ disconnectReferenceImageCards }) => {
     return () => clearTimeout(timeOut);
   });
   return (
-    <div className="font-berlin p-3 md:p-4 lg:p-0 h-full lg:-mt-3 ">
-      <div className="flex h-fit 2xl:h-[550px] w-full ">
+    <div className="font-berlin p-3 md:p-4 lg:p-0 h-full lg:-mt-3 max-w-[1650px]">
+      <div className="flex h-fit 2xl:max-h-[550px] w-full ">
         <div className="relative h-[270px] sm:h-full w-full 2xl:w-[1290px] ">
           <Link href={"/magic-orb"}>
             <Image
@@ -39,7 +39,7 @@ const Home = ({ disconnectReferenceImageCards }) => {
         </div>
         <div className="grow hidden lg:flex items-end -mr-[13px] relative pl-[12px] lg:pb-[7px] xl:pb-[10px] 2xl:pb-[16px]">
           <MagicOrbChatCard magicOrbChatAnimate={magicOrbChatAnimate}></MagicOrbChatCard>
-          <div className="h-[60%] 2xl:h-[349px] w-full mr-[13px] bg-transparent rounded-[16px] max-w-[346px]">
+          <div className="lg:h-[67%] -mb-[10px] w-full mr-[13px] bg-transparent rounded-[16px] max-w-[346px]">
             <AddsSection></AddsSection>
           </div>
         </div>
