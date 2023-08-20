@@ -6,7 +6,6 @@
 @font-face {
   font-family: "BerlinSansFB";
   src: url("/BerlinSansFB.ttf") format("truetype");
-  /* You can include additional font weights and formats if needed */
 }
 
 * {
@@ -15,6 +14,7 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .default-gradient {
