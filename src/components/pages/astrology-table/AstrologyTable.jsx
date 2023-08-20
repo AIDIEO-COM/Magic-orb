@@ -15,7 +15,7 @@ const AstrologyTable = () => {
   );
   useEffect(() => {
     const timeOut = setTimeout(() => {
-      setFirstTransitionImg("bottom-0 left-0 w-[100%] h-[100%]");
+      setFirstTransitionImg("bottom-0 left-0 hidden md:inline-block w-[100%] h-[100%]");
     }, 5);
     return () => clearTimeout(timeOut);
   }, []);
@@ -34,7 +34,7 @@ const AstrologyTable = () => {
     );
   }, []);
   return (
-    <div className="w-full h-[full] lg:h-[700px] 2xl:h-[95%]  ">
+    <div className="w-full h-full lg:h-[700px] 2xl:h-full ">
       <Image
         src={"https://i.ibb.co/zNrsZKZ/Tarot-1.png"}
         alt="astrologyTransitionImg"
@@ -48,7 +48,7 @@ const AstrologyTable = () => {
           alt="img"
           width={1000}
           height={1000}
-          className={`h-full w-full ${secondBgImg}  duration-1000 `}
+          className={`h-full w-full ${secondBgImg} duration-1000 rounded-[15px] min-h-[230px]`}
         ></Image>
         <div className={`lg:absolute lg:top-0 right-0 left-0 bottom-0 w-full h-full ${astrologyContent} duration-1000`}>
           <AstrologyContent></AstrologyContent>
