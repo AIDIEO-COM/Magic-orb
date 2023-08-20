@@ -45,7 +45,7 @@ const DreamInterContent = ({ genarateIcon }) => {
             ))}
           </div>
         </div>
-        <div className="w-[85%] sm:w-[60%] md:min-w-[27%] lg:min-w-[20%] 2xl:w-[250px] default-shadow bg-[#20192A] h-full rounded-[50px] text-[#FFC8AA] bg-opacity-60">
+        <div className="w-[85%] sm:w-[60%] md:min-w-[20%] lg:w-[20%] 2xl:w-[250px] default-shadow bg-[#20192A] h-full rounded-[50px] text-[#FFC8AA] bg-opacity-60 pb-8">
           <h1 className="text-base lg:text-2xl font-berlin text-center mt-2">
             Dream history
           </h1>

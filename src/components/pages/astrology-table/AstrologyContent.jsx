@@ -32,7 +32,7 @@ const AstrologyContent = () => {
           <p className="text-sm lg:text-base">Chines</p>
         </div>
       </div>
-      <div className=" w-full flex flex-col items-center md:items-start  md:flex-row justify-center gap-10 sm:gap-20 lg:gap-0 lg:justify-between pt-10 h-[500px]">
+      <div className=" w-full flex flex-col items-center md:items-start  md:flex-row justify-center gap-7 sm:gap-20 lg:gap-0 lg:justify-between pt-5 md:pt-10 h-full lg:h-[500px]">
         <div className="w-[85%] sm:w-[60%] md:w-[20%] default-shadow bg-[#20192A] h-full rounded-[50px] p-4 text-[#DBCBF4] flex flex-col justify-between">
           <h1 className="text-base lg:text-2xl font-berlin text-center">
             New persons
@@ -84,7 +84,7 @@ const AstrologyContent = () => {
             </button>
           </div>
         </div>
-        <div className="w-[85%] sm:w-[60%] md:w-[20%] default-shadow bg-[#20192A] h-full rounded-[50px] text-[#DBCBF4] ">
+        <div className="w-[85%] p-2 min-h-[300px] sm:w-[60%] md:w-[20%] default-shadow bg-[#20192A] h-full rounded-[50px] text-[#DBCBF4] ">
           <h1 className="text-base lg:text-2xl font-berlin text-center mt-4 px-2">
             Select saved & friends
           </h1>
