@@ -40,7 +40,7 @@ const CompatibilityContent = () => {
         </div>
       </div>
       <div className="h-full w-full flex flex-col items-center md:items-start  md:flex-row justify-center gap-10 sm:gap-20 lg:gap-0 lg:justify-between lg:-translate-y-20">
-        <div className="w-[85%] sm:w-[60%] md:w-[27%] xl:w-[20%] default-shadow bg-[#20192A]  rounded-[50px] px-3 py-4  text-[#FFC8AA] flex flex-col justify-between bg-opacity-60 mt-6 md:mt-0">
+        <div className="w-[85%] sm:w-[60%] md:w-[27%] xl:w-[20%] default-shadow bg-[#20192A]  rounded-[50px] px-3 py-4  text-[#FFC8AA] flex flex-col justify-between bg-opacity-60 min-h-[80%] mt-6 md:mt-0">
           <h1 className="text-base lg:text-2xl font-berlin text-center">
             New persons
           </h1>
@@ -58,7 +58,7 @@ const CompatibilityContent = () => {
               ))}
             </div>
           </div>
-          <div className=" space-y-4 flex flex-col items-center pb-4 mt-6">
+          <div className=" space-y-[10%] flex flex-col items-center pb-4 mt-6">
             <div className="h-7 bg-[#624652] rounded-md py-[3px] px-1 font-berlin flex justify-between w-full">
               <input
                 name="birth-time"
@@ -91,7 +91,7 @@ const CompatibilityContent = () => {
             </button>
           </div>
         </div>
-        <div className="w-[85%] sm:w-[60%] md:w-[27%] xl:w-[20%] min-h-[82%]  default-shadow bg-[#20192A]  rounded-[50px] py-4 text-[#FFC8AA] bg-opacity-60">
+        <div className="w-[85%] sm:w-[60%] md:w-[27%] xl:w-[20%] min-h-[300px] md:min-h-[80%]  default-shadow bg-[#20192A]  rounded-[50px] py-4 text-[#FFC8AA] bg-opacity-60">
           <h1 className="text-base lg:text-2xl font-berlin text-center px-3">
             Select saved & friends
           </h1>
