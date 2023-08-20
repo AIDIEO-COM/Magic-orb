@@ -28,7 +28,7 @@ const DiscoverDestiny = () => {
     );
   }, []);
   return (
-    <div className="w-full h-full relative">
+    <div className="w-full h-full relative ">
       <Image
         src={"https://i.ibb.co/2YnxRVQ/Tarot-3.png"}
         alt="img"
@@ -40,7 +40,7 @@ const DiscoverDestiny = () => {
         alt="img"
         width={1000}
         height={1000}
-        className={`${secondBgImg} duration-700 w-full md:h-full`}></Image>
+        className={`${secondBgImg} duration-700 w-full md:h-full `}></Image>
       <div
         className={`lg:absolute lg:top-0 right-0 left-0 bottom-0 w-full h-full duration-1000 ${contentVisible} `}>
         <DiscoverContent></DiscoverContent>
