@@ -11,13 +11,13 @@ const ToolsContent = ({
 }) => {
   return (
     <div
-      className={`mx-auto w-[95%] max-w-[616px] -mt-28 border-r-2 sm:rotate-[3.00deg] bg-gradient-to-r from-[#442143] to-[#2B3057] lg:z-10 overflow-hidden h-[120%] ${animateToolsContent}} duration-700 `}
+      className={`mx-auto w-[98%] max-w-[616px] -mt-32 md:-mt-28 border-r-2 sm:rotate-[3.00deg] bg-gradient-to-r from-[#442143] to-[#2B3057] lg:z-10 overflow-hidden h-fit lg:h-[140%] ${animateToolsContent}} duration-700 `}
       style={{
         boxShadow:
           "20px 4px 20px 0px rgba(0, 0, 0, 0.25), 20px 4px 20px 0px rgba(0, 0, 0, 0.25) inset",
       }}
     >
-      <div className="mt-10 md:mt-24 h-[250px] md:h-[300px] lg:h-[370px] 2xl:h-auto overflow-hidden sm:-rotate-3 w-[110%] -translate-x-[5%] " style={{boxShadow: '0px 10px 4px 0px rgba(0, 0, 0, 0.25)'
+      <div className="mt-10 md:mt-[16%] h-[250px] md:h-[300px] lg:h-auto max-h-[38%]  overflow-hidden sm:-rotate-3 w-[110%] -translate-x-[5%] " style={{boxShadow: '0px 10px 4px 0px rgba(0, 0, 0, 0.25)'
             }}>
         <h3 className="text-center text-xl md:text-3xl font-semibold text-[#DBCBF4]">
           {activeCard?.card_title === "Magic Orb"
@@ -25,10 +25,10 @@ const ToolsContent = ({
             : activeCard?.card_title}
         </h3>
         <ToolsContentImgAnimate
-          imgLink={activeCard?.card_img_link}
+          imgLink={activeCard?.card_full_img}
         ></ToolsContentImgAnimate>
       </div>
-      <div className="mt-14 grid sm:grid-cols-2 justify-items-center gap-y-3 md:justify-items-center mx-4">
+      <div className="mt-[7%] grid sm:grid-cols-2 justify-items-center gap-y-3  md:justify-items-center mx-4">
         <div>
           <p className="text-[#DBCBF4] sm:-rotate-3 ml-6">Info</p>
           <div className="ml-2 md:mt-1 ">
