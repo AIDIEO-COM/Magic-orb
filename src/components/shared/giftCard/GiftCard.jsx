@@ -15,7 +15,7 @@ const GiftCard = ({ home }) => {
     <div
       className={`p-5 ${
         home
-          ? "mt-4 w-full  lg:w-[120px]  2xl:w-[148px] lg:h-[200px] 2xl:h-[270px] rounded-xl"
+          ? "mt-4 w-full  lg:w-[120px]  2xl:w-[148px] lg:h-[200px] 2xl:h-[33.5%] rounded-xl"
           : "xl:w-36 2xl:w-48 xl:h-full rounded-2xl"
       } mx-auto     2xl:h-[250px]   bg-[#1A1725]  default-shadow relative`}>
       <button
