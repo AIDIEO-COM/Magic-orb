@@ -40,7 +40,7 @@ const ImageCard = ({
       className={`w-full h-full flex justify-center rounded-xl`}
       data-aos={home || animate_origin[0]}>
       <Link
-        className={`relative w-full h-full sm:w-[170px] sm:h-[140px] lg:w-full  ${home ? ' lg:h-[200px] 2xl:max-w-[346px] 2xl:w-full 2xl:h-[270px]' : '2xl:h-full lg:h-full 2xl:w-[363px]'} bg-cover bg-center font-berlin  rounded-xl`}
+        className={`relative w-full h-full sm:w-[170px] sm:h-[140px] lg:w-full  ${home ? ' lg:h-[200px] 2xl:max-w-[346px] 2xl:w-full 2xl:h-[34%]' : '2xl:h-full lg:h-full 2xl:w-[363px]'} bg-cover bg-center font-berlin  rounded-xl`}
         href={home ? href : "/tools"}>
         <div
           onClick={setActiveCard}
