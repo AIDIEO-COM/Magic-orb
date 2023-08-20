@@ -11,10 +11,10 @@ const DiscoverDestiny = () => {
   const [contentVisible, setContentVisible] = useState("opacity-0");
   useEffect(() => {
     const timeOut = setTimeout(() => {
-      setFirstTransitionImg("bottom-0 left-0 w-full h-full");
+      setFirstTransitionImg("bottom-0 left-0 w-full h-full hidden md:inline-block");
     }, 5);
     const timeOut2 = setTimeout(() => {
-      setFirstTransitionImg("opacity-0 bottom-0 left-0 w-full h-full");
+      setFirstTransitionImg("opacity-0 bottom-0 left-0 w-full h-full hidden md:inline-block");
       setSecondBgImg("opacity-100");
       setContentVisible("opacity-100");
     }, 700);
@@ -34,13 +34,13 @@ const DiscoverDestiny = () => {
         alt="img"
         width={1000}
         height={1000}
-        className={`${firstTransitionImg} duration-700 absolute`}></Image>
+        className={`${firstTransitionImg} duration-700 absolute `}></Image>
       <Image
         src={"https://i.ibb.co/9GBC0PP/image-6.png"}
         alt="img"
         width={1000}
         height={1000}
-        className={`${secondBgImg} duration-700 w-full md:h-full `}></Image>
+        className={`${secondBgImg} duration-700 w-full md:h-full rounded-[15px] min-h-[230px]`}></Image>
       <div
         className={`lg:absolute lg:top-0 right-0 left-0 bottom-0 w-full h-full duration-1000 ${contentVisible} `}>
         <DiscoverContent></DiscoverContent>
