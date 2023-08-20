@@ -2,6 +2,7 @@ const imageCardInfo = [
   {
     id: "1",
     card_img_link: "https://i.ibb.co/QHZWYxj/Tarot-2.png",
+    card_full_img: "https://i.ibb.co/LYVQZFf/Tarot-7.png",
     card_title: "Astrology table",
     card_subtitle: "Discover your character",
     try_count: 0,
@@ -29,7 +30,7 @@ const imageCardInfo = [
   {
     id: "2",
     card_img_link: "https://i.ibb.co/ZxxRHPT/Tarot-1.png",
-    card_full_img: "https://i.ibb.co/DL2dzN9/Tarot-5.png",
+    card_full_img: "https://i.ibb.co/xHKCjK3/Tarot-8.png",
     card_title: "Compatibility check",
     card_subtitle: "Discover your real soulmates",
     try_count: 0,
@@ -57,6 +58,7 @@ const imageCardInfo = [
   {
     id: "3",
     card_img_link: "https://i.ibb.co/grBWbWH/Tarot-3.png",
+    card_full_img: "https://i.ibb.co/d5K24Sm/Tarot-9.png",
     card_title: "Tarot table and cards",
     card_subtitle: "Discover destiny",
     try_count: 0,
@@ -85,6 +87,7 @@ const imageCardInfo = [
   {
     id: "4",
     card_img_link: "https://i.ibb.co/HrLXbQ8/Tarot-2.png",
+    card_full_img: "https://i.ibb.co/HGpN0Zj/Tarot-6.png",
     card_title: "Dream interpretation",
     card_subtitle: "Find the symbols of your dreams",
     try_count: 0,
@@ -107,6 +110,7 @@ const imageCardInfo = [
   {
     id: "5",
     card_img_link: "https://i.ibb.co/0Mzfcr5/Tarot-6.png",
+    card_full_img: "https://i.ibb.co/875wwgG/6919282413477aea9f85b1c02b1f1ab1.jpg",
     card_title: "Library",
     card_subtitle: "Read for your mind",
     try_count: 0,
@@ -134,6 +138,7 @@ const imageCardInfo = [
   {
     id: "6",
     card_img_link: "https://i.ibb.co/NC5PCxp/Tarot-7.png",
+    card_full_img: "https://i.ibb.co/yPd6J25/264269ef36e22c69cae499b8ffa87e61.png",  
     card_title: "Shop",
     card_subtitle: "Buy our spiritual products",
     try_count: 0,
@@ -161,6 +166,7 @@ const imageCardInfo = [
   {
     id: "7",
     card_img_link: "https://i.ibb.co/KWd5Th3/Tarot-4.png",
+    card_full_img: "https://i.ibb.co/KWd5Th3/Tarot-4.png",
     card_title: "Magic Orb",
     card_subtitle: "Talk with your personal assistant",
     try_count: 0,
