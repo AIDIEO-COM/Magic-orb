@@ -2,6 +2,7 @@
 import Image from "next/image";
 import CompatibilityContent from "./compatibilityContent/CompatibilityContent";
 import { useEffect, useState } from "react";
+import SoulmatesImg from "./soulmatesImg/SoulmatesImg";
 
 const CompatibilityCheck = () => {
   const [firstTransitionImg, setFirstTransitionImg] = useState(
@@ -62,15 +63,7 @@ const CompatibilityCheck = () => {
             }`}
           ></Image>
           {/* this img show when check soulmates btn clicked */}
-          <Image
-            src={"https://i.ibb.co/S0Vr8gD/Merged.png"}
-            alt="img"
-            width={489}
-            height={469}
-            className={`absolute left-[56%] -top-[10%] w-[250px] h-[250px] 2xl:w-[489px] 2xl:h-[469px] -translate-x-[60%] duration-500 ${
-              isCheckSoulmatesClicked ? "opacity-100" : "opacity-0"
-            }`}
-          ></Image>
+          <SoulmatesImg isCheckSoulmatesClicked={isCheckSoulmatesClicked}></SoulmatesImg>
           <Image
             src={"https://i.ibb.co/dM41vcy/Roght.png"}
             alt="img"
