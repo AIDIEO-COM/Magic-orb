@@ -98,16 +98,16 @@ const AstrologyContent = () => {
               ].map((chartItem) => (
                 <p
                   key={chartItem}
-                  className="bg-[#050507] w-[50px] h-[50px] rounded-xl"></p>
+                  className="bg-[#050507] w-[40px] h-[40px] md:w-[50px] md:h-[50px] rounded-xl"></p>
               ))}
             </div>
-            <div className="flex items-center justify-center gap-2 mt-2">
-              <button className="outline-none w-fit px-3 text-[#442143] h-7 bg-[#BFB1D6] rounded-md flex items-center justify-center">
+            <div className="flex items-center justify-center gap-2 mt-1 md:mt-2 py-2 md:py-0">
+              <button className="outline-none w-fit px-3 text-[#442143] h-6 md:h-7 bg-[#BFB1D6] rounded-md flex items-center justify-center">
                 Share result
               </button>
               <button
                 onClick={() => setIsBirthChartOpen(false)}
-                className="outline-none w-fit px-3 text-[#624652] h-7  rounded-md flex items-center justify-center underline">
+                className="outline-none w-fit px-3 text-[#624652] h-6 md:h-7  rounded-md flex items-center justify-center underline">
                 new chart
               </button>
             </div>
