@@ -10,7 +10,7 @@ const genarateIcon = [
 
 const AstrologyContent = () => {
   const [checkBtnIsClicked, setCheckBtnIsClicked] = useState(false);
-
+  const [isBirthCartOpen, setIsBirthChartOpen] = useState(false);
   return (
     <div className=" w-full h-full lg:p-7 xl:p-10 lg:overflow-hidden">
       <div className="left-1/2 -translate-x-1/2 lg:w-full flex flex-col items-center absolute top-14 lg:relative lg:top-auto ">
@@ -79,11 +79,40 @@ const AstrologyContent = () => {
                 <FaAngleRight className="w-4 h-4 text-[#624652]"></FaAngleRight>
               </button>
             </div>
-            <button className="outline-none w-fit px-3 text-[#442143] h-7 bg-[#BFB1D6] rounded-md flex items-center justify-center">
+            <button
+              onClick={() => setIsBirthChartOpen(true)}
+              className="outline-none w-fit px-3 text-[#442143] h-7 bg-[#BFB1D6] rounded-md flex items-center justify-center">
               Create new chart
             </button>
           </div>
         </div>
+        {isBirthCartOpen && (
+          <div className="bg-[#1A1725] h-full w-[295px] rounded-[50px]">
+            <p className="text-center bg-[#0D0F1E] text-2xl text-[#DBCBF4] py-4 rounded-t-[50px]">
+              Birth chart
+            </p>
+            <div className="p-2 grid grid-cols-4 justify-items-center gap-y-1.5">
+              {[
+                1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
+                19, 20, 21, 22, 23, 24,
+              ].map((chartItem) => (
+                <p
+                  key={chartItem}
+                  className="bg-[#050507] w-[50px] h-[50px] rounded-xl"></p>
+              ))}
+            </div>
+            <div className="flex items-center justify-center gap-2 mt-2">
+              <button className="outline-none w-fit px-3 text-[#442143] h-7 bg-[#BFB1D6] rounded-md flex items-center justify-center">
+                Share result
+              </button>
+              <button
+                onClick={() => setIsBirthChartOpen(false)}
+                className="outline-none w-fit px-3 text-[#624652] h-7  rounded-md flex items-center justify-center underline">
+                new chart
+              </button>
+            </div>
+          </div>
+        )}
         <div className="w-[85%] p-2 min-h-[300px] sm:w-[60%] md:w-[20%] default-shadow bg-[#20192A] h-full rounded-[50px] text-[#DBCBF4] ">
           <h1 className="text-base lg:text-2xl font-berlin text-center mt-4 px-2">
             Select saved & friends
