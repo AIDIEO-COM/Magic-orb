@@ -20,7 +20,7 @@ const Notification = ({ isOpen, onClose }) => {
     return null;
   }
   return (
-    <div className=" max-w-[400px] h-fit absolute top-14 right-2 md:right-20  p-4 z-20 transition-transform duration-500 notification-modal" style={{borderRadius: '15px',
+    <div className=" min-w-[308px] min-h-[248px] absolute top-14 right-2 md:right-20  p-4 z-20 transition-transform duration-500 notification-modal" style={{borderRadius: '15px',
     background: 'linear-gradient(199deg, #624652 0%, #432144 100%)',
     boxShadow: '10px 10px 4px 0px rgba(0, 0, 0, 0.25)'}}>
       <p className="text-center text-[#E5BD9D] text-sm tracking-wide">
