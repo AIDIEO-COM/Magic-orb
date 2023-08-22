@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import TryAgainResultBtn from '../tryAgainResultBtn/TryAgainResultBtn';
 
 const SoulmatesImg = ({isCheckSoulmatesClicked}) => {
     return (

@@ -4,6 +4,7 @@ import NewPersonsCC from "./newPersonCC/NewPersonsCC";
 import SelectSavedFriends from "./selectSaved&Friends/SelectSavedFriends";
 import Image from "next/image";
 import SoulmatesImg from "../soulmatesImg/SoulmatesImg";
+import TryAgainResultBtn from "../tryAgainResultBtn/TryAgainResultBtn";
 
 const genarateIcon = [
   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
@@ -51,11 +52,13 @@ const CompatibilityContent = ({
         </div>
       </div>
       <div className="h-full w-full flex flex-col items-center md:items-start  md:flex-row justify-center gap-10 sm:gap-20 lg:gap-0 lg:justify-between lg:-translate-y-20 z-5 mt-[7%]">
+        {/* soulmates img and btn show only for mobile devices */}
         {isCheckSoulmatesClicked && (
           <div className="lg:hidden">
             <SoulmatesImg
               isCheckSoulmatesClicked={isCheckSoulmatesClicked}
             ></SoulmatesImg>
+            <TryAgainResultBtn isCheckSoulmatesClicked={isCheckSoulmatesClicked} btnAnimate={btnAnimate} tryAgainBtnToggle={tryAgainBtnToggle}></TryAgainResultBtn>
           </div>
         )}
         <NewPersonsCC
@@ -97,22 +100,14 @@ const CompatibilityContent = ({
             )}
           </div>
           {/* TODO: Btn animate not working */}
-          {/* the buttons show after check soulmates btn clicked */}
-          {isCheckSoulmatesClicked && (
-            <div className="flex gap-4 ">
-              <button
-                className={`bg-[#674B53] text-[#E5BD9D] px-[11px] py-1 rounded-3xl text-sm duration-700 ${btnAnimate}`}
-              >
-                Share result
-              </button>
-              <button
-                onClick={tryAgainBtnToggle}
-                className="text-[#E5BD9D] text-[14px]  px-1 py-0.5 md:px-2 md:py-1 underline"
-              >
-                Try again
-              </button>
-            </div>
-          )}
+          {/* the buttons show after check soulmates btn clicked for desktop view */}
+          <div className="hidden lg:inline-block">
+            <TryAgainResultBtn
+              btnAnimate={btnAnimate}
+              isCheckSoulmatesClicked={isCheckSoulmatesClicked}
+              tryAgainBtnToggle={tryAgainBtnToggle}
+            ></TryAgainResultBtn>
+          </div>
         </div>
         <SelectSavedFriends genarateIcon={genarateIcon}></SelectSavedFriends>
       </div>
