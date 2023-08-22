@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import AstrologyContent from "./AstrologyContent";
+import AstrologyContent from "./astrology-content/AstrologyContent";
 
 const AstrologyTable = () => {
   const [firstTransitionImg, setFirstTransitionImg] = useState(

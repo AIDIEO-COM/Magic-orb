@@ -15,18 +15,17 @@ const ToolsContent = ({
       style={{
         boxShadow:
           "20px 4px 20px 0px rgba(0, 0, 0, 0.25), 20px 4px 20px 0px rgba(0, 0, 0, 0.25) inset",
-      }}
-    >
-      <div className="mt-10 md:mt-[16%] h-[250px] md:h-[300px] lg:h-auto max-h-[38%]  overflow-hidden sm:-rotate-3 w-[110%] -translate-x-[5%] " style={{boxShadow: '0px 10px 4px 0px rgba(0, 0, 0, 0.25)'
-            }}>
+      }}>
+      <div
+        className="mt-10 md:mt-[16%] h-[250px] md:h-[300px] lg:h-auto max-h-[38%]  overflow-hidden sm:-rotate-3 w-[110%] -translate-x-[5%] "
+        style={{ boxShadow: "0px 10px 4px 0px rgba(0, 0, 0, 0.25)" }}>
         <h3 className="text-center text-xl md:text-3xl font-semibold text-[#DBCBF4]">
           {activeCard?.card_title === "Magic Orb"
             ? "The Magic Orb"
             : activeCard?.card_title}
         </h3>
         <ToolsContentImgAnimate
-          imgLink={activeCard?.card_full_img}
-        ></ToolsContentImgAnimate>
+          imgLink={activeCard?.card_full_img}></ToolsContentImgAnimate>
       </div>
       <div className="mt-[7%] grid sm:grid-cols-2 justify-items-center gap-y-3  md:justify-items-center mx-4">
         <div>
@@ -35,8 +34,7 @@ const ToolsContent = ({
             {activeCard?.card_info?.map((infoItem, index) => (
               <p
                 key={index}
-                className="text-[10px] mb-4 pl-6 text-[#E5BD9D] sm:-rotate-3 "
-              >
+                className="text-[10px] mb-4 pl-6 text-[#E5BD9D] sm:-rotate-3 ">
                 <span className="text-[#DBCBF4] ml-6 mr-1">
                   {infoItem?.info_headline}:
                 </span>
