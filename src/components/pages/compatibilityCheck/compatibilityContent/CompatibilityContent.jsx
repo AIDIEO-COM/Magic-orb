@@ -30,13 +30,11 @@ const CompatibilityContent = ({
           <div className=" h-[18px] w-10 bg-[#674B53] rounded-full overflow-hidden p-[3px] flex items-center justify-center cursor-pointer">
             <button
               className="relative w-full h-full rounded-full "
-              onClick={() => setCheckBtnIsClicked(!checkBtnIsClicked)}
-            >
+              onClick={() => setCheckBtnIsClicked(!checkBtnIsClicked)}>
               <div
                 className={`absolute top-0 duration-500  h-3 w-3 bg-[#D9D9D9] rounded-full ${
                   checkBtnIsClicked ? "translate-x-[22px]" : "left-0"
-                }`}
-              ></div>
+                }`}></div>
             </button>
           </div>
           <p className="text-sm lg:text-base">Chines</p>
@@ -47,17 +45,17 @@ const CompatibilityContent = ({
         {isCheckSoulmatesClicked && (
           <div className="lg:hidden">
             <SoulmatesImg
+              isCheckSoulmatesClicked={isCheckSoulmatesClicked}></SoulmatesImg>
+            <TryAgainResultBtn
               isCheckSoulmatesClicked={isCheckSoulmatesClicked}
-            ></SoulmatesImg>
-            <TryAgainResultBtn isCheckSoulmatesClicked={isCheckSoulmatesClicked} tryAgainBtnToggle={tryAgainBtnToggle}></TryAgainResultBtn>
+              tryAgainBtnToggle={tryAgainBtnToggle}></TryAgainResultBtn>
           </div>
         )}
         <NewPersonsCC
           genarateIcon={genarateIcon}
-          setPersonSoulmates={setPersonSoulmates}
-        ></NewPersonsCC>
+          setPersonSoulmates={setPersonSoulmates}></NewPersonsCC>
         {/* Set soulmates by add person clicking the btn */}
-        <div className="absolute top-[8%] sm:top-[12%] lg:top-auto lg:relative lg:mt-5 flex flex-col items-center z-6 lg:h-[80%] justify-between">
+        <div className="absolute top-[8%] sm:top-[12%] lg:top-auto lg:relative lg:mt-5 2xl:mt-0 flex flex-col items-center z-6 lg:h-[80%] justify-between">
           <div className="flex flex-col items-center">
             <div className="flex gap-[45px]">
               <div className="w-[52px] h-[52px] bg-[#c8c5c55f] rounded-full flex justify-center items-center">
@@ -66,8 +64,7 @@ const CompatibilityContent = ({
                     alt="soulmates"
                     src={"https://i.ibb.co/48tFJqs/libra-modified-1-1.png"}
                     width={33}
-                    height={33}
-                  ></Image>
+                    height={33}></Image>
                 )}
               </div>
               <div className="w-[50px] h-[50px] bg-[#c8c5c55f] rounded-full flex justify-center items-center">
@@ -76,16 +73,14 @@ const CompatibilityContent = ({
                     alt="soulmates"
                     src={"https://i.ibb.co/48tFJqs/libra-modified-1-1.png"}
                     width={33}
-                    height={33}
-                  ></Image>
+                    height={33}></Image>
                 )}
               </div>
             </div>
             {isCheckSoulmatesClicked || (
               <button
                 onClick={checkSoulmatesBtnToggle}
-                className="bg-[#674B53] text-[#E5BD9D] px-[11px] py-1 rounded-3xl mt-4 text-sm"
-              >
+                className="bg-[#674B53] text-[#E5BD9D] px-[11px] py-1 rounded-3xl mt-4 text-sm">
                 Check soulmates
               </button>
             )}
@@ -94,8 +89,7 @@ const CompatibilityContent = ({
           <div className="hidden lg:inline-block">
             <TryAgainResultBtn
               isCheckSoulmatesClicked={isCheckSoulmatesClicked}
-              tryAgainBtnToggle={tryAgainBtnToggle}
-            ></TryAgainResultBtn>
+              tryAgainBtnToggle={tryAgainBtnToggle}></TryAgainResultBtn>
           </div>
         </div>
         <SelectSavedFriends genarateIcon={genarateIcon}></SelectSavedFriends>
