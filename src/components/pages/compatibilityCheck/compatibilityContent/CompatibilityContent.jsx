@@ -57,7 +57,7 @@ const CompatibilityContent = ({
           setPersonSoulmates={setPersonSoulmates}
         ></NewPersonsCC>
         {/* Set soulmates by add person clicking the btn */}
-        <div className="absolute top-[8%] sm:top-[12%] lg:top-auto lg:relative lg:mt-5 2xl:-mt-5 flex flex-col items-center z-6 lg:h-[80%] justify-between">
+        <div className="absolute top-[8%] sm:top-[12%] lg:top-auto lg:relative lg:mt-5 flex flex-col items-center z-6 lg:h-[80%] justify-between">
           <div className="flex flex-col items-center">
             <div className="flex gap-[45px]">
               <div className="w-[52px] h-[52px] bg-[#c8c5c55f] rounded-full flex justify-center items-center">
