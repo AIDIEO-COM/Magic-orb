@@ -14,6 +14,7 @@ const DiscoverContent = () => {
   const togglePredictDetails = () => {
     setShowPredictDetails(!showPredictDetails);
   };
+  // reset predict
   const resetPredict = () => {
     setShowPredictDetails(false);
     setSelectRandomCards(false);

@@ -19,15 +19,6 @@ const CompatibilityContent = ({
   tryAgainBtnToggle,
 }) => {
   const [checkBtnIsClicked, setCheckBtnIsClicked] = useState(false);
-  const [btnAnimate, setBtnAnimate] = useState(
-    "duration-700 lg:-translate-y-[230px] 2xl:-translate-y-[430px] lg:translate-x-1/2"
-  );
-  useEffect(() => {
-    const timeOut = setTimeout(() => {
-      setBtnAnimate("translate-x-0 -translate-y-0 duration-700");
-    }, 5);
-    return () => clearTimeout(timeOut);
-  }, [isCheckSoulmatesClicked]);
   return (
     <div className=" w-full h-full lg:p-7 xl:p-10 lg:overflow-hidden">
       <div className="left-1/2 -translate-x-1/2 w-full flex flex-col items-center absolute top-5 lg:relative lg:top-auto">
@@ -58,7 +49,7 @@ const CompatibilityContent = ({
             <SoulmatesImg
               isCheckSoulmatesClicked={isCheckSoulmatesClicked}
             ></SoulmatesImg>
-            <TryAgainResultBtn isCheckSoulmatesClicked={isCheckSoulmatesClicked} btnAnimate={btnAnimate} tryAgainBtnToggle={tryAgainBtnToggle}></TryAgainResultBtn>
+            <TryAgainResultBtn isCheckSoulmatesClicked={isCheckSoulmatesClicked} tryAgainBtnToggle={tryAgainBtnToggle}></TryAgainResultBtn>
           </div>
         )}
         <NewPersonsCC
@@ -99,11 +90,9 @@ const CompatibilityContent = ({
               </button>
             )}
           </div>
-          {/* TODO: Btn animate not working */}
           {/* the buttons show after check soulmates btn clicked for desktop view */}
           <div className="hidden lg:inline-block">
             <TryAgainResultBtn
-              btnAnimate={btnAnimate}
               isCheckSoulmatesClicked={isCheckSoulmatesClicked}
               tryAgainBtnToggle={tryAgainBtnToggle}
             ></TryAgainResultBtn>

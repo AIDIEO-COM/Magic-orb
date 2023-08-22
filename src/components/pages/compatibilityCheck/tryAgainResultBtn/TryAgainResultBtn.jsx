@@ -1,11 +1,11 @@
 "use client"
-const TryAgainResultBtn = ({isCheckSoulmatesClicked, btnAnimate, tryAgainBtnToggle}) => {
+const TryAgainResultBtn = ({isCheckSoulmatesClicked, tryAgainBtnToggle}) => {
     return (
         <>
         {isCheckSoulmatesClicked && (
             <div className="flex gap-4 w-full justify-center">
               <button
-                className={`bg-[#674B53] text-[#E5BD9D] px-[11px] py-1 rounded-3xl text-sm duration-700 ${btnAnimate}`}
+                className={`bg-[#674B53] text-[#E5BD9D] px-[11px] py-1 rounded-3xl text-sm duration-700 `}
               >
                 Share result
               </button>
