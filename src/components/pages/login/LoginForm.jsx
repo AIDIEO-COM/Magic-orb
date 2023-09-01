@@ -21,6 +21,20 @@ const LoginForm = () => {
             delete value.email;
         }
         console.log(value);
+        fetch("https://magic-orb-server-five.vercel.app/user/auth/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(value),
+        }).then((res) => {
+            if (res.status === 200) {
+                alert("Login successful");
+                console.log(res);
+            } else {
+                alert("Login failed");
+            }
+        })
     }
   return (
     <form onSubmit={handleSubmit} className="mt-10">
