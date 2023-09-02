@@ -5,8 +5,12 @@ import { AiOutlineGoogle } from "react-icons/ai";
 import { FaFacebookF } from "react-icons/fa";
 import { FiTwitter } from "react-icons/fi";
 import createJWT from "@/utls/createJWT";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const LoginForm = () => {
+  const searchParams = useSearchParams();
+  const from = searchParams.get("redirectUrl");
+  const { replace } = useRouter();
   // get data from login form
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,17 +25,18 @@ const LoginForm = () => {
       value.username = value.email;
       delete value.email;
     }
-    console.log(value);
-    fetch("https://magic-orb-server-five.vercel.app/user/auth/logi", {
+    fetch("https://magic-orb-server-five.vercel.app/user/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(value),
-    }).then((res) => {
+    }).then(async(res) => {
       if (res.status === 200) {
-        createJWT({ email: value.email });
+        await createJWT({ email: value.email });
         alert("Login successful");
+        e.target.reset();
+        replace(from || "/");
       } else {
         alert("Login failed");
       }

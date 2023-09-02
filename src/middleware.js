@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import { jwtVerify } from 'jose'
 
 export async function middleware(request) {
+    const {pathname} = new URL(request.url);
     try {
         let cookie = request.cookies.get('jwt-token')?.value;
         if (!cookie || !cookie.startsWith('Bearer ')) throw new Error('Invalid token');
@@ -10,7 +11,7 @@ export async function middleware(request) {
         return NextResponse.next()
     } catch (error) {
         console.log(error.message)
-        return NextResponse.redirect(new URL('/login', request.url))
+        return NextResponse.redirect(new URL(`/login?redirectUrl=${pathname}`, request.url))
     }
 }
 

@@ -4,8 +4,12 @@ import { FaFacebookF } from "react-icons/fa";
 import { FiTwitter } from "react-icons/fi";
 import { AiOutlineGoogle } from "react-icons/ai";
 import createJWT from "@/utls/createJWT";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const RegistrationForm = () => {
+  const searchParams = useSearchParams();
+  const from = searchParams.get("redirectUrl");
+  const { replace } = useRouter();
   // get data from registration form
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -33,10 +37,12 @@ const RegistrationForm = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(value),
-    }).then((res) => {
+    }).then(async(res) => {
       if (res.status === 200) {
-        createJWT({email: value.email})
+        await createJWT({email: value.email})
         alert("Registration successful");
+        e.target.reset();
+        replace(from || "/");
       } else {
         alert("Registration failed");
       }
