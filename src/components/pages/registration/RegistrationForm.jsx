@@ -3,8 +3,8 @@ import Link from "next/link";
 import { FaFacebookF } from "react-icons/fa";
 import { FiTwitter } from "react-icons/fi";
 import { AiOutlineGoogle } from "react-icons/ai";
-import createJWT from "@/utls/createJWT";
 import { useRouter, useSearchParams } from "next/navigation";
+import toast from 'react-hot-toast';
 
 const RegistrationForm = () => {
   const searchParams = useSearchParams();
@@ -20,33 +20,33 @@ const RegistrationForm = () => {
       value.password === "" ||
       value["password-verification"] === ""
     ) {
-      alert("Please fill in all fields");
+      toast.error("Please fill in all fields");
       return;
     }
     if (value.password !== value["password-verification"]) {
-      alert("Passwords do not match");
+      toast.error("Password does not match!");
       return;
     }
     // delete confirm password property
     delete value["password-verification"];
-    console.log(value)
     // provide data to backend
-    fetch("https://magic-orb-server-five.vercel.app/user/auth/register", {
+    fetch("https://magic-orb-server-five.vercel.app/api/v1/user/auth/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(value),
-    }).then(async(res) => {
-      if (res.status === 200) {
-        await createJWT({email: value.email})
-        alert("Registration successful");
+    }).then(res => res.json()).then(res => {
+      if(res.success) {
+        toast.success("Registration successful!");
         e.target.reset();
-        replace(from || "/");
-      } else {
-        alert("Registration failed");
+        replace("/login")
       }
-    });
+      else {
+        toast.error("Registration failed!")
+      }
+    }
+    )
   };
   return (
     <form onSubmit={handleSubmit} className="mt-10">

@@ -4,43 +4,51 @@ import Link from "next/link";
 import { AiOutlineGoogle } from "react-icons/ai";
 import { FaFacebookF } from "react-icons/fa";
 import { FiTwitter } from "react-icons/fi";
-import createJWT from "@/utls/createJWT";
 import { useRouter, useSearchParams } from "next/navigation";
+import { toast } from "react-hot-toast";
+import storeTokenInCookie from "@/utls/storeTokenInCookie";
+import useGetUser from "@/hooks/useGetUser";
 
 const LoginForm = () => {
   const searchParams = useSearchParams();
-  const from = searchParams.get("redirectUrl");
+  // const from = searchParams.get("redirectUrl");
+  const navigate = "/";
   const { replace } = useRouter();
+  const [, refetch] = useGetUser();
   // get data from login form
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = new FormData(e.target);
     const value = Object.fromEntries(data.entries());
     if (value.email === "" || value.password === "") {
-      alert("Please fill in all fields");
+      toast.error("Please fill all fields!");
       return;
     }
-    if (!value.email.includes("@gmail.com")) {
-      // replace email into username
-      value.username = value.email;
-      delete value.email;
-    }
-    fetch("https://magic-orb-server-five.vercel.app/user/auth/login", {
+    // if (!value.email.includes("@gmail.com")) {
+    //   // replace email into username
+    //   value.username = value.email;
+    //   delete value.email;
+    // }
+    fetch("https://magic-orb-server-five.vercel.app/api/v1/user/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(value),
-    }).then(async(res) => {
-      if (res.status === 200) {
-        await createJWT({ email: value.email });
-        alert("Login successful");
-        e.target.reset();
-        replace(from || "/");
-      } else {
-        alert("Login failed");
-      }
-    });
+    })
+      .then((res) => res.json())
+      .then(async (res) => {
+        if (res.success) {
+          localStorage.setItem("token", JSON.stringify(res.data.token));
+          toast.success("Login successful!");
+          refetch();
+          await storeTokenInCookie(JSON.parse(localStorage.getItem("token")));
+          e.target.reset();
+          replace(navigate);
+        } else {
+          toast.error("Login failed, please try again!");
+        }
+      });
   };
   return (
     <form onSubmit={handleSubmit} className="mt-10">
