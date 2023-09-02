@@ -5,6 +5,7 @@ import { AiOutlineGoogle } from "react-icons/ai";
 import { FaFacebookF } from "react-icons/fa";
 import { FiTwitter } from "react-icons/fi";
 import { useRouter, useSearchParams } from "next/navigation";
+import { toast } from "react-hot-toast";
 
 const LoginForm = () => {
   const searchParams = useSearchParams();
@@ -19,18 +20,28 @@ const LoginForm = () => {
       alert("Please fill in all fields");
       return;
     }
-    if (!value.email.includes("@gmail.com")) {
-      // replace email into username
-      value.username = value.email;
-      delete value.email;
-    }
+    // if (!value.email.includes("@gmail.com")) {
+    //   // replace email into username
+    //   value.username = value.email;
+    //   delete value.email;
+    // }
     fetch("https://magic-orb-server-five.vercel.app/api/v1/user/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(value),
-    }).then(res => res.json()).then(res => console.log(res))
+    }).then(res => res.json()).then(res => {
+      if(res.success) {
+        localStorage.setItem("token", JSON.stringify(res.data.token));
+        toast.success("Login successful!");
+        e.target.reset();
+        replace(from || "/")
+      }
+      else {
+        toast.error("Login failed, please try again!")
+      }
+    })
   };
   return (
     <form onSubmit={handleSubmit} className="mt-10">
