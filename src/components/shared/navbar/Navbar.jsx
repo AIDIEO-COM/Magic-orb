@@ -6,6 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import { FaBars, FaAngleRight } from "react-icons/fa";
+
 const Navbar = ({ toggleSidebar }) => {
   const [isFrdReqNotificationModalOpen, setIsFrdReqNotificationModalOpen] =
     useState(false);

@@ -3,8 +3,13 @@ import Link from "next/link";
 import { FaFacebookF } from "react-icons/fa";
 import { FiTwitter } from "react-icons/fi";
 import { AiOutlineGoogle } from "react-icons/ai";
+import createJWT from "@/utls/createJWT";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const RegistrationForm = () => {
+  const searchParams = useSearchParams();
+  const from = searchParams.get("redirectUrl");
+  const { replace } = useRouter();
   // get data from registration form
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,12 +27,26 @@ const RegistrationForm = () => {
       alert("Passwords do not match");
       return;
     }
-    if (!value.email.includes("@gmail.com")) {
-      // replace email into username
-      value.username = value.email;
-      delete value.email;
-    }
-    console.log(value);
+    // delete confirm password property
+    delete value["password-verification"];
+    console.log(value)
+    // provide data to backend
+    fetch("https://magic-orb-server-five.vercel.app/user/auth/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(value),
+    }).then(async(res) => {
+      if (res.status === 200) {
+        await createJWT({email: value.email})
+        alert("Registration successful");
+        e.target.reset();
+        replace(from || "/");
+      } else {
+        alert("Registration failed");
+      }
+    });
   };
   return (
     <form onSubmit={handleSubmit} className="mt-10">
@@ -40,7 +59,7 @@ const RegistrationForm = () => {
         </label>
         <input
           type="text"
-          placeholder="Email or username"
+          placeholder="Email"
           name="email"
           className="bg-[#674B53] h-8 px-3 rounded-2xl text-sm text-[#E5BD9D] tracking-wide outline-none placeholder-[#E5BD9D]"
         />

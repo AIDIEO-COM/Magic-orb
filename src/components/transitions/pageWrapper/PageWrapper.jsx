@@ -1,13 +1,15 @@
 "use client"
-import "aos/dist/aos.css";
+import { motion } from "framer-motion";
 
 const PageWrapper = ({children}) => {
     return (
-      <div
-      data-aos="zoom-in"
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
       >
         {children}
-      </div>
+      </motion.div>
     );
 };
 
