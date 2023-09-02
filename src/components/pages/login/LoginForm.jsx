@@ -6,11 +6,15 @@ import { FaFacebookF } from "react-icons/fa";
 import { FiTwitter } from "react-icons/fi";
 import { useRouter, useSearchParams } from "next/navigation";
 import { toast } from "react-hot-toast";
+import storeTokenInCookie from "@/utls/storeTokenInCookie";
+import useGetUser from "@/hooks/useGetUser";
 
 const LoginForm = () => {
   const searchParams = useSearchParams();
   const from = searchParams.get("redirectUrl");
+  const navigate = from ? from : "/";
   const { replace } = useRouter();
+  const [, refetch] = useGetUser();
   // get data from login form
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -31,17 +35,20 @@ const LoginForm = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(value),
-    }).then(res => res.json()).then(res => {
-      if(res.success) {
-        localStorage.setItem("token", JSON.stringify(res.data.token));
-        toast.success("Login successful!");
-        e.target.reset();
-        replace(from || "/")
-      }
-      else {
-        toast.error("Login failed, please try again!")
-      }
     })
+      .then((res) => res.json())
+      .then(async (res) => {
+        if (res.success) {
+          localStorage.setItem("token", JSON.stringify(res.data.token));
+          toast.success("Login successful!");
+          refetch();
+          await storeTokenInCookie(JSON.parse(localStorage.getItem("token")));
+          e.target.reset();
+          replace(navigate);
+        } else {
+          toast.error("Login failed, please try again!");
+        }
+      });
   };
   return (
     <form onSubmit={handleSubmit} className="mt-10">

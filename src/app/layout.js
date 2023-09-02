@@ -1,3 +1,4 @@
+import QueryProvider from "@/provider/QueryProvider";
 import "./globals.css";
 import { Toaster } from 'react-hot-toast';
 
@@ -10,8 +11,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`default-background-color h-full`}>
-        {children}
-        <Toaster />
+        <QueryProvider>
+          {children}
+          <Toaster />
+        </QueryProvider>
       </body>
     </html>
   );
