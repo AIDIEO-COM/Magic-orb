@@ -4,38 +4,39 @@ import Link from "next/link";
 import { AiOutlineGoogle } from "react-icons/ai";
 import { FaFacebookF } from "react-icons/fa";
 import { FiTwitter } from "react-icons/fi";
+import createJWT from "@/utls/createJWT";
 
 const LoginForm = () => {
-    // get data from login form
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const data = new FormData(e.target);
-        const value = Object.fromEntries(data.entries());
-        if (value.email === "" || value.password === "") {
-            alert("Please fill in all fields");
-            return;
-        }
-        if (!value.email.includes("@gmail.com")) {
-            // replace email into username
-            value.username = value.email;
-            delete value.email;
-        }
-        console.log(value);
-        fetch("https://magic-orb-server-five.vercel.app/user/auth/login", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(value),
-        }).then((res) => {
-            if (res.status === 200) {
-                alert("Login successful");
-                console.log(res);
-            } else {
-                alert("Login failed");
-            }
-        })
+  // get data from login form
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const data = new FormData(e.target);
+    const value = Object.fromEntries(data.entries());
+    if (value.email === "" || value.password === "") {
+      alert("Please fill in all fields");
+      return;
     }
+    if (!value.email.includes("@gmail.com")) {
+      // replace email into username
+      value.username = value.email;
+      delete value.email;
+    }
+    console.log(value);
+    fetch("https://magic-orb-server-five.vercel.app/user/auth/logi", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(value),
+    }).then((res) => {
+      if (res.status === 200) {
+        createJWT({ email: value.email });
+        alert("Login successful");
+      } else {
+        alert("Login failed");
+      }
+    });
+  };
   return (
     <form onSubmit={handleSubmit} className="mt-10">
       <div className="flex flex-col mb-2.5">
@@ -69,7 +70,7 @@ const LoginForm = () => {
       <div className="flex items-center gap-2 mb-2 ml-4">
         <input
           type="radio"
-            name="keep-logged-in"
+          name="keep-logged-in"
           className="w-4 h-4 rounded-full border-[#866345] cursor-pointer"
         />
         <p className="text-[#DBCBF4] text-sm">Keep logged in</p>

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FaFacebookF } from "react-icons/fa";
 import { FiTwitter } from "react-icons/fi";
 import { AiOutlineGoogle } from "react-icons/ai";
+import createJWT from "@/utls/createJWT";
 
 const RegistrationForm = () => {
   // get data from registration form
@@ -34,8 +35,8 @@ const RegistrationForm = () => {
       body: JSON.stringify(value),
     }).then((res) => {
       if (res.status === 200) {
+        createJWT({email: value.email})
         alert("Registration successful");
-        console.log(res)
       } else {
         alert("Registration failed");
       }
