@@ -15,7 +15,7 @@ export async function middleware(request) {
     }
 }
 
-// See "Matching Paths" below to learn more
+// See "Matching Paths" and private routes below 
 export const config = {
-    matcher: ['/about', '/contact', '/magic-orb'],
+    matcher: ['/about', '/contact', '/magic-orb', '/tools/:path*', '/settings/:path*', '/account/:path*', '/library/:path*', '/shop/:path*'],
 }
