@@ -11,8 +11,8 @@ import useGetUser from "@/hooks/useGetUser";
 
 const LoginForm = () => {
   const searchParams = useSearchParams();
-  const from = searchParams.get("redirectUrl");
-  const navigate = from ? from : "/";
+  // const from = searchParams.get("redirectUrl");
+  const navigate = "/";
   const { replace } = useRouter();
   const [, refetch] = useGetUser();
   // get data from login form
@@ -21,7 +21,7 @@ const LoginForm = () => {
     const data = new FormData(e.target);
     const value = Object.fromEntries(data.entries());
     if (value.email === "" || value.password === "") {
-      alert("Please fill in all fields");
+      toast.error("Please fill all fields!");
       return;
     }
     // if (!value.email.includes("@gmail.com")) {

@@ -13,7 +13,7 @@ const Navbar = ({ toggleSidebar }) => {
     useState(false);
   const [isNotificationModalOpen, setIsNotificationModalOpen] = useState(false);
   const path = usePathname();
-  const [user, , isLoading] = useGetUser();
+  const [user, refetch , isLoading] = useGetUser();
   const toggleNotificationModal = (modalName) => {
     if (modalName === "friendRequest") {
       setIsNotificationModalOpen(false);
@@ -23,7 +23,11 @@ const Navbar = ({ toggleSidebar }) => {
       setIsNotificationModalOpen(!isNotificationModalOpen);
     }
   };
-
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    console.log('logout')
+    refetch()
+  }
   return (
     <div className="h-[49px] flex items-center justify-between relative z-20 nav-bg">
       {/* menubar for mobile */}
@@ -60,6 +64,9 @@ const Navbar = ({ toggleSidebar }) => {
       <div className="flex w-fit h-full items-center pr-3 md:pr-0 gap-4 xl:gap-5 z-20 xl:absolute right-[81px]">
         {user ? (
           <>
+            <button onClick={handleLogout} className="px-[13px] py-[2px] text-[15px] bg-[#BFB1D6] text-[#624652] font-berlin rounded-md hidden sm:inline-block">
+              Log out
+            </button>
             <Image
               onClick={() => toggleNotificationModal("friendRequest")}
               src={"https://i.ibb.co/RTPVZK9/notification-modified-1.png"}
