@@ -4,8 +4,9 @@ import Notification from "@/components/shared/navbar/notification/Notification";
 import useGetUser from "@/hooks/useGetUser";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import React, { useState } from "react";
+import { toast } from "react-hot-toast";
 import { FaBars, FaAngleRight } from "react-icons/fa";
 
 const Navbar = ({ toggleSidebar }) => {
@@ -14,6 +15,7 @@ const Navbar = ({ toggleSidebar }) => {
   const [isNotificationModalOpen, setIsNotificationModalOpen] = useState(false);
   const path = usePathname();
   const [user, refetch , isLoading] = useGetUser();
+  const router = useRouter();
   const toggleNotificationModal = (modalName) => {
     if (modalName === "friendRequest") {
       setIsNotificationModalOpen(false);
@@ -23,10 +25,21 @@ const Navbar = ({ toggleSidebar }) => {
       setIsNotificationModalOpen(!isNotificationModalOpen);
     }
   };
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    console.log('logout')
+  const handleLogout = async() => {
+    try {
+      localStorage.removeItem("token");
+    const res = await fetch('/api/auth/logout', {
+      method: 'POST',
+    })
+    const data = res.json();
+    console.log(data)
     refetch()
+    toast.success("Logout successful!")
+    router.push('/')
+    } catch (error) {
+      console.log(error)
+      toast.error("Logout failed, please try again!")
+    }
   }
   return (
     <div className="h-[49px] flex items-center justify-between relative z-20 nav-bg">
