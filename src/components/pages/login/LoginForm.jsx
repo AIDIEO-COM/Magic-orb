@@ -4,7 +4,6 @@ import Link from "next/link";
 import { AiOutlineGoogle } from "react-icons/ai";
 import { FaFacebookF } from "react-icons/fa";
 import { FiTwitter } from "react-icons/fi";
-import createJWT from "@/utls/createJWT";
 import { useRouter, useSearchParams } from "next/navigation";
 
 const LoginForm = () => {
@@ -25,22 +24,13 @@ const LoginForm = () => {
       value.username = value.email;
       delete value.email;
     }
-    fetch("https://magic-orb-server-five.vercel.app/user/auth/login", {
+    fetch("https://magic-orb-server-five.vercel.app/api/v1/user/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(value),
-    }).then(async(res) => {
-      if (res.status === 200) {
-        await createJWT({ email: value.email });
-        alert("Login successful");
-        e.target.reset();
-        replace(from || "/");
-      } else {
-        alert("Login failed");
-      }
-    });
+    }).then(res => res.json()).then(res => console.log(res))
   };
   return (
     <form onSubmit={handleSubmit} className="mt-10">
