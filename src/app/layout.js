@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
       <body className={`default-background-color h-full`}>
         <QueryProvider>
           {children}
-          <Toaster />
+          <Toaster/>
         </QueryProvider>
       </body>
     </html>

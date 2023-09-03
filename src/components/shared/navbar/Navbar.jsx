@@ -15,7 +15,6 @@ const Navbar = ({ toggleSidebar }) => {
   const [isNotificationModalOpen, setIsNotificationModalOpen] = useState(false);
   const path = usePathname();
   const [user, refetch , isLoading] = useGetUser();
-  console.log(user)
   const router = useRouter();
   const toggleNotificationModal = (modalName) => {
     if (modalName === "friendRequest") {
@@ -38,7 +37,12 @@ const Navbar = ({ toggleSidebar }) => {
     router.push('/')
     } catch (error) {
       console.log(error)
-      toast.error("Logout failed, please try again!")
+      toast.error("Logout failed, please try again!", {
+        style: {
+          background: " #232141",
+          color: '#FFC8AA',
+        },
+    })
     }
   }
   return (

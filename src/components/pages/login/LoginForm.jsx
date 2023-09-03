@@ -21,7 +21,12 @@ const LoginForm = () => {
     const data = new FormData(e.target);
     const value = Object.fromEntries(data.entries());
     if (value.email === "" || value.password === "") {
-      toast.error("Please fill all fields!");
+      toast.error("Please fill all fields!", {
+        style: {
+          background: " #232141",
+          color: '#FFC8AA',
+        },
+    });
       return;
     }
     // if (!value.email.includes("@gmail.com")) {
@@ -40,13 +45,23 @@ const LoginForm = () => {
       .then(async (res) => {
         if (res.success) {
           localStorage.setItem("token", JSON.stringify(res.data.token));
-          toast.success("Login successful!");
+          toast.success("Login successful!", {
+            style: {
+              background: " #232141",
+              color: '#FFC8AA',
+            },
+        });
           refetch();
           await storeTokenInCookie(JSON.parse(localStorage.getItem("token")));
           e.target.reset();
           replace(navigate);
         } else {
-          toast.error("Login failed, please try again!");
+          toast.error("Login failed, please try again!", {
+            style: {
+              background: " #232141",
+              color: '#FFC8AA',
+            },
+        });
         }
       });
   };

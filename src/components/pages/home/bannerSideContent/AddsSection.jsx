@@ -9,7 +9,12 @@ const AddsSection = () => {
   const [user] = useGetUser();
   const handleStatisticShow = () => {
     if (!user) {
-      toast.error("Please login to see statistics")
+      toast.error("Please login to see statistics", {
+          style: {
+            background: " #232141",
+            color: '#FFC8AA',
+          },
+      })
       return;
     }
     setIsStatisticsShow(!isStatisticsShow);

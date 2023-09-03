@@ -28,7 +28,7 @@ const useAxiosSecure = () => {
         return Promise.reject(error);
       }
     );
-  }, [token]);
+  }, []);
 
   return [axiosInstance];
 };
