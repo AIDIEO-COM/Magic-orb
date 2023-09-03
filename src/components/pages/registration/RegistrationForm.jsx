@@ -20,11 +20,21 @@ const RegistrationForm = () => {
       value.password === "" ||
       value["password-verification"] === ""
     ) {
-      toast.error("Please fill in all fields");
+      toast.error("Please fill in all fields", {
+        style: {
+          background: " #232141",
+          color: '#FFC8AA',
+        },
+    });
       return;
     }
     if (value.password !== value["password-verification"]) {
-      toast.error("Password does not match!");
+      toast.error("Password does not match!", {
+        style: {
+          background: " #232141",
+          color: '#FFC8AA',
+        },
+    });
       return;
     }
     // delete confirm password property
@@ -38,12 +48,22 @@ const RegistrationForm = () => {
       body: JSON.stringify(value),
     }).then(res => res.json()).then(res => {
       if(res.success) {
-        toast.success("Registration successful!");
+        toast.success("Registration successful!", {
+          style: {
+            background: " #232141",
+            color: '#FFC8AA',
+          },
+      });
         e.target.reset();
         replace("/login")
       }
       else {
-        toast.error("Registration failed!")
+        toast.error("Registration failed!", {
+          style: {
+            background: " #232141",
+            color: '#FFC8AA',
+          },
+      })
       }
     }
     )

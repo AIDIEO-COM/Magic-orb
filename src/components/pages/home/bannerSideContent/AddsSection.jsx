@@ -1,10 +1,22 @@
 "use client"
 import React, { useState } from 'react';
 import HomeStatistics from '../HomeStatistics';
+import useGetUser from '@/hooks/useGetUser';
+import { toast } from 'react-hot-toast';
 
 const AddsSection = () => {
-    const [isStatisticsShow, setIsStatisticsShow] = useState(false);
+  const [isStatisticsShow, setIsStatisticsShow] = useState(false);
+  const [user] = useGetUser();
   const handleStatisticShow = () => {
+    if (!user) {
+      toast.error("Please login to see statistics", {
+          style: {
+            background: " #232141",
+            color: '#FFC8AA',
+          },
+      })
+      return;
+    }
     setIsStatisticsShow(!isStatisticsShow);
   };
     return (
