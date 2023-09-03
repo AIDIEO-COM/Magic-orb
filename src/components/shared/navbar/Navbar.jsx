@@ -33,7 +33,12 @@ const Navbar = ({ toggleSidebar }) => {
     })
     const data = res.json();
     refetch()
-    toast.success("Logout successful!")
+    toast.success("Logout successful!", {
+      style: {
+        background: " #232141",
+        color: '#FFC8AA',
+      },
+  })
     router.push('/')
     } catch (error) {
       console.log(error)

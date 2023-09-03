@@ -8,6 +8,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { toast } from "react-hot-toast";
 import storeTokenInCookie from "@/utls/storeTokenInCookie";
 import useGetUser from "@/hooks/useGetUser";
+import createJWT from "@/utls/createJWT";
 
 const LoginForm = () => {
   const searchParams = useSearchParams();
@@ -52,7 +53,8 @@ const LoginForm = () => {
             },
         });
           refetch();
-          await storeTokenInCookie(JSON.parse(localStorage.getItem("token")));
+          createJWT({email: value.email})
+          // await storeTokenInCookie(JSON.parse(localStorage.getItem("token")));
           e.target.reset();
           replace(navigate);
         } else {
@@ -109,7 +111,7 @@ const LoginForm = () => {
         </button>
         <Link href="/registration">
           <button className="text-[#E5BD9D] text-xs md:text-sm px-2 rounded-lg py-1 underline">
-            Sign-in
+            Sign-up
           </button>
         </Link>
       </div>

@@ -113,12 +113,12 @@ const RegistrationForm = () => {
         <p className="text-[#DBCBF4] text-sm">Keep logged in</p>
       </div>
       <div className="flex items-center justify-center gap-6 mt-8">
-        <button className="text-[#E5BD9D] text-xs md:text-sm bg-[#674B53] px-8 font-semibold rounded-lg py-1">
-          Sign-in
+        <button className="text-[#E5BD9D] text-xs md:text-sm bg-[#674B53] px-8 rounded-lg py-1">
+          Sign-up
         </button>
         <Link href="/login">
-          <button className="text-[#E5BD9D] text-xs md:text-sm px-2 font-semibold rounded-lg py-1 underline">
-            Login
+          <button className="text-[#E5BD9D] text-xs md:text-sm px-2 rounded-lg py-1 underline">
+            Log-in
           </button>
         </Link>
       </div>
