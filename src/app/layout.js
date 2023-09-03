@@ -1,4 +1,6 @@
+import QueryProvider from "@/provider/QueryProvider";
 import "./globals.css";
+import { Toaster } from 'react-hot-toast';
 
 export const metadata = {
   title: "Magic Orb",
@@ -8,7 +10,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`default-background-color h-full`}>{children}</body>
+      <body className={`default-background-color h-full`}>
+        <QueryProvider>
+          {children}
+          <Toaster/>
+        </QueryProvider>
+      </body>
     </html>
   );
 }

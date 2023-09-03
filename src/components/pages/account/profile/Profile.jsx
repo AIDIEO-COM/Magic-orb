@@ -1,9 +1,12 @@
+"use client"
 import AccountBtnFill from '@/components/shared/btn/accountPageBtn/accountBtnFill/AccountBtnFill';
 import AccountBtnOutline from '@/components/shared/btn/accountPageBtn/accountBtnOutline/AccountBtnOutline';
+import useGetUser from '@/hooks/useGetUser';
 import Image from 'next/image';
 import React from 'react';
 
 const Profile = () => {
+  const [user] = useGetUser();
     return (
         <div className="default-shadow account-box-gradient flex items-center gap-4 p-4 rounded-2xl  lg:w-[380px]  md:h-full">
           <div className="flex flex-col items-center justify-center border-r-2 w-[55%]">
@@ -37,7 +40,7 @@ const Profile = () => {
                   className=""
                 />
                 <p className="text-[#DBCBF4] text-xs md:text-sm font-normal">
-                  Ballance: 52$
+                  Ballance: {user?.balance}$
                 </p>
               </div>
               <div className="flex items-center gap-2 mt-4">
