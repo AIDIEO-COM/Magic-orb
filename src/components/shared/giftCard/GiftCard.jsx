@@ -1,9 +1,12 @@
 "use client";
+import useGetUser from "@/hooks/useGetUser";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import { toast } from "react-hot-toast";
 
 const GiftCard = ({ home }) => {
   const [takeCardIsClicked, setTakeCardIsClicked] = useState(false);
+  const [user] = useGetUser();
   useEffect(() => {
     const timer = setTimeout(() => {
         setTakeCardIsClicked(false);
@@ -40,7 +43,7 @@ const GiftCard = ({ home }) => {
           className="lg:w-[70px] lg:h-[100px] xl:w-[80px] xl:h-[105px] 2xl:w-[114px] 2xl:h-[156px]"
         />
         <button
-          onClick={() => setTakeCardIsClicked(true)}
+          onClick={() => {user ? setTakeCardIsClicked(true) : toast.error("Please login to take the card")}}
           className="mx-auto text-[#E5BD9D] text-[10px] sm:text-xs bg-[#674B53] px-1 sm:px-2 font-normal tracking-wide rounded-full py-1 mt-2 ">
           Take the card
         </button>
