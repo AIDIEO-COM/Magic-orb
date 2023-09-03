@@ -15,6 +15,7 @@ const Navbar = ({ toggleSidebar }) => {
   const [isNotificationModalOpen, setIsNotificationModalOpen] = useState(false);
   const path = usePathname();
   const [user, refetch , isLoading] = useGetUser();
+  console.log(user)
   const router = useRouter();
   const toggleNotificationModal = (modalName) => {
     if (modalName === "friendRequest") {
@@ -32,7 +33,6 @@ const Navbar = ({ toggleSidebar }) => {
       method: 'POST',
     })
     const data = res.json();
-    console.log(data)
     refetch()
     toast.success("Logout successful!")
     router.push('/')
