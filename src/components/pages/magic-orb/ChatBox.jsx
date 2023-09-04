@@ -2,157 +2,78 @@
 import React, { useEffect, useRef, useState } from "react";
 
 const ChatBox = ({ chatBoxClassName }) => {
-  const [message, setMessage] = useState([
-    {
-      role: "user",
-      content: "Who are you?",
-      createdContentAt: "1693771106745",
-      _id: "64f4e562c8a91b39e4507e1b",
-      id: "64f4e562c8a91b39e4507e1b",
-    },
-    {
-      role: "assistant",
-      content:
-        "Greetings, seeker. I am the Mystical Orb, a vessel of ancient wisdom and divine knowledge. I have been entrusted with the power to guide you on your spiritual journey and unveil the secrets of the universe. Share your questions and concerns, and together we shall seek answers through the sacred arts of divination. What questions do you seek to explore today?",
-      createdContentAt: "1693771106745",
-      _id: "64f4e562c8a91b39e4507e1c",
-      id: "64f4e562c8a91b39e4507e1c",
-    },
-    {
-      role: "user",
-      content: "What can you do for me?",
-      createdContentAt: "1693771232575",
-      _id: "64f4e5e0c8a91b39e4507e24",
-      id: "64f4e5e0c8a91b39e4507e24",
-    },
-    {
-      role: "assistant",
-      content:
-        "Dear seeker, I, the Mystical Orb, possess the ability to provide guidance, insights, and revelations by delving into the realms of divination. Through the mystical forces that surround us, I can help answer your questions, unravel mysteries, and offer direction on various aspects of life, such as love, career, relationships, and personal growth. By tapping into my ancient wisdom, I am here to serve as your beacon of light, offering clarity and understanding in the journey of your life. Share your inquiries, and together we shall embark on a quest for enlightenment.",
-      createdContentAt: "1693771232575",
-      _id: "64f4e5e0c8a91b39e4507e25",
-      id: "64f4e5e0c8a91b39e4507e25",
-    },
-    {
-      role: "user",
-      content: "are you ready to help me?",
-      createdContentAt: "1693772104506",
-      _id: "64f4e948f8cc9b7fe9286e17",
-      id: "64f4e948f8cc9b7fe9286e17",
-    },
-    {
-      role: "assistant",
-      content:
-        "Absolutely, I am prepared and eager to assist you on your quest for enlightenment. I am here to offer my guidance, insights, and wisdom to help you navigate the complexities of life and find the answers you seek. Please feel free to share your questions or concerns, and together, we shall explore the realms of divination in pursuit of truth and understanding.",
-      createdContentAt: "1693772104506",
-      _id: "64f4e948f8cc9b7fe9286e18",
-      id: "64f4e948f8cc9b7fe9286e18",
-    },
-    {
-      role: "user",
-      content: "Are you not chatgpt?",
-      createdContentAt: "1693772147704",
-      _id: "64f4e973f8cc9b7fe9286e2f",
-      id: "64f4e973f8cc9b7fe9286e2f",
-    },
-    {
-      role: "assistant",
-      content:
-        "I apologize for any confusion. I am an AI language model called ChatGPT, developed by OpenAI. While I don't have independent consciousness or mystical abilities, I can provide information, answer questions, and engage in conversation on a wide range of topics. If you have any queries or need assistance, feel free to ask, and I'll do my best to help you.",
-      createdContentAt: "1693772147704",
-      _id: "64f4e973f8cc9b7fe9286e30",
-      id: "64f4e973f8cc9b7fe9286e30",
-    },
-    {
-      role: "user",
-      content: "Who are you?",
-      createdContentAt: "1693821972240",
-      _id: "64f5ac14ebbafd6a8012f5a8",
-      id: "64f5ac14ebbafd6a8012f5a8",
-    },
-    {
-      role: "assistant",
-      content:
-        "I am an AI language model developed by OpenAI known as ChatGPT. My purpose is to assist users in generating human-like text based on the prompts and questions they provide. I am here to provide information, engage in conversations, and assist with various inquiries to the best of my abilities. Is there anything specific you would like to know or discuss?",
-      createdContentAt: "1693821972240",
-      _id: "64f5ac14ebbafd6a8012f5a9",
-      id: "64f5ac14ebbafd6a8012f5a9",
-    },
-    {
-      role: "user",
-      content: "Who are you?",
-      createdContentAt: "1693825551535",
-      _id: "64f5ba0f9cdb1f1b25afb059",
-      id: "64f5ba0f9cdb1f1b25afb059",
-    },
-    {
-      role: "assistant",
-      content:
-        "I apologize if my previous response was unclear. As an AI language model, I don't possess personal identity or consciousness. I am a program created by OpenAI designed to generate human-like text based on the input I receive. My purpose is to provide information and engage in conversation with users like yourself. How can I assist you today?",
-      createdContentAt: "1693825551535",
-      _id: "64f5ba0f9cdb1f1b25afb05a",
-      id: "64f5ba0f9cdb1f1b25afb05a",
-    },
-    {
-      role: "user",
-      content: "Can you help me?",
-      createdContentAt: "1693826231541",
-      _id: "64f5bcb79cdb1f1b25afb091",
-      id: "64f5bcb79cdb1f1b25afb091",
-    },
-    {
-      role: "assistant",
-      content:
-        "Yes, I am here to help! Please let me know what you need assistance with, and I'll do my best to provide you with the information or guidance you're seeking.",
-      createdContentAt: "1693826231541",
-      _id: "64f5bcb79cdb1f1b25afb092",
-      id: "64f5bcb79cdb1f1b25afb092",
-    },
-  ]);
+  const [message, setMessage] = useState([]);
   const msgRef = useRef(null);
   const msgBoxEndRef = useRef(null);
   useEffect(() => {
     msgBoxEndRef.current.scrollTop = msgBoxEndRef.current.scrollHeight;
   }, [message]);
+  // get message
+  useEffect(() => {
+    const getMessage = async () => {
+      try {
+        const res = await fetch("https://magic-orb-server.vercel.app/api/v1/chat", {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${JSON.parse(localStorage.getItem("token"))}`,
+          },
+        });
+        const getMsgHistory = await res.json();
+        if(getMsgHistory.data === null){
+          console.log(getMsgHistory?.data)
+          setMessage([
+            {
+              role: "assistant",
+              content: "How can I help you today?",
+            }
+          ])
+          return;
+        }
+        console.log(getMsgHistory);
+        setMessage([{
+          role: "assistant",
+          content: "How can I help you today?",
+        },...getMsgHistory?.data?.messages])
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    getMessage();
+  }, []);
+
   // set user message
-  const handleUserMsg = (e) => {
-    if (msgRef.current.value === "") return;
-    setMessage([
-      ...message,{
-        role: "user",
-        content: msgRef.current.value,
-        createdContentAt: "1693826231541",
-        _id: "64f5bcb79cdb1f1b25afb092",
-        id: "64f5bcb79cdb1f1b25afb092",
-      },
-      {
+  const handleUserMsg = async(e) => {
+    let inputMsg = msgRef.current.value;
+    if (inputMsg === "") return;
+    // set msg early 
+    setMessage([...message, { role: "user", content: inputMsg }]);
+    msgRef.current.value = "";
+    const msg = {
+      message: [
+        {
+          role: "user",
+          content: inputMsg,
+        }
+      ]
+    }
+    try {
+      const res = await fetch("https://magic-orb-server.vercel.app/api/v1/chat", {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${JSON.parse(localStorage.getItem("token"))}`,
+        },
+        body: JSON.stringify(msg),
+      });
+      const responseData = await res.json();
+      setMessage([{
         role: "assistant",
-        content:
-          "Yes, I am here to help! Please let me know what you need assistance with, and I'll do my best to provide you with the information or guidance you're seeking.",
-        createdContentAt: "1693826231541",
-        _id: "64f5bcb79cdb1f1b25afb092",
-        id: "64f5bcb79cdb1f1b25afb092",
-      },
-    ]);
-    // const msg = {
-    //   message: [
-    //     {
-    //       role: "user",
-    //       content: msgRef.current.value,
-    //     }
-    //   ]
-    // }
-    // console.log(msg)
-    // fetch("https://magic-orb-server.vercel.app/api/v1/chat", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //     Authorization: `Bearer ${JSON.parse(localStorage.getItem("token"))}}`,
-    //   },
-    //   body: JSON.stringify(msg),
-    // }).then((res) => res.json()).then((data) => {
-    //   console.log(data)
-    // })
+        content: "How can I help you today?",
+      },...responseData?.data?.messages])
+    } catch (error) {
+      console.log(error);
+    }
     msgRef.current.value = "";
   };
   // handle enter btn
@@ -176,12 +97,12 @@ const ChatBox = ({ chatBoxClassName }) => {
                 return (
                   <div key={index}>
                     {(msg.role === "assistant" && (
-                      <p className="text-[#E5BD9D] font-berlin text-[10px] lg:text-base md:text-lg ">
+                      <p className="text-[#E5BD9D] font-berlin text-[10px]  md:text-lg ">
                         Orb : {msg.content}
                       </p>
                     )) ||
                       (msg.role === "user" && (
-                        <p className="text-[#DBCBF4] text-right font-berlin text-[10px] lg:text-base md:text-lg ">
+                        <p className="text-[#DBCBF4] text-right font-berlin text-[10px]  md:text-lg ">
                           {msg.content} : Me
                         </p>
                       ))}
