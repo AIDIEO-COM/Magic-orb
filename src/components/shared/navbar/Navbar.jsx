@@ -14,7 +14,7 @@ const Navbar = ({ toggleSidebar }) => {
     useState(false);
   const [isNotificationModalOpen, setIsNotificationModalOpen] = useState(false);
   const path = usePathname();
-  const [user, refetch , isLoading] = useGetUser();
+  const [user, refetch, isLoading] = useGetUser();
   const router = useRouter();
   const toggleNotificationModal = (modalName) => {
     if (modalName === "friendRequest") {
@@ -25,26 +25,27 @@ const Navbar = ({ toggleSidebar }) => {
       setIsNotificationModalOpen(!isNotificationModalOpen);
     }
   };
-  const handleLogout = async() => {
+  const handleLogout = async () => {
     try {
       localStorage.removeItem("token");
-    const res = await fetch('/api/auth/logout', {
-      method: 'POST',
-    })
-    const data = res.json();
-    refetch()
-    toast.success("Logout successful!")
-    router.push('/')
+      refetch();
+      toast.success("Logout successful!", {
+        style: {
+          background: " #232141",
+          color: "#FFC8AA",
+        },
+      });
+      router.push("/");
     } catch (error) {
-      console.log(error)
+      console.log(error);
       toast.error("Logout failed, please try again!", {
         style: {
           background: " #232141",
-          color: '#FFC8AA',
+          color: "#FFC8AA",
         },
-    })
+      });
     }
-  }
+  };
   return (
     <div className="h-[49px] flex items-center justify-between relative z-20 nav-bg">
       {/* menubar for mobile */}
@@ -81,7 +82,10 @@ const Navbar = ({ toggleSidebar }) => {
       <div className="flex w-fit h-full items-center pr-3 md:pr-0 gap-4 xl:gap-5 z-20 xl:absolute right-[81px]">
         {user ? (
           <>
-            <button onClick={handleLogout} className="px-[13px] py-[2px] text-[15px] bg-[#BFB1D6] text-[#624652] font-berlin rounded-md hidden sm:inline-block">
+            <button
+              onClick={handleLogout}
+              className="px-[13px] py-[2px] text-[15px] bg-[#BFB1D6] text-[#624652] font-berlin rounded-md hidden sm:inline-block"
+            >
               Log out
             </button>
             <Image

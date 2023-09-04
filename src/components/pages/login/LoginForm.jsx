@@ -4,15 +4,11 @@ import Link from "next/link";
 import { AiOutlineGoogle } from "react-icons/ai";
 import { FaFacebookF } from "react-icons/fa";
 import { FiTwitter } from "react-icons/fi";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { toast } from "react-hot-toast";
-import storeTokenInCookie from "@/utls/storeTokenInCookie";
 import useGetUser from "@/hooks/useGetUser";
 
 const LoginForm = () => {
-  const searchParams = useSearchParams();
-  // const from = searchParams.get("redirectUrl");
-  const navigate = "/";
   const { replace } = useRouter();
   const [, refetch] = useGetUser();
   // get data from login form
@@ -34,7 +30,7 @@ const LoginForm = () => {
     //   value.username = value.email;
     //   delete value.email;
     // }
-    fetch("https://magic-orb-server-five.vercel.app/api/v1/user/auth/login", {
+    fetch("https://magic-orb-server.vercel.app/api/v1/user/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -52,9 +48,8 @@ const LoginForm = () => {
             },
         });
           refetch();
-          await storeTokenInCookie(JSON.parse(localStorage.getItem("token")));
           e.target.reset();
-          replace(navigate);
+          replace('/');
         } else {
           toast.error("Login failed, please try again!", {
             style: {
@@ -109,7 +104,7 @@ const LoginForm = () => {
         </button>
         <Link href="/registration">
           <button className="text-[#E5BD9D] text-xs md:text-sm px-2 rounded-lg py-1 underline">
-            Sign-in
+            Sign-up
           </button>
         </Link>
       </div>
