@@ -166,11 +166,11 @@ const ChatBox = ({ chatBoxClassName }) => {
       <div
         className={`mx-auto flex flex-col justify-between h-full md:absolute md:left-1/2 md:-translate-x-1/2  md:top-auto ${chatBoxClassName} md:bottom-12 w-[90%] md:w-[60%] xl:w-[850px] md:h-[320px] rounded-2xl bg-[#20192A] px-5 md:px-10 py-5 duration-700`}
       >
-        <div className=" w-full h-[85%]">
+        <div className=" w-full h-[80%]">
           <h1 className="text-[#DBCBF4] font-berlin text-xl md:text-3xl text-center pb-3">
             Chat with the magic orb
           </h1>
-          <div ref={msgBoxEndRef} className="h-full md:h-[calc(100%-36px)] w-full pt-5 md:pt-3 md:pb-3 overflow-y-scroll px-2  ">
+          <div ref={msgBoxEndRef} className="h-full md:h-[calc(100%-36px)] w-full pt-5 md:pt-3 md:pb-3 overflow-y-scroll px-2 ">
             <div className="w-full space-y-2 md:space-y-0 ">
               {message.map((msg, index) => {
                 return (
