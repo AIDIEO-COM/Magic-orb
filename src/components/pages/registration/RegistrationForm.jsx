@@ -7,8 +7,6 @@ import { useRouter, useSearchParams } from "next/navigation";
 import toast from 'react-hot-toast';
 
 const RegistrationForm = () => {
-  const searchParams = useSearchParams();
-  const from = searchParams.get("redirectUrl");
   const { replace } = useRouter();
   // get data from registration form
   const handleSubmit = (e) => {
@@ -28,6 +26,15 @@ const RegistrationForm = () => {
     });
       return;
     }
+    if(value.password.length < 6) {
+      toast.error("Password must be at least 6 characters!", {
+        style: {
+          background: " #232141",
+          color: '#FFC8AA',
+        },
+    })
+      return;
+    }
     if (value.password !== value["password-verification"]) {
       toast.error("Password does not match!", {
         style: {
@@ -40,7 +47,7 @@ const RegistrationForm = () => {
     // delete confirm password property
     delete value["password-verification"];
     // provide data to backend
-    fetch("https://magic-orb-server-five.vercel.app/api/v1/user/auth/register", {
+    fetch("https://magic-orb-server.vercel.app/api/v1/user/auth/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
