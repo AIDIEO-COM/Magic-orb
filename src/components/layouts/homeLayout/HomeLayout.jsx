@@ -35,7 +35,7 @@ const HomeLayout = ({ children }) => {
       <div className="hidden xl:inline-block w-[220px] border-r-2 border-white h-full">
         <Sidebar></Sidebar>
       </div>
-      <div className="w-full h-full  overflow-hidden relative">
+      <div className="w-full h-full overflow-hidden relative">
         <Navbar toggleSidebar={toggleSidebar}></Navbar>
         <div className="lg:p-[34px] w-full min-h-screen lg:min-h-fit  lg:h-[calc(100vh-49px)] default-background-color">
           {children}

@@ -62,7 +62,8 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #635B74;
+  /* background: #635B74; */
+  background: transparent;
 }
 
 /* Handle */
