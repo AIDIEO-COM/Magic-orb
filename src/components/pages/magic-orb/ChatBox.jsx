@@ -7,13 +7,16 @@ const ChatBox = ({chatBoxClassName}) => {
       <div
         className={`mx-auto flex flex-col justify-between h-full md:absolute md:left-1/2 md:-translate-x-1/2  md:top-auto ${chatBoxClassName} md:bottom-12 w-[90%] md:w-[60%] xl:w-[850px] md:h-[300px] rounded-2xl bg-[#20192A] px-5 md:px-10 py-5 duration-700`}
       >
-        <div className="text-left w-full h-fit ">
+        <div className="text-left w-full h-[85%]">
           <h1 className="text-[#DBCBF4] font-berlin text-xl md:text-3xl text-center">
             Chat with the magic orb
           </h1>
-          <p className="text-[#E5BD9D] font-berlin text-base md:text-lg px-2 mt-5">
+          {/* <p className="text-[#E5BD9D] font-berlin text-base md:text-lg px-2 mt-5">
             Orb: How can I help you today?
-          </p>
+          </p> */}
+          <div className="h-full w-full  pt-5 ">
+
+          </div>
         </div>
         <div className="h-8 bg-[#635B74] rounded-md py-[3px] px-2 font-berlin flex justify-between md:absolute bottom-5 left-4 right-4 md:left-8 md:right-8 ">
           <input
