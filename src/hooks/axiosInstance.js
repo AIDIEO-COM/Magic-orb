@@ -3,14 +3,14 @@ import axios from 'axios';
 
 // Create an Axios instance with a base URL
 const axiosInstance = axios.create({
-  baseURL: 'https://magic-orb-server-five.vercel.app/api/v1', 
+  baseURL: 'https://magic-orb-server.vercel.app/api/v1', 
 });
 
 // Add a request interceptor
 axiosInstance.interceptors.request.use((config) => {
     const token = JSON.parse(localStorage.getItem('token'));
     if (token) {
-        config.headers.authorization = `Bearer ${token}`;
+        config.headers.Authorization = `Bearer ${token}`;
     }
     return config;
 }, (error) => {
