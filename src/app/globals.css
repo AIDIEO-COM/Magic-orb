@@ -56,3 +56,22 @@
   background: linear-gradient(212deg, #624652 10.17%, rgba(45, 34, 51, 0.35) 100%);
   box-shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #635B74;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #C5B7DC;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #E5BD9D;
+}

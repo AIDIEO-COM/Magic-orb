@@ -13,6 +13,7 @@ const ChatBox = ({ chatBoxClassName }) => {
   }, [chatMsg]);
   // set user message
   const handleUserMsg = (e) => {
+    if(msgRef.current.value === "") return;
     setChatMsg([
       ...chatMsg,
       { user: msgRef.current.value },
@@ -48,7 +49,7 @@ const ChatBox = ({ chatBoxClassName }) => {
           <h1 className="text-[#DBCBF4] font-berlin text-xl md:text-3xl text-center">
             Chat with the magic orb
           </h1>
-          <div className="h-full md:h-[calc(100%-36px)] w-full pt-5 md:pt-3 md:pb-3 overflow-y-scroll px-2">
+          <div className="h-full md:h-[calc(100%-36px)] w-full pt-5 md:pt-3 md:pb-3 overflow-y-scroll px-2  ">
             <div
               
               className="w-full space-y-2 md:space-y-0 "
