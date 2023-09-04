@@ -3,7 +3,7 @@ import Link from "next/link";
 import { FaFacebookF } from "react-icons/fa";
 import { FiTwitter } from "react-icons/fi";
 import { AiOutlineGoogle } from "react-icons/ai";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import toast from 'react-hot-toast';
 
 const RegistrationForm = () => {
