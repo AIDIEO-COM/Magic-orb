@@ -1,4 +1,5 @@
 "use client";
+import ChatBotResTypeAnimation from "@/components/transitions/chatbotResponseTypeAnimation/ChatBotResTypeAnimation";
 import React, { useEffect, useRef, useState } from "react";
 
 const ChatBox = ({ chatBoxClassName }) => {
@@ -12,41 +13,48 @@ const ChatBox = ({ chatBoxClassName }) => {
   useEffect(() => {
     const getMessage = async () => {
       try {
-        const res = await fetch("https://magic-orb-server.vercel.app/api/v1/chat", {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-            Authorization: `Bearer ${JSON.parse(localStorage.getItem("token"))}`,
-          },
-        });
+        const res = await fetch(
+          "https://magic-orb-server.vercel.app/api/v1/chat",
+          {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${JSON.parse(
+                localStorage.getItem("token")
+              )}`,
+            },
+          }
+        );
         const getMsgHistory = await res.json();
-        if(getMsgHistory.data === null){
-          console.log(getMsgHistory?.data)
+        if (getMsgHistory.data === null) {
+          console.log(getMsgHistory?.data);
           setMessage([
             {
               role: "assistant",
               content: "How can I help you today?",
-            }
-          ])
+            },
+          ]);
           return;
         }
-        console.log(getMsgHistory);
-        setMessage([{
-          role: "assistant",
-          content: "How can I help you today?",
-        },...getMsgHistory?.data?.messages])
+        setMessage([
+          {
+            role: "assistant",
+            content: "How can I help you today?",
+          },
+          ...getMsgHistory?.data?.messages,
+        ]);
       } catch (error) {
         console.log(error);
       }
-    }
+    };
     getMessage();
   }, []);
 
   // set user message
-  const handleUserMsg = async(e) => {
+  const handleUserMsg = async (e) => {
     let inputMsg = msgRef.current.value;
     if (inputMsg === "") return;
-    // set msg early 
+    // set msg early
     setMessage([...message, { role: "user", content: inputMsg }]);
     msgRef.current.value = "";
     const msg = {
@@ -54,23 +62,31 @@ const ChatBox = ({ chatBoxClassName }) => {
         {
           role: "user",
           content: inputMsg,
-        }
-      ]
-    }
-    try {
-      const res = await fetch("https://magic-orb-server.vercel.app/api/v1/chat", {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${JSON.parse(localStorage.getItem("token"))}`,
         },
-        body: JSON.stringify(msg),
-      });
+      ],
+    };
+    try {
+      const res = await fetch(
+        "https://magic-orb-server.vercel.app/api/v1/chat",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${JSON.parse(
+              localStorage.getItem("token")
+            )}`,
+          },
+          body: JSON.stringify(msg),
+        }
+      );
       const responseData = await res.json();
-      setMessage([{
-        role: "assistant",
-        content: "How can I help you today?",
-      },...responseData?.data?.messages])
+      setMessage([
+        {
+          role: "assistant",
+          content: "How can I help you today?",
+        },
+        ...responseData?.data?.messages,
+      ]);
     } catch (error) {
       console.log(error);
     }
@@ -81,7 +97,8 @@ const ChatBox = ({ chatBoxClassName }) => {
     if (e.key === "Enter") {
       handleUserMsg();
     }
-  }
+  };
+  // console.log(message[message.length - 1].role);
   return (
     <div className="md:overflow-hidden -mt-10  w-full md:w-auto h-[85%] md:h-auto">
       <div
@@ -91,7 +108,10 @@ const ChatBox = ({ chatBoxClassName }) => {
           <h1 className="text-[#DBCBF4] font-berlin text-xl md:text-3xl text-center pb-3">
             Chat with the magic orb
           </h1>
-          <div ref={msgBoxEndRef} className="h-full md:h-[calc(100%-36px)] w-full pt-5 md:pt-3 md:pb-3 overflow-y-scroll px-2 ">
+          <div
+            ref={msgBoxEndRef}
+            className="h-full md:h-[calc(100%-36px)] w-full pt-5 md:pt-3 md:pb-3 overflow-y-scroll px-2 "
+          >
             <div className="w-full space-y-2 md:space-y-0 ">
               {message.map((msg, index) => {
                 return (
@@ -103,12 +123,15 @@ const ChatBox = ({ chatBoxClassName }) => {
                     )) ||
                       (msg.role === "user" && (
                         <p className="text-[#DBCBF4] text-right font-berlin text-[10px]  md:text-lg ">
-                          {msg.content} : Me
+                          {msg.content} : You
                         </p>
                       ))}
                   </div>
                 );
               })}
+              {message[message.length - 1]?.role === "user" && (
+                <ChatBotResTypeAnimation></ChatBotResTypeAnimation>
+              )}
             </div>
           </div>
         </div>
