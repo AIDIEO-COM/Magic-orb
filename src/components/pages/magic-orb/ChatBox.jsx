@@ -1,8 +1,10 @@
 "use client";
+import ChatBotResTypeAnimation from "@/components/transitions/chatbotResponseTypeAnimation/ChatBotResTypeAnimation";
 import React, { useEffect, useRef, useState } from "react";
 
 const ChatBox = ({ chatBoxClassName }) => {
   const [message, setMessage] = useState([]);
+  const [isResponsePending, setResponsePending] = useState(false);
   const msgRef = useRef(null);
   const msgBoxEndRef = useRef(null);
   useEffect(() => {
@@ -12,41 +14,50 @@ const ChatBox = ({ chatBoxClassName }) => {
   useEffect(() => {
     const getMessage = async () => {
       try {
-        const res = await fetch("https://magic-orb-server.vercel.app/api/v1/chat", {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-            Authorization: `Bearer ${JSON.parse(localStorage.getItem("token"))}`,
-          },
-        });
+        setResponsePending(true);
+        const res = await fetch(
+          "https://magic-orb-server.vercel.app/api/v1/chat",
+          {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${JSON.parse(
+                localStorage.getItem("token")
+              )}`,
+            },
+          }
+        );
         const getMsgHistory = await res.json();
-        if(getMsgHistory.data === null){
-          console.log(getMsgHistory?.data)
+        if (getMsgHistory.data === null) {
           setMessage([
             {
               role: "assistant",
               content: "How can I help you today?",
-            }
-          ])
+            },
+          ]);
+          setResponsePending(false);
           return;
         }
-        console.log(getMsgHistory);
-        setMessage([{
-          role: "assistant",
-          content: "How can I help you today?",
-        },...getMsgHistory?.data?.messages])
+        setMessage([
+          {
+            role: "assistant",
+            content: "How can I help you today?",
+          },
+          ...getMsgHistory?.data?.messages,
+        ]);
+        setResponsePending(false);
       } catch (error) {
         console.log(error);
+        setResponsePending(false);
       }
-    }
+    };
     getMessage();
   }, []);
-
   // set user message
-  const handleUserMsg = async(e) => {
+  const handleUserMsg = async (e) => {
     let inputMsg = msgRef.current.value;
     if (inputMsg === "") return;
-    // set msg early 
+    // set msg early
     setMessage([...message, { role: "user", content: inputMsg }]);
     msgRef.current.value = "";
     const msg = {
@@ -54,25 +65,49 @@ const ChatBox = ({ chatBoxClassName }) => {
         {
           role: "user",
           content: inputMsg,
-        }
-      ]
-    }
-    try {
-      const res = await fetch("https://magic-orb-server.vercel.app/api/v1/chat", {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${JSON.parse(localStorage.getItem("token"))}`,
         },
-        body: JSON.stringify(msg),
-      });
+      ],
+    };
+    try {
+      setResponsePending(true);
+      // get response from AI
+      const res = await fetch(
+        "https://magic-orb-server.vercel.app/api/v1/chat",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${JSON.parse(
+              localStorage.getItem("token")
+            )}`,
+          },
+          body: JSON.stringify(msg),
+        }
+      );
       const responseData = await res.json();
-      setMessage([{
-        role: "assistant",
-        content: "How can I help you today?",
-      },...responseData?.data?.messages])
+      setMessage([
+        {
+          role: "assistant",
+          content: "How can I help you today?",
+        },
+        ...responseData?.data?.messages,
+      ]);
+      setResponsePending(false);
     } catch (error) {
       console.log(error);
+      setMessage([
+        ...message,
+        {
+          role: "user",
+          content: inputMsg,
+        },
+        {
+          role: "assistant",
+          content: "Sorry, something went wrong. Please tell me again!",
+          resFailed: true,
+        }
+      ])
+      setResponsePending(false);
     }
     msgRef.current.value = "";
   };
@@ -81,7 +116,7 @@ const ChatBox = ({ chatBoxClassName }) => {
     if (e.key === "Enter") {
       handleUserMsg();
     }
-  }
+  };
   return (
     <div className="md:overflow-hidden -mt-10  w-full md:w-auto h-[85%] md:h-auto">
       <div
@@ -91,24 +126,30 @@ const ChatBox = ({ chatBoxClassName }) => {
           <h1 className="text-[#DBCBF4] font-berlin text-xl md:text-3xl text-center pb-3">
             Chat with the magic orb
           </h1>
-          <div ref={msgBoxEndRef} className="h-full md:h-[calc(100%-36px)] w-full pt-5 md:pt-3 md:pb-3 overflow-y-scroll px-2 ">
+          <div
+            ref={msgBoxEndRef}
+            className="h-full md:h-[calc(100%-36px)] w-full pt-5 md:pt-3 md:pb-3 overflow-y-scroll px-2 "
+          >
             <div className="w-full space-y-2 md:space-y-0 ">
               {message.map((msg, index) => {
                 return (
                   <div key={index}>
                     {(msg.role === "assistant" && (
-                      <p className="text-[#E5BD9D] font-berlin text-[10px]  md:text-lg ">
+                      <p className={`${msg.resFailed ? 'text-red-500' : 'text-[#E5BD9D]'} font-berlin text-[10px]  md:text-[17px] `}>
                         Orb : {msg.content}
                       </p>
                     )) ||
                       (msg.role === "user" && (
-                        <p className="text-[#DBCBF4] text-right font-berlin text-[10px]  md:text-lg ">
-                          {msg.content} : Me
+                        <p className="text-[#DBCBF4] text-right font-berlin text-[10px]  md:text-[17px] ">
+                          {msg.content} : You
                         </p>
                       ))}
                   </div>
                 );
               })}
+              {message[message.length - 1]?.role === "user" && isResponsePending && (
+                <ChatBotResTypeAnimation></ChatBotResTypeAnimation>
+              )}
             </div>
           </div>
         </div>
@@ -117,9 +158,10 @@ const ChatBox = ({ chatBoxClassName }) => {
             type="text"
             ref={msgRef}
             onKeyDown={handleEnterBtn}
+            disabled={isResponsePending}
             name="userMsg"
             className="outline-none w-[80%] h-full bg-transparent text-[#C5B7DC] text-sm pl-1"
-            placeholder="Ask me..."
+            placeholder="Type your question..."
           ></input>
           <button
             onClick={handleUserMsg}
