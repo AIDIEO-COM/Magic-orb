@@ -128,19 +128,19 @@ const ChatBox = ({ chatBoxClassName }) => {
           </h1>
           <div
             ref={msgBoxEndRef}
-            className="h-full md:h-[calc(100%-36px)] w-full pt-5 md:pt-3 md:pb-3 overflow-y-scroll px-2 "
+            className="h-full md:h-[calc(100%-36px)] w-full pt-5 md:pt-3 md:pb-1 overflow-y-scroll px-1 "
           >
-            <div className="w-full space-y-2 md:space-y-0 ">
+            <div className="w-full ">
               {message.map((msg, index) => {
                 return (
                   <div key={index}>
                     {(msg.role === "assistant" && (
-                      <p className={`${msg.resFailed ? 'text-red-500' : 'text-[#E5BD9D]'} font-berlin text-[10px]  md:text-[17px] `}>
+                      <p className={`${msg.resFailed ? 'text-red-500' : 'text-[#E5BD9D]'} font-berlin text-[10px]  md:text-[17px] bg-[#9191912e] rounded-lg w-fit text-justify max-w-[75%] mb-[10px] px-3 py-2`}>
                         Orb : {msg.content}
                       </p>
                     )) ||
                       (msg.role === "user" && (
-                        <p className="text-[#DBCBF4] text-right font-berlin text-[10px]  md:text-[17px] ">
+                        <p className="text-[#DBCBF4] font-berlin text-[10px]  md:text-[17px] bg-[#9191912e] rounded-lg w-fit text-justify ml-auto max-w-[80%] mb-[10px] px-3 py-2">
                           {msg.content} : You
                         </p>
                       ))}
