@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 const ChatBox = ({ chatBoxClassName }) => {
   const [message, setMessage] = useState([]);
+  const [isResponsePending, setResponsePending] = useState(false);
   const msgRef = useRef(null);
   const msgBoxEndRef = useRef(null);
   useEffect(() => {
@@ -13,6 +14,7 @@ const ChatBox = ({ chatBoxClassName }) => {
   useEffect(() => {
     const getMessage = async () => {
       try {
+        setResponsePending(true);
         const res = await fetch(
           "https://magic-orb-server.vercel.app/api/v1/chat",
           {
@@ -27,13 +29,13 @@ const ChatBox = ({ chatBoxClassName }) => {
         );
         const getMsgHistory = await res.json();
         if (getMsgHistory.data === null) {
-          console.log(getMsgHistory?.data);
           setMessage([
             {
               role: "assistant",
               content: "How can I help you today?",
             },
           ]);
+          setResponsePending(false);
           return;
         }
         setMessage([
@@ -43,13 +45,14 @@ const ChatBox = ({ chatBoxClassName }) => {
           },
           ...getMsgHistory?.data?.messages,
         ]);
+        setResponsePending(false);
       } catch (error) {
         console.log(error);
+        setResponsePending(false);
       }
     };
     getMessage();
   }, []);
-
   // set user message
   const handleUserMsg = async (e) => {
     let inputMsg = msgRef.current.value;
@@ -66,6 +69,8 @@ const ChatBox = ({ chatBoxClassName }) => {
       ],
     };
     try {
+      setResponsePending(true);
+      // get response from AI
       const res = await fetch(
         "https://magic-orb-server.vercel.app/api/v1/chat",
         {
@@ -87,8 +92,22 @@ const ChatBox = ({ chatBoxClassName }) => {
         },
         ...responseData?.data?.messages,
       ]);
+      setResponsePending(false);
     } catch (error) {
       console.log(error);
+      setMessage([
+        ...message,
+        {
+          role: "user",
+          content: inputMsg,
+        },
+        {
+          role: "assistant",
+          content: "Sorry, something went wrong. Please tell me again!",
+          resFailed: true,
+        }
+      ])
+      setResponsePending(false);
     }
     msgRef.current.value = "";
   };
@@ -98,7 +117,6 @@ const ChatBox = ({ chatBoxClassName }) => {
       handleUserMsg();
     }
   };
-  // console.log(message[message.length - 1].role);
   return (
     <div className="md:overflow-hidden -mt-10  w-full md:w-auto h-[85%] md:h-auto">
       <div
@@ -117,19 +135,19 @@ const ChatBox = ({ chatBoxClassName }) => {
                 return (
                   <div key={index}>
                     {(msg.role === "assistant" && (
-                      <p className="text-[#E5BD9D] font-berlin text-[10px]  md:text-lg ">
+                      <p className={`${msg.resFailed ? 'text-red-500' : 'text-[#E5BD9D]'} font-berlin text-[10px]  md:text-[17px] `}>
                         Orb : {msg.content}
                       </p>
                     )) ||
                       (msg.role === "user" && (
-                        <p className="text-[#DBCBF4] text-right font-berlin text-[10px]  md:text-lg ">
+                        <p className="text-[#DBCBF4] text-right font-berlin text-[10px]  md:text-[17px] ">
                           {msg.content} : You
                         </p>
                       ))}
                   </div>
                 );
               })}
-              {message[message.length - 1]?.role === "user" && (
+              {message[message.length - 1]?.role === "user" && isResponsePending && (
                 <ChatBotResTypeAnimation></ChatBotResTypeAnimation>
               )}
             </div>
@@ -140,9 +158,10 @@ const ChatBox = ({ chatBoxClassName }) => {
             type="text"
             ref={msgRef}
             onKeyDown={handleEnterBtn}
+            disabled={isResponsePending}
             name="userMsg"
             className="outline-none w-[80%] h-full bg-transparent text-[#C5B7DC] text-sm pl-1"
-            placeholder="Ask me..."
+            placeholder="Type your question..."
           ></input>
           <button
             onClick={handleUserMsg}
