@@ -1,10 +1,11 @@
+"use client"
 import Image from "next/image";
 import React from "react";
 
-const AdsCard = () => {
+const AdsCard = ({setIsPremiumClicked, isPremiumClicked}) => {
   return (
     <div
-      className="h-fit w-[90%] sm:w-[70%] mx-auto mt-[150px] sm:mt-10 lg:mx-0 lg:mt-auto  lg:w-[33%] rounded-[38px] grid grid-cols-5 py-4 px-3 gap-4"
+      className={`h-fit w-[95%] sm:w-[70%] mx-auto mt-[150px] sm:mt-10 lg:mx-0 lg:mt-auto  lg:w-[33%] rounded-[38px] grid grid-cols-5 py-4 px-3 gap-4 ${isPremiumClicked && 'hidden'}`}
       style={{
         background: "rgba(0, 0, 0, 0.80)",
         boxShadow: " -10px 10px 3.6582px 0px rgba(0, 0, 0, 0.25)",
@@ -25,7 +26,7 @@ const AdsCard = () => {
             <p className="text-[#DBCBF4] text-[10px] sm:text-[15px] font-berlin pb-1">4.99$/Mo</p>
         </div>
         <div className="flex justify-center">
-            <button className="text-[#E5BD9D] text-[10px] sm:text-[13px] font-berlin py-[4px] px-[12px] bg-[#674B53] rounded-[10px]">Get premium right now</button>
+            <button onClick={()=> setIsPremiumClicked(true)} className="text-[#E5BD9D] text-[10px] sm:text-[13px] font-berlin py-[4px] px-[12px] bg-[#674B53] rounded-[10px]">Get premium right now</button>
         </div>
       </div>
     </div>
