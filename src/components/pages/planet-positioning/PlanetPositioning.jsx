@@ -4,6 +4,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import PlanetControlCard from "./planetControlCard/PlanetControlCard";
 import Link from "next/link";
+import PlanetPositionContainer from "./planetPositionContainer/PlanetPositionContainer";
 
 const PlanetPositioning = () => {
   const [detailedView, setDetailedView] = useState(false);
@@ -20,8 +21,9 @@ const PlanetPositioning = () => {
             className={`h-full w-full duration-1000 rounded-[15px] `}
           ></Image>
           <div
-            className={`lg:absolute lg:top-0 right-0 left-0 bottom-0 w-full h-full text-white px-[2%] md:px-0`}
+            className={`lg:absolute lg:top-0 right-0 left-0 bottom-0 w-full h-full text-white px-[2%] md:px-0 lg:flex  lg:items-center`}
           >
+            {/* planet control card and main screen card container */}
             <div className=" lg:w-1/3 h-full flex flex-col items-center justify-between lg:justify-end lg:pb-10 gap-10 lg:gap-[48px]">
               <div></div>
               <PlanetControlCard
@@ -46,6 +48,10 @@ const PlanetPositioning = () => {
                   </Link>
                 </div>
               </div>
+            </div>
+            {/* planet position container */}
+            <div className="hidden lg:inline-block w-full h-full">
+              <PlanetPositionContainer></PlanetPositionContainer>
             </div>
           </div>
         </div>

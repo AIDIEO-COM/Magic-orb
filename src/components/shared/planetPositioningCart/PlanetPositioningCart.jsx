@@ -25,9 +25,9 @@ const PlanetPositioningCart = () => {
             See the sky with our eyes
           </h1>
           <Link href={"/tools/astrology-table/planet-positioning"}>
-          <button className="font-berlin text-xs sm:text-[15px] text-[#624652] rounded-[5px] bg-[#BFB1D6] py-[2px] px-3">
-            See planet positioning
-          </button>
+            <button className="font-berlin text-xs sm:text-[15px] text-[#624652] rounded-[5px] bg-[#BFB1D6] py-[2px] px-3">
+              See planet positioning
+            </button>
           </Link>
         </div>
       </div>
