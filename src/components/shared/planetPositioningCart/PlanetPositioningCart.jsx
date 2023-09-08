@@ -1,5 +1,6 @@
 import PageWrapper from "@/components/transitions/pageWrapper/PageWrapper";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const PlanetPositioningCart = () => {
@@ -23,9 +24,11 @@ const PlanetPositioningCart = () => {
           <h1 className="text-[20px] sm:text-[30px] text-[#DBCBF4] font-berlin">
             See the sky with our eyes
           </h1>
+          <Link href={"/tools/astrology-table/planet-positioning"}>
           <button className="font-berlin text-xs sm:text-[15px] text-[#624652] rounded-[5px] bg-[#BFB1D6] py-[2px] px-3">
             See planet positioning
           </button>
+          </Link>
         </div>
       </div>
     </PageWrapper>
