@@ -3,6 +3,7 @@ import Image from "next/image";
 import CompatibilityContent from "./compatibilityContent/CompatibilityContent";
 import { useEffect, useState } from "react";
 import SoulmatesImg from "./soulmatesImg/SoulmatesImg";
+import compatibilityCover from '/public/cover-images/4.png'
 
 const CompatibilityCheck = () => {
   const [firstTransitionImg, setFirstTransitionImg] = useState(
