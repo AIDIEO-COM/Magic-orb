@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import "./spin.css";
 import sun from "/public/planet-images/sun.png";
 import neptune from "/public/planet-images/neptune.png";
@@ -11,10 +11,16 @@ import uranus from "/public/planet-images/uranus.png";
 import venus from "/public/planet-images/venus.png";
 import mars from "/public/planet-images/mars.png";
 import mercury from "/public/planet-images/mercury.png";
+import Link from "next/link";
 
 const PlanetPositionContainer = () => {
   return (
-    <div className=" w-full h-full p-5 flex justify-center items-center relative">
+    <div className=" w-[83%] mx-auto h-[300px] lg:h-full p-5 flex justify-center items-center relative">
+      <Link href={"/tools/astrology-table/planet-positioning-two"}>
+        <button className="absolute top-12 right-0 font-berlin text-xs sm:text-[15px] text-[#624652] rounded-[5px] bg-[#BFB1D6] py-[2px] px-3">
+          Change Planet
+        </button>
+      </Link>
       {/* <div class="wrapper">
         <div class="neptune-container">
           <Image src={neptune} alt="planetimg" width={80} height={80}></Image>
@@ -51,7 +57,7 @@ const PlanetPositionContainer = () => {
           </Image>
         </div>
       </div> */}
-      <div className="lg:w-[750px] lg:h-[750px] rounded-full border p-[45px] border-dashed  border-white absolute ">
+      <div className="w-full h-[300px] lg:w-[750px] lg:h-[750px] rounded-full border p-4 lg:p-[45px] border-dashed  border-white absolute border-opacity-50">
         <Image
           src={neptune}
           alt="neptune"
@@ -59,7 +65,7 @@ const PlanetPositionContainer = () => {
           height={25}
           className="absolute bottom-[21%] "
         ></Image>
-        <div className="w-full h-full border border-dashed border-white rounded-full p-[45px] relative">
+        <div className="w-full h-full border border-dashed border-white rounded-full p-4 lg:p-[45px] relative border-opacity-50">
           <Image
             src={uranus}
             alt="neptune"
@@ -67,7 +73,7 @@ const PlanetPositionContainer = () => {
             height={23}
             className="absolute bottom-[18%] "
           ></Image>
-          <div className="w-full h-full border border-dashed border-white rounded-full p-[45px] relative">
+          <div className="w-full h-full border border-dashed border-white rounded-full p-4 lg:p-[45px] relative border-opacity-50">
             <Image
               src={saturn}
               alt="neptune"
@@ -75,7 +81,7 @@ const PlanetPositionContainer = () => {
               height={33}
               className="absolute bottom-[13%] "
             ></Image>
-            <div className="w-full h-full border border-dashed border-white rounded-full p-[45px] relative">
+            <div className="w-full h-full border border-dashed border-white rounded-full p-4 lg:p-[45px] relative border-opacity-50">
               <Image
                 src={jupiter}
                 alt="neptune"
@@ -83,7 +89,7 @@ const PlanetPositionContainer = () => {
                 height={42}
                 className="absolute bottom-[4%] "
               ></Image>
-              <div className="w-full h-full border border-dashed border-white rounded-full p-[45px] relative">
+              <div className="w-full h-full border border-dashed border-white rounded-full p-4 lg:p-[45px] relative border-opacity-50">
                 <Image
                   src={venus}
                   alt="neptune"
@@ -91,7 +97,7 @@ const PlanetPositionContainer = () => {
                   height={19}
                   className="absolute bottom-[8%] "
                 ></Image>
-                <div className="w-full h-full border border-dashed border-white rounded-full p-[45px] relative">
+                <div className="w-full h-full border border-dashed border-white rounded-full p-4 lg:p-[45px] relative border-opacity-50">
                   <Image
                     src={earth}
                     alt="neptune"
@@ -99,23 +105,23 @@ const PlanetPositionContainer = () => {
                     height={25}
                     className="absolute bottom-[5%] "
                   ></Image>
-                  <div className="w-full h-full border border-dashed border-white rounded-full p-[45px] relative">
-                  <Image
-                    src={venus}
-                    alt="neptune"
-                    width={42}
-                    height={23}
-                    className="absolute -bottom-[6%] "
-                  ></Image>
-                    <div className="w-full h-full border border-dashed border-white rounded-full p-5 relative">
+                  <div className="w-full h-full border border-dashed border-white rounded-full p-4 lg:p-[45px] relative border-opacity-50">
                     <Image
-                    src={mars}
-                    alt="neptune"
-                    width={22}
-                    height={17}
-                    className="absolute -bottom-[8%] "
-                  ></Image>
-                      <div className="relative h-full w-full  ">
+                      src={mercury}
+                      alt="neptune"
+                      width={42}
+                      height={23}
+                      className="absolute -bottom-[6%] "
+                    ></Image>
+                    <div className="w-full h-full border border-dashed border-white rounded-full p-5 relative border-opacity-50">
+                      <Image
+                        src={mars}
+                        alt="neptune"
+                        width={22}
+                        height={17}
+                        className="absolute -bottom-[8%] "
+                      ></Image>
+                      <div className="relative h-full w-full   border-opacity-50">
                         <Image
                           src={sun}
                           alt="sun"

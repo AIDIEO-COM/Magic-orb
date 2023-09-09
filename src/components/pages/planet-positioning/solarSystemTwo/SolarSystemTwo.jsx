@@ -2,29 +2,19 @@
 import PageWrapper from "@/components/transitions/pageWrapper/PageWrapper";
 import Image from "next/image";
 import React, { useState } from "react";
-import PlanetControlCard from "./planetControlCard/PlanetControlCard";
+import PlanetControlCard from "@/components/pages/planet-positioning/planetControlCard/PlanetControlCard";
 import Link from "next/link";
-import PlanetPositionContainer from "./planetPositionContainer/PlanetPositionContainer";
+import PlanetPositioningTwo from "./PlanetPositioningTwo";
 
-const PlanetPositioning = () => {
+const SolarSystemTwo = () => {
   const [detailedView, setDetailedView] = useState(false);
   const [heliocentric, setHeliocentric] = useState(false);
   return (
     <PageWrapper>
-      <div className="w-full h-full lg:h-[700px] 2xl:h-full ">
+      <div className="w-full h-full lg:h-[700px] 2xl:h-full  ">
         <div className="w-full h-full  relative">
-          <Image
-            src={"https://i.ibb.co/GQT4Zj9/Rectangle-53.png"}
-            alt="planetpositioningimg"
-            width={1000}
-            height={1000}
-            className={`min-h-[320px] object-cover h-full w-full duration-1000 rounded-[15px] `}
-          ></Image>
-          <div className="absolute top-3 w-full lg:hidden">
-            <PlanetPositionContainer></PlanetPositionContainer>
-          </div>
           <div
-            className={`lg:absolute lg:top-0 right-0 left-0 bottom-0 w-full h-full text-white px-[2%] md:px-0 lg:flex  lg:items-center `}
+            className={` w-full h-full text-white px-[2%] md:px-0 lg:flex  lg:items-center `}
           >
             {/* planet control card and main screen card container */}
             <div className=" lg:w-1/3 h-full flex flex-col items-center justify-between lg:justify-end lg:pb-10 gap-10 lg:gap-[48px] ">
@@ -54,7 +44,7 @@ const PlanetPositioning = () => {
             </div>
             {/* planet position container */}
             <div className="hidden lg:inline-block w-full h-full">
-              <PlanetPositionContainer></PlanetPositionContainer>
+                <PlanetPositioningTwo></PlanetPositioningTwo>
             </div>
           </div>
         </div>
@@ -63,4 +53,4 @@ const PlanetPositioning = () => {
   );
 };
 
-export default PlanetPositioning;
+export default SolarSystemTwo;
