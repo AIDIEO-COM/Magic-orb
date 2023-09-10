@@ -10,8 +10,9 @@ import uranus from "/public/planet-images/uranus.png";
 import venus from "/public/planet-images/venus.png";
 import mars from "/public/planet-images/mars.png";
 import mercury from "/public/planet-images/mercury.png";
+import moon from "/public/planet-images/moon.png";
 
-const PlanetPositioningTwo = () => {
+const PlanetPositioningTwo = ({ heliocentric }) => {
   return (
     <div className=" w-[100%] md:w-[83%] mx-auto sm:h-[600px] md:h-[800px] lg:h-full p-5 flex justify-center items-center relative">
       <div className="h-full w-full flex justify-center items-center ">
@@ -25,7 +26,7 @@ const PlanetPositioningTwo = () => {
           ></Image>
           <div className="absolute top-0 right-0 left-0 bottom-0 ">
             <div className="flex justify-center items-center h-full relative ">
-              <div className=" absolute gap-0  bottom-[25.2%] left-0  w-[61.3%] h-fit -rotate-[50deg] flex items-center pl-[8%] ">
+              <div className="transition-all duration-500 absolute gap-0  bottom-[26%] left-0  w-[61.3%] h-fit -rotate-[50deg] flex items-center pl-[8%] ">
                 <Image
                   src={neptune}
                   alt="ellipse planet"
@@ -61,13 +62,32 @@ const PlanetPositioningTwo = () => {
                   height={19}
                   className="w-[20px] h-[10px] md:w-auto md:h-auto"
                 ></Image>
-                <Image
-                  src={earth}
-                  alt="ellipse planet"
-                  width={25}
-                  height={25}
-                  className="w-[15px] h-[15px] md:w-auto md:h-auto"
-                ></Image>
+                {!heliocentric ? (
+                  <div className="relative">
+                    <Image
+                      src={earth}
+                      alt="ellipse planet"
+                      width={25}
+                      height={25}
+                      className="w-[15px] h-[15px] md:w-auto md:h-auto"
+                    ></Image>
+                    <Image
+                      src={moon}
+                      alt="moon"
+                      width={10}
+                      height={10}
+                      className="absolute -bottom-1.5"
+                    ></Image>
+                  </div>
+                ) : (
+                  <Image
+                    src={sun}
+                    alt="ellipse planet"
+                    width={56}
+                    height={56}
+                    className="w-[20px] h-[20px] md:w-auto md:h-auto"
+                  ></Image>
+                )}
                 <Image
                   src={mercury}
                   alt="ellipse planet"
@@ -82,13 +102,32 @@ const PlanetPositioningTwo = () => {
                   height={23}
                   className="w-[20px] h-[20px] md:w-auto md:h-auto"
                 ></Image>
-                <Image
-                  src={sun}
-                  alt="ellipse planet"
-                  width={76}
-                  height={76}
-                  className="w-[20px] h-[20px] md:w-auto md:h-auto"
-                ></Image>
+                {heliocentric ? (
+                  <div className="relative">
+                  <Image
+                    src={earth}
+                    alt="ellipse planet"
+                    width={25}
+                    height={25}
+                    className="w-[15px] h-[15px] md:w-auto md:h-auto"
+                  ></Image>
+                  <Image
+                    src={moon}
+                    alt="moon"
+                    width={10}
+                    height={10}
+                    className="absolute -bottom-1.5"
+                  ></Image>
+                </div>
+                ) : (
+                  <Image
+                    src={sun}
+                    alt="ellipse planet"
+                    width={56}
+                    height={56}
+                    className="w-[20px] h-[20px] md:w-auto md:h-auto"
+                  ></Image>
+                )}
               </div>
             </div>
           </div>

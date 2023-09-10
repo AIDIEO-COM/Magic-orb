@@ -35,7 +35,7 @@ const PlanetPositioning = () => {
             }`}
           >
             {detailedView ? (
-              <PlanetPositioningTwo></PlanetPositioningTwo>
+              <PlanetPositioningTwo heliocentric={heliocentric}></PlanetPositioningTwo>
             ) : (
               <PlanetPositionContainer></PlanetPositionContainer>
             )}
@@ -72,7 +72,7 @@ const PlanetPositioning = () => {
             {/* planet position container */}
             <div className="hidden lg:inline-block w-full h-full transition-all duration-500">
               {detailedView ? (
-                <PlanetPositioningTwo></PlanetPositioningTwo>
+                <PlanetPositioningTwo heliocentric={heliocentric}></PlanetPositioningTwo>
               ) : (
                 <PlanetPositionContainer></PlanetPositionContainer>
               )}
