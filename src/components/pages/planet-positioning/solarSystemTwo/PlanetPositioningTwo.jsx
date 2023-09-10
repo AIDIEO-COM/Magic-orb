@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 import sun from "/public/planet-images/sun.png";
 import neptune from "/public/planet-images/neptune.png";
 import earth from "/public/planet-images/earth.png";
@@ -14,9 +14,9 @@ import Link from "next/link";
 
 const PlanetPositioningTwo = () => {
   return (
-    <div className=" w-[83%] mx-auto h-[300px] lg:h-full p-5 flex justify-center items-center relative">
+    <div className=" w-[100%] md:w-[83%] mx-auto sm:h-[600px] md:h-[800px] lg:h-full p-5 flex justify-center items-center relative">
       <Link href={"/tools/astrology-table/planet-positioning"}>
-        <button className="absolute top-12 right-0 font-berlin text-xs sm:text-[15px] text-[#624652] rounded-[5px] bg-[#BFB1D6] py-[2px] px-3">
+        <button className="hidden lg:inline-block  absolute top-12 right-0 font-berlin text-xs sm:text-[15px] text-[#624652] rounded-[5px] bg-[#BFB1D6] py-[2px] px-3">
           Change Planet
         </button>
       </Link>
@@ -31,69 +31,69 @@ const PlanetPositioningTwo = () => {
           ></Image>
           <div className="absolute top-0 right-0 left-0 bottom-0 ">
             <div className="flex justify-center items-center h-full relative ">
-              <div className=" absolute bottom-[25.2%] left-0  w-[61.3%] h-fit -rotate-[50deg] flex items-center pl-[10%]">
+              <div className=" absolute gap-0  bottom-[25.2%] left-0  w-[61.3%] h-fit -rotate-[50deg] flex items-center pl-[8%] ">
                 <Image
                   src={neptune}
                   alt="ellipse planet"
                   width={20}
                   height={21}
-                  className=""
+                  className="w-[8px] h-[9px] md:w-auto md:h-auto"
                 ></Image>
                 <Image
                   src={uranus}
                   alt="ellipse planet"
                   width={31}
                   height={23}
-                  className=""
+                  className="w-[20px] h-[15px] md:w-auto md:h-auto"
                 ></Image>
                 <Image
                   src={saturn}
                   alt="ellipse planet"
                   width={45}
                   height={34}
-                  className=""
+                  className="w-[30px] h-[20px] md:w-auto md:h-auto"
                 ></Image>
                 <Image
                   src={jupiter}
                   alt="ellipse planet"
-                  width={76}
-                  height={42}
-                  className=""
+                  width={58}
+                  height={40}
+                  className="w-[30px] h-[20px] md:w-[58px] md:h-[40px]"
                 ></Image>
                 <Image
                   src={venus}
                   alt="ellipse planet"
                   width={34}
                   height={19}
-                  className=""
+                  className="w-[20px] h-[10px] md:w-auto md:h-auto"
                 ></Image>
                 <Image
                   src={earth}
                   alt="ellipse planet"
                   width={25}
                   height={25}
-                  className=""
+                  className="w-[15px] h-[15px] md:w-auto md:h-auto"
                 ></Image>
                 <Image
                   src={mercury}
                   alt="ellipse planet"
                   width={80}
                   height={80}
-                  className=""
+                  className="w-[20px] h-[20px] md:w-auto md:h-auto"
                 ></Image>
                 <Image
                   src={mars}
                   alt="ellipse planet"
                   width={42}
                   height={23}
-                  className=""
+                  className="w-[20px] h-[20px] md:w-auto md:h-auto"
                 ></Image>
                 <Image
                   src={sun}
                   alt="ellipse planet"
                   width={76}
                   height={76}
-                  className=""
+                  className="w-[20px] h-[20px] md:w-auto md:h-auto"
                 ></Image>
               </div>
             </div>

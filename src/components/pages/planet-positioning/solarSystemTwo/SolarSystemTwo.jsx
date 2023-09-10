@@ -16,6 +16,10 @@ const SolarSystemTwo = () => {
           <div
             className={` w-full h-full text-white px-[2%] md:px-0 lg:flex  lg:items-center `}
           >
+            {/* planet position container */}
+            <div className=" lg:hidden w-full h-full">
+                <PlanetPositioningTwo></PlanetPositioningTwo>
+            </div>
             {/* planet control card and main screen card container */}
             <div className=" lg:w-1/3 h-full flex flex-col items-center justify-between lg:justify-end lg:pb-10 gap-10 lg:gap-[48px] ">
               <div></div>
@@ -42,7 +46,7 @@ const SolarSystemTwo = () => {
                 </div>
               </div>
             </div>
-            {/* planet position container */}
+            {/* planet position container for desktop view */}
             <div className="hidden lg:inline-block w-full h-full">
                 <PlanetPositioningTwo></PlanetPositioningTwo>
             </div>

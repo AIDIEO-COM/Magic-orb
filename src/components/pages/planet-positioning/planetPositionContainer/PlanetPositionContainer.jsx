@@ -17,7 +17,7 @@ const PlanetPositionContainer = () => {
   return (
     <div className=" w-[83%] mx-auto h-[300px] lg:h-full p-5 flex justify-center items-center relative">
       <Link href={"/tools/astrology-table/planet-positioning-two"}>
-        <button className="absolute top-12 right-0 font-berlin text-xs sm:text-[15px] text-[#624652] rounded-[5px] bg-[#BFB1D6] py-[2px] px-3">
+        <button className="hidden lg:inline-block absolute top-12 right-0 font-berlin text-xs sm:text-[15px] text-[#624652] rounded-[5px] bg-[#BFB1D6] py-[2px] px-3">
           Change Planet
         </button>
       </Link>
@@ -57,7 +57,7 @@ const PlanetPositionContainer = () => {
           </Image>
         </div>
       </div> */}
-      <div className="w-full h-[300px] lg:w-[750px] lg:h-[750px] rounded-full border p-4 lg:p-[45px] border-dashed  border-white absolute border-opacity-50">
+      <div className="w-[300px] h-[300px] lg:w-[650px] lg:h-[650px] 2xl:w-[750px] 2xl:h-[750px]  rounded-full border p-4 lg:p-[45px] border-dashed  border-white absolute border-opacity-50">
         <Image
           src={neptune}
           alt="neptune"
