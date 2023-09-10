@@ -7,7 +7,7 @@ const PlanetPositioningCart = () => {
   return (
     <PageWrapper>
       <div
-        className="rounded-3xl md:rounded-[38px] h-fit my-5 w-full lg:w-[550px] bg-red-500 p-5 relative"
+        className="rounded-3xl md:rounded-[38px] h-fit my-5 w-full lg:w-full bg-red-500 p-5 relative"
         style={{
           background: "rgba(0, 0, 0, 0.80)",
           boxShadow: "-10px 10px 3.6582px 0px rgba(0, 0, 0, 0.25)",
@@ -18,10 +18,10 @@ const PlanetPositioningCart = () => {
           alt="seeplanetimg"
           width={1000}
           height={700}
-          className="w-full h-auto"
+          className="w-full h-[100px] object-cover "
         ></Image>
         <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center gap-1 sm:gap-[10px]">
-          <h1 className="text-[20px] sm:text-[30px] text-[#DBCBF4] font-berlin">
+          <h1 className="text-[15px] sm:text-[20px] text-[#DBCBF4] font-berlin">
             See the sky with our eyes
           </h1>
           <Link href={"/tools/astrology-table/planet-positioning"}>

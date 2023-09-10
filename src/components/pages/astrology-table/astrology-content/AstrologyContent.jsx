@@ -74,7 +74,7 @@ const AstrologyContent = () => {
       </div>
       {/* see planet positioning card desktop view */}
       {isPremiumClicked && (
-        <div className="hidden lg:inline-block">
+        <div className="hidden lg:inline-block w-full sm:w-[60%] md:w-[20%]">
           <PlanetPositioningCart></PlanetPositioningCart>
         </div>
       )}

@@ -10,16 +10,10 @@ import uranus from "/public/planet-images/uranus.png";
 import venus from "/public/planet-images/venus.png";
 import mars from "/public/planet-images/mars.png";
 import mercury from "/public/planet-images/mercury.png";
-import Link from "next/link";
 
 const PlanetPositioningTwo = () => {
   return (
     <div className=" w-[100%] md:w-[83%] mx-auto sm:h-[600px] md:h-[800px] lg:h-full p-5 flex justify-center items-center relative">
-      <Link href={"/tools/astrology-table/planet-positioning"}>
-        <button className="hidden lg:inline-block  absolute top-12 right-0 font-berlin text-xs sm:text-[15px] text-[#624652] rounded-[5px] bg-[#BFB1D6] py-[2px] px-3">
-          Change Planet
-        </button>
-      </Link>
       <div className="h-full w-full flex justify-center items-center ">
         <div className="relative w-fit h-fit flex justify-center items-center">
           <Image
