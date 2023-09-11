@@ -1,7 +1,7 @@
 "use client";
 import PageWrapper from "@/components/transitions/pageWrapper/PageWrapper";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PlanetControlCard from "./planetControlCard/PlanetControlCard";
 import Link from "next/link";
 import PlanetPositionContainer from "./planetPositionContainer/PlanetPositionContainer";
@@ -10,15 +10,20 @@ import PlanetPositioningTwo from "./solarSystemTwo/PlanetPositioningTwo";
 const PlanetPositioning = () => {
   const [detailedView, setDetailedView] = useState(false);
   const [heliocentric, setHeliocentric] = useState(false);
+  // useEffect(() => {
+  //   if(heliocentric){
+  //     setDetailedView(false)
+  //   }
+  // }, [detailedView, heliocentric]);
   return (
     <PageWrapper>
       <div
         className={`w-full h-full lg:h-[700px] 2xl:h-full ${
-          detailedView && "bg-[#030303] rounded-[15px]"
+          (detailedView || heliocentric) && "bg-[#030303] rounded-[15px]"
         }`}
       >
         <div className="w-full h-full  relative">
-          {detailedView || (
+          {(detailedView || heliocentric) || (
             <>
               <Image
                 src={"https://i.ibb.co/GQT4Zj9/Rectangle-53.png"}
@@ -31,10 +36,10 @@ const PlanetPositioning = () => {
           )}
           <div
             className={`w-full lg:hidden transition-all duration-500 ${
-              detailedView ? "h-full " : "absolute top-3"
+              detailedView || heliocentric ? "h-full " : "absolute top-3"
             }`}
           >
-            {detailedView ? (
+            {detailedView || heliocentric ? (
               <PlanetPositioningTwo heliocentric={heliocentric}></PlanetPositioningTwo>
             ) : (
               <PlanetPositionContainer></PlanetPositionContainer>
@@ -71,7 +76,7 @@ const PlanetPositioning = () => {
             </div>
             {/* planet position container */}
             <div className="hidden lg:inline-block w-full h-full transition-all duration-500">
-              {detailedView ? (
+              {detailedView || heliocentric ? (
                 <PlanetPositioningTwo heliocentric={heliocentric}></PlanetPositioningTwo>
               ) : (
                 <PlanetPositionContainer></PlanetPositionContainer>

@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import "./spin.css";
+import "./planetPositionContainer.css";
 import sun from "/public/planet-images/sun.png";
 import neptune from "/public/planet-images/neptune.png";
 import earth from "/public/planet-images/earth.png";
@@ -11,6 +12,7 @@ import uranus from "/public/planet-images/uranus.png";
 import venus from "/public/planet-images/venus.png";
 import mars from "/public/planet-images/mars.png";
 import mercury from "/public/planet-images/mercury.png";
+import moon from "/public/planet-images/moon.png";
 
 const PlanetPositionContainer = () => {
   return (
@@ -51,77 +53,88 @@ const PlanetPositionContainer = () => {
           </Image>
         </div>
       </div> */}
-      <div className="w-[300px] h-[300px] lg:w-[650px] lg:h-[650px] 2xl:w-[750px] 2xl:h-[750px]  rounded-full border p-4 lg:p-[45px] border-dashed  border-white absolute border-opacity-50">
+      <div className="w-[300px] h-[260px] lg:w-[650px] lg:h-[570px] 2xl:w-[750px] 2xl:h-[650px]  border p-3.5 lg:p-[40px] border-dashed rounded-[50%]  border-white absolute border-opacity-40">
         <Image
           src={neptune}
           alt="neptune"
           width={25}
           height={25}
-          className="absolute bottom-[21%] "
+          className="absolute bottom-[21.5%] "
         ></Image>
-        <div className="w-full h-full border border-dashed border-white rounded-full p-4 lg:p-[45px] relative border-opacity-50">
+        <div className="w-full h-full border border-dashed rounded-[50%] border-white  p-3.5 lg:p-[40px] relative border-opacity-40">
           <Image
             src={uranus}
             alt="neptune"
             width={31}
             height={23}
-            className="absolute bottom-[18%] "
+            className="absolute bottom-[19.5%] "
           ></Image>
-          <div className="w-full h-full border border-dashed border-white rounded-full p-4 lg:p-[45px] relative border-opacity-50">
+          <div className="w-full h-full border border-dashed rounded-[50%] border-white  p-3.5 lg:p-[40px] relative border-opacity-40">
             <Image
               src={saturn}
               alt="neptune"
               width={45}
               height={33}
-              className="absolute bottom-[13%] "
+              className="absolute bottom-[15%] "
             ></Image>
-            <div className="w-full h-full border border-dashed border-white rounded-full p-4 lg:p-[45px] relative border-opacity-50">
+            <div className="w-full h-full border border-dashed rounded-[50%] border-white  p-3.5 lg:p-[40px] relative border-opacity-40">
               <Image
                 src={jupiter}
                 alt="neptune"
                 width={75}
                 height={42}
-                className="absolute bottom-[4%] "
+                className="absolute bottom-[6%]  "
               ></Image>
-              <div className="w-full h-full border border-dashed border-white rounded-full p-4 lg:p-[45px] relative border-opacity-50">
+              <div className="w-full h-full border border-dashed rounded-[50%] border-white  p-3.5 lg:p-[40px] relative border-opacity-40">
                 <Image
                   src={venus}
                   alt="neptune"
                   width={34}
                   height={19}
-                  className="absolute bottom-[8%] "
+                  className="absolute bottom-[12%] "
                 ></Image>
-                <div className="w-full h-full border border-dashed border-white rounded-full p-4 lg:p-[45px] relative border-opacity-50">
-                  <Image
-                    src={earth}
-                    alt="neptune"
-                    width={25}
-                    height={25}
-                    className="absolute bottom-[5%] "
-                  ></Image>
-                  <div className="w-full h-full border border-dashed border-white rounded-full p-4 lg:p-[45px] relative border-opacity-50">
+                <div className="w-full h-full border border-dashed rounded-[50%] border-white  p-3.5 lg:p-[40px] relative border-opacity-40">
+                  <div className="absolute bottom-[7%]">
+                    <div className="relative">
+                      <Image
+                        src={earth}
+                        alt="ellipse planet"
+                        width={25}
+                        height={25}
+                        className="w-[15px] h-[15px] md:w-auto md:h-auto"
+                      ></Image>
+                      <Image
+                        src={moon}
+                        alt="moon"
+                        width={10}
+                        height={10}
+                        className="absolute -bottom-1.5"
+                      ></Image>
+                    </div>
+                  </div>
+                  <div className="w-full h-full border border-dashed rounded-[50%] border-white  p-3.5 lg:p-[40px] relative border-opacity-40">
                     <Image
                       src={mercury}
                       alt="neptune"
                       width={42}
                       height={23}
-                      className="absolute -bottom-[6%] "
+                      className="absolute -bottom-[4%] h-fit w-fit "
                     ></Image>
-                    <div className="w-full h-full border border-dashed border-white rounded-full p-5 relative border-opacity-50">
+                    <div className="w-[87%] mx-auto h-full border border-dashed rounded-[50%] border-white  p-5 relative border-opacity-40">
                       <Image
                         src={mars}
                         alt="neptune"
                         width={22}
                         height={17}
-                        className="absolute -bottom-[8%] "
+                        className="absolute -bottom-[9%] "
                       ></Image>
-                      <div className="relative h-full w-full   border-opacity-50">
+                      <div className="relative h-full w-full  border-opacity-40 flex items-center justify-center">
                         <Image
                           src={sun}
                           alt="sun"
                           width={80}
                           height={80}
-                          className="w-[80] h-[80]"
+                          className="h-fit w-fit md:w-[70px] md:h-[70px]"
                         ></Image>
                       </div>
                     </div>
