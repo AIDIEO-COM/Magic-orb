@@ -2,6 +2,7 @@
 import Aos from "aos";
 import "aos/dist/aos.css";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 const ImageCard = ({
   card_img_link,
@@ -28,6 +29,15 @@ const ImageCard = ({
     return () => clearTimeout(timer);
   }, [previousActiveCardId]);
 
+  const router = useRouter();
+  const handleClickedCard = () => {
+    // console.log(toolsBtnRef.current.textContent)
+    if(home){
+      router.push(href);
+      return;
+    }
+  }
+
   useEffect(() => {
     Aos.init({ duration: 700, offset: 0, easing: "ease-in-sine", once: true });
   }, []);
@@ -35,13 +45,15 @@ const ImageCard = ({
   useEffect(() => {
     Aos.refresh()
   }, [])
+
   return (
     <div
       className={`w-full h-full flex justify-center rounded-xl`}
       data-aos={home || animate_origin[0]}>
-      <Link
-        className={`relative w-full h-full sm:w-[170px] sm:h-[140px] lg:w-full  ${home ? ' lg:h-[200px] 2xl:max-w-[346px] 2xl:w-full 2xl:h-[34%]' : '2xl:h-full lg:h-full 2xl:w-[363px]'} bg-cover bg-center font-berlin  rounded-xl`}
-        href={home ? href : "/tools"}>
+      <div
+      onClick={handleClickedCard}
+        className={`relative w-full h-full sm:w-[170px] sm:h-[140px] lg:w-full  ${home ? ' lg:h-[200px] 2xl:max-w-[346px] 2xl:w-full 2xl:h-[34%]' : '2xl:h-full lg:h-full 2xl:w-[363px]'} bg-cover bg-center font-berlin  rounded-xl cursor-pointer`}
+        >
         <div
           onClick={setActiveCard}
           className={`relative w-full h-[160px] default-shadow sm:w-[170px] sm:h-[140px] md:w-[200px] md:h-[160px] lg:w-full lg:h-full bg-cover bg-no-repeat bg-center font-berlin rounded-xl ${
@@ -59,16 +71,16 @@ const ImageCard = ({
           <div className="absolute bottom-2 left-4 text-[#FFC8AA] text-3xl hidden md:inline-block">
             {try_count}
           </div>
-          <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2  bg-[#6b5863] rounded-xl px-3 py-1 hidden md:inline-block">
+          <Link href={href} className="absolute bottom-2 left-1/2 transform -translate-x-1/2  bg-[#6b5863] rounded-xl px-3 py-1 hidden md:inline-block">
             <p className="text-[#E5BD9D] font-berlin text-[12px] lg:font-normal tracking-wider text-center ">
               {game_name}
             </p>
-          </div>
+          </Link>
           <div className="absolute bottom-2 right-4 text-[#FFC8AA] text-3xl hidden md:inline-block">
             {try_remaining}
           </div>
         </div>
-      </Link>
+      </div>
     </div>
   );
 };
