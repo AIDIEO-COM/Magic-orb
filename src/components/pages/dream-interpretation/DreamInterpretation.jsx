@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import DreamInterContent from "./dreamInterpretationContent/DreamInterContent";
+import dreamCover from '/public/cover-images/1.png'
 
 const genarateIcon = [
   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
@@ -25,7 +26,7 @@ const DreamInterpretation = () => {
   return (
     <div className="h-[95%] w-full relative">
       <Image
-        src={"https://i.ibb.co/HrLXbQ8/Tarot-2.png"}
+        src={dreamCover}
         alt="img"
         width={1000}
         height={1000}

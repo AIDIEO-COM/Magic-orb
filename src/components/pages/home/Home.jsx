@@ -31,7 +31,7 @@ const Home = ({ disconnectReferenceImageCards }) => {
               alt="homepageimg"
               width={1000}
               height={1000}
-              className={`w-full object-cover sm:object-fill rounded-2xl sm:rounded-none default-shadow sm:shadow-none h-[270px] sm:h-full duration-700  z-10`}></Image>
+              className={`w-full object-cover sm:object-fill rounded-2xl sm:rounded-none default-shadow sm:shadow-none h-[270px] sm:h-full duration-700 z-10`}></Image>
             <div className="lg:hidden">
               <BannerContent></BannerContent>
             </div>

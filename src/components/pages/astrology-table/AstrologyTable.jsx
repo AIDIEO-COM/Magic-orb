@@ -2,6 +2,8 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import AstrologyContent from "./astrology-content/AstrologyContent";
+import firstImg from '/public/cover-images/2.png'
+import secondCover from '/public/cover-images/6.png'
 
 const AstrologyTable = () => {
   const [firstTransitionImg, setFirstTransitionImg] = useState(
@@ -36,7 +38,7 @@ const AstrologyTable = () => {
   return (
     <div className="w-full h-full lg:h-[700px] 2xl:h-full ">
       <Image
-        src={"https://i.ibb.co/zNrsZKZ/Tarot-1.png"}
+        src={firstImg}
         alt="astrologyTransitionImg"
         width={1000}
         height={800}
@@ -44,7 +46,7 @@ const AstrologyTable = () => {
       ></Image>
       <div className="w-full h-full">
         <Image
-          src={"https://i.ibb.co/yqrp6rj/image-5.png"}
+          src={secondCover}
           alt="img"
           width={1000}
           height={1000}
