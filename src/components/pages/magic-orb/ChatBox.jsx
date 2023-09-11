@@ -118,9 +118,9 @@ const ChatBox = ({ chatBoxClassName }) => {
     }
   };
   return (
-    <div className="md:overflow-hidden -mt-10  w-full md:w-auto h-[85%] md:h-auto">
+    <div className="md:overflow-hidden -mt-10  w-full md:w-auto h-[87%] md:h-auto">
       <div
-        className={`mx-auto flex flex-col justify-between h-full md:absolute md:left-1/2 md:-translate-x-1/2  md:top-auto ${chatBoxClassName} md:bottom-12 w-[90%] md:w-[60%] xl:w-[850px] md:h-[320px] rounded-2xl bg-[#20192A] px-5 md:px-10 py-5 duration-700 `}
+        className={`mx-auto flex flex-col justify-between h-full md:absolute md:left-1/2 md:-translate-x-1/2  md:top-auto ${chatBoxClassName} md:bottom-12 w-[90%] md:w-[60%] xl:w-[850px] md:h-[320px] rounded-2xl bg-[#20192A] px-3.5 sm:px-5 md:px-10 py-4 sm:py-5 duration-700 `}
       >
         <div className=" w-full h-full md:h-[80%]">
           <h1 className="text-[#DBCBF4] font-berlin text-xl md:text-3xl text-center pb-3">
@@ -128,19 +128,19 @@ const ChatBox = ({ chatBoxClassName }) => {
           </h1>
           <div
             ref={msgBoxEndRef}
-            className="h-[calc(100%-29px)]  md:h-[calc(100%-36px)] w-full pt-5 md:pt-3 pb-2 md:pb-0 overflow-y-scroll px-1 "
+            className="h-[calc(100%-36px)] w-full pt-5 md:pt-3 pb-2 md:pb-0 overflow-y-scroll px-1 "
           >
             <div className="w-full ">
               {message.map((msg, index) => {
                 return (
                   <div key={index}>
                     {(msg.role === "assistant" && (
-                      <p className={`${msg.resFailed ? 'text-red-500' : 'text-[#E5BD9D]'} font-berlin text-[10px]  md:text-[17px] bg-[#9191912e] rounded-lg w-fit text-justify max-w-[75%] mb-[10px] px-3 py-2`}>
+                      <p className={`${msg.resFailed ? 'text-red-500' : 'text-[#E5BD9D]'} font-berlin text-[10px]  md:text-[17px] bg-[#9191912e] rounded-lg w-fit max-w-[97%] text-justify sm:max-w-[95%] mb-[7px] sm:mb-[10px] px-3 py-2`}>
                         Orb : {msg.content}
                       </p>
                     )) ||
                       (msg.role === "user" && (
-                        <p className="text-[#DBCBF4] font-berlin text-[10px]  md:text-[17px] bg-[#9191912e] rounded-lg w-fit text-justify ml-auto max-w-[80%] mb-[10px] px-3 py-2">
+                        <p className="text-[#DBCBF4] font-berlin text-[10px]  md:text-[17px] bg-[#9191912e] rounded-lg w-fit max-w-[97%] text-justify ml-auto sm:max-w-[95%] mb-[7px] sm:mb-[10px] px-3 py-2">
                           {msg.content}
                         </p>
                       ))}
