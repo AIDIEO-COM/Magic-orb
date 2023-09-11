@@ -85,7 +85,6 @@ const ToolsPage = ({ imageCardInfo, changeReferenceTools }) => {
   useEffect(() => {
     Aos.init({ duration: 700, offset: 0, once: true });
   }, []);
-
   return (
     <div className="grid justify-items-center md:justify-items-stretch pt-32 md:pt-0 md:grid-cols-2 gap-8 z-0 font-berlin p-3 md:p-4 lg:p-0 h-full ">
       <ToolsContent
