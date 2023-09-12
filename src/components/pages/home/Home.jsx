@@ -27,11 +27,11 @@ const Home = ({ disconnectReferenceImageCards }) => {
           <Link href={"/magic-orb"}>
             <Image
               data-aos="zoom-out-left"
-              src={"https://i.ibb.co/RD05jMX/Tool-label-1.png"}
+              src={"/cover-images/present-orb-home.png"}
               alt="homepageimg"
               width={1000}
               height={1000}
-              className={`w-full object-cover sm:object-fill rounded-2xl sm:rounded-none default-shadow sm:shadow-none h-[270px] sm:h-full duration-700 z-10`}></Image>
+              className={`w-full object-cover  rounded-2xl  default-shadow  h-[270px] sm:h-full duration-700 z-10`}></Image>
             <div className="lg:hidden">
               <BannerContent></BannerContent>
             </div>
@@ -39,7 +39,7 @@ const Home = ({ disconnectReferenceImageCards }) => {
         </div>
         <div className="grow hidden lg:flex items-end -mr-[13px] relative pl-[12px] lg:pb-[7px] xl:pb-[10px] 2xl:pb-[16px]">
           <MagicOrbChatCard magicOrbChatAnimate={magicOrbChatAnimate}></MagicOrbChatCard>
-          <div className="lg:h-[67%] -mb-[10px] w-full mr-[13px] bg-transparent rounded-[16px] max-w-[346px]">
+          <div className="lg:h-[68.7%] -mb-[10px] w-full mr-[13px] bg-transparent rounded-[16px] max-w-[346px]">
             <AddsSection></AddsSection>
           </div>
         </div>
