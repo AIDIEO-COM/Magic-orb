@@ -3,7 +3,6 @@ import Image from "next/image";
 import CompatibilityContent from "./compatibilityContent/CompatibilityContent";
 import { useEffect, useState } from "react";
 import SoulmatesImg from "./soulmatesImg/SoulmatesImg";
-import compatibilityCover from '/public/cover-images/4.png'
 
 const CompatibilityCheck = () => {
   const [firstTransitionImg, setFirstTransitionImg] = useState(
@@ -28,11 +27,11 @@ const CompatibilityCheck = () => {
       return;
     }
   };
-  // control try again btn 
+  // control try again btn
   const tryAgainBtnToggle = () => {
     setIsCheckSoulmatesClicked(false);
     setisPersonSoulmates([]);
-  }
+  };
   useEffect(() => {
     const timeOut = setTimeout(() => {
       setFirstTransitionImg("bottom-0 left-0 w-full h-full");
@@ -43,10 +42,11 @@ const CompatibilityCheck = () => {
   return (
     <div className="w-full h-full relative">
       <Image
-        src={"https://i.ibb.co/j69D2tn/Tarot.png"}
+        src={"/cover-images/4.png"}
         alt="img"
-        width={1000}
-        height={1000}
+        width={3840}
+        height={2160}
+        quality={100}
         className={`${firstTransitionImg} duration-700 lg:absolute rounded-[15px] min-h-[230px]`}
       ></Image>
       <div
@@ -56,20 +56,22 @@ const CompatibilityCheck = () => {
           <Image
             src={"https://i.ibb.co/7WQWsnk/LEft.png"}
             alt="img"
-            width={400}
-            height={400}
+            width={1920}
+            height={1080}
             className={`w-[250px] h-[250px] 2xl:w-[400px] 2xl:h-[400px] ${
               isCheckSoulmatesClicked &&
               "translate-x-1/2 duration-500 opacity-0"
             }`}
           ></Image>
           {/* this img show when check soulmates btn clicked */}
-          <SoulmatesImg isCheckSoulmatesClicked={isCheckSoulmatesClicked}></SoulmatesImg>
+          <SoulmatesImg
+            isCheckSoulmatesClicked={isCheckSoulmatesClicked}
+          ></SoulmatesImg>
           <Image
             src={"https://i.ibb.co/dM41vcy/Roght.png"}
             alt="img"
-            width={400}
-            height={400}
+            width={1920}
+            height={1080}
             className={`w-[250px] h-[250px] 2xl:w-[400px] 2xl:h-[400px] ${
               isCheckSoulmatesClicked &&
               "-translate-x-1/2 duration-500 opacity-0"

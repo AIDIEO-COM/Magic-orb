@@ -1,7 +1,6 @@
 "use client";
 import ImageCard from "@/components/shared/imageCard/ImageCard";
 import BannerContent from "./BannerContent";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import GiftCard from "@/components/shared/giftCard/GiftCard";
 import MagicOrbChatCard from "./bannerSideContent/MagicOrbChatCard";
@@ -36,18 +35,9 @@ const Home = ({ disconnectReferenceImageCards }) => {
             backgroundPosition: "center",
           }}
         >
-          \
-          {/* <Image
-              data-aos="zoom-out-left"
-              src={"/cover-images/present-orb-home2.png"}
-              alt="homepageimg"
-              width={1000}
-              height={1000}
-              className={`w-full object-cover rounded-2xl    default-shadow  h-[270px] sm:h-full duration-700 z-10`}  ></Image> */}
           <div className="lg:hidden">
             <BannerContent></BannerContent>
           </div>
-          \
         </div>
         <div className="grow hidden lg:flex items-end -mr-[8px] relative  lg:pb-[7px] xl:pb-[11px] ">
           <MagicOrbChatCard

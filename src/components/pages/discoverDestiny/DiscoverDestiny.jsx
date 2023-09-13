@@ -2,8 +2,6 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import DiscoverContent from "./DiscoverContent";
-import firstCover from '/public/cover-images/3.png'
-import secondCover from '/public/cover-images/7.png'
 
 const DiscoverDestiny = () => {
   const [firstTransitionImg, setFirstTransitionImg] = useState(
@@ -32,16 +30,18 @@ const DiscoverDestiny = () => {
   return (
     <div className="w-full h-full relative ">
       <Image
-        src={firstCover}
+        src={"/cover-images/3.png"}
         alt="img"
-        width={1000}
-        height={1000}
+        width={3840}
+        height={2160}
+        quality={100}
         className={`${firstTransitionImg} duration-700 absolute `}></Image>
       <Image
-        src={secondCover}
+        src={"/cover-images/7.png"}
         alt="img"
-        width={1000}
-        height={1000}
+        width={3840}
+        height={2160}
+        quality={100}
         className={`${secondBgImg} duration-700 w-full md:h-full rounded-[15px] min-h-[230px]`}></Image>
       <div
         className={`lg:absolute lg:top-0 right-0 left-0 bottom-0 w-full h-full duration-1000 ${contentVisible} `}>

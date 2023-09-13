@@ -170,7 +170,7 @@ const imageCardInfo = [
     card_title: "Magic Orb",
     card_subtitle: "Talk with your personal assistant",
     try_count: 0,
-    game_name: "Shop now",
+    game_name: "Chat now",
     try_remaining: 32,
     href: "/magic-orb",
     animate_origin: ["fade-up", ""],
