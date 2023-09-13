@@ -1,16 +1,24 @@
+"use client"
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import BannerContent from '../BannerContent';
 
-const MagicOrbChatCard = ({magicOrbChatAnimate}) => {
+const MagicOrbChatCard = () => {
+  const [magicOrbChatAnimate, setMagicOrbChatAnimate] = useState("opacity-0 duration-1000");
+  useEffect(() => {
+    const timeOut = setTimeout(() => {
+      setMagicOrbChatAnimate("opacity-100 duration-1000");
+    }, 50);
+    return () => clearTimeout(timeOut);
+  });
     return (
-        <div className={`absolute -left-[17%] 2xl:-left-[12%] right-0 top-0 h-fit z-1 overflow-hidden hidden lg:inline-block ${magicOrbChatAnimate} duration-1000`}>
+        <div className={`absolute -left-[12%] 2xl:-left-[9.5%] right-[3%] top-0 h-fit  z-1 overflow-hidden hidden lg:inline-block ${magicOrbChatAnimate} transition-all default-gradient rounded-r-[16px] `}>
         <Image
-          src={"https://i.ibb.co/QN7h6G0/orb22-1.png"}
+          src={"/thumbnails/chat-cart-bg.png"}
           alt="sideimg"
           width={500}
           height={250}
-          className=" h-full w-full 2xl:w-[450px] 2xl:max-h-[172px] z-1"></Image>
+          className=" h-full w-full 2xl:w-[450px] 2xl:max-h-[172px] z-1 default-gradient rounded-r-[16px]"></Image>
         <BannerContent></BannerContent>
       </div>
     );
