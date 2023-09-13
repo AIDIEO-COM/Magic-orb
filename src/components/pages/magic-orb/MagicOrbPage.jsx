@@ -30,7 +30,7 @@ const MagicOrbPage = () => {
           quality={100}
           className={`${bannerClassName} h-[300px] w-full sm:w-[99%] sm:h-full object-cover rounded-2xl default-gradient `}
         ></Image>
-        <div className="absolute top-0 right-0 w-full justify-center lg:justify-end flex pt-1 sm:pt-2 lg:pr-5 ">
+        <div data-aos="zoom-out" className="absolute top-0 right-0 w-full justify-center lg:justify-end flex pt-1 sm:pt-2 lg:pr-5 ">
           {/* ads container here for premium version */}
           <MagicOrbAds
             isPremiumClicked={isPremiumClicked}
