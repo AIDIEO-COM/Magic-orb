@@ -2,7 +2,7 @@
 import ChatBox from "@/components/pages/magic-orb/ChatBox";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import presentOrb from '/public/cover-images/present-orb.png'
+import presentOrb from "/public/cover-images/present-orb.png";
 
 const MagicOrbPage = () => {
   const [bannerClassName, setBannerClassName] = useState(
@@ -23,8 +23,9 @@ const MagicOrbPage = () => {
         <Image
           src={presentOrb}
           alt="present-orb"
-          width={1500}
-          height={1000}
+          width={3840}
+          height={2160}
+          quality={100}
           className={`${bannerClassName} h-[300px] w-full sm:w-[99%] sm:h-full object-cover rounded-2xl default-gradient `}
         ></Image>
         {/* chat box */}

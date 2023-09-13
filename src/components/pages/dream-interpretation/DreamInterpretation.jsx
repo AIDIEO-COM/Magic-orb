@@ -2,7 +2,6 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import DreamInterContent from "./dreamInterpretationContent/DreamInterContent";
-import dreamCover from '/public/cover-images/1.png'
 
 const genarateIcon = [
   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
@@ -26,10 +25,11 @@ const DreamInterpretation = () => {
   return (
     <div className="h-[95%] w-full relative">
       <Image
-        src={dreamCover}
+        src={"/cover-images/1.png"}
         alt="img"
-        width={1000}
-        height={1000}
+        width={3840}
+        height={2160}
+        quality={100}
         className={`${firstTransitionImg} duration-700 lg:absolute min-h-[200px] rounded-[15px]`}></Image>
       <div
         className={`lg:absolute top-10 lg:top-0 right-0 left-0 bottom-0 w-full h-full duration-1000 ${contentTransition}`}>

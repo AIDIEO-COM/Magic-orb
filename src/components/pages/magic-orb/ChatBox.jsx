@@ -118,17 +118,17 @@ const ChatBox = ({ chatBoxClassName }) => {
     }
   };
   return (
-    <div className="md:overflow-hidden -mt-10  w-full md:w-auto h-[87%] md:h-auto">
+    <div className="md:overflow-hidden -mt-10  w-full md:w-auto h-[85%] md:h-auto">
       <div
-        className={`mx-auto flex flex-col justify-between h-full md:absolute md:left-1/2 md:-translate-x-1/2  md:top-auto ${chatBoxClassName} md:bottom-12 w-[90%] md:w-[60%] xl:w-[850px] md:h-[320px] rounded-2xl bg-[#20192A] px-3.5 sm:px-5 md:px-10 py-4 sm:py-5 duration-700 `}
+        className={`mx-auto flex flex-col justify-between h-full md:absolute md:left-1/2 md:-translate-x-1/2  md:top-auto ${chatBoxClassName} md:bottom-12 w-[92%] md:w-[60%] xl:w-[850px] md:h-[320px] rounded-2xl bg-[#20192A] px-3.5 sm:px-5 md:px-10 py-4 sm:py-5 duration-700 `}
       >
-        <div className=" w-full h-full md:h-[80%]">
+        <div className=" w-full h-full md:h-[80%] ">
           <h1 className="text-[#DBCBF4] font-berlin text-xl md:text-3xl text-center pb-3">
             Chat with the magic orb
           </h1>
           <div
             ref={msgBoxEndRef}
-            className="h-[calc(100%-36px)] w-full pt-5 md:pt-3 pb-2 md:pb-0 overflow-y-scroll px-1 "
+            className="h-[calc(100%-55px)] md:h-[calc(100%-36px)] w-full pt-5 md:pt-3 pb-2 md:pb-0 overflow-y-scroll px-1"
           >
             <div className="w-full ">
               {message.map((msg, index) => {
@@ -153,7 +153,7 @@ const ChatBox = ({ chatBoxClassName }) => {
             </div>
           </div>
         </div>
-        <div className="h-8 bg-[#635B74] rounded-md py-[3px] px-2 font-berlin flex justify-between md:absolute bottom-5 left-4 right-4 md:left-8 md:right-8 ">
+        <div className="h-8 -mt-6 bg-[#635B74] rounded-md py-[3px] px-2 font-berlin flex justify-between md:absolute bottom-5 left-4 right-4 md:left-8 md:right-8 ">
           <input
             type="text"
             ref={msgRef}
