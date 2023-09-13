@@ -8,7 +8,7 @@ const page = () => {
         <div className="account-box-gradient max-w-[450px] h-fit mx-auto p-5 w-full md:px-10 md:pb-4 rounded-xl md:py-6 ">
           <div className="flex flex-col justify-center ">
             <p className="text-[#E5BD9D] font-semibold text-[28px] text-center">
-              Login in
+              Login
             </p>
             <hr className="border-2 border-[#dbcbf4cb] mt-2" />
             <p className="text-center text-[#DBCBF4] text-[10px] mt-1">
