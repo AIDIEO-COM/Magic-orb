@@ -16,10 +16,10 @@ export default function SelectOption() {
   return (
     <div>
       <RadioOption></RadioOption>
-      <div className="w-[150px] md:w-48">
+      <div className="w-[150px] md:w-48 md:mt-3">
         <Listbox value={selected} onChange={setSelected}>
           <div className="relative mt-1">
-            <Listbox.Button className="relative w-full cursor-default rounded-lg bg-[#674B53] py-1 sm:py-1.5 pl-3 pr-10 text-left shadow-md focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 text-xs sm:text-sm text-[#E5BD9D]">
+            <Listbox.Button className="relative w-full cursor-default rounded-lg bg-[#674B53] py-1 sm:py-1.5 pl-3 pr-10 text-left shadow-md focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 text-xs sm:text-sm text-[#E5BD9D] bg-opacity-50">
               <span className="block truncate">
                 {selected?.name || "Select Option"}
               </span>
@@ -36,7 +36,7 @@ export default function SelectOption() {
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <Listbox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-[#674B53] py-1 text-base shadow-lg ring-1 ring-black  ring-opacity-5 focus:outline-none sm:text-sm">
+              <Listbox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-[#674B53] py-1 text-base shadow-lg ring-1 ring-black bg-opacity-75  ring-opacity-5 focus:outline-none sm:text-sm">
                 {options.map((person, personIdx) => (
                   <Listbox.Option
                     key={personIdx}
