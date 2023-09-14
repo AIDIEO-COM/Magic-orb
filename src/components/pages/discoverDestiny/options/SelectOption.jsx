@@ -2,6 +2,7 @@
 import { Fragment, useState } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
+import RadioOption from "./RadioOption";
 
 const options = [
   { name: "Default" },
@@ -12,31 +13,9 @@ const options = [
 
 export default function SelectOption() {
   const [selected, setSelected] = useState();
-  const [cardSide, setCardSide] = useState("front");
   return (
     <div>
-      <div className="">
-        <div className="flex items-center gap-2 mb-2 ">
-          <input
-            onClick={() => setCardSide("front")}
-            checked={cardSide === "front"}
-            type="radio"
-            name="card-front-side"
-            className="w-4 h-4 rounded-full border-[#866345] cursor-pointer "
-          />
-          <p className="text-[#DBCBF4] text-sm">Card front side</p>
-        </div>
-        <div className="flex items-center gap-2 mb-2 ">
-          <input
-            onClick={() => setCardSide("back")}
-            checked={cardSide === "back"}
-            type="radio"
-            name="card-back-side"
-            className="w-4 h-4 rounded-full border-[#866345] cursor-pointer"
-          />
-          <p className="text-[#DBCBF4] text-sm">Card back side</p>
-        </div>
-      </div>
+      <RadioOption></RadioOption>
       <div className="w-[150px] md:w-48">
         <Listbox value={selected} onChange={setSelected}>
           <div className="relative mt-1">
