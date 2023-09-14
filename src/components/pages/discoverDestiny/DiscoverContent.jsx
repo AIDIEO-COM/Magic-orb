@@ -6,7 +6,7 @@ import PredictDetails from "./predictDetails/PredictDetails";
 import CardContainer from "./cardContainer/CardContainer";
 import PredictHistoryCard from "./predictHistoryCard/PredictHistoryCard";
 import AdsCard from "@/components/shared/adsCard/AdsCard";
-import Options from "./options/Options";
+import SelectOption from "./options/SelectOption";
 
 const genarateCards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
@@ -32,7 +32,7 @@ const DiscoverContent = () => {
   return (
     <div className=" w-full h-full lg:p-7 xl:p-10 lg:relative">
       <div className={`absolute ${selectRandomCards ? 'top-[5%]' : 'top-[10%]'} lg:top-0 lg:left-0 w-full flex justify-center lg:justify-start z-20 lg:w-[30%] lg:pt-7 lg:pl-7 xl:pt-10 xl:pl-10`}>
-        <Options></Options>
+        <SelectOption></SelectOption>
       </div>
       <div className=" left-1/2 -translate-x-1/2 w-full flex flex-col items-center absolute top-14 lg:relative lg:top-auto z-10">
         <h1 className="text-lg md:text-xl lg:text-3xl font-berlin font-semibold text-[#FFC8AA]">
