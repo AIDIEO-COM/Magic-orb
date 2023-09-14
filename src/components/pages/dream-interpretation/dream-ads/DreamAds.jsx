@@ -4,7 +4,7 @@ import React from "react";
 const DreamAds = ({ setIsPremiumClicked, isPremiumClicked }) => {
   return (
     <div
-      className={`h-fit w-[95%] sm:w-[70%] mx-auto mt-[20px] sm:mt-10 lg:mx-0 lg:mt-auto  lg:w-[33%] rounded-[38px] grid grid-cols-5 py-4 px-3.5 gap-4 ${
+      className={`h-fit w-[95%] sm:w-[70%]  mx-auto mt-[20px] sm:mt-10 lg:mx-0 lg:mt-auto  lg:w-[33%] rounded-[38px] grid grid-cols-5 py-4 px-3.5 gap-4 ${
         isPremiumClicked && "hidden"
       }`}
       style={{
