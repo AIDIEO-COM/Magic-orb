@@ -5,7 +5,7 @@ import { BsChevronUp } from "react-icons/bs";
 const SortAndFilter = () => {
   return (
     <div
-      className="w-[325px] px-3 py-4 h-[512px]"
+      className="w-[275px] 2xl:w-[325px] px-3 py-4 h-[450px] 2xl:h-[512px] order-2 md:order-3 mt-12 md:mt-0"
       style={{
         borderRadius: "54.873px",
         background: "rgba(0, 0, 0, 0.40)",
