@@ -39,7 +39,7 @@ const AstrologyTable = () => {
         width={3840}
         height={2160}
         quality={100}
-        className={`absolute ${firstTransitionImg} duration-700 `}
+        className={`absolute ${firstTransitionImg} duration-700 rounded-[15px]`}
       ></Image>
       <div className="w-full h-full">
         <Image
@@ -48,7 +48,7 @@ const AstrologyTable = () => {
           width={3840}
           height={2160}
           quality={100}
-          className={`h-full w-full ${secondBgImg} duration-1000 rounded-[15px] min-h-[230px]`}
+          className={`h-full w-full ${secondBgImg} duration-1000 rounded-[15px] min-h-[230px] default-shadow`}
         ></Image>
         <div
           className={`lg:absolute lg:top-0 right-0 left-0 bottom-0 w-full h-full ${astrologyContent} duration-1000`}

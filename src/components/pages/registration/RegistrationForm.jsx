@@ -4,9 +4,11 @@ import { FaFacebookF } from "react-icons/fa";
 import { FiTwitter } from "react-icons/fi";
 import { AiOutlineGoogle } from "react-icons/ai";
 import { useRouter } from "next/navigation";
-import toast from 'react-hot-toast';
+import toast from "react-hot-toast";
+import { useState } from "react";
 
 const RegistrationForm = () => {
+  const [isKeepLoggedChecked, setIsKeepLoggedChecked] = useState(false);
   const { replace } = useRouter();
   // get data from registration form
   const handleSubmit = (e) => {
@@ -21,27 +23,27 @@ const RegistrationForm = () => {
       toast.error("Please fill in all fields", {
         style: {
           background: " #232141",
-          color: '#FFC8AA',
+          color: "#FFC8AA",
         },
-    });
+      });
       return;
     }
-    if(value.password.length < 6) {
+    if (value.password.length < 6) {
       toast.error("Password must be at least 6 characters!", {
         style: {
           background: " #232141",
-          color: '#FFC8AA',
+          color: "#FFC8AA",
         },
-    })
+      });
       return;
     }
     if (value.password !== value["password-verification"]) {
       toast.error("Password does not match!", {
         style: {
           background: " #232141",
-          color: '#FFC8AA',
+          color: "#FFC8AA",
         },
-    });
+      });
       return;
     }
     // delete confirm password property
@@ -53,27 +55,27 @@ const RegistrationForm = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(value),
-    }).then(res => res.json()).then(res => {
-      if(res.success) {
-        toast.success("Registration successful!", {
-          style: {
-            background: " #232141",
-            color: '#FFC8AA',
-          },
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        if (res.success) {
+          toast.success("Registration successful!", {
+            style: {
+              background: " #232141",
+              color: "#FFC8AA",
+            },
+          });
+          e.target.reset();
+          replace("/login");
+        } else {
+          toast.error("Registration failed!", {
+            style: {
+              background: " #232141",
+              color: "#FFC8AA",
+            },
+          });
+        }
       });
-        e.target.reset();
-        replace("/login")
-      }
-      else {
-        toast.error("Registration failed!", {
-          style: {
-            background: " #232141",
-            color: '#FFC8AA',
-          },
-      })
-      }
-    }
-    )
   };
   return (
     <form onSubmit={handleSubmit} className="mt-10">
@@ -113,6 +115,8 @@ const RegistrationForm = () => {
       </div>
       <div className="flex items-center gap-2 mb-2 ml-4">
         <input
+          onClick={() => setIsKeepLoggedChecked(!isKeepLoggedChecked)}
+          checked={isKeepLoggedChecked}
           type="radio"
           name="keep-logged-in"
           className="w-4 h-4 rounded-full border-[#866345] cursor-pointer"
