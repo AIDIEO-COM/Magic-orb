@@ -31,7 +31,7 @@ const DiscoverContent = () => {
   };
   return (
     <div className=" w-full h-full lg:p-7 xl:p-10 lg:relative">
-      <div className="lg:absolute top-0 left-0 w-full lg:flex lg:justify-start z-20 lg:w-[30%] lg:pt-7 lg:pl-7 xl:pt-10 xl:pl-10">
+      <div className={`absolute ${selectRandomCards ? 'top-[5%]' : 'top-[10%]'} lg:top-0 lg:left-0 w-full flex justify-center lg:justify-start z-20 lg:w-[30%] lg:pt-7 lg:pl-7 xl:pt-10 xl:pl-10`}>
         <Options></Options>
       </div>
       <div className=" left-1/2 -translate-x-1/2 w-full flex flex-col items-center absolute top-14 lg:relative lg:top-auto z-10">
