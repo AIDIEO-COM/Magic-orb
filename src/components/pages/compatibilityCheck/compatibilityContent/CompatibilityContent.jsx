@@ -5,6 +5,7 @@ import SelectSavedFriends from "./selectSaved&Friends/SelectSavedFriends";
 import Image from "next/image";
 import SoulmatesImg from "../soulmatesImg/SoulmatesImg";
 import TryAgainResultBtn from "../tryAgainResultBtn/TryAgainResultBtn";
+import CompatibilityAds from "../compatibilityAds/CompatibilityAds";
 
 const genarateIcon = [
   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
@@ -19,9 +20,10 @@ const CompatibilityContent = ({
   tryAgainBtnToggle,
 }) => {
   const [checkBtnIsClicked, setCheckBtnIsClicked] = useState(false);
+  const [isPremiumClicked, setIsPremiumClicked] = useState(false);
   return (
-    <div className=" w-full h-full lg:p-7 xl:p-10 lg:overflow-hidden">
-      <div className="left-1/2 -translate-x-1/2 w-full flex flex-col items-center absolute top-5 lg:relative lg:top-auto">
+    <div className=" w-full h-full lg:p-7 xl:p-10 lg:overflow-hidden lg:relative">
+      <div className="left-1/2 -translate-x-1/2 w-fit flex flex-col items-center absolute top-5 lg:relative lg:top-auto z-10 ">
         <h1 className="text-lg md:text-xl lg:text-3xl font-berlin font-semibold text-[#FFC8AA]">
           Check Compatibility
         </h1>
@@ -41,6 +43,10 @@ const CompatibilityContent = ({
           </div>
           <p className="text-sm lg:text-base">Chines</p>
         </div>
+      </div>
+      {/* ads container here */}
+      <div className="lg:absolute w-full  lg:top-4 lg:right-8 flex lg:justify-end z-[7]">
+        <CompatibilityAds isPremiumClicked={isPremiumClicked} setIsPremiumClicked={setIsPremiumClicked}></CompatibilityAds>
       </div>
       <div className="h-full w-full flex flex-col items-center md:items-start  md:flex-row justify-center gap-10 sm:gap-20 lg:gap-0 lg:justify-between lg:-translate-y-20 z-5 mt-[7%]">
         {/* soulmates img and btn show only for mobile devices */}

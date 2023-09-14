@@ -44,6 +44,8 @@ const AstrologyContent = () => {
           <AdsCard
             isPremiumClicked={isPremiumClicked}
             setIsPremiumClicked={setIsPremiumClicked}
+            img={'https://i.ibb.co/hR8TcJ4/image-7.png'}
+            description={'Learn about planets and change your life Don’t miss a thing'}
           ></AdsCard>
         </div>
       </div>

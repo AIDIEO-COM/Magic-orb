@@ -3,8 +3,10 @@ import ChatBox from "@/components/pages/magic-orb/ChatBox";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import presentOrb from "/public/cover-images/present-orb.png";
+import MagicOrbAds from "./magic-orb-ads/MagicOrbAds";
 
 const MagicOrbPage = () => {
+  const [isPremiumClicked, setIsPremiumClicked] = useState(false);
   const [bannerClassName, setBannerClassName] = useState(
     "md:w-[80%] md:h-[65%] duration-500"
   );
@@ -28,6 +30,13 @@ const MagicOrbPage = () => {
           quality={100}
           className={`${bannerClassName} h-[300px] w-full sm:w-[99%] sm:h-full object-cover rounded-2xl default-gradient `}
         ></Image>
+        <div data-aos="zoom-out" className="absolute top-0 right-0 w-full justify-center lg:justify-end flex pt-1 sm:pt-2 lg:pr-5 ">
+          {/* ads container here for premium version */}
+          <MagicOrbAds
+            isPremiumClicked={isPremiumClicked}
+            setIsPremiumClicked={setIsPremiumClicked}
+          ></MagicOrbAds>
+        </div>
         {/* chat box */}
         <ChatBox chatBoxClassName={chatBoxClassName}></ChatBox>
       </div>

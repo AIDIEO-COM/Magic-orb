@@ -16,9 +16,9 @@ const ToolsContentImgAnimate = ({imgLink}) => {
             <Image
               src={imgLink}
               alt="the magic orb"
-              width={900}
-              height={700}
-              className="w-full h-full mt-6 object-cover" 
+              width={1920}
+              height={1080}
+              className="w-full h-full mt-6 object-cover bg-center" 
             />
           </div>
     );

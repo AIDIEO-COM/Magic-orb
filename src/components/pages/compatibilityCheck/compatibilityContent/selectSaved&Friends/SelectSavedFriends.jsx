@@ -3,7 +3,7 @@ import React from 'react';
 
 const SelectSavedFriends = ({genarateIcon}) => {
     return (
-        <div className="w-[85%] sm:w-[60%] md:w-[27%] xl:w-[20%] min-h-[300px] md:min-h-[80%]  default-shadow bg-[#20192A]  rounded-[50px] py-4 text-[#FFC8AA] bg-opacity-60">
+        <div className="w-[85%] sm:w-[60%] md:w-[27%] xl:w-[20%] min-h-[300px] md:min-h-[60%]  default-shadow bg-[#20192A]  rounded-[50px] py-4 text-[#FFC8AA] bg-opacity-60 lg:mt-[10%]">
           <h1 className="text-base lg:text-2xl font-berlin text-center px-3">
             Select saved & friends
           </h1>
