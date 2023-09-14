@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { AiOutlineGoogle } from "react-icons/ai";
 import { FaFacebookF } from "react-icons/fa";
@@ -9,6 +9,7 @@ import { toast } from "react-hot-toast";
 import useGetUser from "@/hooks/useGetUser";
 
 const LoginForm = () => {
+  const [isKeepLoggedChecked, setIsKeepLoggedChecked] = useState(false);
   const { replace } = useRouter();
   const [, refetch] = useGetUser();
   // get data from login form
@@ -20,9 +21,9 @@ const LoginForm = () => {
       toast.error("Please fill all fields!", {
         style: {
           background: " #232141",
-          color: '#FFC8AA',
+          color: "#FFC8AA",
         },
-    });
+      });
       return;
     }
     // if (!value.email.includes("@gmail.com")) {
@@ -44,19 +45,19 @@ const LoginForm = () => {
           toast.success("Login successful!", {
             style: {
               background: " #232141",
-              color: '#FFC8AA',
+              color: "#FFC8AA",
             },
-        });
+          });
           refetch();
           e.target.reset();
-          replace('/');
+          replace("/");
         } else {
           toast.error("Login failed, please try again!", {
             style: {
               background: " #232141",
-              color: '#FFC8AA',
+              color: "#FFC8AA",
             },
-        });
+          });
         }
       });
   };
@@ -92,6 +93,8 @@ const LoginForm = () => {
       </div>
       <div className="flex items-center gap-2 mb-2 ml-4">
         <input
+          onClick={() => setIsKeepLoggedChecked(!isKeepLoggedChecked)}
+          checked={isKeepLoggedChecked}
           type="radio"
           name="keep-logged-in"
           className="w-4 h-4 rounded-full border-[#866345] cursor-pointer"
