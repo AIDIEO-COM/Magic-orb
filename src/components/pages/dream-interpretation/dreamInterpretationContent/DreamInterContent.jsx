@@ -1,12 +1,14 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
+import DreamAds from "../dream-ads/DreamAds";
 
 const DreamInterContent = ({ genarateIcon }) => {
   const [checkBtnIsClicked, setCheckBtnIsClicked] = useState(false);
+  const [isPremiumClicked, setIsPremiumClicked] = useState(false);
   return (
     <div className=" w-full h-full lg:p-7 xl:p-10 lg:overflow-hidden">
-      <div className="left-1/2 -translate-x-1/2 w-full flex flex-col items-center absolute top-14 lg:relative lg:top-auto">
+      <div className="left-1/2 -translate-x-1/2 w-full flex flex-col items-center absolute top-14 lg:relative lg:top-auto z-10">
         <h1 className="text-lg md:text-xl lg:text-3xl font-berlin font-semibold text-[#FFC8AA]">
           Interpret your dream
         </h1>
@@ -24,6 +26,10 @@ const DreamInterContent = ({ genarateIcon }) => {
           </div>
           <p className="text-sm lg:text-base">Full dream meaning</p>
         </div>
+      </div>
+      {/* ads container here */}
+      <div className="lg:absolute top-4 right-7 w-full flex justify-center lg:justify-end z-0 ">
+        <DreamAds isPremiumClicked={isPremiumClicked} setIsPremiumClicked={setIsPremiumClicked}></DreamAds>
       </div>
       <div className="h-ful w-full flex flex-col items-center md:items-start  md:flex-row justify-center gap-10 sm:gap-20 lg:gap-8 lg:justify-between pt-10 lg:pt-20 h-[500px] ">
         <div className="w-[85%] sm:w-[60%] md:min-w-[20%] lg:w-[20%] 2xl:w-[250px] default-shadow bg-[#20192A] h-full rounded-[50px] p-2 text-[#FFC8AA] flex flex-col  bg-opacity-60">
@@ -45,7 +51,7 @@ const DreamInterContent = ({ genarateIcon }) => {
             ))}
           </div>
         </div>
-        <div className="w-[85%] sm:w-[60%] md:min-w-[20%] lg:w-[20%] 2xl:w-[250px] default-shadow bg-[#20192A] h-full rounded-[50px] text-[#FFC8AA] bg-opacity-60 pb-8">
+        <div className="w-[85%] sm:w-[60%] md:min-w-[20%] lg:w-[20%] 2xl:w-[250px] default-shadow bg-[#20192A] h-full rounded-[50px] text-[#FFC8AA] bg-opacity-60 pb-8 lg:mt-[4%]">
           <h1 className="text-base lg:text-2xl font-berlin text-center mt-2">
             Dream history
           </h1>
