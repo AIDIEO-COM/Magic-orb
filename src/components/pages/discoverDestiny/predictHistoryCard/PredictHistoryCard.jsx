@@ -4,7 +4,7 @@ import React from 'react';
 
 const PredictHistoryCard = ({genarateCards}) => {
     return (
-        <div className="w-[85%] mt-5 lg:mt-12 sm:w-[60%] md:w-[27%] xl:w-[25%] default-shadow md:shadow-none lg:default-shadow h-[500px] rounded-[50px] p-4 xl:px-7 text-[#FFC8AA] bg-opacity-60">
+        <div className="w-[85%] mt-5 lg:mt-16 sm:w-[60%] md:w-[27%] xl:w-[25%] default-shadow md:shadow-none lg:default-shadow h-[500px] rounded-[50px] p-4 xl:px-7 text-[#FFC8AA] bg-opacity-60">
           <h1 className="text-base lg:text-2xl font-berlin text-center">
             Prediction history
           </h1>

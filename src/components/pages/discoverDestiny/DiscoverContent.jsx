@@ -43,12 +43,10 @@ const DiscoverContent = () => {
         </button>
       </div>
       {/* ads container here for premium version */}
-      <div className="lg:absolute top-0 right-0 w-full lg:flex lg:justify-end z-0 ">
+      <div className="lg:absolute top-3 right-0 w-full lg:flex lg:justify-end z-0 ">
         <AdsCard
             isPremiumClicked={isPremiumClicked}
             setIsPremiumClicked={setIsPremiumClicked}
-            img={'/ads-images/tarot-ads.png'}
-            description={'Play tarot with our Ai powered configuration Discover the most valuable cards'}
           ></AdsCard>
       </div>
       <div className="flex flex-col items-center pt-10 md:pt-28 lg:pt-0 lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:top-28 ">
