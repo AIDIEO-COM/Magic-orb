@@ -13,7 +13,7 @@ const FeedOfDreams = () => {
       }}
     >
       {/* sections start */}
-      <div className="w-full h-full overflow-y-auto px-[10px]">
+      <div className="w-full md:h-screen lg:h-full overflow-y-auto px-[10px]">
         <FeedSection></FeedSection>
         <FeedSection></FeedSection>
         <FeedSection></FeedSection>

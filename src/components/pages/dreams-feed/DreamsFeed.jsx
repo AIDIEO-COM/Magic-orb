@@ -18,7 +18,7 @@ const DreamsFeed = () => {
             {/* filtering and symbols */}
             <div className='w-full h-full flex flex-col md:flex-row mt-20 md:mt-0 items-center  md:justify-between'>
                 <SymbolsFilter genarateIcon={genarateIcon}></SymbolsFilter>
-                <div className='pt-10 grow px-[3.5%] h-full order-3 md:order-2'>
+                <div className='pt-10 grow sm:px-[3.5%] h-full order-3 md:order-2 '>
                     <FeedOfDreams></FeedOfDreams>
                 </div>
                 <SortAndFilter></SortAndFilter>

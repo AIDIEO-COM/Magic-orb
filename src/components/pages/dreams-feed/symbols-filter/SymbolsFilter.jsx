@@ -4,7 +4,7 @@ import React from "react";
 const SymbolsFilter = ({ genarateIcon }) => {
   return (
     <div
-      className="w-[275px] 2xl:w-[325px] px-3 py-4 h-[450px] 2xl:h-[512px] order-1"
+      className="w-full sm:max-w-[275px] 2xl:max-w-[325px] px-3 py-4 h-[450px] 2xl:h-[512px] order-1"
       style={{
         borderRadius: "54.873px",
         background: "rgba(0, 0, 0, 0.40)",
