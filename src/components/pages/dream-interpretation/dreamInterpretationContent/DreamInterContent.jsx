@@ -2,10 +2,15 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import DreamAds from "../dream-ads/DreamAds";
+import { useRouter } from "next/navigation";
 
 const DreamInterContent = ({ genarateIcon }) => {
   const [checkBtnIsClicked, setCheckBtnIsClicked] = useState(false);
   const [isPremiumClicked, setIsPremiumClicked] = useState(false);
+  const router = useRouter();
+  if(isPremiumClicked){
+    router.push("/tools/dream-interpretation/dreams-feed")
+  }
   return (
     <div className=" w-full h-full lg:p-7 xl:p-10 lg:overflow-hidden">
       <div className="left-1/2 -translate-x-1/2 w-full flex flex-col items-center absolute top-14 lg:relative lg:top-auto z-10">
